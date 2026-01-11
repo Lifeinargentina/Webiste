@@ -19,11 +19,27 @@
         }
 
         .nav-transition {
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: background-color 0.4s ease, box-shadow 0.4s ease, padding 0.4s ease;
+        }
+
+        .nav-scrolled {
+            background-color: rgba(5, 10, 22, 0.92);
+            box-shadow: 0 16px 40px rgba(2, 6, 23, 0.35);
+            backdrop-filter: blur(8px);
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
         }
 
         .hero-gradient {
-            background: linear-gradient(to right, #020617 0%, rgba(2, 6, 23, 0.7) 50%, transparent 100%);
+            background: linear-gradient(120deg, rgba(3, 7, 18, 0.95) 0%, rgba(3, 7, 18, 0.6) 45%, rgba(3, 7, 18, 0.15) 100%);
+        }
+
+        .hero-frame {
+            box-shadow: inset 0 -120px 200px rgba(3, 7, 18, 0.7);
+        }
+
+        .trend-strip {
+            background: linear-gradient(90deg, #7a0f1f 0%, #a5122e 50%, #7a0f1f 100%);
         }
 
         .mobile-menu {
@@ -44,38 +60,44 @@
 
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-50 nav-transition bg-transparent py-8">
-        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
-            <div class="flex items-center gap-3 group cursor-pointer">
-                <div class="w-7 h-7 bg-[#002B49] flex items-center justify-center transition-transform group-hover:rotate-12">
-                    <span class="text-white text-xs font-semibold italic">A</span>
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="hidden md:flex justify-end text-[10px] uppercase tracking-[0.25em] text-white/70 mb-4">
+                <span class="mr-6">About</span>
+                <span class="mr-6">Careers</span>
+                <span>Locations</span>
+            </div>
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3 group cursor-pointer">
+                    <div class="w-8 h-8 bg-[#a5122e] flex items-center justify-center transition-transform group-hover:rotate-6">
+                        <span class="text-white text-xs font-semibold italic">A</span>
+                    </div>
+                    <span id="logo-text" class="text-lg font-semibold tracking-[0.25em] uppercase text-white">
+                        ARGENTINA<span class="text-[#E31837] font-light">MOVE</span>
+                    </span>
                 </div>
-                <span id="logo-text" class="text-lg font-semibold tracking-[0.2em] uppercase text-white">
-                    ARGENTINA<span class="text-[#E31837] font-light">MOVE</span>
-                </span>
-            </div>
+                <div id="nav-links" class="hidden md:flex gap-10 text-[11px] font-medium uppercase tracking-[0.28em] text-white/80">
+                    <a href="#services" class="hover:text-white transition-colors relative group py-1">
+                        Services
+                        <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#insights" class="hover:text-white transition-colors relative group py-1">
+                        Insights
+                        <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#about" class="hover:text-white transition-colors relative group py-1">
+                        About
+                        <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
+                    </a>
+                    <a href="#contact" class="hover:text-white transition-colors relative group py-1">
+                        Contact
+                        <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
+                    </a>
+                </div>
 
-            <div id="nav-links" class="hidden md:flex gap-10 text-[11px] font-medium uppercase tracking-[0.25em] text-white/80">
-                <a href="#services" class="hover:text-[#E31837] transition-colors relative group py-1">
-                    Services
-                    <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
-                </a>
-                <a href="#insights" class="hover:text-[#E31837] transition-colors relative group py-1">
-                    Insights
-                    <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
-                </a>
-                <a href="#about" class="hover:text-[#E31837] transition-colors relative group py-1">
-                    About
-                    <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
-                </a>
-                <a href="#contact" class="hover:text-[#E31837] transition-colors relative group py-1">
-                    Contact
-                    <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
-                </a>
+                <button class="md:hidden" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
+                    <i data-lucide="menu" id="menu-icon" class="text-white"></i>
+                </button>
             </div>
-
-            <button class="md:hidden" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
-                <i data-lucide="menu" id="menu-icon" class="text-white"></i>
-            </button>
         </div>
     </nav>
 
@@ -89,12 +111,12 @@
 
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center bg-slate-950 overflow-hidden">
-        <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 z-0 hero-frame">
             <div class="absolute inset-0 hero-gradient z-10"></div>
             <img 
                 src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?q=80&w=2000&auto=format&fit=crop" 
                 alt="Buenos Aires" 
-                class="w-full h-full object-cover opacity-40 grayscale sepia-[0.2]"
+                class="w-full h-full object-cover opacity-50 grayscale-[0.4]"
             >
         </div>
 
@@ -112,7 +134,7 @@
                     <span class="font-semibold text-white/90">done properly.</span>
                 </h1>
 
-                <p class="text-slate-400 text-lg md:text-xl mb-12 font-light max-w-2xl leading-relaxed">
+                <p class="text-slate-300 text-lg md:text-xl mb-12 font-light max-w-2xl leading-relaxed">
                     Legal and relocation services for individuals, families, and companies planning a move to Argentina, with clear advice and local support throughout the process.
                 </p>
 
@@ -120,7 +142,7 @@
                     <button id="cta-request" class="bg-[#E31837] text-white px-10 py-5 text-[11px] font-semibold uppercase tracking-[0.25em] hover:bg-white hover:text-[#002B49] transition-all duration-300 shadow-xl">
                         Request a consultation
                     </button>
-                    <button id="cta-how" class="border border-white/30 text-white px-10 py-5 text-[11px] font-semibold uppercase tracking-[0.25em] hover:bg-white/10 transition-all">
+                    <button id="cta-how" class="border border-white/40 text-white px-10 py-5 text-[11px] font-semibold uppercase tracking-[0.25em] hover:bg-white/10 transition-all">
                         How we work
                     </button>
                 </div>
@@ -128,8 +150,23 @@
         </div>
     </section>
 
+    <!-- Trending Strip -->
+    <section class="trend-strip text-white">
+        <div class="max-w-7xl mx-auto px-8 py-8">
+            <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-10 text-[11px] uppercase tracking-[0.25em] font-semibold">
+                <span class="text-white/70">Trending analysis</span>
+                <div class="flex flex-col md:flex-row gap-6 md:gap-10 text-[13px] tracking-normal font-medium">
+                    <span class="flex items-center gap-3">EO Seeking National AI Policy <span class="text-white/70">→</span></span>
+                    <span class="flex items-center gap-3">DOJ White Collar Enforcement <span class="text-white/70">→</span></span>
+                    <span class="flex items-center gap-3">2026 SEC Examination Priorities <span class="text-white/70">→</span></span>
+                    <span class="flex items-center gap-3">EPA Enforcement Playbook <span class="text-white/70">→</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Stats Section -->
-    <section class="bg-white py-16 border-b border-slate-50">
+    <section class="bg-white py-20 border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
                 <div>
@@ -157,7 +194,7 @@
         <div class="max-w-7xl mx-auto px-8">
             <div class="flex flex-col md:flex-row justify-between mb-24 gap-12">
                 <div class="max-w-xl">
-                    <h2 class="text-3xl md:text-4xl font-semibold text-[#002B49] mb-8">
+                    <h2 class="text-3xl md:text-4xl font-semibold text-[#0a1428] mb-8">
                         What we help with
                     </h2>
                     <div class="w-20 h-0.5 bg-[#E31837]"></div>
@@ -169,7 +206,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
                 <div>
-                    <i data-lucide="shield-check" class="w-7 h-7 text-[#002B49] mb-8"></i>
+                    <i data-lucide="shield-check" class="w-7 h-7 text-[#0a1428] mb-8"></i>
                     <h3 class="text-sm font-semibold uppercase mb-4">Immigration & Legal</h3>
                     <p class="text-slate-500 font-light text-sm">
                         Residency, citizenship, and identity documents handled with clear advice and close follow-up.
@@ -177,7 +214,7 @@
                 </div>
 
                 <div>
-                    <i data-lucide="home" class="w-7 h-7 text-[#002B49] mb-8"></i>
+                    <i data-lucide="home" class="w-7 h-7 text-[#0a1428] mb-8"></i>
                     <h3 class="text-sm font-semibold uppercase mb-4">Housing & Real Estate</h3>
                     <p class="text-slate-500 font-light text-sm">
                         Help with property searches, leases, and understanding how the local rental market works.
@@ -185,7 +222,7 @@
                 </div>
 
                 <div>
-                    <i data-lucide="building" class="w-7 h-7 text-[#002B49] mb-8"></i>
+                    <i data-lucide="building" class="w-7 h-7 text-[#0a1428] mb-8"></i>
                     <h3 class="text-sm font-semibold uppercase mb-4">Corporate Relocation</h3>
                     <p class="text-slate-500 font-light text-sm">
                         Relocation support for executives and international teams, aligned with Argentine requirements.
@@ -193,7 +230,7 @@
                 </div>
 
                 <div>
-                    <i data-lucide="user-check" class="w-7 h-7 text-[#002B49] mb-8"></i>
+                    <i data-lucide="user-check" class="w-7 h-7 text-[#0a1428] mb-8"></i>
                     <h3 class="text-sm font-semibold uppercase mb-4">Cultural Integration</h3>
                     <p class="text-slate-500 font-light text-sm">
                         Assistance with language, schools, healthcare access, and everyday logistics.
@@ -212,7 +249,7 @@
                 <span class="text-[#E31837] text-[10px] uppercase tracking-[0.3em] block mb-6">
                     Insights
                 </span>
-                <h2 class="text-3xl md:text-4xl font-semibold text-[#002B49] mb-6">
+                <h2 class="text-3xl md:text-4xl font-semibold text-[#0a1428] mb-6">
                     Practical guidance for relocating to Argentina
                 </h2>
                 <p class="text-slate-500 font-light text-lg leading-relaxed">
@@ -228,13 +265,13 @@
                 <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400 block mb-4">
                     Immigration
                 </span>
-                <h3 class="text-xl font-semibold text-[#002B49] mb-4 group-hover:text-[#E31837] transition-colors">
+                <h3 class="text-xl font-semibold text-[#0a1428] mb-4 group-hover:text-[#E31837] transition-colors">
                     Residency options in Argentina: what actually works in 2026
                 </h3>
                 <p class="text-slate-500 font-light leading-relaxed mb-6">
                     An overview of the main residency paths available to foreigners, including realistic timelines and common mistakes.
                 </p>
-                <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#002B49] group-hover:text-[#E31837] transition-colors">
+                <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#0a1428] group-hover:text-[#E31837] transition-colors">
                     Read article
                 </span>
             </article>
@@ -244,13 +281,13 @@
                 <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400 block mb-4">
                     Housing
                 </span>
-                <h3 class="text-xl font-semibold text-[#002B49] mb-4 group-hover:text-[#E31837] transition-colors">
+                <h3 class="text-xl font-semibold text-[#0a1428] mb-4 group-hover:text-[#E31837] transition-colors">
                     Renting in Buenos Aires as a foreigner
                 </h3>
                 <p class="text-slate-500 font-light leading-relaxed mb-6">
                     What to expect from the rental market, how contracts work, and what landlords usually ask from non-residents.
                 </p>
-                <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#002B49] group-hover:text-[#E31837] transition-colors">
+                <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#0a1428] group-hover:text-[#E31837] transition-colors">
                     Read article
                 </span>
             </article>
@@ -260,13 +297,13 @@
                 <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400 block mb-4">
                     Relocation
                 </span>
-                <h3 class="text-xl font-semibold text-[#002B49] mb-4 group-hover:text-[#E31837] transition-colors">
+                <h3 class="text-xl font-semibold text-[#0a1428] mb-4 group-hover:text-[#E31837] transition-colors">
                     Moving to Argentina with a family: what to plan in advance
                 </h3>
                 <p class="text-slate-500 font-light leading-relaxed mb-6">
                     Schools, healthcare, paperwork, and timing considerations when relocating with children.
                 </p>
-                <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#002B49] group-hover:text-[#E31837] transition-colors">
+                <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#0a1428] group-hover:text-[#E31837] transition-colors">
                     Read article
                 </span>
             </article>
@@ -284,7 +321,7 @@
                 <span class="text-[#E31837] text-[10px] uppercase tracking-[0.3em] block mb-6">
                     How we work
                 </span>
-                <h2 class="text-3xl md:text-5xl font-light text-[#002B49] mb-10">
+                <h2 class="text-3xl md:text-5xl font-light text-[#0a1428] mb-10">
                     Clear advice, local knowledge,<br />
                     and personal attention.
                 </h2>
@@ -337,10 +374,23 @@
         lucide.createIcons();
 
         document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.getElementById('navbar');
             const menuToggle = document.getElementById('menu-toggle');
             const mobileOverlay = document.getElementById('mobile-overlay');
             const menuIcon = document.getElementById('menu-icon');
             const body = document.body;
+
+            function handleNavScroll() {
+                if (!navbar) return;
+                if (window.scrollY > 30) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    navbar.classList.remove('nav-scrolled');
+                }
+            }
+
+            handleNavScroll();
+            window.addEventListener('scroll', handleNavScroll);
 
             function setMenuIcon(name) {
                 menuIcon.setAttribute('data-lucide', name);
