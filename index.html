@@ -308,16 +308,36 @@
             We are happy to review your situation and explain how the process would work in your case.
         </p>
 
-        <form class="max-w-md mx-auto relative" onsubmit="event.preventDefault();">
-            <input 
-                type="email" 
-                placeholder="Your email address" 
-                class="w-full bg-transparent border-b border-white/20 pb-4 pt-2 text-sm focus:outline-none focus:border-[#E31837]"
-            >
-            <button class="absolute right-0 top-0 text-[10px] font-bold uppercase tracking-[0.2em] text-[#E31837]">
-                Request a call
-            </button>
-        </form>
+       <div class="max-w-md mx-auto relative">
+    <input 
+        type="email"
+        placeholder="Your email address"
+        class="w-full bg-transparent border-b border-white/20 pb-4 pt-2 text-sm text-white placeholder-white/50 focus:outline-none focus:border-[#E31837]"
+        id="user-email"
+    >
+
+    <a
+        href="#"
+        class="absolute right-0 top-0 text-[10px] font-bold uppercase tracking-[0.2em] text-[#E31837]"
+        onclick="
+            const email = document.getElementById('user-email').value;
+            if (!email) {
+                alert('Please enter your email address.');
+                return false;
+            }
+            window.location.href =
+                'mailto:contact@lifeinargentina.com'
+                + '?subject=Request%20a%20call'
+                + '&body=Hello,%0D%0A%0D%0AMy%20email%20address%20is:%20'
+                + encodeURIComponent(email)
+                + '%0D%0A%0D%0AI%20would%20like%20to%20request%20a%20call.%0D%0A';
+            return false;
+        "
+    >
+        Request a call
+    </a>
+</div>
+
     </section>
 
     <script>
