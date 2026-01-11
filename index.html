@@ -29,13 +29,14 @@
         .mobile-menu {
             display: none;
             opacity: 0;
+            pointer-events: none;
             transition: opacity 0.3s ease;
         }
 
-        
         .mobile-menu.active {
             display: flex;
             opacity: 1;
+            pointer-events: auto;
         }
     </style>
 </head>
@@ -72,14 +73,14 @@
                 </a>
             </div>
 
-            <button class="md:hidden" id="menu-toggle">
+            <button class="md:hidden" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
                 <i data-lucide="menu" id="menu-icon" class="text-white"></i>
             </button>
         </div>
     </nav>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-overlay" class="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center text-[#002B49] space-y-8 text-xl font-medium uppercase tracking-widest mobile-menu">
+    <div id="mobile-overlay" class="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center text-[#002B49] space-y-8 text-xl font-medium uppercase tracking-widest mobile-menu" aria-hidden="true">
         <a href="#services" class="menu-link">Services</a>
         <a href="#insights" class="menu-link">Insights</a>
         <a href="#about" class="menu-link">About</a>
@@ -116,10 +117,10 @@
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-6">
-                    <button class="bg-[#E31837] text-white px-10 py-5 text-[11px] font-semibold uppercase tracking-[0.25em] hover:bg-white hover:text-[#002B49] transition-all duration-300 shadow-xl shadow-[#E31837]/10">
+                    <button id="cta-request" class="bg-[#E31837] text-white px-10 py-5 text-[11px] font-semibold uppercase tracking-[0.25em] hover:bg-white hover:text-[#002B49] transition-all duration-300 shadow-xl">
                         Request a consultation
                     </button>
-                    <button class="border border-white/30 text-white px-10 py-5 text-[11px] font-semibold uppercase tracking-[0.25em] hover:bg-white/10 transition-all">
+                    <button id="cta-how" class="border border-white/30 text-white px-10 py-5 text-[11px] font-semibold uppercase tracking-[0.25em] hover:bg-white/10 transition-all">
                         How we work
                     </button>
                 </div>
@@ -223,7 +224,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
 
             <!-- Entry 1 -->
-            <article class="group cursor-pointer">
+            <article class="group cursor-pointer" role="button" aria-pressed="false" tabindex="0">
                 <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400 block mb-4">
                     Immigration
                 </span>
@@ -239,7 +240,7 @@
             </article>
 
             <!-- Entry 2 -->
-            <article class="group cursor-pointer">
+            <article class="group cursor-pointer" role="button" aria-pressed="false" tabindex="0">
                 <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400 block mb-4">
                     Housing
                 </span>
@@ -255,7 +256,7 @@
             </article>
 
             <!-- Entry 3 -->
-            <article class="group cursor-pointer">
+            <article class="group cursor-pointer" role="button" aria-pressed="false" tabindex="0">
                 <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400 block mb-4">
                     Relocation
                 </span>
@@ -306,20 +307,176 @@
             We are happy to review your situation and explain how the process would work in your case.
         </p>
 
-        <form class="max-w-md mx-auto relative" onsubmit="event.preventDefault();">
+        <form id="contact-form" class="max-w-md mx-auto relative">
             <input 
+                id="contact-email"
                 type="email" 
                 placeholder="Your email address" 
                 class="w-full bg-transparent border-b border-white/20 pb-4 pt-2 text-sm focus:outline-none focus:border-[#E31837]"
+                required
             >
-            <button class="absolute right-0 top-0 text-[10px] font-bold uppercase tracking-[0.2em] text-[#E31837]">
+            <button type="submit" class="absolute right-0 top-0 text-[10px] font-bold uppercase tracking-[0.2em] text-[#E31837]">
                 Request a call
             </button>
+            <p id="contact-feedback" class="mt-6 text-sm text-white/80 hidden"></p>
         </form>
     </section>
 
+    <!-- Article modal (hidden by default) -->
+    <div id="article-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-6">
+        <div id="modal-backdrop" class="absolute inset-0 bg-black/60"></div>
+        <div class="relative bg-white max-w-2xl w-full rounded-lg p-6 z-10">
+            <button id="modal-close" class="absolute top-4 right-4 text-slate-500" aria-label="Close">✕</button>
+            <h3 id="modal-title" class="text-2xl font-semibold text-[#002B49] mb-4"></h3>
+            <p id="modal-body" class="text-slate-600"></p>
+        </div>
+    </div>
+
     <script>
+        // Initialize lucide icons
         lucide.createIcons();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileOverlay = document.getElementById('mobile-overlay');
+            const menuIcon = document.getElementById('menu-icon');
+            const body = document.body;
+
+            function setMenuIcon(name) {
+                menuIcon.setAttribute('data-lucide', name);
+                lucide.createIcons();
+            }
+
+            function openMobileMenu() {
+                mobileOverlay.classList.add('active');
+                mobileOverlay.setAttribute('aria-hidden', 'false');
+                menuToggle.setAttribute('aria-expanded', 'true');
+                setMenuIcon('x');
+                // Prevent background scroll while menu open
+                body.classList.add('overflow-hidden');
+            }
+
+            function closeMobileMenu() {
+                mobileOverlay.classList.remove('active');
+                mobileOverlay.setAttribute('aria-hidden', 'true');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                setMenuIcon('menu');
+                body.classList.remove('overflow-hidden');
+            }
+
+            menuToggle.addEventListener('click', function () {
+                if (mobileOverlay.classList.contains('active')) closeMobileMenu();
+                else openMobileMenu();
+            });
+
+            // Close mobile menu when tapping a link
+            document.querySelectorAll('#mobile-overlay a[href^="#"]').forEach(a => {
+                a.addEventListener('click', function () {
+                    closeMobileMenu();
+                });
+            });
+
+            // Smooth scroll for on-page anchors
+            document.querySelectorAll('a[href^="#"]').forEach(a => {
+                a.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (!href || href === '#') return;
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // close mobile after clicking
+                        if (mobileOverlay.classList.contains('active')) closeMobileMenu();
+                    }
+                });
+            });
+
+            // Wire hero CTAs
+            const ctaRequest = document.getElementById('cta-request');
+            const ctaHow = document.getElementById('cta-how');
+            const contactSection = document.getElementById('contact');
+            const aboutSection = document.getElementById('about');
+
+            if (ctaRequest && contactSection) {
+                ctaRequest.addEventListener('click', () => {
+                    contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            }
+            if (ctaHow && aboutSection) {
+                ctaHow.addEventListener('click', () => {
+                    aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            }
+
+            // Articles: make clickable and open a simple modal with title + excerpt
+            const articles = document.querySelectorAll('article.group.cursor-pointer');
+            const modal = document.getElementById('article-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+            const modalClose = document.getElementById('modal-close');
+            const modalBackdrop = document.getElementById('modal-backdrop');
+
+            function openModal(title, bodyText) {
+                modalTitle.textContent = title;
+                modalBody.textContent = bodyText;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                document.body.classList.add('overflow-hidden');
+                modalClose.focus();
+            }
+
+            function closeModal() {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+            }
+
+            articles.forEach(article => {
+                // make sure it's keyboard accessible (tabindex already set in markup)
+                article.addEventListener('click', () => {
+                    const title = article.querySelector('h3') ? article.querySelector('h3').innerText : 'Article';
+                    const excerpt = article.querySelector('p') ? article.querySelector('p').innerText : '';
+                    openModal(title, excerpt + ' — This is a preview. Full article pages will be available soon.');
+                });
+                article.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        article.click();
+                    }
+                });
+            });
+
+            modalClose.addEventListener('click', closeModal);
+            modalBackdrop.addEventListener('click', closeModal);
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    if (!modal.classList.contains('hidden')) closeModal();
+                    if (mobileOverlay.classList.contains('active')) closeMobileMenu();
+                }
+            });
+
+            // Handle contact form submission (client-side)
+            const contactForm = document.getElementById('contact-form');
+            const contactFeedback = document.getElementById('contact-feedback');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const email = document.getElementById('contact-email').value;
+                    if (!email) {
+                        contactFeedback.textContent = 'Please enter an email address.';
+                        contactFeedback.classList.remove('hidden');
+                        contactFeedback.classList.add('text-rose-300');
+                        return;
+                    }
+                    // Placeholder behaviour: show confirmation message
+                    contactFeedback.textContent = 'Thanks — we will contact you soon at ' + email + '.';
+                    contactFeedback.classList.remove('hidden');
+                    contactFeedback.classList.remove('text-rose-300');
+                    contactFeedback.classList.add('text-white/90');
+                    contactForm.reset();
+                });
+            }
+        });
     </script>
 </body>
 </html>
