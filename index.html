@@ -3,351 +3,411 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Immigration & Citizenship Law</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-
+    <title>ArgentinaMove | Boutique Relocation Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        :root {
-            --navy: #002147;
-            --gold: #C5A059;
-            --white: #FFFFFF;
-            --charcoal: #1a1a1a;
-            --soft-gray: #f6f6f6;
-            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        }
-
-        * { box-sizing: border-box; }
-
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+        
         body {
-            margin: 0;
-            font-family: 'Montserrat', sans-serif;
-            background: var(--white);
-            color: var(--charcoal);
-            overflow-x: hidden;
-            line-height: 1.8;
+            font-family: 'Inter', sans-serif;
         }
 
-        /* --- Navigation --- */
-        nav {
+        .selection-red::selection {
+            background-color: #E31837;
+            color: white;
+        }
+
+        .nav-transition {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(to right, #020617 0%, rgba(2, 6, 23, 0.7) 50%, transparent 100%);
+        }
+
+        .mobile-menu {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-menu.active {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 40px 6%;
-            position: absolute;
-            width: 100%;
-            z-index: 1000;
-            transition: var(--transition);
-        }
-
-        nav.scrolled {
-            position: fixed;
-            padding: 20px 6%;
-            background: rgba(0, 33, 71, 0.98);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .logo {
-            font-family: 'Playfair Display', serif;
-            color: var(--white);
-            font-size: 1.2rem;
-            letter-spacing: 0.5px;
-            text-transform: none;
-            font-weight: 700;
-        }
-
-        .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            margin-left: 40px;
-            font-size: 0.7rem;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: opacity 0.3s;
-            opacity: 0.8;
-        }
-
-        .nav-links a:hover { opacity: 1; color: var(--gold); }
-
-        /* --- Hero Section --- */
-        .hero {
-            height: 100vh;
-            background: var(--navy);
-            display: flex;
-            align-items: center;        
-            justify-content: center;   
-            position: relative;
-            color: var(--white);
-            padding: 0 10%;
-            overflow: hidden;
-            text-align: center;        
-        }
-
-        .hero-image {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://images.unsplash.com/photo-1604014238170-4def1e3c3f7c?auto=format&fit=crop&q=80&w=2200') center/cover;
-            filter: grayscale(100%) brightness(25%);
-            transition: transform 10s ease;
-            z-index: 1;
-        }
-
-        .hero:hover .hero-image { transform: scale(1.05); }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 850px; 
-            animation: fadeInUp 1.2s ease-out;
-            margin: 0 auto;   
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .gold-line {
-            width: 50px;
-            height: 2px;
-            background: var(--gold);
-            margin: 0 auto 30px; 
-        }
-
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.8rem, 6vw, 4.2rem);
-            line-height: 1.15;
-            margin-bottom: 30px;
-            letter-spacing: -1px;
-        }
-
-        .hero-content h1 span {
-            font-style: italic;
-            font-weight: 400;
-            color: var(--gold);
-        }
-
-        .hero-content p {
-            font-size: 1.15rem;
-            color: rgba(255,255,255,0.75);
-            font-weight: 300;
-            max-width: 600px; 
-            margin: 0 auto;
-        }
-
-        .hero-cta {
-            display: inline-block;
-            margin-top: 45px;
-            color: var(--gold);
-            text-decoration: none;
-            letter-spacing: 3px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            border-bottom: 1px solid var(--gold);
-            padding-bottom: 8px;
-            transition: var(--transition);
-        }
-
-        .hero-cta:hover { letter-spacing: 4px; border-bottom-width: 2px; }
-
-        /* Scroll Indicator */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            z-index: 10;
-        }
-
-        .scroll-indicator span {
-            font-size: 0.6rem;
-            letter-spacing: 5px;
-            color: var(--gold);
-        }
-
-        .scroll-line {
-            width: 1px;
-            height: 60px;
-            background: rgba(197, 160, 89, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .scroll-line::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--gold);
-            animation: scrollAnim 3s infinite;
-        }
-
-        @keyframes scrollAnim {
-            0% { transform: translateY(-100%); }
-            100% { transform: translateY(100%); }
-        }
-
-        /* --- WhatsApp Button --- */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: var(--gold);
-            color: var(--navy);
-            padding: 15px 25px;
-            border-radius: 2px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            z-index: 9999;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: var(--transition);
-        }
-
-        .whatsapp-float:hover { transform: translateY(-5px); }
-        .whatsapp-float svg { fill: var(--navy); }
-
-        /* --- Sections Style --- */
-        .about, .services, #contact-section { padding: 140px 10%; }
-        
-        .about { background: var(--soft-gray); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
-        .about h2 { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: var(--navy); line-height: 1.2; margin: 0; }
-        .about p { font-size: 1.1rem; font-weight: 300; color: #555; }
-
-        .services { background: var(--white); }
-        .service-label { font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 15px; display: block; font-weight: 600; }
-        .service-item { border-bottom: 1px solid #eee; padding: 40px 0; }
-        .service-header { cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-        .service-header h3 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--navy); font-weight: 400; margin: 0; }
-        
-        .service-body { max-height: 0; overflow: hidden; transition: max-height 0.6s ease; }
-        .service-item.active .service-body { max-height: 500px; padding-top: 30px; }
-        .service-item.active h3 { color: var(--gold); }
-
-        /* --- Form Section --- */
-        #contact-section { background: var(--soft-gray); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
-        .intake-form { display: flex; flex-direction: column; gap: 30px; }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .form-row.single { grid-template-columns: 1fr; }
-        .intake-form input, .intake-form textarea, .intake-form select {
-            background: transparent; border: none; border-bottom: 1px solid #ccc; padding: 12px 0; font-family: inherit; font-size: 0.9rem; color: var(--charcoal); width: 100%; border-radius: 0;
-        }
-        .intake-form input:focus { outline: none; border-bottom-color: var(--gold); }
-        .intake-submit { background: var(--navy); color: white; border: none; padding: 18px 40px; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; align-self: flex-start; transition: var(--transition); }
-        .intake-submit:hover { background: var(--gold); }
-
-        /* --- Footer --- */
-        .site-footer { background: var(--navy); color: rgba(255,255,255,0.6); padding: 80px 10% 40px; display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: end; font-size: 0.8rem; }
-        .footer-logo { font-family: 'Playfair Display', serif; color: white; font-size: 1.5rem; margin-bottom: 10px; }
-
-        @media (max-width: 900px) {
-            .about, #contact-section { grid-template-columns: 1fr; padding: 80px 6%; }
-            .whatsapp-float span { display: none; }
-            .whatsapp-float { padding: 15px; border-radius: 50%; }
-            .site-footer { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+            opacity: 1;
         }
     </style>
 </head>
+<body class="bg-white text-slate-800 selection-red overflow-x-hidden">
 
-<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 nav-transition bg-transparent py-8">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+            <div class="flex items-center gap-3 group cursor-pointer">
+                <div class="w-7 h-7 bg-[#002B49] flex items-center justify-center transition-transform group-hover:rotate-12">
+                    <span class="text-white text-xs font-semibold italic">A</span>
+                </div>
+                <span id="logo-text" class="text-lg font-semibold tracking-[0.2em] uppercase text-white">
+                    ARGENTINA<span class="text-[#E31837] font-light">MOVE</span>
+                </span>
+            </div>
 
-<nav id="main-nav">
-    <div class="logo">Immigration & Citizenship Law</div>
-    <div class="nav-links">
-        <a href="#about">The Firm</a>
-        <a href="#services">Services</a>
-        <a href="#contact-section">Consultation</a>
-    </div>
-</nav>
+            <!-- Desktop Nav -->
+            <div id="nav-links" class="hidden md:flex gap-10 text-[11px] font-medium uppercase tracking-[0.25em] text-white/80">
+                <a href="#services" class="hover:text-[#E31837] transition-colors relative group py-1">
+                    Services
+                    <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#insights" class="hover:text-[#E31837] transition-colors relative group py-1">
+                    Insights
+                    <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#about" class="hover:text-[#E31837] transition-colors relative group py-1">
+                    About
+                    <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
+                </a>
+                <a href="#contact" class="hover:text-[#E31837] transition-colors relative group py-1">
+                    Contact
+                    <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
+                </a>
+            </div>
 
-<div class="hero">
-    <div class="hero-content">
-        <div class="gold-line"></div>
-        <h1>Immigration Law <span>for International Clients</span></h1>
-        <p>Strategic legal counsel for residency, citizenship and professional relocation in the Argentine Republic.</p>
-        <a href="#contact-section" class="hero-cta">REQUEST A CONSULTATION</a>
-    </div>
-    <div class="hero-image"></div>
-    <div class="scroll-indicator">
-        <span>Scroll</span>
-        <div class="scroll-line"></div>
-    </div>
-</div>
-
-<a href="https://wa.me/TUNUMERO" class="whatsapp-float" target="_blank">
-    <svg viewBox="0 0 448 512" width="18" height="18"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.4-8.6-44.6-27.6-16.5-14.7-27.6-32.8-30.8-38.4-3.2-5.6-.3-8.6 2.5-11.4 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.6-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.3 5.7 23.5 9.2 31.5 11.8 13.4 4.3 25.5 3.7 35.1 2.3 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
-    <span>Talk to us</span>
-</a>
-
-<section class="about" id="about">
-    <div><h2>Legal certainty for cross-border lives.</h2></div>
-    <div><p>Life in Argentina is a boutique Argentine law firm dedicated to immigration and nationality matters. We bridge the gap between complex local regulations and the needs of foreign nationals.</p></div>
-</section>
-
-<section class="services" id="services">
-    <span class="service-label">Expertise</span>
-    <div class="service-item">
-        <div class="service-header"><h3>Argentine Residence Permits</h3><span>+</span></div>
-        <div class="service-body"><p>Comprehensive representation for temporary and permanent residency applications, Digital Nomad visas, and Rentista status.</p></div>
-    </div>
-    <div class="service-item">
-        <div class="service-header"><h3>Citizenship Proceedings</h3><span>+</span></div>
-        <div class="service-body"><p>Expert legal litigation for obtaining Argentine citizenship by residence through the federal court system.</p></div>
-    </div>
-</section>
-
-<section id="contact-section">
-    <div><h2>Request a consultation.</h2><p>Please provide your current immigration status and primary objective.</p></div>
-    <form action="https://formsubmit.co/contact@lifeinargentina.com" method="POST" class="intake-form">
-        <div class="form-row"><input type="text" name="name" placeholder="Full name" required><input type="email" name="email" placeholder="Email" required></div>
-        <div class="form-row single">
-            <select name="objective" required>
-                <option value="" disabled selected>Primary objective</option>
-                <option>Immigration</option>
-                <option>Citizenship</option>
-                <option>Business Setup</option>
-            </select>
+            <button class="md:hidden" id="menu-toggle">
+                <i data-lucide="menu" id="menu-icon" class="text-white"></i>
+            </button>
         </div>
-        <textarea name="message" rows="4" placeholder="Additional details"></textarea>
-        <button type="submit" class="intake-submit">Submit Inquiry</button>
-    </form>
-</section>
+    </nav>
 
-<footer class="site-footer">
-    <div><div class="footer-logo">Life in Argentina</div><p>Buenos Aires | Córdoba</p></div>
-    <div><p>Email</p><a href="mailto:contact@lifeinargentina.com" style="color:white;text-decoration:none;">contact@lifeinargentina.com</a></div>
-    <div style="text-align:right;"><p>© 2026 Life in Argentina.</p></div>
-</footer>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center text-[#002B49] space-y-8 text-xl font-medium uppercase tracking-widest mobile-menu">
+        <a href="#services" class="menu-link">Services</a>
+        <a href="#insights" class="menu-link">Insights</a>
+        <a href="#about" class="menu-link">About</a>
+        <a href="#contact" class="menu-link">Contact</a>
+    </div>
 
-<script>
-    window.addEventListener('scroll', function() {
-        const nav = document.getElementById('main-nav');
-        window.scrollY > 50 ? nav.classList.add('scrolled') : nav.classList.remove('scrolled');
-    });
-    document.querySelectorAll('.service-header').forEach(header => {
-        header.addEventListener('click', () => {
-            const item = header.parentElement;
-            item.classList.toggle('active');
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center bg-slate-950 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 hero-gradient z-10"></div>
+            <img 
+                src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?q=80&w=2000&auto=format&fit=crop" 
+                alt="Buenos Aires" 
+                class="w-full h-full object-cover opacity-40 grayscale sepia-[0.2]"
+            >
+        </div>
+        
+        <div class="absolute left-8 h-full w-px bg-white/10 hidden lg:block z-10"></div>
+
+        <div class="relative z-20 max-w-7xl mx-auto px-8 w-full">
+            <div class="max-w-4xl">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-12 h-px bg-[#E31837]"></div>
+                    <h2 class="text-[#E31837] font-semibold tracking-[0.4em] uppercase text-[10px]">
+                        Global Mobility Specialists
+                    </h2>
+                </div>
+                <h1 class="text-white text-5xl md:text-7xl font-light leading-[1.1] mb-10 tracking-tight">
+                    Sophisticated entry into the <br />
+                    <span class="font-semibold text-white/90">Argentine Frontier.</span>
+                </h1>
+                <p class="text-slate-400 text-lg md:text-xl mb-12 font-light max-w-2xl leading-relaxed tracking-wide">
+                    We provide precision-engineered relocation architecture for global executives, digital pioneers, and private families.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <button class="bg-[#E31837] text-white px-10 py-5 text-[11px] font-semibold uppercase tracking-[0.25em] hover:bg-white hover:text-[#002B49] transition-all duration-300 shadow-xl shadow-[#E31837]/10">
+                        Begin Consultation
+                    </button>
+                    <button class="border border-white/30 text-white px-10 py-5 text-[11px] font-semibold uppercase tracking-[0.25em] hover:bg-white/10 transition-all">
+                        The Firm Portfolio
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-16 border-b border-slate-50">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                <div class="flex flex-col gap-2">
+                    <div class="text-3xl font-light text-[#002B49] tracking-tighter italic">15+</div>
+                    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-[0.2em]">Years Experience</div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <div class="text-3xl font-light text-[#002B49] tracking-tighter italic">2.5k</div>
+                    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-[0.2em]">Relocations</div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <div class="text-3xl font-light text-[#002B49] tracking-tighter italic">98%</div>
+                    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-[0.2em]">Satisfaction</div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <div class="text-3xl font-light text-[#002B49] tracking-tighter italic">24/7</div>
+                    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-[0.2em]">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex flex-col md:flex-row md:items-start justify-between mb-24 gap-12">
+                <div class="max-w-xl">
+                    <h2 class="text-3xl md:text-4xl font-semibold text-[#002B49] tracking-tight mb-8">
+                        Strategic Practice Areas
+                    </h2>
+                    <div class="w-20 h-0.5 bg-[#E31837]"></div>
+                </div>
+                <p class="text-slate-500 max-w-md text-base font-light leading-relaxed">
+                    Our multidisciplinary approach combines legal rigor with boots-on-the-ground logistical mastery, ensuring a seamless transition into South America’s cultural capital.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Service 1 -->
+                <div class="group cursor-pointer">
+                    <div class="text-[#002B49] mb-8 group-hover:text-[#E31837] transition-all duration-500 transform group-hover:-translate-y-1">
+                        <i data-lucide="shield-check" class="w-7 h-7 stroke-1"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold mb-5 uppercase tracking-[0.15em] text-[#002B49]">Immigration & Legal</h3>
+                    <p class="text-slate-500 font-light text-[15px] leading-relaxed mb-8 pr-4">
+                        Expert guidance through Argentine residency, citizenship, and DNI applications.
+                    </p>
+                    <div class="flex items-center text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 group-hover:text-[#002B49] transition-colors">
+                        Explore <i data-lucide="chevron-right" class="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="group cursor-pointer">
+                    <div class="text-[#002B49] mb-8 group-hover:text-[#E31837] transition-all duration-500 transform group-hover:-translate-y-1">
+                        <i data-lucide="home" class="w-7 h-7 stroke-1"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold mb-5 uppercase tracking-[0.15em] text-[#002B49]">Housing & Real Estate</h3>
+                    <p class="text-slate-500 font-light text-[15px] leading-relaxed mb-8 pr-4">
+                        Premium property search, lease negotiation, and neighborhood orientation in Buenos Aires.
+                    </p>
+                    <div class="flex items-center text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 group-hover:text-[#002B49] transition-colors">
+                        Explore <i data-lucide="chevron-right" class="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="group cursor-pointer">
+                    <div class="text-[#002B49] mb-8 group-hover:text-[#E31837] transition-all duration-500 transform group-hover:-translate-y-1">
+                        <i data-lucide="building" class="w-7 h-7 stroke-1"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold mb-5 uppercase tracking-[0.15em] text-[#002B49]">Corporate Relocation</h3>
+                    <p class="text-slate-500 font-light text-[15px] leading-relaxed mb-8 pr-4">
+                        Comprehensive mobility solutions for executives and international teams.
+                    </p>
+                    <div class="flex items-center text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 group-hover:text-[#002B49] transition-colors">
+                        Explore <i data-lucide="chevron-right" class="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="group cursor-pointer">
+                    <div class="text-[#002B49] mb-8 group-hover:text-[#E31837] transition-all duration-500 transform group-hover:-translate-y-1">
+                        <i data-lucide="user-check" class="w-7 h-7 stroke-1"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold mb-5 uppercase tracking-[0.15em] text-[#002B49]">Cultural Integration</h3>
+                    <p class="text-slate-500 font-light text-[15px] leading-relaxed mb-8 pr-4">
+                        Language training, school placement, and local concierge services.
+                    </p>
+                    <div class="flex items-center text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 group-hover:text-[#002B49] transition-colors">
+                        Explore <i data-lucide="chevron-right" class="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="about" class="py-32 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-24 items-center">
+            <div class="relative order-2 md:order-1">
+                <div class="aspect-[3/4] overflow-hidden">
+                    <img 
+                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" 
+                        alt="Strategic Meeting" 
+                        class="w-full h-full object-cover grayscale opacity-90 transition-transform duration-700 hover:scale-105"
+                    >
+                </div>
+                <div class="absolute top-12 -left-12 w-full h-full border border-slate-200 -z-10"></div>
+            </div>
+            <div class="order-1 md:order-2">
+                <span class="text-[#E31837] text-[10px] font-bold uppercase tracking-[0.3em] block mb-6">Our Philosophy</span>
+                <h2 class="text-3xl md:text-5xl font-light text-[#002B49] tracking-tight mb-10 leading-[1.2]">
+                    The intersection of <br />
+                    <span class="font-semibold italic">Legal Precision</span> and <br />
+                    <span class="font-semibold italic">Local Wisdom</span>.
+                </h2>
+                <div class="space-y-8 text-slate-500 font-light text-lg leading-relaxed">
+                    <p>
+                        In the complex legal and administrative environment of Argentina, we serve as your institutional anchor. We mitigate risk and eliminate the ambiguity often found in international moves.
+                    </p>
+                    <p>
+                        Every client is managed by a senior advisor, ensuring that your immigration status, real estate holdings, and corporate compliance are handled with unparalleled discretion and detail.
+                    </p>
+                </div>
+                <button class="mt-12 group flex items-center gap-6 text-[11px] font-semibold uppercase tracking-[0.25em] text-[#002B49] hover:text-[#E31837] transition-all">
+                    Meet the Advisory Board <div class="w-12 h-px bg-slate-200 group-hover:bg-[#E31837] group-hover:w-16 transition-all duration-500"></div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-40 bg-[#002B49] text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-white/5 skew-x-12 transform translate-x-20"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-8 text-center">
+            <h2 class="text-4xl md:text-6xl font-light tracking-tight mb-10">
+                Let's discuss your <br />
+                <span class="font-semibold italic">Argentine Strategy</span>.
+            </h2>
+            <p class="text-lg text-slate-400 mb-14 font-light max-w-2xl mx-auto">
+                Schedule a confidential discovery call with our Buenos Aires partners.
+            </p>
+            <form class="max-w-md mx-auto relative" onsubmit="event.preventDefault();">
+                <input 
+                    type="email" 
+                    placeholder="ENTER CORPORATE EMAIL" 
+                    class="w-full bg-transparent border-b border-white/20 pb-4 pt-2 text-sm font-light uppercase tracking-[0.2em] focus:outline-none focus:border-[#E31837] transition-colors placeholder:text-white/20"
+                >
+                <button type="submit" class="absolute right-0 top-0 text-[10px] font-bold uppercase tracking-[0.2em] text-[#E31837] hover:text-white transition-colors">
+                    Request Call
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-slate-500 py-24 px-8 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
+            <div class="col-span-1">
+                <div class="flex items-center gap-3 mb-10">
+                    <div class="w-6 h-6 bg-[#002B49] flex items-center justify-center">
+                        <span class="text-white text-[10px] font-bold italic">A</span>
+                    </div>
+                    <span class="text-slate-800 text-base font-semibold tracking-[0.2em] uppercase">
+                        ARGENTINA<span class="text-[#E31837] font-light">MOVE</span>
+                    </span>
+                </div>
+                <p class="text-[13px] leading-relaxed mb-8 font-light">
+                    Strategic relocation architecture for global leaders and families. Established in Buenos Aires, operating globally.
+                </p>
+                <div class="flex gap-6 items-center">
+                    <i data-lucide="linkedin" class="w-4 h-4 cursor-pointer hover:text-[#E31837] transition-colors"></i>
+                    <i data-lucide="instagram" class="w-4 h-4 cursor-pointer hover:text-[#E31837] transition-colors"></i>
+                    <i data-lucide="mail" class="w-4 h-4 cursor-pointer hover:text-[#E31837] transition-colors"></i>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-slate-900 font-semibold uppercase tracking-[0.2em] text-[10px] mb-10">Services</h4>
+                <ul class="space-y-4 text-[13px] font-light">
+                    <li><a href="#" class="hover:text-[#E31837] transition-colors">Digital Nomad Visas</a></li>
+                    <li><a href="#" class="hover:text-[#E31837] transition-colors">Investment Residency</a></li>
+                    <li><a href="#" class="hover:text-[#E31837] transition-colors">Property Management</a></li>
+                    <li><a href="#" class="hover:text-[#E31837] transition-colors">Tax Advisory</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-slate-900 font-semibold uppercase tracking-[0.2em] text-[10px] mb-10">Insights</h4>
+                <ul class="space-y-4 text-[13px] font-light">
+                    <li><a href="#" class="hover:text-[#E31837] transition-colors">Market Quarterly</a></li>
+                    <li><a href="#" class="hover:text-[#E31837] transition-colors">Education Guide</a></li>
+                    <li><a href="#" class="hover:text-[#E31837] transition-colors">Regulatory News</a></li>
+                    <li><a href="#" class="hover:text-[#E31837] transition-colors">Press Inquiries</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-slate-900 font-semibold uppercase tracking-[0.2em] text-[10px] mb-10">Primary Office</h4>
+                <ul class="space-y-6 text-[13px] font-light">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="w-4 h-4 text-[#E31837] shrink-0 mt-0.5"></i>
+                        <span>Avenida Alvear 1891, C1129 <br />Recoleta, Buenos Aires</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="phone" class="w-4 h-4 text-[#E31837] shrink-0"></i>
+                        <span>+54 11 4811 XXXX</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto mt-24 pt-10 border-t border-slate-100 flex flex-col md:flex-row justify-between text-[10px] uppercase tracking-[0.25em] font-medium text-slate-400">
+            <p>© 2026 ArgentinaMove Relocation Group. All Rights Reserved.</p>
+            <div class="flex gap-8 mt-6 md:mt-0">
+                <a href="#" class="hover:text-[#002B49] transition-colors">Privacy</a>
+                <a href="#" class="hover:text-[#002B49] transition-colors">Legal Notices</a>
+                <a href="#" class="hover:text-[#002B49] transition-colors">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        const navbar = document.getElementById('navbar');
+        const logoText = document.getElementById('logo-text');
+        const navLinks = document.getElementById('nav-links');
+        const menuIcon = document.getElementById('menu-icon');
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileOverlay = document.getElementById('mobile-overlay');
+
+        // Scroll Logic
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-transparent', 'py-8');
+                navbar.classList.add('bg-white/95', 'backdrop-blur-sm', 'border-b', 'border-slate-100', 'py-4', 'shadow-sm');
+                logoText.classList.remove('text-white');
+                logoText.classList.add('text-[#002B49]');
+                navLinks.classList.remove('text-white/80');
+                navLinks.classList.add('text-slate-600');
+                menuIcon.classList.remove('text-white');
+                menuIcon.classList.add('text-slate-900');
+            } else {
+                navbar.classList.add('bg-transparent', 'py-8');
+                navbar.classList.remove('bg-white/95', 'backdrop-blur-sm', 'border-b', 'border-slate-100', 'py-4', 'shadow-sm');
+                logoText.classList.add('text-white');
+                logoText.classList.remove('text-[#002B49]');
+                navLinks.classList.add('text-white/80');
+                navLinks.classList.remove('text-slate-600');
+                menuIcon.classList.add('text-white');
+                menuIcon.classList.remove('text-slate-900');
+            }
         });
-    });
-</script>
 
+        // Mobile Menu Toggle
+        let isMenuOpen = false;
+        menuToggle.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileOverlay.classList.add('active');
+                menuIcon.setAttribute('data-lucide', 'x');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileOverlay.classList.remove('active');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                document.body.style.overflow = 'auto';
+            }
+            lucide.createIcons();
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileOverlay.classList.remove('active');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                document.body.style.overflow = 'auto';
+                lucide.createIcons();
+            });
+        });
+    </script>
 </body>
 </html>
