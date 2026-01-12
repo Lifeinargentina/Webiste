@@ -1,482 +1,509 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LIA | Boutique Relocation Services</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life in Argentina | Relocation & Immigration Services</title>
 
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-        .selection-red::selection {
-            background-color: #E31837;
-            color: white;
-        }
+  <style>
+    body{
+      font-family: "Inter", sans-serif;
+      background:#fff;
+      color:#0b0f17;
+      scroll-behaviour:smooth;
+      font-size:15px;
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
 
-        .nav-transition {
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+    /* Hero background: deeper, more layered, with a left-to-right editorial gradient */
+    .hero-gradient{
+      background: linear-gradient(135deg, #000000 0%, #070A10 70%, #0B1220 100%);
+      position:relative;
+      overflow:hidden;
+    }
 
-        .hero-gradient {
-            background: linear-gradient(to right, #020617 0%, rgba(2, 6, 23, 0.7) 50%, transparent 100%);
-        }
+    .hero-gradient::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(20, 184, 166, 0.10) 0%, transparent 55%),
+        radial-gradient(circle at 75% 35%, rgba(59, 130, 246, 0.10) 0%, transparent 55%),
+        repeating-linear-gradient(90deg, transparent 0, transparent 120px, rgba(20, 184, 166, 0.03) 120px, rgba(20, 184, 166, 0.03) 121px),
+        repeating-linear-gradient(0deg, transparent 0, transparent 120px, rgba(20, 184, 166, 0.03) 120px, rgba(20, 184, 166, 0.03) 121px);
+      pointer-events:none;
+      opacity:.9;
+    }
 
-        .mobile-menu {
-            display: none;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
+    .hero-lines{
+      position:absolute;
+      inset:-25% -10%;
+      opacity:.55;
+      pointer-events:none;
+      transform: rotate(-8deg);
+      background:
+        url("data:image/svg+xml,%3Csvg width='1200' height='700' viewBox='0 0 1200 700' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2314B8A6' stop-opacity='0.55'/%3E%3Cstop offset='0.6' stop-color='%233B82F6' stop-opacity='0.30'/%3E%3Cstop offset='1' stop-color='%2314B8A6' stop-opacity='0.10'/%3E%3C/linearGradient%3E%3Cfilter id='blurGlow' x='-50%25' y='-50%25' width='200%25' height='200%25'%3E%3CfeGaussianBlur stdDeviation='6' result='b'/%3E%3CfeMerge%3E%3CfeMergeNode in='b'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M-40,280 C180,160 260,460 460,330 C660,200 720,460 930,340 C1080,250 1160,260 1260,190' stroke='url(%23g1)' stroke-width='10' fill='none' filter='url(%23blurGlow)' opacity='0.55'/%3E%3Cpath d='M-60,420 C120,300 320,520 520,410 C700,320 760,520 980,420 C1120,360 1180,380 1300,300' stroke='url(%23g1)' stroke-width='8' fill='none' filter='url(%23blurGlow)' opacity='0.45'/%3E%3Cpath d='M-30,170 C210,90 290,260 520,210 C750,160 820,300 1040,220 C1140,185 1200,200 1300,150' stroke='url(%23g1)' stroke-width='6' fill='none' filter='url(%23blurGlow)' opacity='0.35'/%3E%3Cg opacity='0.40'%3E%3Crect x='860' y='160' width='80' height='380' fill='%2314B8A6' opacity='0.18'/%3E%3Crect x='960' y='210' width='60' height='330' fill='%233B82F6' opacity='0.18'/%3E%3Crect x='1040' y='110' width='50' height='430' fill='%2314B8A6' opacity='0.14'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center;
+    }
 
-        .mobile-menu.active {
-            display: flex;
-            opacity: 1;
-            pointer-events: auto;
-        }
-    </style>
+    .hero-overlay{
+      position:absolute;
+      inset:0;
+      background: linear-gradient(to right, rgba(2,6,23,.92) 0%, rgba(2,6,23,.78) 48%, rgba(2,6,23,.18) 78%, rgba(2,6,23,0) 100%);
+      pointer-events:none;
+    }
+
+    .red-logo-block{ background-color:#C8102E; }
+    .red-accent-band{ background-color:#C8102E; }
+
+    .cta-link::after{
+      content:"";
+      display:block;
+      width:0;
+      height:2px;
+      background: currentColor;
+      transition: width .25s ease;
+      opacity:.7;
+    }
+    .cta-link:hover::after{ width:100%; }
+
+    .trending-container::-webkit-scrollbar{ display:none; }
+  </style>
 </head>
-<body class="bg-white text-slate-800 selection-red overflow-x-hidden">
 
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-50 nav-transition bg-transparent py-8">
-        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
-            <div class="flex items-center gap-3 group cursor-pointer">
-                <div class="w-7 h-7 bg-[#002B49] flex items-center justify-center transition-transform group-hover:rotate-12">
-                    <span class="text-white text-xs font-semibold italic">A</span>
-                </div>
-                <span id="logo-text" class="text-lg font-semibold tracking-[0.2em] uppercase text-white">
-                    ARGENTINA<span class="text-[#E31837] font-light">MOVE</span>
-                </span>
-            </div>
+<body class="antialiased">
 
-            <div id="nav-links" class="hidden md:flex gap-10 text-[11px] font-medium uppercase tracking-[0.25em] text-white/80">
-                <a href="#services" class="hover:text-[#E31837] transition-colors relative group py-1">
-                    Services
-                    <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
-                </a>
-                <a href="#insights" class="hover:text-[#E31837] transition-colors relative group py-1">
-                    Insights
-                    <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
-                </a>
-                <a href="#about" class="hover:text-[#E31837] transition-colors relative group py-1">
-                    About
-                    <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
-                </a>
-                <a href="#contact" class="hover:text-[#E31837] transition-colors relative group py-1">
-                    Contact
-                    <span class="absolute bottom-0 left-0 w-0 h-px bg-[#E31837] transition-all group-hover:w-full"></span>
-                </a>
-            </div>
-
-            <button class="md:hidden" id="menu-toggle" aria-label="Open menu" aria-expanded="false">
-                <i data-lucide="menu" id="menu-icon" class="text-white"></i>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-overlay" class="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center text-[#002B49] space-y-8 text-xl font-medium uppercase tracking-widest mobile-menu" aria-hidden="true">
-        <a href="#services" class="menu-link">Services</a>
-        <a href="#insights" class="menu-link">Insights</a>
-        <a href="#about" class="menu-link">About</a>
-        <a href="#contact" class="menu-link">Contact</a>
+  <!-- HEADER -->
+  <header id="siteHeader" class="fixed w-full z-50 bg-black/70 backdrop-blur-md border-b border-white/10">
+    <div class="hidden lg:block border-b border-white/10">
+      <div class="max-w-7xl mx-auto px-6 h-10 flex items-center justify-end gap-8">
+        <a href="#about" class="text-[10px] uppercase tracking-[0.22em] font-medium text-white/60 hover:text-white transition">About</a>
+        <a href="#contact" class="text-[10px] uppercase tracking-[0.22em] font-medium text-white/60 hover:text-white transition">Careers</a>
+        <a href="#contact" class="text-[10px] uppercase tracking-[0.22em] font-medium text-white/60 hover:text-white transition">Locations</a>
+      </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="relative h-screen flex items-center bg-slate-950 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute inset-0 hero-gradient z-10"></div>
-            <img 
-                src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?q=80&w=2000&auto=format&fit=crop" 
-                alt="Buenos Aires" 
-                class="w-full h-full object-cover opacity-40 grayscale sepia-[0.2]"
-            >
-        </div>
+    <div class="max-w-7xl mx-auto px-6 h-[74px] flex items-center justify-between">
+      <div class="flex items-center gap-10">
+        <a href="#home" class="flex items-center gap-3">
+          <div class="red-logo-block w-11 h-11 rounded-xl flex items-center justify-center overflow-hidden shadow-[0_14px_30px_rgba(200,16,46,.25)] ring-1 ring-white/10">
+            <img src="logo.png" alt="ARGENTINAMOVE Logo" class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.parentNode.innerHTML='<svg viewBox=\'0 0 24 24\' fill=\'white\' class=\'w-6 h-6\'><path d=\'M12 2L4 15h3v5h10v-5h3L12 2z\'/></svg>'">
+          </div>
+          <div class="leading-tight">
+            <div class="text-[13px] font-semibold text-white tracking-wide">Life in Argentina</div>
+            <div class="text-[11px] text-white/55 tracking-[0.12em] uppercase">Relocation and Immigration</div>
+          </div>
+        </a>
 
-        <div class="relative z-20 max-w-7xl mx-auto px-8 w-full">
-            <div class="max-w-4xl">
-                <div class="flex items-center gap-4 mb-8">
-                    <div class="w-12 h-px bg-[#E31837]"></div>
-                    <h2 class="text-[#E31837] font-semibold tracking-[0.4em] uppercase text-[10px]">
-                        Relocation & Immigration Services
-                    </h2>
-                </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#services" class="text-[13px] font-semibold text-white/90 hover:text-white transition">Services</a>
+          <a href="#insights" class="text-[13px] font-semibold text-white/90 hover:text-white transition">Insights</a>
+          <a href="#about" class="text-[13px] font-semibold text-white/90 hover:text-white transition">How we work</a>
+          <a href="#contact" class="text-[13px] font-semibold text-white/90 hover:text-white transition">Contact</a>
+        </nav>
+      </div>
 
-                <h1 class="text-white text-5xl md:text-7xl font-light leading-[1.1] mb-10 tracking-tight">
-                    Moving to Argentina, <br />
-                    <span class="font-semibold text-white/90">done properly.</span>
-                </h1>
+      <div class="flex items-center gap-3">
+        <button class="w-10 h-10 rounded-xl grid place-items-center text-white/90 hover:text-white ring-1 ring-white/15 bg-white/5 hover:bg-white/10 transition" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
 
-                <p class="text-slate-400 text-lg md:text-xl mb-12 font-light max-w-2xl leading-relaxed">
-                    Legal and relocation services for individuals, families, and companies planning a move to Argentina, with clear advice and local support throughout the process.
-                </p>
-
-                <div class="flex flex-col sm:flex-row gap-6">
-                    <button id="cta-request" class="bg-[#E31837] text-white px-10 py-5 text-[11px] font-semibold uppercase tracking-[0.25em] hover:bg-white hover:text-[#002B49] transition-all duration-300 shadow-xl">
-                        Request a consultation
-                    </button>
-                    <button id="cta-how" class="border border-white/30 text-white px-10 py-5 text-[11px] font-semibold uppercase tracking-[0.25em] hover:bg-white/10 transition-all">
-                        How we work
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="bg-white py-16 border-b border-slate-50">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
-                <div>
-                    <div class="text-3xl font-light text-[#002B49] italic">15+</div>
-                    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-[0.2em]">Years of experience</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-light text-[#002B49] italic">2,500+</div>
-                    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-[0.2em]">Relocations completed</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-light text-[#002B49] italic">98%</div>
-                    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-[0.2em]">Client satisfaction</div>
-                </div>
-                <div>
-                    <div class="text-3xl font-light text-[#002B49] italic">24/7</div>
-                    <div class="text-[10px] font-semibold text-slate-400 uppercase tracking-[0.2em]">Ongoing support</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Grid -->
-    <section id="services" class="py-28 bg-white">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="flex flex-col md:flex-row justify-between mb-24 gap-12">
-                <div class="max-w-xl">
-                    <h2 class="text-3xl md:text-4xl font-semibold text-[#002B49] mb-8">
-                        What we help with
-                    </h2>
-                    <div class="w-20 h-0.5 bg-[#E31837]"></div>
-                </div>
-                <p class="text-slate-500 max-w-md font-light leading-relaxed">
-                    Relocating to Argentina involves legal, administrative, and practical decisions. We help you understand each step and move forward with confidence.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
-                <div>
-                    <i data-lucide="shield-check" class="w-7 h-7 text-[#002B49] mb-8"></i>
-                    <h3 class="text-sm font-semibold uppercase mb-4">Immigration & Legal</h3>
-                    <p class="text-slate-500 font-light text-sm">
-                        Residency, citizenship, and identity documents handled with clear advice and close follow-up.
-                    </p>
-                </div>
-
-                <div>
-                    <i data-lucide="home" class="w-7 h-7 text-[#002B49] mb-8"></i>
-                    <h3 class="text-sm font-semibold uppercase mb-4">Housing & Real Estate</h3>
-                    <p class="text-slate-500 font-light text-sm">
-                        Help with property searches, leases, and understanding how the local rental market works.
-                    </p>
-                </div>
-
-                <div>
-                    <i data-lucide="building" class="w-7 h-7 text-[#002B49] mb-8"></i>
-                    <h3 class="text-sm font-semibold uppercase mb-4">Corporate Relocation</h3>
-                    <p class="text-slate-500 font-light text-sm">
-                        Relocation support for executives and international teams, aligned with Argentine requirements.
-                    </p>
-                </div>
-
-                <div>
-                    <i data-lucide="user-check" class="w-7 h-7 text-[#002B49] mb-8"></i>
-                    <h3 class="text-sm font-semibold uppercase mb-4">Cultural Integration</h3>
-                    <p class="text-slate-500 font-light text-sm">
-                        Assistance with language, schools, healthcare access, and everyday logistics.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Insights Section -->
-<section id="insights" class="py-32 bg-white border-t border-slate-100">
-    <div class="max-w-7xl mx-auto px-8">
-
-        <div class="flex flex-col md:flex-row justify-between items-start mb-20 gap-12">
-            <div class="max-w-xl">
-                <span class="text-[#E31837] text-[10px] uppercase tracking-[0.3em] block mb-6">
-                    Insights
-                </span>
-                <h2 class="text-3xl md:text-4xl font-semibold text-[#002B49] mb-6">
-                    Practical guidance for relocating to Argentina
-                </h2>
-                <p class="text-slate-500 font-light text-lg leading-relaxed">
-                    Short articles written by our team, focused on real questions clients ask when planning a move to Argentina.
-                </p>
-            </div>
-        </div>
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
-
-            <!-- Entry 1 -->
-            <article class="group cursor-pointer" role="button" aria-pressed="false" tabindex="0">
-                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400 block mb-4">
-                    Immigration
-                </span>
-                <h3 class="text-xl font-semibold text-[#002B49] mb-4 group-hover:text-[#E31837] transition-colors">
-                    Residency options in Argentina: what actually works in 2026
-                </h3>
-                <p class="text-slate-500 font-light leading-relaxed mb-6">
-                    An overview of the main residency paths available to foreigners, including realistic timelines and common mistakes.
-                </p>
-                <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#002B49] group-hover:text-[#E31837] transition-colors">
-                    Read article
-                </span>
-            </article>
-
-            <!-- Entry 2 -->
-            <article class="group cursor-pointer" role="button" aria-pressed="false" tabindex="0">
-                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400 block mb-4">
-                    Housing
-                </span>
-                <h3 class="text-xl font-semibold text-[#002B49] mb-4 group-hover:text-[#E31837] transition-colors">
-                    Renting in Buenos Aires as a foreigner
-                </h3>
-                <p class="text-slate-500 font-light leading-relaxed mb-6">
-                    What to expect from the rental market, how contracts work, and what landlords usually ask from non-residents.
-                </p>
-                <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#002B49] group-hover:text-[#E31837] transition-colors">
-                    Read article
-                </span>
-            </article>
-
-            <!-- Entry 3 -->
-            <article class="group cursor-pointer" role="button" aria-pressed="false" tabindex="0">
-                <span class="text-[10px] uppercase tracking-[0.25em] text-slate-400 block mb-4">
-                    Relocation
-                </span>
-                <h3 class="text-xl font-semibold text-[#002B49] mb-4 group-hover:text-[#E31837] transition-colors">
-                    Moving to Argentina with a family: what to plan in advance
-                </h3>
-                <p class="text-slate-500 font-light leading-relaxed mb-6">
-                    Schools, healthcare, paperwork, and timing considerations when relocating with children.
-                </p>
-                <span class="text-[11px] font-semibold uppercase tracking-[0.25em] text-[#002B49] group-hover:text-[#E31837] transition-colors">
-                    Read article
-                </span>
-            </article>
-
-        </div>
-
+        <button id="menuBtn" class="w-10 h-10 rounded-xl grid place-items-center text-white/90 hover:text-white ring-1 ring-white/15 bg-white/5 hover:bg-white/10 transition md:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+          </svg>
+        </button>
+      </div>
     </div>
-</section>
 
-    
-    <!-- About -->
-    <section id="about" class="py-32 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-24 items-center">
-            <div>
-                <span class="text-[#E31837] text-[10px] uppercase tracking-[0.3em] block mb-6">
-                    How we work
-                </span>
-                <h2 class="text-3xl md:text-5xl font-light text-[#002B49] mb-10">
-                    Clear advice, local knowledge,<br />
-                    and personal attention.
-                </h2>
-                <p class="text-slate-500 font-light text-lg mb-6">
-                    Argentina’s legal and administrative system can be difficult to navigate, particularly for foreigners. We help you understand what is required and what is realistic from the start.
-                </p>
-                <p class="text-slate-500 font-light text-lg">
-                    You will work directly with senior professionals who manage your case personally, ensuring discretion, clarity, and continuity.
-                </p>
-            </div>
-        </div>
-    </section>
+    <div id="mobilePanel" class="hidden md:hidden border-t border-white/10 bg-black/80 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-3">
+        <a href="#services" class="py-2 text-[13px] font-semibold text-white/90">Services</a>
+        <a href="#insights" class="py-2 text-[13px] font-semibold text-white/90">Insights</a>
+        <a href="#about" class="py-2 text-[13px] font-semibold text-white/90">How we work</a>
+        <a href="#contact" class="py-2 text-[13px] font-semibold text-white/90">Contact</a>
+      </div>
+    </div>
+  </header>
 
-    <!-- CTA -->
-    <section id="contact" class="py-40 bg-[#002B49] text-white text-center">
-        <h2 class="text-4xl md:text-6xl font-light mb-10">
-            Let’s talk about your move to Argentina.
-        </h2>
-        <p class="text-slate-400 mb-12 max-w-2xl mx-auto">
-            We are happy to review your situation and explain how the process would work in your case.
+  <!-- HERO -->
+  <section id="home" class="hero-gradient min-h-[88vh] flex flex-col justify-center pt-28 px-6">
+    <div class="hero-lines"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="max-w-7xl mx-auto w-full relative z-10">
+      <div class="max-w-3xl">
+        <p class="text-teal-400 font-semibold tracking-[0.26em] text-[11px] uppercase mb-5">
+          Relocation and Immigration Services
         </p>
 
-        <form id="contact-form" class="max-w-md mx-auto relative">
-            <input 
-                id="contact-email"
-                type="email" 
-                placeholder="Your email address" 
-                class="w-full bg-transparent border-b border-white/20 pb-4 pt-2 text-sm focus:outline-none focus:border-[#E31837]"
-                required
-            >
-            <button type="submit" class="absolute right-0 top-0 text-[10px] font-bold uppercase tracking-[0.2em] text-[#E31837]">
-                Request a call
-            </button>
-            <p id="contact-feedback" class="mt-6 text-sm text-white/80 hidden"></p>
-        </form>
-    </section>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-[1.06] tracking-[-0.02em] mb-7">
+          Moving to Argentina,<br class="hidden sm:block" />
+          done properly.
+        </h1>
 
-    <!-- Article modal (hidden by default) -->
-    <div id="article-modal" class="hidden fixed inset-0 z-50 items-center justify-center p-6">
-        <div id="modal-backdrop" class="absolute inset-0 bg-black/60"></div>
-        <div class="relative bg-white max-w-2xl w-full rounded-lg p-6 z-10">
-            <button id="modal-close" class="absolute top-4 right-4 text-slate-500" aria-label="Close">✕</button>
-            <h3 id="modal-title" class="text-2xl font-semibold text-[#002B49] mb-4"></h3>
-            <p id="modal-body" class="text-slate-600"></p>
+        <p class="text-white/65 text-[15px] md:text-[16px] max-w-2xl mb-10 font-medium leading-relaxed">
+          Legal and relocation support for individuals, families, and companies planning a move to Argentina, with clear advice and local execution from start to finish.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 sm:gap-8">
+          <a href="#contact"
+            class="inline-flex items-center justify-center rounded-xl bg-white text-black px-8 py-4 font-semibold text-[11px] uppercase tracking-[0.22em] hover:bg-gray-100 transition shadow-[0_22px_60px_rgba(0,0,0,.45)]">
+            Request a consultation
+          </a>
+
+          <a href="#about" class="cta-link text-white/90 text-[13px] font-semibold inline-block pb-1">
+            How we work
+          </a>
         </div>
+
+        <div class="mt-10 flex items-center gap-4 text-white/60">
+          <span class="text-[11px] uppercase tracking-[0.20em] font-semibold">Ongoing support</span>
+          <div class="w-40 h-[2px] bg-white/15 relative overflow-hidden rounded-full">
+            <div class="absolute left-0 top-0 h-full bg-teal-400 w-[78%]"></div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <script>
-        // Initialize lucide icons
-        lucide.createIcons();
+  <!-- TRENDING STRIP (optional, but matches the style you referenced) -->
+  <section class="red-accent-band">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row md:items-center gap-4">
+      <div class="text-white font-extrabold text-[16px] md:text-[18px] tracking-[-0.01em] whitespace-nowrap">
+        Trending Analysis
+      </div>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.getElementById('menu-toggle');
-            const mobileOverlay = document.getElementById('mobile-overlay');
-            const menuIcon = document.getElementById('menu-icon');
-            const body = document.body;
+      <div class="trending-container flex items-center gap-3 overflow-x-auto md:overflow-visible md:grid md:grid-cols-4 md:gap-0 w-full border-t md:border-t-0 md:border-l border-white/20 pt-3 md:pt-0">
+        <a href="#insights" class="min-w-[240px] md:min-w-0 px-4 py-2 md:py-0 md:h-10 flex items-center justify-between gap-3 text-white/95 font-semibold text-[13px] border-white/20 md:border-r md:first:border-l-0 hover:bg-white/10 transition">
+          <span>Visa strategy for 2026</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 18 15 12 9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
 
-            function setMenuIcon(name) {
-                menuIcon.setAttribute('data-lucide', name);
-                lucide.createIcons();
-            }
+        <a href="#insights" class="min-w-[240px] md:min-w-0 px-4 py-2 md:py-0 md:h-10 flex items-center justify-between gap-3 text-white/95 font-semibold text-[13px] border-white/20 md:border-r hover:bg-white/10 transition">
+          <span>Renting in Buenos Aires</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 18 15 12 9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
 
-            function openMobileMenu() {
-                mobileOverlay.classList.add('active');
-                mobileOverlay.setAttribute('aria-hidden', 'false');
-                menuToggle.setAttribute('aria-expanded', 'true');
-                setMenuIcon('x');
-                // Prevent background scroll while menu open
-                body.classList.add('overflow-hidden');
-            }
+        <a href="#insights" class="min-w-[240px] md:min-w-0 px-4 py-2 md:py-0 md:h-10 flex items-center justify-between gap-3 text-white/95 font-semibold text-[13px] border-white/20 md:border-r hover:bg-white/10 transition">
+          <span>Apostilles and translations</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 18 15 12 9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
 
-            function closeMobileMenu() {
-                mobileOverlay.classList.remove('active');
-                mobileOverlay.setAttribute('aria-hidden', 'true');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                setMenuIcon('menu');
-                body.classList.remove('overflow-hidden');
-            }
+        <a href="#insights" class="min-w-[240px] md:min-w-0 px-4 py-2 md:py-0 md:h-10 flex items-center justify-between gap-3 text-white/95 font-semibold text-[13px] hover:bg-white/10 transition">
+          <span>Family relocation planning</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 18 15 12 9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
 
-            menuToggle.addEventListener('click', function () {
-                if (mobileOverlay.classList.contains('active')) closeMobileMenu();
-                else openMobileMenu();
-            });
+  <!-- SERVICES -->
+  <section id="services" class="py-20 px-6 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-14">
+        <h2 class="text-[11px] uppercase tracking-[0.28em] font-semibold text-teal-700 mb-4">What we help with</h2>
+        <h3 class="text-2xl md:text-4xl font-extrabold tracking-[-0.02em] max-w-4xl leading-tight text-gray-900">
+          Relocating to Argentina involves legal, administrative, and practical decisions. We help you understand each step and move forward with clarity.
+        </h3>
+      </div>
 
-            // Close mobile menu when tapping a link
-            document.querySelectorAll('#mobile-overlay a[href^="#"]').forEach(a => {
-                a.addEventListener('click', function () {
-                    closeMobileMenu();
-                });
-            });
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div class="group">
+          <div class="w-10 h-[2px] bg-teal-500 mb-6 group-hover:w-20 transition-all duration-300"></div>
+          <h4 class="text-[16px] font-extrabold mb-3">Immigration and legal</h4>
+          <p class="text-gray-600 text-[13px] leading-relaxed">
+            Residency, citizenship, and identity documents handled with structured advice and close follow-up.
+          </p>
+        </div>
 
-            // Smooth scroll for on-page anchors
-            document.querySelectorAll('a[href^="#"]').forEach(a => {
-                a.addEventListener('click', function (e) {
-                    const href = this.getAttribute('href');
-                    if (!href || href === '#') return;
-                    const target = document.querySelector(href);
-                    if (target) {
-                        e.preventDefault();
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        // close mobile after clicking
-                        if (mobileOverlay.classList.contains('active')) closeMobileMenu();
-                    }
-                });
-            });
+        <div class="group">
+          <div class="w-10 h-[2px] bg-teal-500 mb-6 group-hover:w-20 transition-all duration-300"></div>
+          <h4 class="text-[16px] font-extrabold mb-3">Housing and real estate</h4>
+          <p class="text-gray-600 text-[13px] leading-relaxed">
+            Support with property searches, leases, and a practical read of the local rental market.
+          </p>
+        </div>
 
-            // Wire hero CTAs
-            const ctaRequest = document.getElementById('cta-request');
-            const ctaHow = document.getElementById('cta-how');
-            const contactSection = document.getElementById('contact');
-            const aboutSection = document.getElementById('about');
+        <div class="group">
+          <div class="w-10 h-[2px] bg-teal-500 mb-6 group-hover:w-20 transition-all duration-300"></div>
+          <h4 class="text-[16px] font-extrabold mb-3">Corporate relocation</h4>
+          <p class="text-gray-600 text-[13px] leading-relaxed">
+            Relocation support for executives and international teams, aligned with Argentine requirements.
+          </p>
+        </div>
 
-            if (ctaRequest && contactSection) {
-                ctaRequest.addEventListener('click', () => {
-                    contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                });
-            }
-            if (ctaHow && aboutSection) {
-                ctaHow.addEventListener('click', () => {
-                    aboutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                });
-            }
+        <div class="group">
+          <div class="w-10 h-[2px] bg-teal-500 mb-6 group-hover:w-20 transition-all duration-300"></div>
+          <h4 class="text-[16px] font-extrabold mb-3">Integration support</h4>
+          <p class="text-gray-600 text-[13px] leading-relaxed">
+            Guidance on healthcare access, schools, banking, and day-to-day logistics once you arrive.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            // Articles: make clickable and open a simple modal with title + excerpt
-            const articles = document.querySelectorAll('article.group.cursor-pointer');
-            const modal = document.getElementById('article-modal');
-            const modalTitle = document.getElementById('modal-title');
-            const modalBody = document.getElementById('modal-body');
-            const modalClose = document.getElementById('modal-close');
-            const modalBackdrop = document.getElementById('modal-backdrop');
+  <!-- INSIGHTS -->
+  <section id="insights" class="py-20 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col lg:flex-row justify-between items-end gap-8 mb-12">
+        <div class="max-w-2xl">
+          <h2 class="text-[11px] uppercase tracking-[0.28em] font-semibold text-gray-500 mb-4">Insights</h2>
+          <h3 class="text-3xl md:text-4xl font-extrabold tracking-[-0.02em] mb-4 text-gray-900">
+            Practical guidance for relocating to Argentina
+          </h3>
+          <p class="text-gray-600 font-medium text-[14px] leading-relaxed">
+            Short articles written by our team, built around real questions clients ask while planning a move.
+          </p>
+        </div>
 
-            function openModal(title, bodyText) {
-                modalTitle.textContent = title;
-                modalBody.textContent = bodyText;
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                document.body.classList.add('overflow-hidden');
-                modalClose.focus();
-            }
+        <div>
+          <a href="#insights"
+            class="inline-flex items-center justify-center rounded-xl bg-black text-white text-[11px] uppercase tracking-[0.22em] px-6 py-3 hover:bg-gray-900 transition ring-1 ring-black/10">
+            View all articles
+          </a>
+        </div>
+      </div>
 
-            function closeModal() {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                document.body.classList.remove('overflow-hidden');
-            }
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="#"
+          class="bg-white p-8 border border-gray-200 rounded-2xl hover:shadow-[0_26px_70px_rgba(16,24,40,.12)] transition">
+          <span class="text-[10px] uppercase font-semibold tracking-[0.22em] text-teal-700">Immigration</span>
+          <h4 class="text-[16px] font-extrabold mt-4 mb-3 leading-snug text-gray-900 hover:text-teal-700 transition">
+            Residency options in Argentina: what actually works in 2026
+          </h4>
+          <p class="text-gray-600 text-[13px] mb-6 leading-relaxed">
+            Main residency paths, realistic timelines, and common mistakes that delay filings.
+          </p>
+          <span class="text-[12px] font-extrabold border-b-2 border-gray-900 pb-1">Read article</span>
+        </a>
 
-            articles.forEach(article => {
-                // make sure it's keyboard accessible (tabindex already set in markup)
-                article.addEventListener('click', () => {
-                    const title = article.querySelector('h3') ? article.querySelector('h3').innerText : 'Article';
-                    const excerpt = article.querySelector('p') ? article.querySelector('p').innerText : '';
-                    openModal(title, excerpt + ' — This is a preview. Full article pages will be available soon.');
-                });
-                article.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        article.click();
-                    }
-                });
-            });
+        <a href="#"
+          class="bg-white p-8 border border-gray-200 rounded-2xl hover:shadow-[0_26px_70px_rgba(16,24,40,.12)] transition">
+          <span class="text-[10px] uppercase font-semibold tracking-[0.22em] text-teal-700">Housing</span>
+          <h4 class="text-[16px] font-extrabold mt-4 mb-3 leading-snug text-gray-900 hover:text-teal-700 transition">
+            Renting in Buenos Aires as a foreigner
+          </h4>
+          <p class="text-gray-600 text-[13px] mb-6 leading-relaxed">
+            What to expect from the rental market, contracts, and typical documentation requests.
+          </p>
+          <span class="text-[12px] font-extrabold border-b-2 border-gray-900 pb-1">Read article</span>
+        </a>
 
-            modalClose.addEventListener('click', closeModal);
-            modalBackdrop.addEventListener('click', closeModal);
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape') {
-                    if (!modal.classList.contains('hidden')) closeModal();
-                    if (mobileOverlay.classList.contains('active')) closeMobileMenu();
-                }
-            });
+        <a href="#"
+          class="bg-white p-8 border border-gray-200 rounded-2xl hover:shadow-[0_26px_70px_rgba(16,24,40,.12)] transition">
+          <span class="text-[10px] uppercase font-semibold tracking-[0.22em] text-teal-700">Relocation</span>
+          <h4 class="text-[16px] font-extrabold mt-4 mb-3 leading-snug text-gray-900 hover:text-teal-700 transition">
+            Moving to Argentina with a family: what to plan in advance
+          </h4>
+          <p class="text-gray-600 text-[13px] mb-6 leading-relaxed">
+            Schools, healthcare, paperwork, and timing considerations when relocating with children.
+          </p>
+          <span class="text-[12px] font-extrabold border-b-2 border-gray-900 pb-1">Read article</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-            // Handle contact form submission (client-side)
-            const contactForm = document.getElementById('contact-form');
-            const contactFeedback = document.getElementById('contact-feedback');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function (e) {
-                    e.preventDefault();
-                    const email = document.getElementById('contact-email').value;
-                    if (!email) {
-                        contactFeedback.textContent = 'Please enter an email address.';
-                        contactFeedback.classList.remove('hidden');
-                        contactFeedback.classList.add('text-rose-300');
-                        return;
-                    }
-                    // Placeholder behaviour: show confirmation message
-                    contactFeedback.textContent = 'Thanks — we will contact you soon at ' + email + '.';
-                    contactFeedback.classList.remove('hidden');
-                    contactFeedback.classList.remove('text-rose-300');
-                    contactFeedback.classList.add('text-white/90');
-                    contactForm.reset();
-                });
-            }
+  <!-- ABOUT -->
+  <section id="about" class="py-20 px-6 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-[11px] uppercase tracking-[0.28em] font-semibold text-teal-700 mb-5">How we work</h2>
+          <h3 class="text-3xl md:text-5xl font-extrabold tracking-[-0.02em] mb-8 leading-[1.08] text-gray-900">
+            Clear advice, local knowledge, and personal attention.
+          </h3>
+
+          <div class="space-y-8">
+            <div class="flex gap-5">
+              <div class="shrink-0 w-11 h-11 rounded-full border border-teal-500/70 flex items-center justify-center text-teal-700 font-extrabold text-[14px]">
+                1
+              </div>
+              <p class="text-gray-700 text-[14px] leading-relaxed">
+                Argentina’s administrative system can feel opaque when you are new to it. We map requirements early and align expectations with real processing constraints.
+              </p>
+            </div>
+
+            <div class="flex gap-5">
+              <div class="shrink-0 w-11 h-11 rounded-full border border-teal-500/70 flex items-center justify-center text-teal-700 font-extrabold text-[14px]">
+                2
+              </div>
+              <p class="text-gray-700 text-[14px] leading-relaxed">
+                You work directly with senior professionals who manage your matter end-to-end, ensuring continuity, discretion, and clear communication.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="bg-gray-50 border border-gray-200 rounded-3xl relative z-10 p-12 md:p-14 flex flex-col justify-end shadow-[0_26px_70px_rgba(16,24,40,.10)]">
+            <div class="red-logo-block w-16 h-16 rounded-2xl flex items-center justify-center mb-10 overflow-hidden ring-1 ring-black/10">
+              <img src="logo.png" alt="ARGENTINAMOVE Brand" class="w-full h-full object-cover"
+                onerror="this.style.display='none'; this.parentNode.innerHTML='<svg viewBox=\'0 0 24 24\' fill=\'white\' class=\'w-8 h-8\'><path d=\'M12 2L4 15h3v5h10v-5h3L12 2z\'/></svg>'">
+            </div>
+
+            <blockquote class="text-2xl md:text-3xl font-extrabold text-gray-900 leading-snug tracking-[-0.02em]">
+              "We bridge the gap between global plans and local execution."
+            </blockquote>
+          </div>
+
+          <div class="absolute -top-10 -right-10 w-64 h-64 border border-teal-500/15 rounded-3xl z-0"></div>
+          <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-teal-500/10 rounded-3xl z-0"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="px-6 mb-20">
+    <div class="max-w-7xl mx-auto red-accent-band rounded-3xl p-10 md:p-16 relative overflow-hidden shadow-[0_26px_70px_rgba(16,24,40,.22)]">
+      <div class="relative z-10 flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 text-left">
+        <div class="max-w-2xl text-white">
+          <h2 class="text-3xl md:text-4xl font-extrabold mb-4 leading-tight">
+            Let’s talk about your move to Argentina.
+          </h2>
+          <p class="text-white/80 text-[14px] md:text-[15px] font-medium leading-relaxed">
+            We review your situation and outline next steps, timelines, and documentation requirements for your case.
+          </p>
+        </div>
+
+        <a href="mailto:contact@lifeinargentina.com"
+          class="inline-flex items-center justify-center rounded-xl bg-white text-black px-8 py-4 font-semibold text-[11px] uppercase tracking-[0.22em] hover:bg-black hover:text-white transition ring-1 ring-white/20">
+          Request a call
+        </a>
+      </div>
+
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-black/10 skew-x-12 translate-x-24"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-950 text-white pt-16 pb-10 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+        <div class="col-span-1">
+          <a href="#home" class="red-logo-block w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden mb-6 ring-1 ring-white/10">
+            <img src="logo.png" alt="ARGENTINAMOVE Logo" class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.parentNode.innerHTML='<svg viewBox=\'0 0 24 24\' fill=\'white\' class=\'w-6 h-6\'><path d=\'M12 2L4 15h3v5h10v-5h3L12 2z\'/></svg>'">
+          </a>
+          <p class="text-white/55 text-[13px] leading-relaxed max-w-xs">
+            Relocation and immigration services in Argentina with legal execution and local support.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-[11px] uppercase tracking-[0.22em] font-extrabold mb-5">Navigation</h4>
+          <ul class="space-y-3 text-[13px] text-white/60">
+            <li><a href="#services" class="hover:text-white transition">Services</a></li>
+            <li><a href="#insights" class="hover:text-white transition">Insights</a></li>
+            <li><a href="#about" class="hover:text-white transition">How we work</a></li>
+            <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-[11px] uppercase tracking-[0.22em] font-extrabold mb-5">Connect</h4>
+          <ul class="space-y-3 text-[13px] text-white/60">
+            <li><a href="#" class="hover:text-white transition">LinkedIn</a></li>
+            <li><a href="#" class="hover:text-white transition">X</a></li>
+            <li><a href="#" class="hover:text-white transition">Instagram</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-[11px] uppercase tracking-[0.22em] font-extrabold mb-5">Newsletter</h4>
+          <p class="text-white/55 text-[13px] mb-4">Updates on immigration policy and practical steps.</p>
+          <form class="flex gap-2">
+            <input type="email" required placeholder="Email address"
+              class="bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-[13px] w-full focus:outline-none focus:border-teal-400 transition placeholder:text-white/35">
+            <button type="submit"
+              class="rounded-xl bg-white text-black px-5 py-3 font-semibold text-[11px] uppercase tracking-[0.20em] hover:bg-gray-200 transition">
+              Join
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] uppercase tracking-[0.22em] text-white/45">
+        <p>© <span id="year"></span> ARGENTINAMOVE. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white/70 transition">Privacy policy</a>
+          <a href="#" class="hover:text-white/70 transition">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var yearEl = document.getElementById("year");
+      yearEl.textContent = String(new Date().getFullYear());
+
+      var menuBtn = document.getElementById("menuBtn");
+      var mobilePanel = document.getElementById("mobilePanel");
+
+      if (menuBtn && mobilePanel) {
+        menuBtn.addEventListener("click", function () {
+          var expanded = menuBtn.getAttribute("aria-expanded") === "true";
+          menuBtn.setAttribute("aria-expanded", expanded ? "false" : "true");
+          mobilePanel.classList.toggle("hidden");
         });
-    </script>
+      }
+
+      var anchors = document.querySelectorAll('a[href^="#"]');
+      anchors.forEach(function (anchor) {
+        anchor.addEventListener("click", function (e) {
+          var href = anchor.getAttribute("href");
+          if (!href || href === "#") return;
+
+          var target = document.querySelector(href);
+          if (!target) return;
+
+          e.preventDefault();
+          target.scrollIntoView({ behaviour: "smooth" });
+
+          if (menuBtn && mobilePanel && !mobilePanel.classList.contains("hidden")) {
+            mobilePanel.classList.add("hidden");
+            menuBtn.setAttribute("aria-expanded", "false");
+          }
+        });
+      });
+
+      window.addEventListener("scroll", function () {
+        var header = document.getElementById("siteHeader");
+        if (!header) return;
+
+        if (window.scrollY > 40) {
+          header.classList.add("bg-black/85");
+          header.classList.remove("bg-black/70");
+        } else {
+          header.classList.remove("bg-black/85");
+          header.classList.add("bg-black/70");
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
