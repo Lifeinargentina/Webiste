@@ -7,31 +7,33 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    body { font-family: "Inter", sans-serif; background: #fff; color: #0b0f17; }
-    .article-content h2 { font-weight: 800; font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1rem; color: #0b0f17; }
-    .article-content p { margin-bottom: 1.5rem; line-height: 1.8; color: #374151; }
-    .article-content ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; }
-    .article-content li { margin-bottom: 0.5rem; color: #374151; }
+    body { font-family: "Inter", sans-serif; background: #fff; color: #0b0f17; scroll-behavior: smooth; }
+    .prose h2 { font-weight: 800; font-size: 1.8rem; margin-top: 3rem; margin-bottom: 1.5rem; color: #0b0f17; line-height: 1.2; }
+    .prose h3 { font-weight: 700; font-size: 1.3rem; margin-top: 2rem; margin-bottom: 1rem; color: #C8102E; }
+    .prose p { margin-bottom: 1.5rem; line-height: 1.8; color: #374151; }
+    .prose ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 2rem; }
+    .prose li { margin-bottom: 0.5rem; color: #374151; }
+    .step-card { background: #f9fafb; border-left: 4px solid #14B8A6; padding: 1.5rem; margin: 2rem 0; border-radius: 0 1.5rem 1.5rem 0; }
   </style>
 </head>
-<body class="antialiased text-[15px]">
+<body class="antialiased">
 
   <nav class="fixed top-0 w-full z-50 bg-black/95 border-b border-white/10 px-6 h-[70px] flex items-center justify-between">
     <a href="../index.html" class="flex items-center gap-3">
       <div class="bg-[#C8102E] w-8 h-8 rounded-lg flex items-center justify-center">
         <svg class="w-5 h-5 fill-white" viewBox="0 0 100 100"><path d="M22,70 C35,85 65,85 78,65 C85,55 82,40 75,35 C68,30 55,28 45,35 C35,42 20,55 22,70 Z"/><path d="M68,36 C75,36 82,30 82,22 C82,15 76,10 68,10 C60,10 52,15 52,25 C52,30 58,36 68,36 Z"/><path d="M81,20 L95,22 C95,22 85,26 81,26 Z"/></svg>
       </div>
-      <span class="text-white font-bold text-sm uppercase tracking-widest">Life in Argentina</span>
+      <span class="text-white font-bold text-xs uppercase tracking-widest hidden sm:block">Life in Argentina</span>
     </a>
-    <a href="../insights.html" class="text-white/70 hover:text-white text-[11px] font-bold uppercase tracking-widest">← Back to Insights</a>
+    <a href="../insights.html" class="text-white/70 hover:text-white text-[11px] font-bold uppercase tracking-widest transition">← Back to Insights</a>
   </nav>
 
-  <header class="pt-32 pb-16 px-6 bg-gray-50">
+  <header class="pt-32 pb-16 px-6 bg-gray-50 border-b border-gray-100">
     <div class="max-w-3xl mx-auto">
-      <span class="text-teal-600 font-black text-[11px] uppercase tracking-[0.3em] mb-4 block">Visa & Immigration</span>
+      <span class="text-teal-600 font-black text-[11px] uppercase tracking-[0.3em] mb-4 block underline decoration-2 underline-offset-4">Legal & Immigration</span>
       <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-8">The rentista paperwork mistake that derails more moves than any other</h1>
       <div class="flex items-center gap-4 text-gray-400 text-xs font-bold uppercase tracking-widest">
-        <span class="text-gray-900">By Relocation Team</span>
+        <span class="text-gray-900">Relocation Strategy Team</span>
         <span>•</span>
         <span>Jan 12, 2026</span>
       </div>
@@ -39,35 +41,95 @@
   </header>
 
   <main class="py-16 px-6">
-    <div class="max-w-3xl mx-auto article-content text-lg">
-      <p class="italic text-gray-500 text-xl border-l-4 border-teal-500 pl-6 mb-12">I can almost predict the moment it happens. An expat lands in Argentina, signs a short-term rental, opens a spreadsheet for the visa, and then realises their key documents still sit back home without apostilles.</p>
+    <div class="max-w-3xl mx-auto prose text-lg">
       
-      <p>Delaying legal paperwork is one of the most common and most expensive mistakes I see clients make when relocating, especially with rentista applications. You pay for couriers, you lose weeks waiting on authorities, and you end up making housing and banking decisions under pressure.</p>
+      <p class="text-xl text-gray-600 leading-relaxed font-medium mb-10">
+        I can almost predict the moment it happens. An expat lands in Argentina, signs a short-term rental, opens a spreadsheet for the visa, and then realises their key documents still sit back home without apostilles. At that point, every “simple” step starts to stretch.
+      </p>
 
-      <h2>What is an apostille?</h2>
-      <p>An apostille is an official certificate that confirms a public document is authentic for use in another country. It confirms the signature, seal, or issuing authority on the document.</p>
+      <p>Delaying legal paperwork is one of the most common and most expensive mistakes I see clients make when relocating, especially with rentista applications. You pay for couriers, you lose weeks waiting on authorities, and you end up making housing and banking decisions under pressure. You can avoid most of that stress by treating your documents like a pre-departure deliverable, not an after-arrival chore.</p>
 
-      <h2>Common documents you will need</h2>
+      <h2>What is an apostille (and why Argentina asks for it)</h2>
+      <p>An apostille is an official certificate that confirms a public document is authentic for use in another country. It does not “approve” the content. It confirms the signature, seal, or issuing authority on the document.</p>
+      <p>Argentina uses apostilles because both Argentina and your home country (the U.S. and Canada) participate in the Hague Apostille Convention, which standardises how countries recognise each other’s public documents.</p>
+
+      <h2>Common documents expats apostille for Argentina</h2>
+      <p>For most relocation files, clients most often need apostilles for items like:</p>
       <ul>
         <li>Birth certificates (often long-form)</li>
-        <li>Marriage certificates</li>
-        <li>Name change documents</li>
-        <li>Proof-of-income letters (CPA or Employer letters)</li>
-        <li>Background checks</li>
+        <li>Marriage certificates (when you file as a couple, or for family-based processes)</li>
+        <li>Name change documents (if your documents show different names over time)</li>
+        <li>Notarised letters and sworn statements (financial letters, declarations, authorisations)</li>
+        <li>Proof-of-income letters (CPA letters, employer letters, pension statements)</li>
+        <li>Certain background checks (case-dependent)</li>
       </ul>
 
-      <div class="bg-gray-900 rounded-[40px] p-10 mt-16 text-white relative overflow-hidden">
-        <div class="relative z-10">
-          <h3 class="text-2xl font-bold mb-4 text-teal-400">Need help with these documents?</h3>
-          <p class="text-white/70 mb-8 text-base">We work with a trusted network of vendors in the US and Canada who specialize in obtaining apostilles and notarizations remotely.</p>
-          <a href="mailto:contact@lifeinargentina.com" class="inline-block bg-white text-black px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-teal-50 transition">Get Assistance</a>
-        </div>
+      <div class="step-card">
+        <p class="font-bold text-gray-900 mb-0">Mental Shortcut:</p>
+        <p class="mb-0 italic text-sm">If a document originates in the U.S. or Canada and you plan to present it to an Argentinian authority, plan for the apostille early.</p>
       </div>
+
+      <h2>A quick decision map: who issues your apostille?</h2>
+      <p>You must apostille a document through the authority that controls the jurisdiction where the document was issued. This usually means a state or province for vital records, and a federal channel for certain federal documents.</p>
+
+      <h2>United States: Practical Examples</h2>
+      <h3>1. Texas</h3>
+      <p>The Texas Secretary of State issues apostilles for Texas public records. Texas also supports online notarisation, which helps when your document needs notarisation before apostille.</p>
+      <h3>2. California</h3>
+      <p>The California Secretary of State publishes clear instructions and fees for apostille requests, including mail requests.</p>
+      <h3>3. New York</h3>
+      <p>New York’s Department of State authenticates public documents but often requires a county clerk step first.</p>
+      <h3>4. Florida</h3>
+      <p>Florida’s Secretary of State (Division of Corporations) provides a dedicated page for requests and FAQs.</p>
+      <h3>5. Federal U.S. Documents</h3>
+      <p>For federal documents, the U.S. Department of State provides the apostille process.</p>
+
+      <h2>Canada: The post-2024 reality</h2>
+      <p>Canada joined the Apostille Convention in 2024. The process now routes through Global Affairs Canada or specific provincial authorities like Ontario's ODS, British Columbia's authentication framework, or Alberta's vital statistics certificates.</p>
+
+      <div class="bg-gray-900 text-white rounded-3xl p-8 my-12 shadow-2xl">
+        <h2 class="text-teal-400 !mt-0 !mb-4">Remote Logistics Playbook</h2>
+        <p class="text-white/80 text-sm mb-6 uppercase tracking-widest font-bold">When you cannot do this in person:</p>
+        <ul class="space-y-4 !ml-0 list-none">
+          <li class="flex gap-4 text-white/90">
+            <span class="text-teal-400 font-bold">01.</span>
+            <span>Send documents to a reliable relative or trusted friend in your home jurisdiction.</span>
+          </li>
+          <li class="flex gap-4 text-white/90">
+            <span class="text-teal-400 font-bold">02.</span>
+            <span>Have that person forward originals to the relevant authority or a courier provider.</span>
+          </li>
+          <li class="flex gap-4 text-white/90">
+            <span class="text-teal-400 font-bold">03.</span>
+            <span>Use trackable shipping with a signature requirement (FedEx/UPS).</span>
+          </li>
+          <li class="flex gap-4 text-white/90">
+            <span class="text-teal-400 font-bold">04.</span>
+            <span>Include a prepaid return label so the document comes back to your relative, then onward to Argentina.</span>
+          </li>
+        </ul>
+      </div>
+
+      <h2>Why handle this before you arrive?</h2>
+      <p class="font-bold text-teal-600">The Golden Rule: Do apostilles at home. Do translations in Argentina.</p>
+      <p>In-country you should focus on certified translations, local notarisation for Argentine documents, and your actual filing appointments.</p>
+
+      <h2>Final thoughts and next steps</h2>
+      <p>Most Argentina relocation headaches come from timing. If you take one action this week: Make a list of every document you need and order fresh originals immediately.</p>
+
+      <section class="mt-20 p-10 bg-teal-50 border border-teal-100 rounded-[40px]">
+        <h3 class="!mt-0">Need Professional Assistance?</h3>
+        <p class="text-gray-600">Managing international paperwork across borders can be overwhelming. We work with a trusted network of specialized vendors in the US and Canada who streamline the process of obtaining apostilles and notarizations at a lower cost.</p>
+        <div class="flex flex-col sm:flex-row gap-4 mt-8">
+          <a href="mailto:contact@lifeinargentina.com" class="bg-[#C8102E] text-white px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-black transition text-center">Contact our team</a>
+          <a href="#" class="bg-white border border-gray-200 text-gray-900 px-8 py-4 rounded-xl font-bold text-xs uppercase tracking-widest hover:bg-gray-50 transition text-center">Book a free call</a>
+        </div>
+      </section>
     </div>
   </main>
 
-  <footer class="py-12 border-t border-gray-100 text-center">
-    <p class="text-[10px] font-black text-gray-300 uppercase tracking-[0.4em]">© 2026 LIFE IN ARGENTINA</p>
+  <footer class="bg-gray-950 text-white/20 py-12 px-6 text-center border-t border-white/5">
+    <p class="text-[10px] font-black uppercase tracking-[0.4em]">© 2026 LIFE IN ARGENTINA. ALL RIGHTS RESERVED.</p>
   </footer>
 
 </body>
