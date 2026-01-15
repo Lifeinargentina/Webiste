@@ -90,6 +90,12 @@
         .modal.open .modal-content {
             transform: translateY(0);
         }
+        
+        /* Custom Scrollbar for Modal if content is long */
+        .modal-scroll {
+            max-height: 90vh;
+            overflow-y: auto;
+        }
     </style>
 </head>
 <body class="bg-white text-firm-black font-sans">
@@ -306,7 +312,7 @@
                 
                 <!-- Branding Column -->
                 <div class="col-span-1 md:col-span-1">
-                    <a href="#" class="font-display text-xl tracking-wide font-bold text-white mb-6 block">
+                    <a href="#" class="font-display text-xl tracking-wide font-bold text-firm-black">
                         LIFE <span class="text-firm-accent">IN</span> ARGENTINA
                     </a>
                     <p class="text-gray-500 text-sm font-medium">
@@ -372,7 +378,7 @@
         <div onclick="closeModal()" class="absolute inset-0 bg-black bg-opacity-80 backdrop-blur-sm cursor-pointer"></div>
         
         <!-- Content -->
-        <div class="modal-content relative bg-white w-full max-w-lg mx-4 p-10 shadow-2xl border-t-4 border-firm-accent">
+        <div class="modal-content relative bg-white w-full max-w-lg mx-4 p-8 shadow-2xl border-t-4 border-firm-accent modal-scroll">
             <!-- Close Button -->
             <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-firm-black">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -382,23 +388,64 @@
 
             <!-- Form State -->
             <div id="modalFormState">
-                <h3 class="font-display text-2xl font-bold text-firm-black mb-2">Priority Legal Assessment</h3>
+                <h3 class="font-display text-2xl font-bold text-firm-black mb-2">Schedule a Consultation</h3>
                 <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-                    Please provide your email address to initiate the process. You will instantly receive a specialized questionnaire to detail your case.
-                    <br><br>
-                    <span class="font-bold text-firm-accent">Our Promise:</span> We review all inquiries and provide a preliminary response within the same business day.
+                    Tell us about your needs. Our team will review your case and contact you shortly.
                 </p>
                 
                 <form onsubmit="handleSubmit(event)" class="space-y-4">
+                    <!-- Name Fields -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="firstName" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">First Name</label>
+                            <input type="text" id="firstName" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Last Name</label>
+                            <input type="text" id="lastName" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors">
+                        </div>
+                    </div>
+
+                    <!-- Nationality -->
+                    <div>
+                        <label for="nationality" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Nationality</label>
+                        <input type="text" id="nationality" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="e.g. United States, Brazil...">
+                    </div>
+
+                    <!-- Email -->
                     <div>
                         <label for="email" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Email Address</label>
                         <input type="email" id="email" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="name@company.com">
                     </div>
+
+                    <!-- Area of Interest -->
+                    <div>
+                        <label for="interest" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">I am interested in</label>
+                        <div class="relative">
+                            <select id="interest" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors appearance-none bg-white">
+                                <option value="residency">Residency & Citizenship</option>
+                                <option value="nomad_visa">Digital Nomad Visa</option>
+                                <option value="corporate">Corporate Formation</option>
+                                <option value="trademark">Trademark / IP</option>
+                                <option value="other">Other (Please describe)</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div>
+                        <label for="description" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Brief Description</label>
+                        <textarea id="description" rows="3" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="Please provide any relevant details..."></textarea>
+                    </div>
+
                     <button type="submit" class="w-full bg-firm-black text-white py-3 text-xs font-bold uppercase tracking-widest hover:bg-firm-accent transition-colors">
-                        Send Questionnaire
+                        Submit Request
                     </button>
                     <p class="text-[10px] text-gray-400 text-center mt-2">
-                        Your information is kept strictly confidential under attorney-client privilege protocols.
+                        Your information is kept strictly confidential.
                     </p>
                 </form>
             </div>
@@ -410,10 +457,10 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                 </div>
-                <h3 class="font-display text-2xl font-bold text-firm-black mb-2">Questionnaire Sent</h3>
+                <h3 class="font-display text-2xl font-bold text-firm-black mb-2">Request Received</h3>
                 <p class="text-gray-600 text-sm mb-6">
-                    Please check your inbox. We have sent you the preliminary assessment form.<br>
-                    Our team will be in touch with you today.
+                    Thank you. We have received your inquiry.<br>
+                    Our team will review your case and respond to <strong>contact@lifeinargentina.com</strong> shortly.
                 </p>
                 <button onclick="closeModal()" class="inline-block border border-gray-300 px-6 py-2 text-xs uppercase tracking-widest hover:bg-gray-50">
                     Close
@@ -432,7 +479,14 @@
             // Reset state
             document.getElementById('modalFormState').classList.remove('hidden');
             document.getElementById('modalSuccessState').classList.add('hidden');
+            
+            // Clear fields (Optional, good for UX if they reopen)
+            document.getElementById('firstName').value = '';
+            document.getElementById('lastName').value = '';
+            document.getElementById('nationality').value = '';
             document.getElementById('email').value = '';
+            document.getElementById('description').value = '';
+            document.getElementById('interest').selectedIndex = 0;
         }
 
         function closeModal() {
@@ -443,16 +497,32 @@
 
         function handleSubmit(event) {
             event.preventDefault();
-            // Simulate API call / Email sending
-            const formState = document.getElementById('modalFormState');
-            const successState = document.getElementById('modalSuccessState');
+            
+            // Capture Data
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const nationality = document.getElementById('nationality').value;
             const email = document.getElementById('email').value;
+            const interest = document.getElementById('interest').value;
+            const description = document.getElementById('description').value;
 
-            // Simple transition
-            formState.classList.add('hidden');
-            successState.classList.remove('hidden');
+            // Construct payload (Simulation)
+            const payload = {
+                firstName,
+                lastName,
+                nationality,
+                email,
+                interest,
+                description,
+                timestamp: new Date().toISOString(),
+                destination: 'contact@lifeinargentina.com'
+            };
 
-            console.log(`Email captured for priority assessment: ${email}`);
+            console.log("Submitting form to backend:", payload);
+
+            // Transition to Success
+            document.getElementById('modalFormState').classList.add('hidden');
+            document.getElementById('modalSuccessState').classList.remove('hidden');
         }
 
         // Close on Escape key
