@@ -72,6 +72,24 @@
         .hero-overlay {
             background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
         }
+
+        /* Modal Animation */
+        .modal {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .modal.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            transform: translateY(20px);
+            transition: all 0.3s ease-in-out;
+        }
+        .modal.open .modal-content {
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="bg-white text-firm-black font-sans">
@@ -95,9 +113,9 @@
                     <a href="#" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Insights</a>
                 </nav>
 
-                <!-- Elemento Destacado -->
+                <!-- Elemento Destacado (Trigger Modal) -->
                 <div class="hidden lg:flex items-center">
-                    <div class="relative group cursor-pointer">
+                    <div onclick="openModal()" class="relative group cursor-pointer">
                         <div class="flex items-center border border-gray-300 px-4 py-2 bg-gray-50 transition-all duration-300 group-hover:border-firm-accent group-hover:bg-white w-64 justify-between">
                             <span class="text-sm text-gray-500 font-serif italic group-hover:text-firm-black">Start your journey</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-firm-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -141,11 +159,11 @@
                     We provide the strategic counsel you need to thrive in Argentina.
                 </p>
 
-                <!-- CTA -->
+                <!-- CTA (Trigger Modal) -->
                 <div class="mt-10">
-                    <a href="#" class="inline-flex items-center px-8 py-3 border border-white text-base font-medium text-white hover:bg-white hover:text-firm-black transition-all duration-300 uppercase tracking-widest text-xs">
+                    <button onclick="openModal()" class="inline-flex items-center px-8 py-3 border border-white text-base font-medium text-white hover:bg-white hover:text-firm-black transition-all duration-300 uppercase tracking-widest text-xs">
                         Schedule a Consultation
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -271,7 +289,7 @@
                     <div class="bg-firm-black p-8 text-white mt-auto">
                         <h5 class="font-serif text-lg mb-2">Argentina Legal Briefing</h5>
                         <p class="text-gray-400 text-xs mb-4">Stay updated on regulatory changes affecting expats and businesses.</p>
-                        <button class="w-full bg-transparent border border-gray-600 text-white py-2 text-xs uppercase tracking-widest hover:bg-white hover:text-firm-black transition-colors">
+                        <button onclick="openModal()" class="w-full bg-transparent border border-gray-600 text-white py-2 text-xs uppercase tracking-widest hover:bg-white hover:text-firm-black transition-colors">
                             Subscribe
                         </button>
                     </div>
@@ -347,6 +365,103 @@
             </div>
         </div>
     </footer>
+
+    <!-- MODAL OVERLAY -->
+    <div id="contactModal" class="modal fixed inset-0 z-[100] flex items-center justify-center">
+        <!-- Backdrop -->
+        <div onclick="closeModal()" class="absolute inset-0 bg-black bg-opacity-80 backdrop-blur-sm cursor-pointer"></div>
+        
+        <!-- Content -->
+        <div class="modal-content relative bg-white w-full max-w-lg mx-4 p-10 shadow-2xl border-t-4 border-firm-accent">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-firm-black">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Form State -->
+            <div id="modalFormState">
+                <h3 class="font-display text-2xl font-bold text-firm-black mb-2">Priority Legal Assessment</h3>
+                <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                    Please provide your email address to initiate the process. You will instantly receive a specialized questionnaire to detail your case.
+                    <br><br>
+                    <span class="font-bold text-firm-accent">Our Promise:</span> We review all inquiries and provide a preliminary response within the same business day.
+                </p>
+                
+                <form onsubmit="handleSubmit(event)" class="space-y-4">
+                    <div>
+                        <label for="email" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Email Address</label>
+                        <input type="email" id="email" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="name@company.com">
+                    </div>
+                    <button type="submit" class="w-full bg-firm-black text-white py-3 text-xs font-bold uppercase tracking-widest hover:bg-firm-accent transition-colors">
+                        Send Questionnaire
+                    </button>
+                    <p class="text-[10px] text-gray-400 text-center mt-2">
+                        Your information is kept strictly confidential under attorney-client privilege protocols.
+                    </p>
+                </form>
+            </div>
+
+            <!-- Success State (Hidden by default) -->
+            <div id="modalSuccessState" class="hidden text-center py-8">
+                <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
+                    <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-firm-black mb-2">Questionnaire Sent</h3>
+                <p class="text-gray-600 text-sm mb-6">
+                    Please check your inbox. We have sent you the preliminary assessment form.<br>
+                    Our team will be in touch with you today.
+                </p>
+                <button onclick="closeModal()" class="inline-block border border-gray-300 px-6 py-2 text-xs uppercase tracking-widest hover:bg-gray-50">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR MODAL -->
+    <script>
+        function openModal() {
+            const modal = document.getElementById('contactModal');
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            
+            // Reset state
+            document.getElementById('modalFormState').classList.remove('hidden');
+            document.getElementById('modalSuccessState').classList.add('hidden');
+            document.getElementById('email').value = '';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('contactModal');
+            modal.classList.remove('open');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            // Simulate API call / Email sending
+            const formState = document.getElementById('modalFormState');
+            const successState = document.getElementById('modalSuccessState');
+            const email = document.getElementById('email').value;
+
+            // Simple transition
+            formState.classList.add('hidden');
+            successState.classList.remove('hidden');
+
+            console.log(`Email captured for priority assessment: ${email}`);
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
 
 </body>
 </html>
