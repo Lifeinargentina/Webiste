@@ -1,958 +1,360 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="es">
 <head>
-
-<meta charset="UTF-8" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>Life in Argentina | Relocation & Immigration Services</title>
-
-
-
-<script src="https://cdn.tailwindcss.com"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-
-
-<style>
-
-:root {
-
---brand-red: #C8102E;
-
---brand-teal: #14B8A6;
-
---hornero-brown: #A36A4F;
-
-}
-
-
-
-body {
-
-font-family: "Inter", sans-serif;
-
-background: #fff;
-
-color: #0b0f17;
-
-scroll-behavior: smooth;
-
--webkit-font-smoothing: antialiased;
-
-}
-
-
-
-.hero-gradient {
-
-background: linear-gradient(135deg, #020617 0%, #070A10 70%, #0B1220 100%);
-
-position: relative;
-
-overflow: hidden;
-
-}
-
-
-
-.hero-gradient::before {
-
-content: "";
-
-position: absolute;
-
-inset: 0;
-
-background-image:
-
-radial-gradient(circle at 20% 30%, rgba(20, 184, 166, 0.08) 0%, transparent 55%),
-
-radial-gradient(circle at 75% 35%, rgba(59, 130, 246, 0.08) 0%, transparent 55%),
-
-repeating-linear-gradient(90deg, transparent 0, transparent 120px, rgba(255, 255, 255, 0.02) 120px, rgba(255, 255, 255, 0.02) 121px),
-
-repeating-linear-gradient(0deg, transparent 0, transparent 120px, rgba(255, 255, 255, 0.02) 120px, rgba(255, 255, 255, 0.02) 121px);
-
-pointer-events: none;
-
-}
-
-
-
-.hero-lines {
-
-position: absolute;
-
-inset: -25% -10%;
-
-opacity: .4;
-
-pointer-events: none;
-
-transform: rotate(-5deg);
-
-background:
-
-url("data:image/svg+xml,%3Csvg width='1200' height='700' viewBox='0 0 1200 700' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-40,280 C180,160 260,460 460,330 C660,200 720,460 930,340 C1080,250 1160,260 1260,190' stroke='%2314B8A6' stroke-width='2' fill='none' opacity='0.3'/%3E%3C/svg%3E");
-
-background-size: cover;
-
-}
-
-
-
-.hero-overlay {
-
-position: absolute;
-
-inset: 0;
-
-background: linear-gradient(to right, rgba(2,6,23,0.95) 0%, rgba(2,6,23,0.8) 40%, rgba(2,6,23,0) 100%);
-
-pointer-events: none;
-
-}
-
-
-
-.nav-scrolled {
-
-background-color: rgba(0, 0, 0, 0.9) !important;
-
-border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
-backdrop-filter: blur(10px);
-
-}
-
-
-
-/* Hornero Animation Styles */
-
-.hornero-icon {
-
-transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
-}
-
-.hornero-container:hover .hornero-icon {
-
-transform: scale(1.1) rotate(-5deg);
-
-}
-
-
-
-.cta-link::after {
-
-content: "";
-
-display: block;
-
-width: 0;
-
-height: 2px;
-
-background: currentColor;
-
-transition: width .25s ease;
-
-opacity: .7;
-
-}
-
-.cta-link:hover::after { width: 100%; }
-
-
-
-.trending-container::-webkit-scrollbar { display: none; }
-
-
-
-/* Custom Illustration Styling */
-
-.bird-hero-art {
-
-position: absolute;
-
-right: 5%;
-
-bottom: 10%;
-
-width: 35%;
-
-opacity: 0.2;
-
-filter: grayscale(1) brightness(2);
-
-pointer-events: none;
-
-transition: all 1s ease;
-
-}
-
-@media (max-width: 1024px) {
-
-.bird-hero-art { display: none; }
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life in Argentina | Global Legal Counsel</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: 
+         Cinzel (Nuevo para Logo - Estilo Romano/Institucional)
+         Playfair Display (Titulares Editoriales) 
+         Inter (UI/Cuerpo) 
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Configuración personalizada de Tailwind para colores de marca -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'firm-black': '#111111',
+                        'firm-gray': '#f4f4f4',
+                        'firm-stone': '#8c8c8c',
+                        'firm-accent': '#800020', // Burgundy / Ladrillo sobrio
+                        'firm-accent-hover': '#5c0017',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        display: ['Cinzel', 'serif'], // Fuente específica para el Logo
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos base para asegurar la sensación "Expensive" */
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* Transiciones suaves para interacciones sutiles */
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+        }
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #800020;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Imágenes con filtro sutil para uniformidad */
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+        }
+    </style>
 </head>
-
-
-
-<body class="antialiased text-[15px] leading-relaxed">
-
-
-
-<!-- HEADER -->
-
-<header id="siteHeader" class="fixed top-0 w-full z-50 transition-all duration-300">
-
-<div class="max-w-7xl mx-auto px-6 h-[80px] flex items-center justify-between">
-
-
-
-<!-- BRAND -->
-
-<a href="#home" class="hornero-container flex items-center gap-3">
-
-<div class="bg-[#C8102E] w-12 h-12 rounded-xl flex items-center justify-center shadow-lg ring-1 ring-white/10 overflow-hidden relative group">
-
-<!-- Realistic Hornero SVG -->
-
-<svg class="hornero-icon w-8 h-8 fill-white" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-
-<!-- Tail -->
-
-<path d="M15,65 L5,78 L12,82 L25,72 Z" opacity="0.8"/>
-
-<!-- Body Main -->
-
-<path d="M22,70 C35,85 65,85 78,65 C85,55 82,40 75,35 C68,30 55,28 45,35 C35,42 20,55 22,70 Z"/>
-
-<!-- Wing -->
-
-<path d="M35,62 C45,75 68,72 75,58 C78,50 75,42 65,42 C55,42 45,50 35,62 Z" fill="#ffffff" opacity="0.3"/>
-
-<!-- Head -->
-
-<path d="M68,36 C75,36 82,30 82,22 C82,15 76,10 68,10 C60,10 52,15 52,25 C52,30 58,36 68,36 Z"/>
-
-<!-- Beak (Characteristic shape) -->
-
-<path d="M81,20 L95,22 C95,22 85,26 81,26 Z"/>
-
-<!-- Eye -->
-
-<circle cx="70" cy="18" r="1.5" fill="#C8102E"/>
-
-<!-- Legs -->
-
-<path d="M45,80 L42,92 M42,92 L38,94 M42,92 L46,94" stroke="white" stroke-width="2" stroke-linecap="round"/>
-
-<path d="M55,80 L52,92 M52,92 L48,94 M52,92 L56,94" stroke="white" stroke-width="2" stroke-linecap="round"/>
-
-</svg>
-
-</div>
-
-<div class="leading-tight hidden sm:block">
-
-<div class="text-[14px] font-bold text-white tracking-tight">Life in Argentina</div>
-
-<div class="text-[10px] text-white/50 tracking-widest uppercase font-semibold">Relocation & Immigration</div>
-
-</div>
-
-</a>
-
-
-
-<!-- NAVIGATION -->
-
-<nav class="hidden md:flex items-center gap-10">
-
-<a href="#services" class="text-[13px] font-semibold text-white/70 hover:text-white transition">Services</a>
-
-<a href="#insights" class="text-[13px] font-semibold text-white/70 hover:text-white transition">Insights</a>
-
-<a href="#about" class="text-[13px] font-semibold text-white/70 hover:text-white transition">How we work</a>
-
-<a href="#contact" class="text-[13px] font-semibold text-white/70 hover:text-white transition">Contact</a>
-
-</nav>
-
-
-
-<!-- ACTIONS -->
-
-<div class="flex items-center gap-3">
-
-<button class="w-10 h-10 rounded-xl grid place-items-center text-white/80 border border-white/10 bg-white/5 hover:bg-white/10 transition">
-
-<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-
-<circle cx="11" cy="11" r="8"></circle>
-
-<path d="m21 21-4.3-4.3"></path>
-
-</svg>
-
-</button>
-
-
-
-<button id="menuBtn" class="md:hidden w-10 h-10 rounded-xl grid place-items-center text-white/80 border border-white/10 bg-white/5 transition">
-
-<svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-
-<line x1="4" y1="6" x2="20" y2="6"></line>
-
-<line x1="4" y1="12" x2="20" y2="12"></line>
-
-<line x1="4" y1="18" x2="20" y2="18"></line>
-
-</svg>
-
-</button>
-
-</div>
-
-</div>
-
-
-
-<!-- MOBILE MENU -->
-
-<div id="mobilePanel" class="hidden md:hidden bg-black/95 border-t border-white/10">
-
-<div class="px-6 py-8 flex flex-col gap-6">
-
-<a href="#services" class="text-lg font-bold text-white">Services</a>
-
-<a href="#insights" class="text-lg font-bold text-white">Insights</a>
-
-<a href="#about" class="text-lg font-bold text-white">How we work</a>
-
-<a href="#contact" class="text-lg font-bold text-white">Contact</a>
-
-</div>
-
-</div>
-
-</header>
-
-
-
-
-
-<!-- HERO -->
-
-<section id="home" class="hero-gradient min-h-screen flex flex-col justify-center pt-20 px-6">
-
-<div class="hero-lines"></div>
-
-<div class="hero-overlay"></div>
-
-
-
-<!-- Large Background Hornero Art -->
-
-<div class="bird-hero-art">
-
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-
-<path d="M15,65 L5,78 L12,82 L25,72 Z" fill="currentColor"/>
-
-<path d="M22,70 C35,85 65,85 78,65 C85,55 82,40 75,35 C68,30 55,28 45,35 C35,42 20,55 22,70 Z" fill="currentColor"/>
-
-<path d="M68,36 C75,36 82,30 82,22 C82,15 76,10 68,10 C60,10 52,15 52,25 C52,30 58,36 68,36 Z" fill="currentColor"/>
-
-<path d="M81,20 L98,22 C98,22 85,28 81,28 Z" fill="currentColor"/>
-
-</svg>
-
-</div>
-
-
-
-<div class="max-w-7xl mx-auto w-full relative z-10">
-
-<div class="max-w-3xl">
-
-<p class="text-teal-400 font-bold tracking-[0.3em] text-[11px] uppercase mb-6 flex items-center gap-3">
-
-<span class="w-8 h-[1px] bg-teal-400"></span>
-
-Trusted Relocation Partner
-
-</p>
-
-
-
-<h1 class="text-5xl md:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-8">
-
-Moving to Argentina,<br class="hidden lg:block" />
-
-done properly.
-
-</h1>
-
-
-
-<p class="text-white/70 text-lg md:text-xl max-w-2xl mb-12 font-medium leading-relaxed">
-
-Legal and relocation support for individuals, families, and companies.
-
-We provide clear strategy and local execution from start to finish.
-
-</p>
-
-
-
-<div class="flex flex-col sm:flex-row items-start sm:items-center gap-8">
-
-<a href="#contact" class="bg-white text-black px-10 py-5 rounded-xl font-bold text-[11px] uppercase tracking-widest hover:bg-teal-50 transition shadow-2xl">
-
-Request a consultation
-
-</a>
-
-
-
-<a href="#about" class="cta-link text-white text-[13px] font-bold pb-1">
-
-How we work
-
-</a>
-
-</div>
-
-
-
-<div class="mt-16 flex items-center gap-6 text-white/40">
-
-<span class="text-[10px] uppercase tracking-widest font-bold">Client Success Rate</span>
-
-<div class="w-48 h-[3px] bg-white/10 relative rounded-full">
-
-<div class="absolute left-0 top-0 h-full bg-teal-400 w-[96%] rounded-full shadow-[0_0_10px_rgba(20,184,166,0.5)]"></div>
-
-</div>
-
-<span class="text-[11px] font-bold text-teal-400">96%</span>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- TRENDING STRIP -->
-
-<section class="bg-[#C8102E] text-white">
-
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch">
-
-<div class="px-6 py-6 flex items-center bg-black/10">
-
-<span class="font-black text-sm uppercase tracking-widest whitespace-nowrap">Local Context</span>
-
-</div>
-
-
-
-<div class="trending-container flex-1 flex items-center overflow-x-auto">
-
-<a href="#" class="px-8 py-6 border-l border-white/10 hover:bg-white/5 transition flex items-center justify-between gap-4 min-w-[280px]">
-
-<span class="text-[13px] font-bold">Digital Nomad Visa 2026</span>
-
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m9 18 6-6-6-6"/></svg>
-
-</a>
-
-<a href="#" class="px-8 py-6 border-l border-white/10 hover:bg-white/5 transition flex items-center justify-between gap-4 min-w-[280px]">
-
-<span class="text-[13px] font-bold">Renting in Palermo vs. Belgrano</span>
-
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m9 18 6-6-6-6"/></svg>
-
-</a>
-
-<a href="#" class="px-8 py-6 border-l border-white/10 hover:bg-white/5 transition flex items-center justify-between gap-4 min-w-[280px]">
-
-<span class="text-[13px] font-bold">Private Healthcare Guide</span>
-
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m9 18 6-6-6-6"/></svg>
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- SERVICES -->
-
-<section id="services" class="py-32 px-6 bg-white">
-
-<div class="max-w-7xl mx-auto">
-
-<div class="mb-20">
-
-<h2 class="text-[11px] uppercase tracking-[0.3em] font-black text-teal-600 mb-6">Expertise</h2>
-
-<h3 class="text-3xl md:text-5xl font-extrabold tracking-tight max-w-4xl leading-tight">
-
-Comprehensive relocation solutions designed for the complexities of Argentina.
-
-</h3>
-
-</div>
-
-
-
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-
-<div class="group">
-
-<div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-8 transition-colors group-hover:bg-teal-600 group-hover:text-white">
-
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-
-</div>
-
-<h4 class="text-lg font-bold mb-4">Legal & Immigration</h4>
-
-<p class="text-gray-500 leading-relaxed">Residency, citizenship, and ID filings managed by legal experts with deep knowledge of local migration law.</p>
-
-</div>
-
-
-
-<div class="group">
-
-<div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-8 transition-colors group-hover:bg-teal-600 group-hover:text-white">
-
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-
-</div>
-
-<h4 class="text-lg font-bold mb-4">Housing Strategy</h4>
-
-<p class="text-gray-500 leading-relaxed">Property search, lease negotiation, and understanding the unique dual-currency rental market dynamics.</p>
-
-</div>
-
-
-
-<div class="group">
-
-<div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-8 transition-colors group-hover:bg-teal-600 group-hover:text-white">
-
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-
-</div>
-
-<h4 class="text-lg font-bold mb-4">Corporate Transfers</h4>
-
-<p class="text-gray-500 leading-relaxed">Scaling your team? We handle bulk relocations and corporate compliance for international firms.</p>
-
-</div>
-
-
-
-<div class="group">
-
-<div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center text-teal-600 mb-8 transition-colors group-hover:bg-teal-600 group-hover:text-white">
-
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-
-</div>
-
-<h4 class="text-lg font-bold mb-4">Integration Care</h4>
-
-<p class="text-gray-500 leading-relaxed">From school enrollment to private banking setup, we ensure your family transitions smoothly into Argentine life.</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- HOW WE WORK / QUOTE -->
-
-<section id="about" class="py-32 px-6 bg-gray-50 overflow-hidden relative">
-
-<div class="max-w-7xl mx-auto">
-
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-
-<div class="relative z-10">
-
-<h2 class="text-[11px] uppercase tracking-[0.3em] font-black text-teal-600 mb-6">Our Methodology</h2>
-
-<h3 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-12 leading-tight">
-
-Clear advice. Local knowledge. Senior attention.
-
-</h3>
-
-
-
-<div class="space-y-10">
-
-<div class="flex gap-6">
-
-<div class="shrink-0 w-12 h-12 rounded-full border-2 border-teal-500 flex items-center justify-center text-teal-600 font-black text-sm">
-
-01
-
-</div>
-
-<div>
-
-<h5 class="font-bold text-lg mb-2">Requirement Mapping</h5>
-
-<p class="text-gray-500">We audit your documents early to avoid common bottlenecks in Argentine bureaucracy before you even land.</p>
-
-</div>
-
-</div>
-
-
-
-<div class="flex gap-6">
-
-<div class="shrink-0 w-12 h-12 rounded-full border-2 border-teal-500 flex items-center justify-center text-teal-600 font-black text-sm">
-
-02
-
-</div>
-
-<div>
-
-<h5 class="font-bold text-lg mb-2">Direct Execution</h5>
-
-<p class="text-gray-500">You work with senior partners, not interns. Every filing is supervised by professionals who know the system.</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-
-<div class="relative">
-
-<div class="bg-white p-12 md:p-16 rounded-[40px] shadow-xl relative z-10">
-
-<div class="bg-[#C8102E] w-14 h-14 rounded-2xl flex items-center justify-center mb-10 overflow-hidden shadow-inner">
-
-<!-- Realistic Hornero Logo (Alt White) -->
-
-<svg class="w-10 h-10 fill-white" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-
-<path d="M15,65 L5,78 L12,82 L25,72 Z" opacity="0.8"/>
-
-<path d="M22,70 C35,85 65,85 78,65 C85,55 82,40 75,35 C68,30 55,28 45,35 C35,42 20,55 22,70 Z"/>
-
-<path d="M68,36 C75,36 82,30 82,22 C82,15 76,10 68,10 C60,10 52,15 52,25 C52,30 58,36 68,36 Z"/>
-
-<path d="M81,20 L95,22 C95,22 85,26 81,26 Z"/>
-
-</svg>
-
-</div>
-
-<blockquote class="text-2xl md:text-3xl font-extrabold italic text-gray-900 leading-snug mb-8">
-
-"We bridge the gap between global expectations and the specific realities of Argentine administration."
-
-</blockquote>
-
-<p class="text-[13px] font-bold uppercase tracking-widest text-gray-400">Founding Partners</p>
-
-</div>
-
-<!-- Decor elements -->
-
-<div class="absolute -top-10 -right-10 w-64 h-64 border border-teal-500/10 rounded-[60px] -rotate-12"></div>
-
-<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-teal-500/5 rounded-full"></div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- CONTACT -->
-
-<section id="contact" class="px-6 py-20">
-
-<div class="max-w-7xl mx-auto bg-[#C8102E] rounded-[48px] p-12 md:p-24 relative overflow-hidden shadow-2xl">
-
-<div class="relative z-10 flex flex-col lg:flex-row justify-between items-center gap-12 text-center lg:text-left">
-
-<div class="max-w-2xl text-white">
-
-<h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight">
-
-Ready to start your journey?
-
-</h2>
-
-<p class="text-white/80 text-lg font-medium">
-
-We review your case individually and outline clear steps, costs, and timelines for your relocation.
-
-</p>
-
-</div>
-
-
-
-<a href="mailto:contact@lifeinargentina.com" class="bg-white text-black px-12 py-6 rounded-2xl font-black text-sm uppercase tracking-widest hover:bg-black hover:text-white transition-all transform hover:scale-105">
-
-Get in touch
-
-</a>
-
-</div>
-
-
-<!-- Abstract patterns -->
-
-<div class="absolute top-0 right-0 w-1/3 h-full bg-black/10 -skew-x-12 translate-x-1/2"></div>
-
-<div class="absolute bottom-0 left-0 w-1/4 h-1/2 bg-white/5 rounded-full -translate-x-1/2 translate-y-1/2"></div>
-
-</div>
-
-</section>
-
-
-
-<!-- FOOTER -->
-
-<footer class="bg-gray-950 text-white pt-24 pb-12 px-6">
-
-<div class="max-w-7xl mx-auto">
-
-<div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
-
-<div class="col-span-1 md:col-span-1">
-
-<a href="#home" class="flex items-center gap-3 mb-8">
-
-<div class="bg-[#C8102E] w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden">
-
-<svg class="w-6 h-6 fill-white" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-
-<path d="M22,70 C35,85 65,85 78,65 C85,55 82,40 75,35 C68,30 55,28 45,35 C35,42 20,55 22,70 Z"/>
-
-<path d="M68,36 C75,36 82,30 82,22 C82,15 76,10 68,10 C60,10 52,15 52,25 C52,30 58,36 68,36 Z"/>
-
-<path d="M81,20 L95,22 C95,22 85,26 81,26 Z"/>
-
-</svg>
-
-</div>
-
-<span class="font-bold tracking-tight">Life in Argentina</span>
-
-</a>
-
-<p class="text-white/40 text-[14px] leading-relaxed">
-
-Premium relocation and immigration services for international citizens moving to the Republic of Argentina.
-
-</p>
-
-</div>
-
-
-
-<div>
-
-<h4 class="text-[11px] uppercase tracking-widest font-black text-white/30 mb-8">Navigation</h4>
-
-<ul class="space-y-4 text-[14px] font-medium">
-
-<li><a href="#services" class="text-white/60 hover:text-white transition">Services</a></li>
-
-<li><a href="#insights" class="text-white/60 hover:text-white transition">Insights</a></li>
-
-<li><a href="#about" class="text-white/60 hover:text-white transition">How we work</a></li>
-
-<li><a href="#contact" class="text-white/60 hover:text-white transition">Contact</a></li>
-
-</ul>
-
-</div>
-
-
-
-<div>
-
-<h4 class="text-[11px] uppercase tracking-widest font-black text-white/30 mb-8">Legal</h4>
-
-<ul class="space-y-4 text-[14px] font-medium">
-
-<li><a href="#" class="text-white/60 hover:text-white transition">Privacy Policy</a></li>
-
-<li><a href="#" class="text-white/60 hover:text-white transition">Terms of Service</a></li>
-
-<li><a href="#" class="text-white/60 hover:text-white transition">Cookie Policy</a></li>
-
-</ul>
-
-</div>
-
-
-
-<div>
-
-<h4 class="text-[11px] uppercase tracking-widest font-black text-white/30 mb-8">Newsletter</h4>
-
-<form class="flex flex-col gap-4">
-
-<input type="email" placeholder="Your email" class="bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-sm focus:outline-none focus:border-teal-500 transition">
-
-<button class="bg-teal-600 hover:bg-teal-500 py-4 rounded-xl font-bold text-[10px] uppercase tracking-widest transition">Subscribe</button>
-
-</form>
-
-</div>
-
-</div>
-
-
-
-<div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] font-bold uppercase tracking-widest text-white/20">
-
-<p>© <span id="year"></span> LIFE IN ARGENTINA. ALL RIGHTS RESERVED.</p>
-
-<div class="flex gap-8">
-
-<a href="#" class="hover:text-white/40 transition">LinkedIn</a>
-
-<a href="#" class="hover:text-white/40 transition">Instagram</a>
-
-<a href="#" class="hover:text-white/40 transition">X.com</a>
-
-</div>
-
-</div>
-
-</div>
-
-</footer>
-
-
-
-<script>
-
-(function () {
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-
-
-const menuBtn = document.getElementById("menuBtn");
-
-const mobilePanel = document.getElementById("mobilePanel");
-
-const header = document.getElementById("siteHeader");
-
-
-
-menuBtn.addEventListener("click", () => {
-
-const isHidden = mobilePanel.classList.toggle("hidden");
-
-header.classList.toggle("bg-black", !isHidden);
-
-});
-
-
-
-window.addEventListener("scroll", () => {
-
-if (window.scrollY > 50) {
-
-header.classList.add("nav-scrolled");
-
-} else {
-
-header.classList.remove("nav-scrolled");
-
-}
-
-});
-
-
-
-// Simple smooth scroll fix
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-
-anchor.addEventListener('click', function (e) {
-
-e.preventDefault();
-
-const target = document.querySelector(this.getAttribute('href'));
-
-if (target) {
-
-mobilePanel.classList.add("hidden");
-
-window.scrollTo({
-
-top: target.offsetTop - 80,
-
-behavior: 'smooth'
-
-});
-
-}
-
-});
-
-});
-
-})();
-
-</script>
+<body class="bg-white text-firm-black font-sans">
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <!-- Diseño: Minimalista, fondo blanco, borde inferior sutil -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                
+                <!-- Logo: Tipográfico, sobrio -->
+                <div class="flex-shrink-0 flex items-center">
+                    <!-- Cambio de fuente a font-display (Cinzel) -->
+                    <a href="#" class="font-display text-2xl tracking-widest font-bold text-firm-black">
+                        LIFE IN <span class="text-firm-accent">&</span> ARGENTINA
+                
+                    </a>
+                </div>
+
+                <!-- Navegación Principal -->
+                <nav class="hidden md:flex space-x-12 items-center">
+                    <a href="#" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Attorneys</a>
+                    <a href="#" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Industries & Practices</a>
+                    <a href="#" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Insights</a>
+                </nav>
+
+                <!-- Elemento Destacado: "How can we help you?" -->
+                <div class="hidden lg:flex items-center">
+                    <div class="relative group cursor-pointer">
+                        <div class="flex items-center border border-gray-300 px-4 py-2 bg-gray-50 transition-all duration-300 group-hover:border-firm-accent group-hover:bg-white w-64 justify-between">
+                            <span class="text-sm text-gray-500 font-serif italic group-hover:text-firm-black">How can we help you?</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-firm-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-800 hover:text-firm-accent">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <!-- Concepto: Arquitectura abstracta, mensaje directo, sin distracciones humanas -->
+    <section class="relative bg-gray-900 h-[600px] flex items-center justify-center">
+        <!-- Imagen de fondo: Edificio/Estructura abstracta -->
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" alt="Corporate Architecture" class="w-full h-full object-cover object-center opacity-60">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center md:text-left w-full pt-12">
+            <div class="max-w-3xl">
+                <!-- Headline Serif Elegante -->
+                <h1 class="text-4xl md:text-6xl font-serif text-white font-medium leading-tight mb-6">
+                    Practical Counsel. <br>
+                    <span class="italic text-gray-300">Unique Insight.</span>
+                </h1>
+                
+                <!-- Subtítulo -->
+                <p class="mt-4 text-lg md:text-xl text-gray-200 font-light max-w-2xl leading-relaxed">
+                    We don’t just identify risks; we engineer business solutions. 
+                    Navigating complex regulatory landscapes for the world’s leading institutions.
+                </p>
+
+                <!-- CTA Discreto -->
+                <div class="mt-10">
+                    <a href="#" class="inline-flex items-center px-8 py-3 border border-white text-base font-medium text-white hover:bg-white hover:text-firm-black transition-all duration-300 uppercase tracking-widest text-xs">
+                        View Our Experience
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE ACCESOS DIRECTOS (THE 3 DOORS) -->
+    <!-- Diseño: Bloques claros, borde superior de acento, tipografía jerárquica -->
+    <section class="bg-white relative -mt-16 z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 shadow-2xl bg-white border-t-4 border-firm-accent">
+            
+            <!-- Door 1 -->
+            <a href="#" class="group p-10 border-r border-gray-100 hover:bg-gray-50 transition-colors">
+                <h3 class="text-xl font-serif font-semibold text-firm-black mb-3 group-hover:text-firm-accent transition-colors">
+                    Find a Lawyer
+                </h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                    Access our global directory of partners and associates by name, location, or practice area.
+                </p>
+                <div class="flex items-center text-xs font-bold uppercase tracking-widest text-firm-black group-hover:translate-x-2 transition-transform duration-300">
+                    Search Directory <span class="ml-2 text-firm-accent">&rarr;</span>
+                </div>
+            </a>
+
+            <!-- Door 2 -->
+            <a href="#" class="group p-10 border-r border-gray-100 hover:bg-gray-50 transition-colors">
+                <h3 class="text-xl font-serif font-semibold text-firm-black mb-3 group-hover:text-firm-accent transition-colors">
+                    Explore Capabilities
+                </h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                    Comprehensive legal solutions tailored to specific industries, from Fintech to Energy.
+                </p>
+                <div class="flex items-center text-xs font-bold uppercase tracking-widest text-firm-black group-hover:translate-x-2 transition-transform duration-300">
+                    View Practices <span class="ml-2 text-firm-accent">&rarr;</span>
+                </div>
+            </a>
+
+            <!-- Door 3 -->
+            <a href="#" class="group p-10 hover:bg-gray-50 transition-colors">
+                <h3 class="text-xl font-serif font-semibold text-firm-black mb-3 group-hover:text-firm-accent transition-colors">
+                    Market Insights
+                </h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                    Critical analysis and forward-looking perspectives on the trends shaping the global economy.
+                </p>
+                <div class="flex items-center text-xs font-bold uppercase tracking-widest text-firm-black group-hover:translate-x-2 transition-transform duration-300">
+                    Read Analysis <span class="ml-2 text-firm-accent">&rarr;</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN EDITORIAL / INSIGHTS -->
+    <!-- Diseño: Grid tipo periódico, mucho whitespace, enfoque en contenido especializado -->
+    <section class="py-24 bg-firm-gray">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="flex justify-between items-end mb-12 border-b border-gray-300 pb-4">
+                <div>
+                    <span class="text-firm-accent font-bold text-xs uppercase tracking-widest mb-2 block">Thought Leadership</span>
+                    <h2 class="text-4xl font-serif text-firm-black">Latest Perspectives</h2>
+                </div>
+                <a href="#" class="hidden md:block text-sm font-semibold text-gray-600 hover:text-firm-black">View All Insights &rarr;</a>
+            </div>
+
+            <!-- Bento Grid Editorial -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Columna Principal (2/3) -->
+                <div class="lg:col-span-7 space-y-8">
+                    <!-- Featured Article -->
+                    <article class="group cursor-pointer">
+                        <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80" alt="Global Network" class="w-full h-80 object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out">
+                        </div>
+                        <div class="space-y-3">
+                            <span class="text-xs font-bold text-firm-accent uppercase tracking-widest">Global Trade & Sanctions</span>
+                            <h3 class="text-3xl font-serif leading-tight text-firm-black group-hover:text-gray-700 transition-colors">
+                                Navigating Cross-Border M&A in an Era of Increased Regulatory Scrutiny
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed font-light">
+                                As geopolitical tensions rise, the Committee on Foreign Investment in the United States (CFIUS) and European equivalents are tightening controls. What general counsel needs to know before the deal table.
+                            </p>
+                            <span class="text-xs text-gray-400 block mt-2">By Sarah Jenkins & Robert Thorne | 10 Min Read</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Columna Lateral (1/3) - Niche Topics -->
+                <div class="lg:col-span-5 flex flex-col justify-between border-l border-gray-300 pl-0 lg:pl-12 pt-8 lg:pt-0">
+                    
+                    <!-- Niche Item 1 -->
+                    <article class="mb-8 group cursor-pointer">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">AI Law Blog</span>
+                        <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
+                            Generative AI Liability: Who owns the output in federal court?
+                        </h4>
+                        <p class="text-sm text-gray-500 line-clamp-2">An analysis of the latest ruling from the Southern District of New York regarding copyright infringement.</p>
+                    </article>
+
+                    <div class="w-full h-px bg-gray-200 mb-8"></div>
+
+                    <!-- Niche Item 2 -->
+                    <article class="mb-8 group cursor-pointer">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Fashion Counsel</span>
+                        <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
+                            Sustainability Claims and the new EU "Greenwashing" Directive
+                        </h4>
+                        <p class="text-sm text-gray-500 line-clamp-2">How luxury brands must adapt supply chain transparency reporting by Q4 2024.</p>
+                    </article>
+
+                    <div class="w-full h-px bg-gray-200 mb-8"></div>
+
+                    <!-- Niche Item 3 -->
+                    <article class="mb-8 group cursor-pointer">
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Environmental Law Advisor</span>
+                        <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
+                            The Fine Print: Carbon Credit verification standards update
+                        </h4>
+                    </article>
+
+                    <!-- Newsletter CTA Box -->
+                    <div class="bg-firm-black p-8 text-white mt-auto">
+                        <h5 class="font-serif text-lg mb-2">Stay Ahead of the Curve</h5>
+                        <p class="text-gray-400 text-xs mb-4">Briefings tailored to your industry, delivered weekly.</p>
+                        <button class="w-full bg-transparent border border-gray-600 text-white py-2 text-xs uppercase tracking-widest hover:bg-white hover:text-firm-black transition-colors">
+                            Subscribe to Newsletters
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <!-- Diseño: Sobrio, utilitario, columnas organizadas -->
+    <footer class="bg-firm-black text-white pt-20 pb-10 border-t-4 border-firm-accent">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                
+                <!-- Branding Column -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="font-display text-xl tracking-wide font-bold text-white mb-6 block">
+                        LIFE IN <span class="text-firm-accent">&</span> ARGENTINA
+                    </a>
+                    <p class="text-gray-500 text-sm">
+                        London &bull; New York &bull; Singapore &bull; Dubai
+                    </p>
+                </div>
+
+                <!-- Utility Links 1 -->
+                <div>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">The Firm</h4>
+                    <ul class="space-y-4 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Diversity & Inclusion</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Pro Bono</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Office Locations</a></li>
+                    </ul>
+                </div>
+
+                <!-- Utility Links 2 -->
+                <div>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Client Services</h4>
+                    <ul class="space-y-4 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">Client Payment Portal</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Extranet Login</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Alumni Network</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Subscribe</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact / Legal -->
+                <div>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Contact</h4>
+                    <p class="text-sm text-gray-300 mb-4">
+                        +54 11 6684-7734 <br>
+                        contact@lifeinargentina.com
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <!-- Social Placeholders -->
+                        <div class="w-5 h-5 bg-gray-700 hover:bg-white transition-colors cursor-pointer"></div>
+                        <div class="w-5 h-5 bg-gray-700 hover:bg-white transition-colors cursor-pointer"></div>
+                        <div class="w-5 h-5 bg-gray-700 hover:bg-white transition-colors cursor-pointer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Legal -->
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between text-xs text-gray-500">
+                <p>&copy; 2024 Life in Argentina. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-gray-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-gray-300">Cookie Notice</a>
+                    <a href="#" class="hover:text-gray-300">Legal Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
-
 </html>
