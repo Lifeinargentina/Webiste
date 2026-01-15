@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,7 +70,7 @@
         }
 
         .hero-overlay {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
         }
 
         /* Modal Animation */
@@ -114,9 +114,9 @@
 
                 <!-- Navegación Principal -->
                 <nav class="hidden md:flex space-x-12 items-center">
-                    <a href="#" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Our Team</a>
-                    <a href="#" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Practice Areas</a>
-                    <a href="#" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Insights</a>
+                    <a href="#team" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Our Team</a>
+                    <a href="#practice-areas" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Practice Areas</a>
+                    <a href="#insights" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Insights</a>
                 </nav>
 
                 <!-- Elemento Destacado (Trigger Modal) -->
@@ -144,7 +144,7 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative bg-gray-900 h-[600px] flex items-center justify-center">
+    <section class="relative bg-gray-900 h-[650px] flex items-center justify-center">
         <!-- Imagen de fondo: Buenos Aires (Obelisco / 9 de Julio) -->
         <div class="absolute inset-0 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?auto=format&fit=crop&q=80" alt="Buenos Aires Architecture" class="w-full h-full object-cover object-center opacity-60">
@@ -155,20 +155,20 @@
             <div class="max-w-3xl">
                 <!-- Headline -->
                 <h1 class="text-4xl md:text-6xl font-serif text-white font-medium leading-tight mb-6">
-                    Your Gateway <br> to Argentina.
-                    <span class="italic text-gray-300 block text-3xl md:text-5xl mt-2">Comprehensive Legal Solutions.</span>
+                    Argentina Made Effortless.
+                    <span class="italic text-gray-300 block text-2xl md:text-4xl mt-3 font-light">Legal solutions for your new life.</span>
                 </h1>
                 
                 <!-- Subtítulo -->
-                <p class="mt-4 text-lg md:text-xl text-gray-200 font-light max-w-2xl leading-relaxed">
-                    From residency and citizenship to corporate formation and intellectual property. 
-                    We provide the strategic counsel you need to thrive in Argentina.
+                <p class="mt-6 text-lg md:text-xl text-gray-200 font-light max-w-2xl leading-relaxed">
+                    Navigating a new country can be complex. We make it simple. 
+                    From settling in to starting up, our local team handles the bureaucracy so you can focus on what matters.
                 </p>
 
                 <!-- CTA (Trigger Modal) -->
                 <div class="mt-10">
-                    <button onclick="openModal()" class="inline-flex items-center px-8 py-3 border border-white text-base font-medium text-white hover:bg-white hover:text-firm-black transition-all duration-300 uppercase tracking-widest text-xs">
-                        Schedule a Consultation
+                    <button onclick="openModal()" class="inline-flex items-center px-8 py-3 bg-white text-firm-black border border-white text-base font-medium hover:bg-gray-100 transition-all duration-300 uppercase tracking-widest text-xs">
+                        Tell us your goals
                     </button>
                 </div>
             </div>
@@ -176,60 +176,113 @@
     </section>
 
     <!-- SECCIÓN DE ACCESOS DIRECTOS (THE 3 DOORS) -->
-    <section class="bg-white relative -mt-16 z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-20">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 shadow-2xl bg-white border-t-4 border-firm-accent">
+    <!-- ID agregado para navegación -->
+    <section id="practice-areas" class="bg-white relative -mt-20 z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-0 shadow-2xl bg-white">
             
             <!-- Door 1: Immigration -->
-            <a href="#" class="group p-10 border-r border-gray-100 hover:bg-gray-50 transition-colors">
+            <a href="#" class="group p-10 border-r border-gray-100 hover:bg-gray-50 transition-colors border-t-4 border-firm-accent">
+                <div class="mb-4 text-firm-accent">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
                 <h3 class="text-xl font-serif font-semibold text-firm-black mb-3 group-hover:text-firm-accent transition-colors">
-                    Immigration & Residency
+                    Move to Argentina
                 </h3>
                 <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Seamless relocation strategies for individuals and families. Expert guidance on temporary visas, permanent residency, and citizenship.
+                    Residency doesn't have to be a headache. Whether you are retiring, working remotely, or seeking citizenship, we guide you through every form and filing.
                 </p>
                 <div class="flex items-center text-xs font-bold uppercase tracking-widest text-firm-black group-hover:translate-x-2 transition-transform duration-300">
-                    View Visa Options <span class="ml-2 text-firm-accent">&rarr;</span>
+                    Immigration Services <span class="ml-2 text-firm-accent">&rarr;</span>
                 </div>
             </a>
 
             <!-- Door 2: Corporate -->
-            <a href="#" class="group p-10 border-r border-gray-100 hover:bg-gray-50 transition-colors">
+            <a href="#" class="group p-10 border-r border-gray-100 hover:bg-gray-50 transition-colors border-t-4 border-gray-200 hover:border-firm-accent transition-all">
+                <div class="mb-4 text-firm-black group-hover:text-firm-accent transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                </div>
                 <h3 class="text-xl font-serif font-semibold text-firm-black mb-3 group-hover:text-firm-accent transition-colors">
-                    Corporate Formation
+                    Start a Company
                 </h3>
                 <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Structuring your business for success. We handle company incorporation (S.A. / S.R.L.), tax registration, and compliance.
+                    We cut through the red tape. From S.R.L. setup to tax registration, we build the legal foundation your business needs to operate smoothly.
                 </p>
                 <div class="flex items-center text-xs font-bold uppercase tracking-widest text-firm-black group-hover:translate-x-2 transition-transform duration-300">
-                    Start a Business <span class="ml-2 text-firm-accent">&rarr;</span>
+                    Corporate Solutions <span class="ml-2 text-firm-accent">&rarr;</span>
                 </div>
             </a>
 
             <!-- Door 3: IP & General -->
-            <a href="#" class="group p-10 hover:bg-gray-50 transition-colors">
+            <a href="#" class="group p-10 hover:bg-gray-50 transition-colors border-t-4 border-gray-200 hover:border-firm-accent transition-all">
+                <div class="mb-4 text-firm-black group-hover:text-firm-accent transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
                 <h3 class="text-xl font-serif font-semibold text-firm-black mb-3 group-hover:text-firm-accent transition-colors">
-                    Intellectual Property
+                    Protect Your Brand
                 </h3>
                 <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Protecting your brand assets in Argentina. Comprehensive trademark registration, patent filing, and IP portfolio management.
+                    Your ideas are your assets. We manage trademark registration and intellectual property rights so you can expand with peace of mind.
                 </p>
                 <div class="flex items-center text-xs font-bold uppercase tracking-widest text-firm-black group-hover:translate-x-2 transition-transform duration-300">
-                    Protect Your Brand <span class="ml-2 text-firm-accent">&rarr;</span>
+                    IP Services <span class="ml-2 text-firm-accent">&rarr;</span>
                 </div>
             </a>
 
         </div>
     </section>
 
+    <!-- SECCIÓN: OUR TEAM (ACTUALIZADA: SIN FOTOS/NOMBRES ESPECÍFICOS) -->
+    <section id="team" class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-firm-accent font-bold text-xs uppercase tracking-widest mb-3 block">A Complete Ecosystem</span>
+                <h2 class="text-4xl font-serif text-firm-black mb-6">More than just lawyers.</h2>
+                <p class="text-gray-500 font-light leading-relaxed">
+                    We have curated a full network of professionals to handle every aspect of your move. 
+                    From the legal strategy to the certified translation, we coordinate everything under one roof.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Migratory Law -->
+                <div class="bg-gray-50 p-10 border-t-4 border-firm-accent hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-serif font-semibold text-firm-black mb-4">Migratory Law Specialists</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Our core team consists of experienced attorneys dedicated exclusively to immigration and citizenship law. We stay constantly updated on changing regulations to ensure your residency application is flawless.
+                    </p>
+                </div>
+
+                <!-- Card 2: Support Network -->
+                <div class="bg-gray-50 p-10 border-t-4 border-gray-200 hover:border-firm-accent transition-all hover:shadow-lg">
+                     <h3 class="text-xl font-serif font-semibold text-firm-black mb-4">The Support Network</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Bureaucracy requires more than legal advice. Our team includes <strong>certified translators</strong>, public <strong>notaries</strong>, and <strong>accountants</strong>. We handle the apostilles, translations, and tax registrations so you don't have to source multiple vendors.
+                    </p>
+                </div>
+
+                <!-- Card 3: In-Person Support -->
+                <div class="bg-gray-50 p-10 border-t-4 border-gray-200 hover:border-firm-accent transition-all hover:shadow-lg">
+                     <h3 class="text-xl font-serif font-semibold text-firm-black mb-4">By Your Side, Literally</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        We don't just advise from a desk. We offer <strong>virtual consultations</strong> for planning, and we <strong>accompany you in person</strong> to government offices (Migraciones, AFIP, Banks) to ensure your diligences go smoothly.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- SECCIÓN EDITORIAL / INSIGHTS -->
-    <section class="py-24 bg-firm-gray">
+    <!-- ID agregado para navegación -->
+    <section id="insights" class="py-24 bg-firm-gray">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             
             <!-- Section Header -->
             <div class="flex justify-between items-end mb-12 border-b border-gray-300 pb-4">
                 <div>
-                    <span class="text-firm-accent font-bold text-xs uppercase tracking-widest mb-2 block">Our Expertise</span>
-                    <h2 class="text-4xl font-serif text-firm-black">Legal Insights & Updates</h2>
+                    <span class="text-firm-accent font-bold text-xs uppercase tracking-widest mb-2 block">Knowledge Base</span>
+                    <h2 class="text-4xl font-serif text-firm-black">Essential Reading</h2>
                 </div>
                 <a href="#" class="hidden md:block text-sm font-semibold text-gray-600 hover:text-firm-black">Read All Articles &rarr;</a>
             </div>
@@ -248,12 +301,12 @@
                         <div class="space-y-3">
                             <span class="text-xs font-bold text-firm-accent uppercase tracking-widest">Doing Business</span>
                             <h3 class="text-3xl font-serif leading-tight text-firm-black group-hover:text-gray-700 transition-colors">
-                                S.A. vs. S.R.L.: Choosing the Right Corporate Structure in Argentina
+                                S.A. vs. S.R.L.: Which structure fits your business?
                             </h3>
                             <p class="text-gray-600 leading-relaxed font-light">
-                                Understanding the liability, tax implications, and administrative requirements for foreign investors setting up operations in the country.
+                                Choosing the right entity is the first step to success. We break down liability, tax implications, and setup times in plain English.
                             </p>
-                            <span class="text-xs text-gray-400 block mt-2">By Our Corporate Team | 8 Min Read</span>
+                            <span class="text-xs text-gray-400 block mt-2">By Martin Velasco | 5 Min Read</span>
                         </div>
                     </article>
                 </div>
@@ -263,22 +316,22 @@
                     
                     <!-- Niche Item 1 -->
                     <article class="mb-8 group cursor-pointer">
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Immigration Law</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Living Here</span>
                         <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
-                            The Digital Nomad Visa: Opportunities for remote workers in Buenos Aires
+                            The Digital Nomad Visa: Work from Buenos Aires legally
                         </h4>
-                        <p class="text-sm text-gray-500 line-clamp-2">A complete guide to requirements, income thresholds, and renewal processes.</p>
+                        <p class="text-sm text-gray-500 line-clamp-2">Everything you need to know about income requirements and the application process.</p>
                     </article>
 
                     <div class="w-full h-px bg-gray-200 mb-8"></div>
 
                     <!-- Niche Item 2 -->
                     <article class="mb-8 group cursor-pointer">
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Intellectual Property</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Brand Protection</span>
                         <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
-                            Why registering your trademark in Argentina is crucial for LATAM expansion
+                            Don't lose your name: Why trademarking early matters
                         </h4>
-                        <p class="text-sm text-gray-500 line-clamp-2">First-to-file vs. First-to-use: Navigating the Argentinian trademark system.</p>
+                        <p class="text-sm text-gray-500 line-clamp-2">Argentina is a "first-to-file" country. Learn how to protect your intellectual property before you launch.</p>
                     </article>
 
                     <div class="w-full h-px bg-gray-200 mb-8"></div>
@@ -287,14 +340,14 @@
                     <article class="mb-8 group cursor-pointer">
                         <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Real Estate</span>
                         <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
-                            Property acquisition for non-residents: Legal hurdles and tax benefits
+                            Buying Property as a Non-Resident: A Step-by-Step Guide
                         </h4>
                     </article>
 
                     <!-- Newsletter CTA Box -->
                     <div class="bg-firm-black p-8 text-white mt-auto">
-                        <h5 class="font-serif text-lg mb-2">Argentina Legal Briefing</h5>
-                        <p class="text-gray-400 text-xs mb-4">Stay updated on regulatory changes affecting expats and businesses.</p>
+                        <h5 class="font-serif text-lg mb-2">Weekly Briefing</h5>
+                        <p class="text-gray-400 text-xs mb-4">Practical advice on navigating Argentine law, delivered to your inbox.</p>
                         <button onclick="openModal()" class="w-full bg-transparent border border-gray-600 text-white py-2 text-xs uppercase tracking-widest hover:bg-white hover:text-firm-black transition-colors">
                             Subscribe
                         </button>
@@ -306,26 +359,27 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-firm-black text-white pt-20 pb-10 border-t-4 border-firm-accent">
+    <!-- ID agregado para navegación -->
+    <footer id="footer" class="bg-firm-black text-white pt-20 pb-10 border-t-4 border-firm-accent">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                 
                 <!-- Branding Column -->
                 <div class="col-span-1 md:col-span-1">
-                    <a href="#" class="font-display text-xl tracking-wide font-bold text-firm-black">
+                    <a href="#" class="font-display text-xl tracking-wide font-bold text-white mb-6 block">
                         LIFE <span class="text-firm-accent">IN</span> ARGENTINA
                     </a>
                     <p class="text-gray-500 text-sm font-medium">
                         Buenos Aires &bull; Córdoba
                     </p>
                     <p class="text-gray-500 text-xs mt-4 leading-relaxed">
-                        Providing world-class legal services to the international community in Argentina.
+                        We bridge the gap between international needs and local solutions. Simple, transparent, and effective.
                     </p>
                 </div>
 
                 <!-- Utility Links 1 -->
                 <div>
-                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Our Services</h4>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Services</h4>
                     <ul class="space-y-4 text-sm text-gray-300">
                         <li><a href="#" class="hover:text-white transition-colors">Immigration & Visas</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Company Formation</a></li>
@@ -336,18 +390,18 @@
 
                 <!-- Utility Links 2 -->
                 <div>
-                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Resources</h4>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Client Area</h4>
                     <ul class="space-y-4 text-sm text-gray-300">
-                        <li><a href="#" class="hover:text-white transition-colors">Client Portal</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Latest Insights</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">FAQ for Expats</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Portal Login</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Track Application</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Subscribe</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact / Legal -->
                 <div>
-                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Contact Us</h4>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Get in Touch</h4>
                     <p class="text-sm text-gray-300 mb-4">
                         +54 11 1234 5678 <br>
                         info@lifeinargentina.com
@@ -388,9 +442,9 @@
 
             <!-- Form State -->
             <div id="modalFormState">
-                <h3 class="font-display text-2xl font-bold text-firm-black mb-2">Schedule a Consultation</h3>
+                <h3 class="font-display text-2xl font-bold text-firm-black mb-2">Let's Simplify Argentina</h3>
                 <p class="text-gray-600 text-sm mb-6 leading-relaxed">
-                    Tell us about your needs. Our team will review your case and contact you shortly.
+                    Tell us a bit about your plans. We will get back to you today with a clear path forward.
                 </p>
                 
                 <form onsubmit="handleSubmit(event)" class="space-y-4">
@@ -420,14 +474,14 @@
 
                     <!-- Area of Interest -->
                     <div>
-                        <label for="interest" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">I am interested in</label>
+                        <label for="interest" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">I need help with</label>
                         <div class="relative">
                             <select id="interest" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors appearance-none bg-white">
-                                <option value="residency">Residency & Citizenship</option>
-                                <option value="nomad_visa">Digital Nomad Visa</option>
-                                <option value="corporate">Corporate Formation</option>
-                                <option value="trademark">Trademark / IP</option>
-                                <option value="other">Other (Please describe)</option>
+                                <option value="residency">Getting Residency / Citizenship</option>
+                                <option value="nomad_visa">Applying for a Digital Nomad Visa</option>
+                                <option value="corporate">Starting a Business / S.R.L.</option>
+                                <option value="trademark">Registering a Trademark</option>
+                                <option value="other">Other Inquiry</option>
                             </select>
                             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -437,15 +491,15 @@
 
                     <!-- Description -->
                     <div>
-                        <label for="description" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Brief Description</label>
-                        <textarea id="description" rows="3" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="Please provide any relevant details..."></textarea>
+                        <label for="description" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">How can we help?</label>
+                        <textarea id="description" rows="3" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="Briefly describe your situation..."></textarea>
                     </div>
 
                     <button type="submit" class="w-full bg-firm-black text-white py-3 text-xs font-bold uppercase tracking-widest hover:bg-firm-accent transition-colors">
-                        Submit Request
+                        Get Started
                     </button>
                     <p class="text-[10px] text-gray-400 text-center mt-2">
-                        Your information is kept strictly confidential.
+                        We respect your privacy.
                     </p>
                 </form>
             </div>
@@ -457,13 +511,13 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                 </div>
-                <h3 class="font-display text-2xl font-bold text-firm-black mb-2">Request Received</h3>
+                <h3 class="font-display text-2xl font-bold text-firm-black mb-2">We're on it!</h3>
                 <p class="text-gray-600 text-sm mb-6">
-                    Thank you. We have received your inquiry.<br>
-                    Our team will review your case and respond to <strong>contact@lifeinargentina.com</strong> shortly.
+                    Thanks for reaching out. We've received your details.<br>
+                    Our team will check your eligibility and email you at <strong>contact@lifeinargentina.com</strong> shortly.
                 </p>
                 <button onclick="closeModal()" class="inline-block border border-gray-300 px-6 py-2 text-xs uppercase tracking-widest hover:bg-gray-50">
-                    Close
+                    Back to Site
                 </button>
             </div>
         </div>
