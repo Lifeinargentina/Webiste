@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life In Argentina | Global Legal Counsel</title>
+    <title>Life In Argentina | Strategic Legal Counsel</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Google Fonts: 
-         Cinzel (Nuevo para Logo - Estilo Romano/Institucional)
+         Cinzel (Logo - Institucional)
          Playfair Display (Titulares Editoriales) 
          Inter (UI/Cuerpo) 
     -->
@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- Configuración personalizada de Tailwind para colores de marca -->
+    <!-- Configuración personalizada de Tailwind -->
     <script>
         tailwind.config = {
             theme: {
@@ -32,7 +32,7 @@
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         serif: ['Playfair Display', 'serif'],
-                        display: ['Cinzel', 'serif'], // Fuente específica para el Logo
+                        display: ['Cinzel', 'serif'], 
                     },
                     spacing: {
                         '128': '32rem',
@@ -43,13 +43,11 @@
     </script>
 
     <style>
-        /* Estilos base para asegurar la sensación "Expensive" */
         body {
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
         
-        /* Transiciones suaves para interacciones sutiles */
         .hover-underline-animation {
             display: inline-block;
             position: relative;
@@ -71,23 +69,20 @@
             transform-origin: bottom left;
         }
 
-        /* Imágenes con filtro sutil para uniformidad */
         .hero-overlay {
-            background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
         }
     </style>
 </head>
 <body class="bg-white text-firm-black font-sans">
 
     <!-- HEADER / NAVEGACIÓN -->
-    <!-- Diseño: Minimalista, fondo blanco, borde inferior sutil -->
     <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
                 
-                <!-- Logo: Tipográfico, sobrio -->
+                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <!-- Cambio de fuente a font-display (Cinzel) -->
                     <a href="#" class="font-display text-2xl tracking-widest font-bold text-firm-black">
                         LIFE <span class="text-firm-accent">IN</span> ARGENTINA
                     </a>
@@ -95,16 +90,16 @@
 
                 <!-- Navegación Principal -->
                 <nav class="hidden md:flex space-x-12 items-center">
-                    <a href="#" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Attorneys</a>
-                    <a href="#" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Industries & Practices</a>
+                    <a href="#" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Our Team</a>
+                    <a href="#" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Practice Areas</a>
                     <a href="#" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Insights</a>
                 </nav>
 
-                <!-- Elemento Destacado: "How can we help you?" -->
+                <!-- Elemento Destacado -->
                 <div class="hidden lg:flex items-center">
                     <div class="relative group cursor-pointer">
                         <div class="flex items-center border border-gray-300 px-4 py-2 bg-gray-50 transition-all duration-300 group-hover:border-firm-accent group-hover:bg-white w-64 justify-between">
-                            <span class="text-sm text-gray-500 font-serif italic group-hover:text-firm-black">How can we help you?</span>
+                            <span class="text-sm text-gray-500 font-serif italic group-hover:text-firm-black">Start your journey</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-firm-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
@@ -125,7 +120,6 @@
     </header>
 
     <!-- HERO SECTION -->
-    <!-- Concepto: Arquitectura abstracta, mensaje directo, sin distracciones humanas -->
     <section class="relative bg-gray-900 h-[600px] flex items-center justify-center">
         <!-- Imagen de fondo: Buenos Aires (Obelisco / 9 de Julio) -->
         <div class="absolute inset-0 overflow-hidden">
@@ -135,22 +129,22 @@
 
         <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center md:text-left w-full pt-12">
             <div class="max-w-3xl">
-                <!-- Headline Serif Elegante -->
+                <!-- Headline -->
                 <h1 class="text-4xl md:text-6xl font-serif text-white font-medium leading-tight mb-6">
-                    Practical Counsel. <br>
-                    <span class="italic text-gray-300">Unique Insight.</span>
+                    Your Gateway <br> to Argentina.
+                    <span class="italic text-gray-300 block text-3xl md:text-5xl mt-2">Comprehensive Legal Solutions.</span>
                 </h1>
                 
                 <!-- Subtítulo -->
                 <p class="mt-4 text-lg md:text-xl text-gray-200 font-light max-w-2xl leading-relaxed">
-                    We don’t just identify risks; we engineer business solutions. 
-                    Navigating complex regulatory landscapes for the world’s leading institutions.
+                    From residency and citizenship to corporate formation and intellectual property. 
+                    We provide the strategic counsel you need to thrive in Argentina.
                 </p>
 
-                <!-- CTA Discreto -->
+                <!-- CTA -->
                 <div class="mt-10">
                     <a href="#" class="inline-flex items-center px-8 py-3 border border-white text-base font-medium text-white hover:bg-white hover:text-firm-black transition-all duration-300 uppercase tracking-widest text-xs">
-                        View Our Experience
+                        Schedule a Consultation
                     </a>
                 </div>
             </div>
@@ -158,46 +152,45 @@
     </section>
 
     <!-- SECCIÓN DE ACCESOS DIRECTOS (THE 3 DOORS) -->
-    <!-- Diseño: Bloques claros, borde superior de acento, tipografía jerárquica -->
     <section class="bg-white relative -mt-16 z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-20">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 shadow-2xl bg-white border-t-4 border-firm-accent">
             
-            <!-- Door 1 -->
+            <!-- Door 1: Immigration -->
             <a href="#" class="group p-10 border-r border-gray-100 hover:bg-gray-50 transition-colors">
                 <h3 class="text-xl font-serif font-semibold text-firm-black mb-3 group-hover:text-firm-accent transition-colors">
-                    Find a Lawyer
+                    Immigration & Residency
                 </h3>
                 <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Access our global directory of partners and associates by name, location, or practice area.
+                    Seamless relocation strategies for individuals and families. Expert guidance on temporary visas, permanent residency, and citizenship.
                 </p>
                 <div class="flex items-center text-xs font-bold uppercase tracking-widest text-firm-black group-hover:translate-x-2 transition-transform duration-300">
-                    Search Directory <span class="ml-2 text-firm-accent">&rarr;</span>
+                    View Visa Options <span class="ml-2 text-firm-accent">&rarr;</span>
                 </div>
             </a>
 
-            <!-- Door 2 -->
+            <!-- Door 2: Corporate -->
             <a href="#" class="group p-10 border-r border-gray-100 hover:bg-gray-50 transition-colors">
                 <h3 class="text-xl font-serif font-semibold text-firm-black mb-3 group-hover:text-firm-accent transition-colors">
-                    Explore Capabilities
+                    Corporate Formation
                 </h3>
                 <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Comprehensive legal solutions tailored to specific industries, from Fintech to Energy.
+                    Structuring your business for success. We handle company incorporation (S.A. / S.R.L.), tax registration, and compliance.
                 </p>
                 <div class="flex items-center text-xs font-bold uppercase tracking-widest text-firm-black group-hover:translate-x-2 transition-transform duration-300">
-                    View Practices <span class="ml-2 text-firm-accent">&rarr;</span>
+                    Start a Business <span class="ml-2 text-firm-accent">&rarr;</span>
                 </div>
             </a>
 
-            <!-- Door 3 -->
+            <!-- Door 3: IP & General -->
             <a href="#" class="group p-10 hover:bg-gray-50 transition-colors">
                 <h3 class="text-xl font-serif font-semibold text-firm-black mb-3 group-hover:text-firm-accent transition-colors">
-                    Market Insights
+                    Intellectual Property
                 </h3>
                 <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Critical analysis and forward-looking perspectives on the trends shaping the global economy.
+                    Protecting your brand assets in Argentina. Comprehensive trademark registration, patent filing, and IP portfolio management.
                 </p>
                 <div class="flex items-center text-xs font-bold uppercase tracking-widest text-firm-black group-hover:translate-x-2 transition-transform duration-300">
-                    Read Analysis <span class="ml-2 text-firm-accent">&rarr;</span>
+                    Protect Your Brand <span class="ml-2 text-firm-accent">&rarr;</span>
                 </div>
             </a>
 
@@ -205,17 +198,16 @@
     </section>
 
     <!-- SECCIÓN EDITORIAL / INSIGHTS -->
-    <!-- Diseño: Grid tipo periódico, mucho whitespace, enfoque en contenido especializado -->
     <section class="py-24 bg-firm-gray">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             
             <!-- Section Header -->
             <div class="flex justify-between items-end mb-12 border-b border-gray-300 pb-4">
                 <div>
-                    <span class="text-firm-accent font-bold text-xs uppercase tracking-widest mb-2 block">Thought Leadership</span>
-                    <h2 class="text-4xl font-serif text-firm-black">Latest Perspectives</h2>
+                    <span class="text-firm-accent font-bold text-xs uppercase tracking-widest mb-2 block">Our Expertise</span>
+                    <h2 class="text-4xl font-serif text-firm-black">Legal Insights & Updates</h2>
                 </div>
-                <a href="#" class="hidden md:block text-sm font-semibold text-gray-600 hover:text-firm-black">View All Insights &rarr;</a>
+                <a href="#" class="hidden md:block text-sm font-semibold text-gray-600 hover:text-firm-black">Read All Articles &rarr;</a>
             </div>
 
             <!-- Bento Grid Editorial -->
@@ -226,17 +218,18 @@
                     <!-- Featured Article -->
                     <article class="group cursor-pointer">
                         <div class="aspect-w-16 aspect-h-9 mb-6 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80" alt="Global Network" class="w-full h-80 object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out">
+                            <!-- Placeholder image business/meeting -->
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80" alt="Business Meeting" class="w-full h-80 object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out">
                         </div>
                         <div class="space-y-3">
-                            <span class="text-xs font-bold text-firm-accent uppercase tracking-widest">Global Trade & Sanctions</span>
+                            <span class="text-xs font-bold text-firm-accent uppercase tracking-widest">Doing Business</span>
                             <h3 class="text-3xl font-serif leading-tight text-firm-black group-hover:text-gray-700 transition-colors">
-                                Navigating Cross-Border M&A in an Era of Increased Regulatory Scrutiny
+                                S.A. vs. S.R.L.: Choosing the Right Corporate Structure in Argentina
                             </h3>
                             <p class="text-gray-600 leading-relaxed font-light">
-                                As geopolitical tensions rise, the Committee on Foreign Investment in the United States (CFIUS) and European equivalents are tightening controls. What general counsel needs to know before the deal table.
+                                Understanding the liability, tax implications, and administrative requirements for foreign investors setting up operations in the country.
                             </p>
-                            <span class="text-xs text-gray-400 block mt-2">By Sarah Jenkins & Robert Thorne | 10 Min Read</span>
+                            <span class="text-xs text-gray-400 block mt-2">By Our Corporate Team | 8 Min Read</span>
                         </div>
                     </article>
                 </div>
@@ -246,40 +239,40 @@
                     
                     <!-- Niche Item 1 -->
                     <article class="mb-8 group cursor-pointer">
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">AI Law Blog</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Immigration Law</span>
                         <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
-                            Generative AI Liability: Who owns the output in federal court?
+                            The Digital Nomad Visa: Opportunities for remote workers in Buenos Aires
                         </h4>
-                        <p class="text-sm text-gray-500 line-clamp-2">An analysis of the latest ruling from the Southern District of New York regarding copyright infringement.</p>
+                        <p class="text-sm text-gray-500 line-clamp-2">A complete guide to requirements, income thresholds, and renewal processes.</p>
                     </article>
 
                     <div class="w-full h-px bg-gray-200 mb-8"></div>
 
                     <!-- Niche Item 2 -->
                     <article class="mb-8 group cursor-pointer">
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Fashion Counsel</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Intellectual Property</span>
                         <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
-                            Sustainability Claims and the new EU "Greenwashing" Directive
+                            Why registering your trademark in Argentina is crucial for LATAM expansion
                         </h4>
-                        <p class="text-sm text-gray-500 line-clamp-2">How luxury brands must adapt supply chain transparency reporting by Q4 2024.</p>
+                        <p class="text-sm text-gray-500 line-clamp-2">First-to-file vs. First-to-use: Navigating the Argentinian trademark system.</p>
                     </article>
 
                     <div class="w-full h-px bg-gray-200 mb-8"></div>
 
                     <!-- Niche Item 3 -->
                     <article class="mb-8 group cursor-pointer">
-                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Environmental Law Advisor</span>
+                        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Real Estate</span>
                         <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
-                            The Fine Print: Carbon Credit verification standards update
+                            Property acquisition for non-residents: Legal hurdles and tax benefits
                         </h4>
                     </article>
 
                     <!-- Newsletter CTA Box -->
                     <div class="bg-firm-black p-8 text-white mt-auto">
-                        <h5 class="font-serif text-lg mb-2">Stay Ahead of the Curve</h5>
-                        <p class="text-gray-400 text-xs mb-4">Briefings tailored to your industry, delivered weekly.</p>
+                        <h5 class="font-serif text-lg mb-2">Argentina Legal Briefing</h5>
+                        <p class="text-gray-400 text-xs mb-4">Stay updated on regulatory changes affecting expats and businesses.</p>
                         <button class="w-full bg-transparent border border-gray-600 text-white py-2 text-xs uppercase tracking-widest hover:bg-white hover:text-firm-black transition-colors">
-                            Subscribe to Newsletters
+                            Subscribe
                         </button>
                     </div>
 
@@ -289,7 +282,6 @@
     </section>
 
     <!-- FOOTER -->
-    <!-- Diseño: Sobrio, utilitario, columnas organizadas -->
     <footer class="bg-firm-black text-white pt-20 pb-10 border-t-4 border-firm-accent">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
@@ -299,37 +291,39 @@
                     <a href="#" class="font-display text-xl tracking-wide font-bold text-white mb-6 block">
                         LIFE <span class="text-firm-accent">IN</span> ARGENTINA
                     </a>
-                    <p class="text-gray-500 text-sm">
-                        London &bull; New York &bull; Buenos Aires &bull; Dubai
+                    <p class="text-gray-500 text-sm font-medium">
+                        Buenos Aires &bull; Córdoba
+                    </p>
+                    <p class="text-gray-500 text-xs mt-4 leading-relaxed">
+                        Providing world-class legal services to the international community in Argentina.
                     </p>
                 </div>
 
                 <!-- Utility Links 1 -->
                 <div>
-                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">The Firm</h4>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Our Services</h4>
                     <ul class="space-y-4 text-sm text-gray-300">
-                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Diversity & Inclusion</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Pro Bono</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Office Locations</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Immigration & Visas</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Company Formation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Trademark Registration</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Real Estate Law</a></li>
                     </ul>
                 </div>
 
                 <!-- Utility Links 2 -->
                 <div>
-                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Client Services</h4>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Resources</h4>
                     <ul class="space-y-4 text-sm text-gray-300">
-                        <li><a href="#" class="hover:text-white transition-colors">Client Payment Portal</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Extranet Login</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Alumni Network</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Client Portal</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Latest Insights</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">FAQ for Expats</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Subscribe</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact / Legal -->
                 <div>
-                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Contact</h4>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Contact Us</h4>
                     <p class="text-sm text-gray-300 mb-4">
                         +54 11 1234 5678 <br>
                         info@lifeinargentina.com
@@ -345,11 +339,10 @@
 
             <!-- Bottom Legal -->
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between text-xs text-gray-500">
-                <p>&copy; 2024 Life In Argentina. All rights reserved. Attorney Advertising.</p>
+                <p>&copy; 2024 Life In Argentina. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
                     <a href="#" class="hover:text-gray-300">Privacy Policy</a>
-                    <a href="#" class="hover:text-gray-300">Cookie Notice</a>
-                    <a href="#" class="hover:text-gray-300">Legal Disclaimer</a>
+                    <a href="#" class="hover:text-gray-300">Terms of Service</a>
                 </div>
             </div>
         </div>
