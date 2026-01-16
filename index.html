@@ -440,6 +440,9 @@
                 </p>
                 <form id="liaContactForm" onsubmit="handleSubmit(event)" class="space-y-4">
   <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
+                    <input type="hidden" id="timeField" name="time">
+<input type="hidden" id="pageUrlField" name="page_url">
+
 
   <div class="grid grid-cols-2 gap-4">
     <div>
@@ -588,12 +591,48 @@
         function handleSubmit(event) {
             event.preventDefault();
 
-            const firstName = document.getElementById('firstName').value.trim();
-            const lastName = document.getElementById('lastName').value.trim();
-            const nationality = document.getElementById('nationality').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const interest = document.getElementById('interest').value;
-            const description = document.getElementById('description').value.trim();
+           <script>
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = document.getElementById("liaContactForm");
+    if (!form || !window.emailjs) return;
+
+    // Populate hidden metadata fields BEFORE sending
+    const timeField = document.getElementById("timeField");
+    if (timeField) timeField.value = new Date().toISOString();
+
+    const pageUrlField = document.getElementById("pageUrlField");
+    if (pageUrlField) pageUrlField.value = window.location.href;
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    try {
+      await window.emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        form
+      );
+
+      document.getElementById('modalFormState').classList.add('hidden');
+      document.getElementById('modalSuccessState').classList.remove('hidden');
+
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      alert("We could not submit your enquiry. Please try again.");
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    }
+  }
+</script>
+
+
 
             const interestLabelMap = {
                 residency: 'Getting Residency / Citizenship',
