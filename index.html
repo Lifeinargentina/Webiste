@@ -431,63 +431,116 @@
                 </svg>
             </button>
 
+            FORM
+
             <div id="modalFormState">
                 <h3 class="font-display text-2xl font-bold text-firm-black mb-2">Let's Simplify Argentina</h3>
                 <p class="text-gray-600 text-sm mb-6 leading-relaxed">
                     Tell us a bit about your plans. We will get back to you today with a clear path forward.
                 </p>
+                <form id="liaContactForm" onsubmit="handleSubmit(event)" class="space-y-4">
+  <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
 
-                <form onsubmit="handleSubmit(event)" class="space-y-4" novalidate>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label for="firstName" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">First Name</label>
-                            <input type="text" id="firstName" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors">
-                        </div>
-                        <div>
-                            <label for="lastName" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Last Name</label>
-                            <input type="text" id="lastName" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors">
-                        </div>
-                    </div>
+  <div class="grid grid-cols-2 gap-4">
+    <div>
+      <label for="firstName" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">First Name</label>
+      <input type="text" id="firstName" name="firstName" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors">
+    </div>
+    <div>
+      <label for="lastName" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Last Name</label>
+      <input type="text" id="lastName" name="lastName" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors">
+    </div>
+  </div>
 
-                    <div>
-                        <label for="nationality" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Nationality</label>
-                        <input type="text" id="nationality" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="e.g. United States, Brazil...">
-                    </div>
+  <div>
+    <label for="nationality" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Nationality</label>
+    <input type="text" id="nationality" name="nationality" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="e.g. United States, Brazil...">
+  </div>
 
-                    <div>
-                        <label for="email" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Email Address</label>
-                        <input type="email" id="email" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="name@company.com">
-                    </div>
+  <div>
+    <label for="email" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Email Address</label>
+    <input type="email" id="email" name="email" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="name@company.com">
+  </div>
 
-                    <div>
-                        <label for="interest" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">I need help with</label>
-                        <div class="relative">
-                            <select id="interest" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors appearance-none bg-white">
-                                <option value="residency">Getting Residency / Citizenship</option>
-                                <option value="nomad_visa">Applying for a Digital Nomad Visa</option>
-                                <option value="corporate">Starting a Business / S.R.L.</option>
-                                <option value="trademark">Registering a Trademark</option>
-                                <option value="other">Other Inquiry</option>
-                            </select>
-                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-                            </div>
-                        </div>
-                    </div>
+  <div>
+    <label for="interest" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">I need help with</label>
+    <div class="relative">
+      <select id="interest" name="interest" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors appearance-none bg-white">
+        <option value="residency">Getting Residency / Citizenship</option>
+        <option value="nomad_visa">Applying for a Digital Nomad Visa</option>
+        <option value="corporate">Starting a Business / S.R.L.</option>
+        <option value="trademark">Registering a Trademark</option>
+        <option value="other">Other Inquiry</option>
+      </select>
+      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+      </div>
+    </div>
+  </div>
 
-                    <div>
-                        <label for="description" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">How can we help?</label>
-                        <textarea id="description" rows="3" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="Briefly describe your situation..."></textarea>
-                    </div>
+  <div>
+    <label for="description" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">How can we help?</label>
+    <textarea id="description" name="description" rows="3" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="Briefly describe your situation..."></textarea>
+  </div>
 
-                    <button type="submit" class="w-full bg-firm-black text-white py-3 text-xs font-bold uppercase tracking-widest hover:bg-firm-accent transition-colors">
-                        Get Started
-                    </button>
+  <button type="submit" class="w-full bg-firm-black text-white py-3 text-xs font-bold uppercase tracking-widest hover:bg-firm-accent transition-colors">
+    Get Started
+  </button>
 
-                    <p class="text-[10px] text-gray-400 text-center mt-2">
-                        We respect your privacy.
-                    </p>
-                </form>
+  <p class="text-[10px] text-gray-400 text-center mt-2">We respect your privacy.</p>
+</form>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  const EMAILJS_SERVICE_ID = "service_huqa16f";
+  const EMAILJS_TEMPLATE_ID = "template_yk44c0i";
+  const EMAILJS_PUBLIC_KEY = "kcX6p2ITpMpxi-ZYc";
+
+  (function initEmailJS() {
+    if (window.emailjs && typeof window.emailjs.init === "function") {
+      window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    }
+  })();
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    const form = document.getElementById("liaContactForm");
+    if (!form || !window.emailjs) return;
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn ? submitBtn.textContent : "";
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
+    }
+
+    try {
+      await window.emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
+
+      document.getElementById('modalFormState').classList.add('hidden');
+      document.getElementById('modalSuccessState').classList.remove('hidden');
+
+      form.reset();
+    } catch (err) {
+      console.error(err);
+      alert("We could not submit your enquiry. Please try again.");
+    } finally {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    }
+  }
+</script>
+
+
+
+
+
+
+                
             </div>
 
             <div id="modalSuccessState" class="hidden text-center py-8">
