@@ -564,41 +564,43 @@
         </div>
     </div>
 
-    <!-- JAVASCRIPT -->
-    <script>
-        function openModal() {
-            const modal = document.getElementById('contactModal');
-            modal.classList.add('open');
-            document.body.style.overflow = 'hidden';
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-            document.getElementById('modalFormState').classList.remove('hidden');
-            document.getElementById('modalSuccessState').classList.add('hidden');
+<script>
+  const EMAILJS_SERVICE_ID = "service_huqa16f";
+  const EMAILJS_TEMPLATE_ID = "template_yk44c0i";
+  const EMAILJS_PUBLIC_KEY = "kcX6p2ITpMpxi-ZYc";
 
-            document.getElementById('firstName').value = '';
-            document.getElementById('lastName').value = '';
-            document.getElementById('nationality').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('description').value = '';
-            document.getElementById('interest').selectedIndex = 0;
-        }
+  (function initEmailJS() {
+    if (window.emailjs && typeof window.emailjs.init === "function") {
+      window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+    }
+  })();
 
-        function closeModal() {
-            const modal = document.getElementById('contactModal');
-            modal.classList.remove('open');
-            document.body.style.overflow = '';
-        }
+  function openModal() {
+    const modal = document.getElementById('contactModal');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
 
-        function handleSubmit(event) {
-            event.preventDefault();
+    document.getElementById('modalFormState').classList.remove('hidden');
+    document.getElementById('modalSuccessState').classList.add('hidden');
 
-           <script>
+    document.getElementById('liaContactForm').reset();
+  }
+
+  function closeModal() {
+    const modal = document.getElementById('contactModal');
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
   async function handleSubmit(event) {
     event.preventDefault();
 
     const form = document.getElementById("liaContactForm");
     if (!form || !window.emailjs) return;
 
-    // Populate hidden metadata fields BEFORE sending
+    // metadata
     const timeField = document.getElementById("timeField");
     if (timeField) timeField.value = new Date().toISOString();
 
@@ -620,7 +622,6 @@
 
       document.getElementById('modalFormState').classList.add('hidden');
       document.getElementById('modalSuccessState').classList.remove('hidden');
-
       form.reset();
     } catch (err) {
       console.error(err);
@@ -630,7 +631,14 @@
       submitBtn.textContent = originalText;
     }
   }
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
 </script>
+
 
 
 
