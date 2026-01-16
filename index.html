@@ -4,20 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life In Argentina | Strategic Legal Counsel</title>
-
+    
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Fonts:
-         Cinzel (Logo)
-         Playfair Display (Headings)
-         Inter (Body/UI)
-    -->
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-    <!-- Tailwind config -->
+    <!-- Configuración personalizada de Tailwind -->
     <script>
         tailwind.config = {
             theme: {
@@ -26,13 +22,13 @@
                         'firm-black': '#111111',
                         'firm-gray': '#f4f4f4',
                         'firm-stone': '#8c8c8c',
-                        'firm-accent': '#800020',
+                        'firm-accent': '#800020', // Burgundy / Ladrillo sobrio
                         'firm-accent-hover': '#5c0017',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         serif: ['Playfair Display', 'serif'],
-                        display: ['Cinzel', 'serif'],
+                        display: ['Cinzel', 'serif'], 
                     },
                     spacing: {
                         '128': '32rem',
@@ -47,7 +43,7 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-
+        
         .hover-underline-animation {
             display: inline-block;
             position: relative;
@@ -90,43 +86,41 @@
         .modal.open .modal-content {
             transform: translateY(0);
         }
-
+        
         /* Custom Scrollbar for Modal if content is long */
         .modal-scroll {
             max-height: 90vh;
             overflow-y: auto;
         }
-
-        /* Tailwind CDN does not ship plugins; replicate line-clamp behaviour */
+        
+        /* Helper classes for aspect ratio and line clamp support via CSS if CDN fails */
+        .aspect-16-9 {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+        }
+        .aspect-16-9 img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .line-clamp-2 {
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
-
-        /* Tailwind CDN plugin-free aspect ratio helper */
-        .aspect-16-9 {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%;
-        }
-        .aspect-16-9 > img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
     </style>
 </head>
 <body class="bg-white text-firm-black font-sans">
 
-    <!-- HEADER -->
+    <!-- HEADER / NAVEGACIÓN -->
     <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
-
+                
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#" class="font-display text-2xl tracking-widest font-bold text-firm-black">
@@ -134,14 +128,14 @@
                     </a>
                 </div>
 
-                <!-- Nav -->
+                <!-- Navegación Principal -->
                 <nav class="hidden md:flex space-x-12 items-center">
                     <a href="#team" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Our Team</a>
                     <a href="#practice-areas" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Practice Areas</a>
                     <a href="#insights" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Insights</a>
                 </nav>
 
-                <!-- Modal Trigger -->
+                <!-- Elemento Destacado (Trigger Modal) -->
                 <div class="hidden lg:flex items-center">
                     <div onclick="openModal()" class="relative group cursor-pointer">
                         <div class="flex items-center border border-gray-300 px-4 py-2 bg-gray-50 transition-all duration-300 group-hover:border-firm-accent group-hover:bg-white w-64 justify-between">
@@ -153,21 +147,21 @@
                     </div>
                 </div>
 
-                <!-- Mobile button (visual only) -->
+                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center">
-                    <button class="text-gray-800 hover:text-firm-accent" type="button" aria-label="Open menu">
+                    <button class="text-gray-800 hover:text-firm-accent">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                 </div>
-
             </div>
         </div>
     </header>
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <section class="relative bg-gray-900 h-[650px] flex items-center justify-center">
+        <!-- Imagen de fondo: Buenos Aires (Obelisco / 9 de Julio) -->
         <div class="absolute inset-0 overflow-hidden">
             <img src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?auto=format&fit=crop&q=80" alt="Buenos Aires Architecture" class="w-full h-full object-cover object-center opacity-60">
             <div class="hero-overlay absolute inset-0"></div>
@@ -175,18 +169,21 @@
 
         <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center md:text-left w-full pt-12">
             <div class="max-w-3xl">
+                <!-- Headline -->
                 <h1 class="text-4xl md:text-6xl font-serif text-white font-medium leading-tight mb-6">
                     Argentina Made Effortless.
                     <span class="italic text-gray-300 block text-2xl md:text-4xl mt-3 font-light">Legal solutions for your new life.</span>
                 </h1>
-
+                
+                <!-- Subtítulo -->
                 <p class="mt-6 text-lg md:text-xl text-gray-200 font-light max-w-2xl leading-relaxed">
-                    Navigating a new country can be complex. We make it simple.
+                    Navigating a new country can be complex. We make it simple. 
                     From settling in to starting up, our local team handles the bureaucracy so you can focus on what matters.
                 </p>
 
+                <!-- CTA (Trigger Modal) -->
                 <div class="mt-10">
-                    <button onclick="openModal()" class="inline-flex items-center px-8 py-3 bg-white text-firm-black border border-white text-base font-medium hover:bg-gray-100 transition-all duration-300 uppercase tracking-widest text-xs" type="button">
+                    <button onclick="openModal()" class="inline-flex items-center px-8 py-3 bg-white text-firm-black border border-white text-base font-medium hover:bg-gray-100 transition-all duration-300 uppercase tracking-widest text-xs">
                         Tell us your goals
                     </button>
                 </div>
@@ -194,10 +191,12 @@
         </div>
     </section>
 
-    <!-- PRACTICE AREAS -->
+    <!-- SECCIÓN DE ACCESOS DIRECTOS (THE 3 DOORS) -->
+    <!-- ID agregado para navegación -->
     <section id="practice-areas" class="bg-white relative -mt-20 z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-20">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-0 shadow-2xl bg-white">
-
+            
+            <!-- Door 1: Immigration -->
             <a href="#" class="group p-10 border-r border-gray-100 hover:bg-gray-50 transition-colors border-t-4 border-firm-accent">
                 <div class="mb-4 text-firm-accent">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -206,13 +205,14 @@
                     Move to Argentina
                 </h3>
                 <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                    Residency does not have to be a headache. Whether you are retiring, working remotely, or seeking citizenship, we guide you through every form and filing.
+                    Residency doesn't have to be a headache. Whether you are retiring, working remotely, or seeking citizenship, we guide you through every form and filing.
                 </p>
                 <div class="flex items-center text-xs font-bold uppercase tracking-widest text-firm-black group-hover:translate-x-2 transition-transform duration-300">
                     Immigration Services <span class="ml-2 text-firm-accent">&rarr;</span>
                 </div>
             </a>
 
+            <!-- Door 2: Corporate -->
             <a href="#" class="group p-10 border-r border-gray-100 hover:bg-gray-50 transition-colors border-t-4 border-gray-200 hover:border-firm-accent transition-all">
                 <div class="mb-4 text-firm-black group-hover:text-firm-accent transition-colors">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
@@ -228,6 +228,7 @@
                 </div>
             </a>
 
+            <!-- Door 3: IP & General -->
             <a href="#" class="group p-10 hover:bg-gray-50 transition-colors border-t-4 border-gray-200 hover:border-firm-accent transition-all">
                 <div class="mb-4 text-firm-black group-hover:text-firm-accent transition-colors">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
@@ -246,20 +247,21 @@
         </div>
     </section>
 
-    <!-- TEAM -->
+    <!-- SECCIÓN: OUR TEAM (ACTUALIZADA: SIN FOTOS/NOMBRES ESPECÍFICOS) -->
     <section id="team" class="py-24 bg-white border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-firm-accent font-bold text-xs uppercase tracking-widest mb-3 block">A Complete Ecosystem</span>
                 <h2 class="text-4xl font-serif text-firm-black mb-6">More than just lawyers.</h2>
                 <p class="text-gray-500 font-light leading-relaxed">
-                    We have curated a full network of professionals to handle every aspect of your move.
+                    We have curated a full network of professionals to handle every aspect of your move. 
                     From the legal strategy to the certified translation, we coordinate everything under one roof.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
+                
+                <!-- Card 1: Migratory Law -->
                 <div class="bg-gray-50 p-10 border-t-4 border-firm-accent hover:shadow-lg transition-shadow">
                     <h3 class="text-xl font-serif font-semibold text-firm-black mb-4">Migratory Law Specialists</h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
@@ -267,17 +269,19 @@
                     </p>
                 </div>
 
+                <!-- Card 2: Support Network -->
                 <div class="bg-gray-50 p-10 border-t-4 border-gray-200 hover:border-firm-accent transition-all hover:shadow-lg">
-                    <h3 class="text-xl font-serif font-semibold text-firm-black mb-4">The Support Network</h3>
+                     <h3 class="text-xl font-serif font-semibold text-firm-black mb-4">The Support Network</h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
-                        Bureaucracy requires more than legal advice. Our team includes <strong>certified translators</strong>, public <strong>notaries</strong>, and <strong>accountants</strong>. We handle apostilles, translations, and tax registrations so you do not have to source multiple vendors.
+                        Bureaucracy requires more than legal advice. Our team includes <strong>certified translators</strong>, public <strong>notaries</strong>, and <strong>accountants</strong>. We handle the apostilles, translations, and tax registrations so you don't have to source multiple vendors.
                     </p>
                 </div>
 
+                <!-- Card 3: In-Person Support -->
                 <div class="bg-gray-50 p-10 border-t-4 border-gray-200 hover:border-firm-accent transition-all hover:shadow-lg">
-                    <h3 class="text-xl font-serif font-semibold text-firm-black mb-4">By Your Side, Literally</h3>
+                     <h3 class="text-xl font-serif font-semibold text-firm-black mb-4">By Your Side, Literally</h3>
                     <p class="text-sm text-gray-600 leading-relaxed">
-                        We do not just advise from a desk. We offer <strong>virtual consultations</strong> for planning, and we <strong>accompany you in person</strong> to government offices (Migraciones, AFIP, Banks) so your diligences go smoothly.
+                        We don't just advise from a desk. We offer <strong>virtual consultations</strong> for planning, and we <strong>accompany you in person</strong> to government offices (Migraciones, AFIP, Banks) to ensure your diligences go smoothly.
                     </p>
                 </div>
 
@@ -285,10 +289,12 @@
         </div>
     </section>
 
-    <!-- INSIGHTS -->
+    <!-- SECCIÓN EDITORIAL / INSIGHTS -->
+    <!-- ID agregado para navegación -->
     <section id="insights" class="py-24 bg-firm-gray">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-
+            
+            <!-- Section Header -->
             <div class="flex justify-between items-end mb-12 border-b border-gray-300 pb-4">
                 <div>
                     <span class="text-firm-accent font-bold text-xs uppercase tracking-widest mb-2 block">Knowledge Base</span>
@@ -297,11 +303,15 @@
                 <a href="#" class="hidden md:block text-sm font-semibold text-gray-600 hover:text-firm-black">Read All Articles &rarr;</a>
             </div>
 
+            <!-- Bento Grid Editorial -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-
+                
+                <!-- Columna Principal (2/3) -->
                 <div class="lg:col-span-7 space-y-8">
+                    <!-- Featured Article -->
                     <article class="group cursor-pointer">
                         <div class="aspect-16-9 mb-6 overflow-hidden">
+                            <!-- Placeholder image business/meeting -->
                             <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80" alt="Business Meeting" class="grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out">
                         </div>
                         <div class="space-y-3">
@@ -317,8 +327,10 @@
                     </article>
                 </div>
 
+                <!-- Columna Lateral (1/3) - Niche Topics -->
                 <div class="lg:col-span-5 flex flex-col justify-between border-l border-gray-300 pl-0 lg:pl-12 pt-8 lg:pt-0">
-
+                    
+                    <!-- Niche Item 1 -->
                     <article class="mb-8 group cursor-pointer">
                         <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Living Here</span>
                         <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
@@ -329,16 +341,18 @@
 
                     <div class="w-full h-px bg-gray-200 mb-8"></div>
 
+                    <!-- Niche Item 2 -->
                     <article class="mb-8 group cursor-pointer">
                         <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Brand Protection</span>
                         <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
-                            Do not lose your name: Why trademarking early matters
+                            Don't lose your name: Why trademarking early matters
                         </h4>
                         <p class="text-sm text-gray-500 line-clamp-2">Argentina is a "first-to-file" country. Learn how to protect your intellectual property before you launch.</p>
                     </article>
 
                     <div class="w-full h-px bg-gray-200 mb-8"></div>
 
+                    <!-- Niche Item 3 -->
                     <article class="mb-8 group cursor-pointer">
                         <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Real Estate</span>
                         <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
@@ -346,10 +360,11 @@
                         </h4>
                     </article>
 
+                    <!-- Newsletter CTA Box -->
                     <div class="bg-firm-black p-8 text-white mt-auto">
                         <h5 class="font-serif text-lg mb-2">Weekly Briefing</h5>
                         <p class="text-gray-400 text-xs mb-4">Practical advice on navigating Argentine law, delivered to your inbox.</p>
-                        <button onclick="openModal()" class="w-full bg-transparent border border-gray-600 text-white py-2 text-xs uppercase tracking-widest hover:bg-white hover:text-firm-black transition-colors" type="button">
+                        <button onclick="openModal()" class="w-full bg-transparent border border-gray-600 text-white py-2 text-xs uppercase tracking-widest hover:bg-white hover:text-firm-black transition-colors">
                             Subscribe
                         </button>
                     </div>
@@ -360,10 +375,12 @@
     </section>
 
     <!-- FOOTER -->
+    <!-- ID agregado para navegación -->
     <footer id="footer" class="bg-firm-black text-white pt-20 pb-10 border-t-4 border-firm-accent">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-
+                
+                <!-- Branding Column -->
                 <div class="col-span-1 md:col-span-1">
                     <a href="#" class="font-display text-xl tracking-wide font-bold text-white mb-6 block">
                         LIFE <span class="text-firm-accent">IN</span> ARGENTINA
@@ -376,6 +393,7 @@
                     </p>
                 </div>
 
+                <!-- Utility Links 1 -->
                 <div>
                     <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Services</h4>
                     <ul class="space-y-4 text-sm text-gray-300">
@@ -386,23 +404,26 @@
                     </ul>
                 </div>
 
+                <!-- Utility Links 2 -->
                 <div>
                     <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Client Area</h4>
                     <ul class="space-y-4 text-sm text-gray-300">
                         <li><a href="#" class="hover:text-white transition-colors">Portal Login</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">Track Application</a></li>
                         <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors" onclick="openModal()">Subscribe</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Subscribe</a></li>
                     </ul>
                 </div>
 
+                <!-- Contact / Legal -->
                 <div>
                     <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Get in Touch</h4>
                     <p class="text-sm text-gray-300 mb-4">
                         +54 11 1234 5678 <br>
-                        contact@lifeinargentina.com
+                        info@lifeinargentina.com
                     </p>
                     <div class="flex space-x-4 mt-6">
+                        <!-- Social Placeholders -->
                         <div class="w-5 h-5 bg-gray-700 hover:bg-white transition-colors cursor-pointer"></div>
                         <div class="w-5 h-5 bg-gray-700 hover:bg-white transition-colors cursor-pointer"></div>
                         <div class="w-5 h-5 bg-gray-700 hover:bg-white transition-colors cursor-pointer"></div>
@@ -410,6 +431,7 @@
                 </div>
             </div>
 
+            <!-- Bottom Legal -->
             <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between text-xs text-gray-500">
                 <p>&copy; 2024 Life In Argentina. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
@@ -420,262 +442,192 @@
         </div>
     </footer>
 
-    <!-- MODAL -->
+    <!-- MODAL OVERLAY -->
     <div id="contactModal" class="modal fixed inset-0 z-[100] flex items-center justify-center">
+        <!-- Backdrop -->
         <div onclick="closeModal()" class="absolute inset-0 bg-black bg-opacity-80 backdrop-blur-sm cursor-pointer"></div>
-
+        
+        <!-- Content -->
         <div class="modal-content relative bg-white w-full max-w-lg mx-4 p-8 shadow-2xl border-t-4 border-firm-accent modal-scroll">
-            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-firm-black" type="button" aria-label="Close modal">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-firm-black">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                 </svg>
             </button>
 
-            
-
+            <!-- Form State -->
             <div id="modalFormState">
                 <h3 class="font-display text-2xl font-bold text-firm-black mb-2">Let's Simplify Argentina</h3>
                 <p class="text-gray-600 text-sm mb-6 leading-relaxed">
                     Tell us a bit about your plans. We will get back to you today with a clear path forward.
                 </p>
-                <form id="liaContactForm" onsubmit="handleSubmit(event)" class="space-y-4">
-  <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
-                    <input type="hidden" id="timeField" name="time">
-<input type="hidden" id="pageUrlField" name="page_url">
-
-
-  <div class="grid grid-cols-2 gap-4">
-    <div>
-      <label for="firstName" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">First Name</label>
-      <input type="text" id="firstName" name="firstName" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors">
-    </div>
-    <div>
-      <label for="lastName" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Last Name</label>
-      <input type="text" id="lastName" name="lastName" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors">
-    </div>
-  </div>
-
-  <div>
-    <label for="nationality" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Nationality</label>
-    <input type="text" id="nationality" name="nationality" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="e.g. United States, Brazil...">
-  </div>
-
-  <div>
-    <label for="email" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Email Address</label>
-    <input type="email" id="email" name="email" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="name@company.com">
-  </div>
-
-  <div>
-    <label for="interest" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">I need help with</label>
-    <div class="relative">
-      <select id="interest" name="interest" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors appearance-none bg-white">
-        <option value="residency">Getting Residency / Citizenship</option>
-        <option value="nomad_visa">Applying for a Digital Nomad Visa</option>
-        <option value="corporate">Starting a Business / S.R.L.</option>
-        <option value="trademark">Registering a Trademark</option>
-        <option value="other">Other Inquiry</option>
-      </select>
-      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
-        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
-      </div>
-    </div>
-  </div>
-
-  <div>
-    <label for="description" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">How can we help?</label>
-    <textarea id="description" name="description" rows="3" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="Briefly describe your situation..."></textarea>
-  </div>
-
-  <button type="submit" class="w-full bg-firm-black text-white py-3 text-xs font-bold uppercase tracking-widest hover:bg-firm-accent transition-colors">
-    Get Started
-  </button>
-
-  <p class="text-[10px] text-gray-400 text-center mt-2">We respect your privacy.</p>
-</form>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script>
-  const EMAILJS_SERVICE_ID = "service_huqa16f";
-  const EMAILJS_TEMPLATE_ID = "template_yk44c0i";
-  const EMAILJS_PUBLIC_KEY = "kcX6p2ITpMpxi-ZYc";
-
-  (function initEmailJS() {
-    if (window.emailjs && typeof window.emailjs.init === "function") {
-      window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-    }
-  })();
-
-  async function handleSubmit(event) {
-    event.preventDefault();
-
-    const form = document.getElementById("liaContactForm");
-    if (!form || !window.emailjs) return;
-
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn ? submitBtn.textContent : "";
-
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Sending...";
-    }
-
-    try {
-      await window.emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form);
-
-      document.getElementById('modalFormState').classList.add('hidden');
-      document.getElementById('modalSuccessState').classList.remove('hidden');
-
-      form.reset();
-    } catch (err) {
-      console.error(err);
-      alert("We could not submit your enquiry. Please try again.");
-    } finally {
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.textContent = originalText;
-      }
-    }
-  }
-</script>
-
-
-
-
-
-
                 
+                <form id="liaContactForm" onsubmit="handleSubmit(event)" class="space-y-4">
+                    <!-- HIDDEN FIELDS FOR EMAILJS -->
+                    <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
+                    <input type="hidden" id="timeField" name="time">
+                    <input type="hidden" id="pageUrlField" name="page_url">
+
+                    <!-- Name Fields -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="firstName" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors">
+                        </div>
+                    </div>
+
+                    <!-- Nationality -->
+                    <div>
+                        <label for="nationality" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Nationality</label>
+                        <input type="text" id="nationality" name="nationality" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="e.g. United States, Brazil...">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Email Address</label>
+                        <input type="email" id="email" name="email" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="name@company.com">
+                    </div>
+
+                    <!-- Area of Interest -->
+                    <div>
+                        <label for="interest" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">I need help with</label>
+                        <div class="relative">
+                            <select id="interest" name="interest" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors appearance-none bg-white">
+                                <option value="residency">Getting Residency / Citizenship</option>
+                                <option value="nomad_visa">Applying for a Digital Nomad Visa</option>
+                                <option value="corporate">Starting a Business / S.R.L.</option>
+                                <option value="trademark">Registering a Trademark</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div>
+                        <label for="description" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">How can we help?</label>
+                        <textarea id="description" name="description" rows="3" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="Briefly describe your situation..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-firm-black text-white py-3 text-xs font-bold uppercase tracking-widest hover:bg-firm-accent transition-colors">
+                        Get Started
+                    </button>
+                    <p class="text-[10px] text-gray-400 text-center mt-2">
+                        We respect your privacy.
+                    </p>
+                </form>
             </div>
 
+            <!-- Success State (Hidden by default) -->
             <div id="modalSuccessState" class="hidden text-center py-8">
                 <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
                     <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                 </div>
-                <h3 class="font-display text-2xl font-bold text-firm-black mb-2">Draft ready</h3>
+                <h3 class="font-display text-2xl font-bold text-firm-black mb-2">We're on it!</h3>
                 <p class="text-gray-600 text-sm mb-6">
-                    We opened an email draft addressed to <strong>contact@lifeinargentina.com</strong> with your details pre-filled.
-                    If it did not open, check that your device has a default mail app configured.
+                    Thanks for reaching out. We've received your details.<br>
+                    Our team will check your eligibility and email you at <strong>contact@lifeinargentina.com</strong> shortly.
                 </p>
-                <button onclick="closeModal()" class="inline-block border border-gray-300 px-6 py-2 text-xs uppercase tracking-widest hover:bg-gray-50" type="button">
+                <button onclick="closeModal()" class="inline-block border border-gray-300 px-6 py-2 text-xs uppercase tracking-widest hover:bg-gray-50">
                     Back to Site
                 </button>
             </div>
         </div>
     </div>
 
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- JAVASCRIPT FOR MODAL & EMAILJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // --- CONFIG ---
+        const EMAILJS_SERVICE_ID = "service_huqa16f";
+        const EMAILJS_TEMPLATE_ID = "template_yk44c0i";
+        const EMAILJS_PUBLIC_KEY = "kcX6p2ITpMpxi-ZYc";
 
-<script>
-  const EMAILJS_SERVICE_ID = "service_huqa16f";
-  const EMAILJS_TEMPLATE_ID = "template_yk44c0i";
-  const EMAILJS_PUBLIC_KEY = "kcX6p2ITpMpxi-ZYc";
+        // Init EmailJS
+        (function() {
+            if (window.emailjs) {
+                emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+            }
+        })();
 
-  (function initEmailJS() {
-    if (window.emailjs && typeof window.emailjs.init === "function") {
-      window.emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-    }
-  })();
-
-  function openModal() {
-    const modal = document.getElementById('contactModal');
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-
-    document.getElementById('modalFormState').classList.remove('hidden');
-    document.getElementById('modalSuccessState').classList.add('hidden');
-
-    document.getElementById('liaContactForm').reset();
-  }
-
-  function closeModal() {
-    const modal = document.getElementById('contactModal');
-    modal.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  async function handleSubmit(event) {
-    event.preventDefault();
-
-    const form = document.getElementById("liaContactForm");
-    if (!form || !window.emailjs) return;
-
-    // metadata
-    const timeField = document.getElementById("timeField");
-    if (timeField) timeField.value = new Date().toISOString();
-
-    const pageUrlField = document.getElementById("pageUrlField");
-    if (pageUrlField) pageUrlField.value = window.location.href;
-
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Sending...";
-
-    try {
-      await window.emailjs.sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        form
-      );
-
-      document.getElementById('modalFormState').classList.add('hidden');
-      document.getElementById('modalSuccessState').classList.remove('hidden');
-      form.reset();
-    } catch (err) {
-      console.error(err);
-      alert("We could not submit your enquiry. Please try again.");
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = originalText;
-    }
-  }
-
-  document.addEventListener('keydown', function(event) {
-    if (event.key === "Escape") {
-      closeModal();
-    }
-  });
-</script>
-
-
-
-
-            const interestLabelMap = {
-                residency: 'Getting Residency / Citizenship',
-                nomad_visa: 'Digital Nomad Visa',
-                corporate: 'Starting a Business / S.R.L.',
-                trademark: 'Trademark Registration',
-                other: 'Other Inquiry'
-            };
-
-            const subject = `New enquiry (${interestLabelMap[interest] || 'General'}) - ${firstName} ${lastName}`.trim();
-
-            const bodyLines = [
-                'New enquiry from lifeinargentina.com',
-                '',
-                `Name: ${firstName} ${lastName}`.trim(),
-                `Email: ${email}`,
-                `Nationality: ${nationality}`,
-                `Service: ${interestLabelMap[interest] || interest}`,
-                '',
-                'Message:',
-                description || '(No additional details provided)',
-                '',
-                `Submitted at: ${new Date().toISOString()}`
-            ];
-
-            const mailto = `mailto:contact@lifeinargentina.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
-
-            document.getElementById('modalFormState').classList.add('hidden');
-            document.getElementById('modalSuccessState').classList.remove('hidden');
-
-            setTimeout(function () {
-                window.location.href = mailto;
-            }, 150);
+        // --- MODAL LOGIC ---
+        function openModal() {
+            const modal = document.getElementById('contactModal');
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            
+            // Reset state
+            document.getElementById('modalFormState').classList.remove('hidden');
+            document.getElementById('modalSuccessState').classList.add('hidden');
+            
+            // Clear form
+            const form = document.getElementById('liaContactForm');
+            if(form) form.reset();
         }
 
+        function closeModal() {
+            const modal = document.getElementById('contactModal');
+            modal.classList.remove('open');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // --- FORM SUBMIT LOGIC ---
+        async function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById("liaContactForm");
+            if (!form || !window.emailjs) return;
+
+            // Set hidden metadata fields
+            const timeField = document.getElementById("timeField");
+            if (timeField) timeField.value = new Date().toISOString();
+
+            const pageUrlField = document.getElementById("pageUrlField");
+            if (pageUrlField) pageUrlField.value = window.location.href;
+
+            // UI Feedback
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn ? submitBtn.textContent : "Get Started";
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Sending...";
+            }
+
+            try {
+                await window.emailjs.sendForm(
+                    EMAILJS_SERVICE_ID,
+                    EMAILJS_TEMPLATE_ID,
+                    form
+                );
+
+                // Success
+                document.getElementById('modalFormState').classList.add('hidden');
+                document.getElementById('modalSuccessState').classList.remove('hidden');
+                form.reset();
+
+            } catch (err) {
+                console.error("EmailJS Error:", err);
+                alert("We could not submit your enquiry. Please check your connection and try again.");
+            } finally {
+                // Restore button state
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                }
+            }
+        }
+
+        // Close on Escape key
         document.addEventListener('keydown', function(event) {
             if (event.key === "Escape") {
                 closeModal();
