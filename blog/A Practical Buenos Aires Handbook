@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Practical Buenos Aires Handbook for Expats and Remote Workers (Updated 2026)</title>
+    <meta name="description" content="A practical 2026 guide to living in Buenos Aires: neighbourhoods, rents, visas, SUBE and transport, SIMs, safety habits, coworking, cafés, and setup.">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --border-color: #ddd;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-top: 2.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+        }
+
+        .meta-info {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        /* Table Styles */
+        .table-container {
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Map Links */
+        .map-links a {
+            display: inline-block;
+            background: #eee;
+            padding: 5px 10px;
+            margin: 3px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+
+        .map-links a:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+
+        /* Callouts and Checklists */
+        .callout {
+            background-color: #e8f4fc;
+            border-left: 5px solid var(--accent-color);
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .warning {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li::before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Image Placeholder Style */
+        .image-placeholder {
+            background-color: #eaeaea;
+            color: #555;
+            padding: 20px;
+            text-align: center;
+            border: 1px dashed #999;
+            margin: 20px 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <header>
+        <h1>A Practical Buenos Aires Handbook for Expats and Remote Workers (Updated 2026)</h1>
+        <div class="meta-info">
+            <p><strong>Estimated reading time:</strong> 18–22 minutes<br>
+            <strong>Last updated:</strong> 17 January 2026</p>
+        </div>
+    </header>
+
+    
+
+    <section id="outline">
+        <h2>Map Index</h2>
+        <ul>
+            <li><a href="#neighbourhood-map">Map 1: Neighbourhoods (with “who it suits”)</a></li>
+            <li><a href="#day-to-day-map">Map 2: Day-to-day essentials</a></li>
+        </ul>
+    </section>
+
+    <section id="neighbourhood-map">
+        <h2>Map 1: Neighbourhoods map</h2>
+        <p>Covering: Palermo, Recoleta, Belgrano, Villa Crespo, Colegiales, Núñez, San Telmo, Microcentro, Retiro, Barracas, Almagro, Caballito, Chacarita, Puerto Madero.</p>
+        
+        <p><strong><a href="https://www.google.com/maps/place/Buenos+Aires" target="_blank">Open the base map in Google Maps</a></strong></p>
+
+        <h3>Neighbourhood pins (tap to explore):</h3>
+        <div class="map-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=Palermo%2C%20Buenos%20Aires" target="_blank">Palermo</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Recoleta%2C%20Buenos%20Aires" target="_blank">Recoleta</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Belgrano%2C%20Buenos%20Aires" target="_blank">Belgrano</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Villa%20Crespo%2C%20Buenos%20Aires" target="_blank">Villa Crespo</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Colegiales%2C%20Buenos%20Aires" target="_blank">Colegiales</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=N%C3%BA%C3%B1ez%2C%20Buenos%20Aires" target="_blank">Núñez</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=San%20Telmo%2C%20Buenos%20Aires" target="_blank">San Telmo</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Microcentro%2C%20Buenos%20Aires" target="_blank">Microcentro</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Retiro%2C%20Buenos%20Aires" target="_blank">Retiro</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Barracas%2C%20Buenos%20Aires" target="_blank">Barracas</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Almagro%2C%20Buenos%20Aires" target="_blank">Almagro</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Caballito%2C%20Buenos%20Aires" target="_blank">Caballito</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Chacarita%2C%20Buenos%20Aires" target="_blank">Chacarita</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Puerto%20Madero%2C%20Buenos%20Aires" target="_blank">Puerto Madero</a>
+        </div>
+
+        
+
+        <h3>Quick “who it suits” notes</h3>
+        <ul>
+            <li><strong>Palermo:</strong> first-timers who want convenience, cafés, restaurants, English-friendly services, and a big social scene.</li>
+            <li><strong>Recoleta:</strong> people who want classic architecture, walkability, quieter nights, and easy access to clinics and cultural venues.</li>
+            <li><strong>Belgrano:</strong> longer-stay expats, families, and anyone who values residential calm and strong everyday infrastructure.</li>
+            <li><strong>Villa Crespo:</strong> value-seekers who want great food and a local feel, while staying close to Palermo.</li>
+            <li><strong>Colegiales:</strong> remote workers who want calm streets, good cafés, and fast access to Palermo without living inside it.</li>
+            <li><strong>Núñez:</strong> runners, families, and anyone who likes space and a more residential rhythm.</li>
+            <li><strong>Chacarita:</strong> food people, creatives, and remote workers who want a less polished, more “real city” vibe.</li>
+            <li><strong>Caballito:</strong> central, practical, and residential; good for long-term life if you do not need expat nightlife.</li>
+            <li><strong>Almagro:</strong> city life with tango DNA and late-night Corrientes energy, usually better value than the north.</li>
+            <li><strong>San Telmo:</strong> history and aesthetics, better for short stays unless you already know the micro-areas you like.</li>
+            <li><strong>Microcentro:</strong> work-week convenience; quieter at night and on weekends, so choose building and block carefully.</li>
+            <li><strong>Retiro:</strong> transport access and offices; choose micro-location carefully and use street-smarts.</li>
+            <li><strong>Barracas:</strong> big spaces and a rising arts scene in parts; best for people who already know Buenos Aires.</li>
+            <li><strong>Puerto Madero:</strong> modern towers and high security; quiet and pricey, with fewer corner shops.</li>
+        </ul>
+    </section>
+
+    <section id="day-to-day-map">
+        <h2>Map 2: Day-to-day essentials</h2>
+        <p><strong><a href="https://www.google.com/maps/place/Buenos+Aires" target="_blank">Open the base map</a></strong></p>
+        
+        <h3>Airports</h3>
+        <div class="map-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=EZE%20Ministro%20Pistarini%20International%20Airport" target="_blank">EZE (Ezeiza)</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Aeroparque%20Jorge%20Newbery" target="_blank">AEP (Aeroparque)</a>
+        </div>
+
+        <h3>Key transport hubs</h3>
+        <div class="map-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=Estaci%C3%B3n%20Retiro" target="_blank">Retiro (trains + buses)</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Estaci%C3%B3n%20Constituci%C3%B3n" target="_blank">Constitución</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Estaci%C3%B3n%20Once%20Buenos%20Aires" target="_blank">Once</a>
+        </div>
+
+        <h3>Coworking</h3>
+        <div class="map-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=La%20Maquinita%20Co%20Palermo" target="_blank">La Maquinita Co</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=WeWork%20Buenos%20Aires" target="_blank">WeWork</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=AreaTres%20cowork%20Buenos%20Aires" target="_blank">AreaTres</a>
+        </div>
+
+        <h3>Cafés suitable for working</h3>
+        <div class="map-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=LAB%20Tostadores%20Palermo" target="_blank">LAB Tostadores</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Cuervo%20Cafe%20Buenos%20Aires" target="_blank">Cuervo Café</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Lattente%20Buenos%20Aires" target="_blank">Lattente</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=All%20Saints%20Cafe%20Buenos%20Aires" target="_blank">All Saints Café</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Cafe%20Registrado%20Buenos%20Aires" target="_blank">Café Registrado</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Negro%20Cueva%20de%20Cafe%20Buenos%20Aires" target="_blank">Negro Cueva de Café</a>
+        </div>
+
+        <h3>Parks</h3>
+        <div class="map-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=Bosques%20de%20Palermo" target="_blank">Bosques de Palermo</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Parque%20Centenario" target="_blank">Parque Centenario</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Barrancas%20de%20Belgrano" target="_blank">Barrancas de Belgrano</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Reserva%20Ecologica%20Costanera%20Sur" target="_blank">Reserva Ecológica Costanera Sur</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Parque%20Lezama" target="_blank">Parque Lezama</a>
+        </div>
+
+        <h3>Hospitals / clinics</h3>
+        <div class="map-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=Hospital%20Aleman%20Buenos%20Aires" target="_blank">Hospital Alemán</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hospital%20Italiano%20Buenos%20Aires" target="_blank">Hospital Italiano</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sanatorio%20Los%20Arcos%20Buenos%20Aires" target="_blank">Sanatorio Los Arcos</a>
+        </div>
+
+        <h3>Practical stops</h3>
+        <div class="map-links">
+            <a href="https://www.google.com/maps/search/?api=1&query=Personal%20Store%20Buenos%20Aires" target="_blank">Personal store</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Claro%20Sucursal%20Buenos%20Aires" target="_blank">Claro store</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Movistar%20Sucursal%20Buenos%20Aires" target="_blank">Movistar store</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Coto%20Buenos%20Aires" target="_blank">Supermercado Coto</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Jumbo%20Buenos%20Aires" target="_blank">Jumbo</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Carrefour%20Buenos%20Aires" target="_blank">Carrefour</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=casa%20de%20cambio%20Microcentro%20Buenos%20Aires" target="_blank">Microcentro cambio (area)</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>Is Buenos Aires right for you?</h2>
+        <p>Buenos Aires rewards people who like cities. You will walk a lot, you will live close to other people, and you will share elevators, doormen, late dinners, and a street life that starts after dark. The city also tests your patience with admin, small frictions, and the reality that not every system optimises for convenience.</p>
+        
+        <h3>These personas usually thrive:</h3>
+        <ul>
+            <li><strong>Remote founder who wants energy and access:</strong> You want meetings, coffee chats, and a social calendar without trying too hard. Palermo, Colegiales, Villa Crespo, and parts of Recoleta will suit you.</li>
+            <li><strong>Freelancer who wants focus and routine:</strong> You need calm mornings, reliable internet, and a neighbourhood that feels “liveable” rather than touristic. Colegiales, Belgrano, Núñez, and quieter pockets of Recoleta work well.</li>
+            <li><strong>Couple doing a one-year reset:</strong> You want walkability, good restaurants, safety habits you can live with, and a flat that does not feel temporary. Recoleta, Palermo Hollywood, Villa Crespo, and Belgrano C usually fit.</li>
+            <li><strong>Family with school and healthcare priorities:</strong> You want parks, clinics, and a home that feels predictable. Belgrano and Núñez rise to the top, with Recoleta as a close second if you prefer the central city.</li>
+            <li><strong>Student who wants Spanish, culture, and budget control:</strong> You want transport access, cheaper rent bands, and late-night life. Almagro, Caballito, Villa Crespo, and parts of Microcentro can work.</li>
+            <li><strong>Early retiree who wants ease and comfort:</strong> You want day-to-day simplicity, clinics nearby, and fewer surprises. Recoleta and Belgrano often work best.</li>
+            <li><strong>Digital nomad who wants “first month friction-free”:</strong> You want short-term housing, easy coworking, and English-speaking services. Palermo leads, but you should plan your exit strategy if you want better sleep and better value.</li>
+        </ul>
+        <p><em>If you read this and think, “I want a calm city that runs early,” you might prefer a different base. If you like late dinners, walking neighbourhoods, and the feeling that something interesting happens every day, Buenos Aires will treat you well.</em></p>
+    </section>
+
+    <section>
+        <h2>Choosing a neighbourhood</h2>
+        <p>Buenos Aires does not operate as one city. It operates as many small cities stitched together by Subte lines, buses, and habits. Choose based on how you live Monday to Friday, not on what looks good on a weekend.</p>
+
+        <h3>Neighbourhood comparison table</h3>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Neighbourhood</th>
+                        <th>Vibe</th>
+                        <th>Rent level</th>
+                        <th>Noise</th>
+                        <th>Walkability</th>
+                        <th>Safety feel</th>
+                        <th>Best for</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Palermo</td>
+                        <td>social, food, cafés</td>
+                        <td>High</td>
+                        <td>Medium–High</td>
+                        <td>High</td>
+                        <td>Medium–High</td>
+                        <td>first-timers, social nomads</td>
+                    </tr>
+                    <tr>
+                        <td>Recoleta</td>
+                        <td>classic, elegant</td>
+                        <td>High</td>
+                        <td>Low–Medium</td>
+                        <td>High</td>
+                        <td>High</td>
+                        <td>long stays, comfort</td>
+                    </tr>
+                    <tr>
+                        <td>Belgrano</td>
+                        <td>residential, stable</td>
+                        <td>Medium–High</td>
+                        <td>Low–Medium</td>
+                        <td>High</td>
+                        <td>High</td>
+                        <td>families, long-term routines</td>
+                    </tr>
+                    <tr>
+                        <td>Villa Crespo</td>
+                        <td>local + modern food</td>
+                        <td>Medium</td>
+                        <td>Low–Medium</td>
+                        <td>Medium</td>
+                        <td>Medium–High</td>
+                        <td>value + good lifestyle</td>
+                    </tr>
+                    <tr>
+                        <td>Colegiales</td>
+                        <td>calm, leafy</td>
+                        <td>Medium–High</td>
+                        <td>Low</td>
+                        <td>Medium–High</td>
+                        <td>High</td>
+                        <td>remote focus, sleep</td>
+                    </tr>
+                    <tr>
+                        <td>Núñez</td>
+                        <td>space, runners</td>
+                        <td>Medium–High</td>
+                        <td>Low</td>
+                        <td>Medium</td>
+                        <td>High</td>
+                        <td>calm living, parks</td>
+                    </tr>
+                    <tr>
+                        <td>Chacarita</td>
+                        <td>creative, rising</td>
+                        <td>Medium</td>
+                        <td>Low–Medium</td>
+                        <td>Medium</td>
+                        <td>Medium</td>
+                        <td>food scene, creatives</td>
+                    </tr>
+                    <tr>
+                        <td>Almagro</td>
+                        <td>city energy, tango</td>
+                        <td>Low–Medium</td>
+                        <td>Medium</td>
+                        <td>High</td>
+                        <td>Medium</td>
+                        <td>students, budget</td>
+                    </tr>
+                    <tr>
+                        <td>Caballito</td>
+                        <td>residential centre</td>
+                        <td>Low–Medium</td>
+                        <td>Medium</td>
+                        <td>Medium–High</td>
+                        <td>Medium</td>
+                        <td>long-term value</td>
+                    </tr>
+                    <tr>
+                        <td>San Telmo</td>
+                        <td>historic, touristic</td>
+                        <td>Medium</td>
+                        <td>Medium–High</td>
+                        <td>Medium</td>
+                        <td>Medium</td>
+                        <td>short stays, history lovers</td>
+                    </tr>
+                    <tr>
+                        <td>Microcentro</td>
+                        <td>business core</td>
+                        <td>Low–Medium</td>
+                        <td>Low at night</td>
+                        <td>High</td>
+                        <td>Medium</td>
+                        <td>office proximity</td>
+                    </tr>
+                    <tr>
+                        <td>Puerto Madero</td>
+                        <td>modern, quiet</td>
+                        <td>Very High</td>
+                        <td>Low</td>
+                        <td>Medium</td>
+                        <td>High</td>
+                        <td>high security, modern towers</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="callout">
+            <h3>How to decide in 90 seconds</h3>
+            <ul>
+                <li>If you plan to work from cafés and meet people quickly: start in <strong>Palermo</strong>, then reassess.</li>
+                <li>If you want “easy daily life” and you care about sleep: look at <strong>Recoleta, Belgrano, Colegiales</strong>.</li>
+                <li>If you want value without feeling far away: shortlist <strong>Villa Crespo and Almagro</strong>.</li>
+                <li>If you want modern towers and you do not mind paying for them: consider <strong>Puerto Madero</strong>.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Cost of living in 2026 terms</h2>
+        <p>Buenos Aires costs vary more by lifestyle than by neighbourhood. Your biggest swings come from housing type, currency method, and how often you eat out.</p>
+        
+        <h3>Monthly planning bands (single person)</h3>
+        <ul>
+            <li><strong>Rent (furnished, short-term):</strong> higher band, wide spread by building, amenities, and seasonality. Palermo and Recoleta sit at the top end.</li>
+            <li><strong>Rent (unfurnished, longer-term):</strong> lower band, but you will face paperwork and local requirements.</li>
+            <li><strong>Utilities:</strong> electricity rises in summer with air-con; older buildings leak heat and cold.</li>
+            <li><strong>Mobile + home internet:</strong> affordable by international standards; quality varies by building wiring and provider reach.</li>
+            <li><strong>Transport:</strong> very manageable if you use SUBE and mix Subte + buses. The City publishes Subte fares and the difference between a registered and non-registered SUBE, so register early.</li>
+            <li><strong>Food:</strong> a big spread depending on imported products and how often you choose premium supermarkets.</li>
+        </ul>
+
+        <h3>Transport costs you can plan precisely</h3>
+        <ul>
+            <li><strong>Subte:</strong> the City publishes the fare bands by number of trips and shows a higher fare for an unregistered SUBE.</li>
+            <li><strong>Colectivos and trains in AMBA:</strong> the national transport site publishes the distance bands and the “registered SUBE” rates.</li>
+            <li><strong>Payment methods:</strong> SUBE still matters, but the government expanded contactless options on more AMBA bus lines (cards, mobile, QR) in January 2026.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Visas and staying legally (practical overview)</h2>
+        <div class="warning">
+            <p><strong>Disclaimer:</strong> I will keep this plain. You should always confirm your exact pathway with official guidance and, if needed, a qualified professional. This section does not provide legal advice.</p>
+        </div>
+
+        <h3>Common pathways expats use</h3>
+        <ul>
+            <li><strong>Digital nomad (residencia transitoria):</strong> Argentina offers a transitory residence route for digital nomads. The official guidance explains that the process does not run through Radex and directs people in CABA to contact Migraciones by email for the procedure. If you already hold that nomad status and you want to extend it, Migraciones lists a prórroga process and includes requirements such as proof of income during the period and criminal record documentation from the country of origin.</li>
+            <li><strong>Other temporary residence categories:</strong> Many people use study, work, family, or other temporary categories depending on eligibility. Start from the “Residencias” portal and then move to your specific subcategory.</li>
+            <li><strong>Radex (online residence filing):</strong> Radex functions as the online entry point for many residence applications. Migraciones states that you need to sit inside Argentina to apply online and that the system checks legal entry.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Finding a flat (step-by-step, with red flags)</h2>
+        <p>You can make Buenos Aires housing easy if you follow a disciplined process. Most problems come from rushing the first payment.</p>
+
+        <h3>Step-by-step process</h3>
+        <ol>
+            <li><strong>Book a “landing base” for 10–21 nights:</strong> Choose somewhere central and functional. You want to view flats in person. Photos lie. Neighbours do not.</li>
+            <li><strong>Pick two target neighbourhoods, not five:</strong> You can cross the city, but you will not enjoy it at peak. Keep your search tight.</li>
+            <li><strong>Define non-negotiables you can inspect:</strong> Water pressure, mobile signal inside the flat, lift reliability, A/C type, window quality, and street noise.</li>
+            <li><strong>View flats at the time you plan to live:</strong> If you work from home, visit mid-morning. If you care about sleep, visit after 22:00 on a Thursday or Friday and listen.</li>
+            <li><strong>Ask the right questions before you pay anything:</strong>
+                <ul>
+                    <li>What do expensas include, and what do they not include?</li>
+                    <li>Who handles repairs, and how fast?</li>
+                    <li>Which internet provider serves the building, and what plan does the flat use?</li>
+                    <li>Does the building allow deliveries easily? (Doormen help. Some buildings do not.)</li>
+                    <li>What currency and method does the landlord accept, and what does that include?</li>
+                </ul>
+            </li>
+            <li><strong>Pay only after you verify identity and terms:</strong> You should see the person who rents the flat. You should see a clear contract or written terms.</li>
+        </ol>
+
+        <div class="warning">
+            <h3>Red flags (walk away fast)</h3>
+            <ul>
+                <li>Someone asks for a deposit to “hold it” before you see the keys.</li>
+                <li>The listing price looks far below comparable flats in the same micro-area.</li>
+                <li>The landlord refuses to show building rules, expensas details, or a basic written agreement.</li>
+                <li>The flat shows a beautiful photo set but a vague address and no building name.</li>
+                <li>The agent pushes urgency and avoids specifics.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Setting up in week one (timeline checklist)</h2>
+        <h3>Day 0: landing</h3>
+        <ul>
+            <li>Take out enough cash for the first 48 hours.</li>
+            <li>Get to your accommodation with a reputable transfer or app-based ride.</li>
+        </ul>
+        <h3>Day 1: phone + money + transport</h3>
+        <ul>
+            <li><strong>SIM or eSIM:</strong> If your phone supports eSIM, you can often sort it quickly without hunting for a tiny chip. Claro explains eSIM activation and line management through its official assistance pages. If you prefer physical SIM, buy from official carrier stores rather than random street kiosks.</li>
+            <li><strong>SUBE:</strong> Buy a SUBE card via official channels or at SUBE points. The government explains how to get a SUBE and how to load it. Use the official SUBE map to find points nearby.</li>
+        </ul>
+        
+        <h3>Day 2–3: health + work setup</h3>
+        <ul>
+            <li>Identify your nearest pharmacy and a clinic you trust.</li>
+            <li>Choose one coworking option and one café option you can use as fallback.</li>
+        </ul>
+        <h3>Day 4–7: housing and paperwork rhythm</h3>
+        <ul>
+            <li>View flats, keep notes, decide fast when you find the right one.</li>
+            <li>If you plan to apply for a residence status, map your required documents, translations, and appointments early.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Safety and street-smarts</h2>
+        <p>Buenos Aires rewards “soft vigilance”. You do not need fear. You need habits.</p>
+        
+        <ul>
+            <li><strong>Keep your phone off the street edge.</strong> Use it inside doorways or against a wall.</li>
+            <li><strong>Wear your bag cross-body,</strong> keep zips closed, and keep valuables out of outer pockets.</li>
+            <li><strong>Use ride-hailing at night</strong> when you move between neighbourhoods you do not know.</li>
+            <li><strong>Avoid empty blocks late at night,</strong> even in upscale areas. Foot traffic matters more than reputation.</li>
+            <li><strong>Keep one backup card</strong> and a photocopy of your passport page at home.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Getting around</h2>
+        <h3>SUBE is your foundation</h3>
+        <p>SUBE remains the core tool for public transport. The official SUBE site explains how to get it and load it, plus where to find points.</p>
+
+        <h3>Subte</h3>
+        <p>Use the Subte for predictable routes, then switch to buses for flexibility. The City publishes the fare structure and shows why registering your SUBE matters.</p>
+        
+
+        <h3>Buses (colectivos)</h3>
+        <p>Buses cover everything and run late. Use Google Maps, Moovit, or a local transit app, then build two favourite routes and stick to them. The national transport site publishes distance-based fares for AMBA services.</p>
+
+        <h3>Airport transfers</h3>
+        <p><strong>AEP</strong> usually feels quick and close to the city. <strong>EZE</strong> can take 45–90 minutes depending on traffic. If you land late, pay for convenience. The stress cost will beat the savings.</p>
+    </section>
+
+    <section>
+        <h2>Where to work (coworking + cafés)</h2>
+        <p>Buenos Aires supports remote work well if you choose places that expect laptops.</p>
+        
+        
+        <h3>3–6 coworking options</h3>
+        <ul>
+            <li><strong>La Maquinita Co (Palermo/Villa Crespo/Microcentro):</strong> Best for consistent infrastructure, decent community, good “default” choice.</li>
+            <li><strong>WeWork (various CABA sites):</strong> Best for corporate calls, reliability, meeting rooms.</li>
+            <li><strong>AreaTres (Palermo):</strong> Best for founders, events, and social proximity to cafés.</li>
+        </ul>
+
+        <h3>Cafés etiquette (this will save you)</h3>
+        <ul>
+            <li>Order something every 60–90 minutes if you stay.</li>
+            <li>Take calls outside or in a coworking booth.</li>
+            <li>Pick weekday mornings for focus. Weekends bring brunch crowds and fewer plugs.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Practical life (SIMs, internet, plugs, pharmacies)</h2>
+        <ul>
+            <li><strong>SIM and eSIM:</strong> Start with the big three: Personal, Movistar, Claro. If you want the quickest setup, eSIM can reduce friction. Claro’s support pages explain eSIM basics and activation steps.</li>
+            <li><strong>Internet at home:</strong> Ask one question before you rent: “Which provider serves this building, and what speed does the flat currently run?”</li>
+            <li><strong>Power and adapters:</strong> Argentina uses 220V. Many flats use the angled-pin plug standard, and older buildings may mix socket types. Bring a universal adapter.</li>
+            <li><strong>Pharmacies:</strong> You will find pharmacies everywhere. For common items, you can often walk in and ask. For controlled medication, you will need an appropriate prescription.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Culture that affects daily life</h2>
+        <ul>
+            <li><strong>WhatsApp runs everything:</strong> landlords, doormen, deliveries, tradespeople, even some clinics.</li>
+            <li><strong>Time runs later:</strong> dinner starts late, social plans start later, and people often confirm close to the time.</li>
+            <li><strong>Greetings matter:</strong> a quick hello and a calm tone gets you better outcomes than urgency.</li>
+            <li><strong>Queues exist, but rules vary:</strong> watch what locals do, then mirror the pattern.</li>
+            <li><strong>Deliveries:</strong> doormen make life easier; without one, you will coordinate more actively.</li>
+        </ul>
+        <div class="callout">
+            <strong>Useful Spanish phrase:</strong> “¿Me confirmás el precio final por mes, con expensas incluidas?”
+        </div>
+    </section>
+
+    <section>
+        <h2>Common mistakes (and fixes)</h2>
+        <ul>
+            <li><strong>Mistake:</strong> They pick Palermo because everyone else did.<br><strong>Fix:</strong> choose based on sleep, work style, and weekday routine.</li>
+            <li><strong>Mistake:</strong> They pay a deposit before they see keys.<br><strong>Fix:</strong> view first, verify identity, then pay.</li>
+            <li><strong>Mistake:</strong> They treat internet as guaranteed.<br><strong>Fix:</strong> confirm provider and speed, keep mobile data ready.</li>
+            <li><strong>Mistake:</strong> They do not register or organise SUBE early.<br><strong>Fix:</strong> buy SUBE, load it, register it, and save the nearest SUBE points.</li>
+            <li><strong>Mistake:</strong> They carry their phone openly at the curb.<br><strong>Fix:</strong> step inside a doorway to check maps.</li>
+            <li><strong>Mistake:</strong> They work from cafés all day and burn out.<br><strong>Fix:</strong> use coworking for deep work and cafés for lighter tasks.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Two sample itineraries</h2>
+        <h3>A realistic weekday routine (remote worker)</h3>
+        <ul>
+            <li><strong>08:00:</strong> walk to a café near home, light breakfast, plan the day.</li>
+            <li><strong>09:00–12:00:</strong> coworking for calls and focused work.</li>
+            <li><strong>12:30:</strong> menú del día lunch in your neighbourhood.</li>
+            <li><strong>14:00–16:30:</strong> home work block, admin, deep tasks.</li>
+            <li><strong>17:30:</strong> gym or a run in a nearby park.</li>
+            <li><strong>20:30:</strong> dinner with a friend or a quiet local spot.</li>
+            <li><strong>22:30:</strong> short walk, prep for tomorrow, sleep.</li>
+        </ul>
+        <h3>A realistic weekend plan</h3>
+        <ul>
+            <li><strong>Saturday morning:</strong> coffee, walk in Bosques de Palermo or Reserva Costanera Sur.</li>
+            <li><strong>Saturday afternoon:</strong> long lunch, browse a market or a bookshop run.</li>
+            <li><strong>Saturday night:</strong> dinner late, one bar, then home.</li>
+            <li><strong>Sunday:</strong> late breakfast, cultural plan (museum or neighbourhood walk), early evening reset for the week.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Resources</h2>
+        <ul>
+            <li><strong>Official basics:</strong> Migraciones (start here for legal pathways). Digital nomad transitory residence overview.</li>
+            <li><strong>Transport:</strong> SUBE official site (where to buy/load). Subte fares from the City. AMBA bus/train fares.</li>
+            <li><strong>Phone:</strong> Claro eSIM help pages.</li>
+            <li><strong>Day-to-day:</strong> Google Maps lists (Map 2 links). WhatsApp for coordination.</li>
+        </ul>
+    </section>
+
+    <section class="checklist">
+        <h2>Checklist (copy/paste)</h2>
+        <ul class="checklist">
+            <li>Landing accommodation booked (10–21 nights)</li>
+            <li>Mobile data plan ready (SIM or eSIM)</li>
+            <li>SUBE plan: buy + load + locate nearest points</li>
+            <li>One coworking chosen + one café fallback</li>
+            <li>Housing criteria defined (noise, A/C, water pressure, internet)</li>
+            <li>Flat viewing slots booked (daytime + late evening)</li>
+            <li>Payment method chosen (risk-first, not hype-first)</li>
+            <li>Legal pathway identified on Migraciones site</li>
+            <li>Document list created (passport scans, background checks if needed, income proofs)</li>
+            <li>Safety habits agreed (phone, bag, late-night transport plan)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Short FAQs</h2>
+        <p><strong>Do I really need a SUBE card?</strong><br>
+        Yes, you should get one early. You can pay on more AMBA bus lines with contactless options as of January 2026, but SUBE still gives you the most consistent coverage and fare structure.</p>
+        
+        <p><strong>Does registering SUBE matter?</strong><br>
+        Yes. The City publishes higher Subte fares for an unregistered SUBE.</p>
+        
+        <p><strong>Is a digital nomad residence a real pathway in Argentina?</strong><br>
+        Yes. Migraciones publishes a transitory residence route for digital nomads and explains the process and extension requirements.</p>
+        
+        <p><strong>Should I sign a long-term lease immediately?</strong><br>
+        Not in week one. Live in the city first, learn micro-areas, then commit.</p>
+        
+        <p><strong>Can I work from cafés all day?</strong><br>
+        You can, but you will work better if you combine cafés with coworking, especially for calls and deep work.</p>
+    </section>
+
+</main>
+
+</body>
+</html>
