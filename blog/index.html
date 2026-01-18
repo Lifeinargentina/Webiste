@@ -1,178 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insights | Life In Argentina</title>
-  <meta name="description" content="All articles from Life In Argentina. Practical guides for expats, remote workers, and relocation planning." />
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            "firm-black": "#111111",
-            "firm-gray": "#f4f4f4",
-            "firm-accent": "#800020",
-          },
-          fontFamily: {
-            sans: ["Inter", "sans-serif"],
-            serif: ["Playfair Display", "serif"],
-            display: ["Cinzel", "serif"],
-          },
-          boxShadow: {
-            soft: "0 10px 30px rgba(0,0,0,0.08)",
-          }
-        }
-      }
-    }
-  </script>
-</head>
-
-<body class="bg-white text-firm-black font-sans">
-
-  <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="flex justify-between items-center h-24">
-        <div class="flex-shrink-0 flex items-center">
-          <a href="../index.html" class="font-display text-xl tracking-widest font-bold text-firm-black">
-            LIFE <span class="text-firm-accent">IN</span> ARGENTINA
-          </a>
-        </div>
-
-        <nav class="hidden md:flex items-center space-x-8">
-          <a href="../index.html" class="text-xs font-bold text-gray-500 hover:text-firm-accent uppercase tracking-widest transition-colors">
-            Home
-          </a>
-          <a href="../index.html#insights" class="text-xs font-bold text-gray-500 hover:text-firm-accent uppercase tracking-widest transition-colors">
-            Insights
-          </a>
-          <a href="../index.html#contact" class="text-xs font-bold text-gray-500 hover:text-firm-accent uppercase tracking-widest transition-colors">
-            Contact
-          </a>
-        </nav>
-      </div>
-    </div>
-  </header>
-
-  <section class="py-16 md:py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="max-w-3xl mb-12">
-        <span class="text-xs font-bold text-firm-accent uppercase tracking-widest">Insights</span>
-        <h1 class="mt-4 text-4xl md:text-5xl font-serif text-firm-black leading-tight">
-          Practical guidance for expats and remote workers in Argentina
-        </h1>
-        <p class="mt-6 text-gray-600 font-light leading-relaxed">
-          Operational articles on relocation logistics, legal paperwork, and housing strategy in Buenos Aires.
-        </p>
-      </div>
-
-      <div class="group relative w-full h-[500px] bg-gray-200 overflow-hidden rounded-2xl shadow-soft">
-        <a href="./apostilles-guide.html" class="block w-full h-full">
-            <img
-              src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?auto=format&fit=crop&q=80&w=2400"
-              alt="The Obelisco on 9 de Julio Avenue, Buenos Aires"
-              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8 md:p-12">
-                <div class="flex items-center space-x-3 text-white/90 mb-3">
-                    <span class="text-xs font-bold uppercase tracking-widest text-white">Doing Business</span>
-                    <span class="text-xs uppercase tracking-widest">|</span>
-                    <span class="text-xs uppercase tracking-widest">New</span>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+    <div class="lg:col-span-7 space-y-8">
+        <a href="./apostilles-guide.html" class="block group">
+            <article class="group cursor-pointer">
+                <div class="aspect-16-9 mb-6 overflow-hidden rounded-xl shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=2400" alt="Apostille-style document seal" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out">
                 </div>
-                <h2 class="text-3xl md:text-4xl font-serif text-white leading-tight group-hover:text-firm-gray transition-colors">
-                    The Definitive Guide to Apostilles for Argentina: Don’t Move Without Reading This
-                </h2>
-                <p class="mt-3 text-white/80 font-light max-w-2xl leading-relaxed hidden md:block">
-                    Stop guessing about "competent authorities" and Hague conventions. Here is exactly how to prepare your documents before you travel.
-                </p>
-            </div>
+                <div class="space-y-3">
+                    <span class="text-xs font-bold text-firm-accent uppercase tracking-widest">Doing Business</span>
+                    <h3 class="text-3xl font-serif leading-tight text-firm-black group-hover:text-gray-700 transition-colors">
+                        The Definitive Guide to Apostilles for Argentina: Don’t Move Without Reading This
+                    </h3>
+                    <p class="text-gray-600 leading-relaxed font-light">
+                        Stop guessing about "competent authorities" and Hague conventions. Here is exactly how to prepare your documents so your residency process is smooth from Day 1.
+                    </p>
+                    <span class="text-xs text-gray-400 block mt-2">By Life in Argentina | 5 Min Read</span>
+                </div>
+            </article>
         </a>
-      </div>
     </div>
-  </section>
 
-  <section class="py-16 bg-firm-gray">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="flex justify-between items-end mb-10 border-b border-gray-300 pb-4">
-        <div>
-          <span class="text-firm-accent font-bold text-xs uppercase tracking-widest mb-2 block">Library</span>
-          <h2 class="text-3xl md:text-4xl font-serif text-firm-black">Recent Articles</h2>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <article class="group">
-          <a href="./buenos-aires-handbook.html" class="block">
-            <div class="aspect-[16/9] mb-4 overflow-hidden bg-gray-200 rounded-xl shadow-soft">
-              <img
-                src="https://images.unsplash.com/photo-1544989164-31dc3c645987?auto=format&fit=crop&q=80&w=1600"
-                alt="Buenos Aires Street"
-                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
-              />
-            </div>
-            <span class="text-xs font-bold text-firm-accent uppercase tracking-widest mb-1 block">Living Here</span>
-            <h4 class="text-lg font-serif font-semibold text-firm-black mb-2 group-hover:text-firm-accent transition-colors">
-              How to Live in Buenos Aires in 2026: A Practical Guide
-            </h4>
-            <p class="text-sm text-gray-600 leading-relaxed line-clamp-3">
-              Neighbourhood fit, legal stays, real rent workflows, SUBE and transport, and safety habits for expats.
-            </p>
-          </a>
+    <div class="lg:col-span-5 flex flex-col justify-between border-l border-gray-300 pl-0 lg:pl-12 pt-8 lg:pt-0">
+        
+        <article class="mb-8 group cursor-pointer">
+            <a href="./buenos-aires-handbook.html" class="block">
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Living Here</span>
+                <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
+                    How to Live in Buenos Aires in 2026: A Practical Guide
+                </h4>
+                <p class="text-sm text-gray-500 line-clamp-2">
+                    Neighbourhood fit, legal stays, real rent workflows, SUBE and transport, safety habits, coworking, cafés, and a week-one setup plan.
+                </p>
+            </a>
         </article>
 
-        <article class="group">
-          <a href="./advance-payment-rentals.html" class="block">
-            <div class="aspect-[16/9] mb-4 overflow-hidden bg-gray-200 rounded-xl shadow-soft">
-              <img
-                src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&q=80&w=1600"
-                alt="Buenos Aires Apartment Interior"
-                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
-              />
-            </div>
-            <span class="text-xs font-bold text-firm-accent uppercase tracking-widest mb-1 block">Rentals</span>
-            <h4 class="text-lg font-serif font-semibold text-firm-black mb-2 group-hover:text-firm-accent transition-colors">
-              Advance payment rentals in Buenos Aires
-            </h4>
-            <p class="text-sm text-gray-600 leading-relaxed line-clamp-3">
-              What clauses should I check in a temporary lease in Buenos Aires? How to handle 'paquete' pricing.
-            </p>
-          </a>
+        <div class="w-full h-px bg-gray-200 mb-8"></div>
+
+        <article class="mb-8 group cursor-pointer">
+             <a href="./advance-payment-rentals.html" class="block">
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Rentals</span>
+                <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
+                    Advance payment rentals in Buenos Aires
+                </h4>
+                <p class="text-sm text-gray-500 line-clamp-2">
+                    What clauses should I check in a temporary lease in Buenos Aires? How to handle 'paquete' pricing.
+                </p>
+            </a>
         </article>
 
-        <article class="group">
-          <a href="./residency-diy-vs-lawyer.html" class="block">
-            <div class="aspect-[16/9] mb-4 overflow-hidden bg-gray-200 rounded-xl shadow-soft">
-              <img
-                src="https://images.unsplash.com/photo-1617548468335-9e38f651b9b4?auto=format&fit=crop&q=80&w=1600"
-                alt="Palacio del Congreso Nacional Argentina"
-                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
-              />
-            </div>
-            <span class="text-xs font-bold text-firm-accent uppercase tracking-widest mb-1 block">Legal Support</span>
-            <h4 class="text-lg font-serif font-semibold text-firm-black mb-2 group-hover:text-firm-accent transition-colors">
-              Should You Hire a Lawyer for Argentine Residency?
-            </h4>
-            <p class="text-sm text-gray-600 leading-relaxed line-clamp-3">
-              It works for some cases. For most, tailored legal guidance prevents delays and rejections.
-            </p>
-          </a>
+        <div class="w-full h-px bg-gray-200 mb-8"></div>
+
+        <article class="mb-8 group cursor-pointer">
+            <a href="./residency-diy-vs-lawyer.html" class="block">
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Legal support</span>
+                <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
+                    Should You Hire a Lawyer for Argentine Residency?
+                </h4>
+                <p class="text-sm text-gray-500 line-clamp-2">
+                    It works for some cases. For most, tailored legal guidance prevents delays and rejections.
+                </p>
+            </a>
         </article>
 
-      </div>
     </div>
-  </section>
-
-  <footer class="bg-firm-black text-white py-12 border-t-4 border-firm-accent">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-      <p class="font-display text-xl tracking-wide font-bold mb-4">LIFE IN ARGENTINA</p>
-      <p class="text-gray-500 text-sm">&copy; 2026. All rights reserved.</p>
-    </div>
-  </footer>
-
-</body>
-</html>
+</div>
