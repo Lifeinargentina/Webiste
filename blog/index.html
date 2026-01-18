@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Insights | Life In Argentina</title>
+  <meta name="description" content="All articles from Life In Argentina. Practical guides for expats, remote workers, and relocation planning." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "firm-black": "#111111",
+            "firm-gray": "#f4f4f4",
+            "firm-accent": "#800020",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            serif: ["Playfair Display", "serif"],
+            display: ["Cinzel", "serif"],
+          },
+          boxShadow: {
+            soft: "0 10px 30px rgba(0,0,0,0.08)",
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-white text-firm-black font-sans">
+
+  <!-- HEADER -->
+  <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex justify-between items-center h-24">
+        <div class="flex-shrink-0 flex items-center">
+          <a href="../index.html" class="font-display text-xl tracking-widest font-bold text-firm-black">
+            LIFE <span class="text-firm-accent">IN</span> ARGENTINA
+          </a>
+        </div>
+
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="../index.html" class="text-xs font-bold text-gray-500 hover:text-firm-accent uppercase tracking-widest">
+            Home
+          </a>
+          <a href="../index.html#insights" class="text-xs font-bold text-gray-500 hover:text-firm-accent uppercase tracking-widest">
+            Insights section
+          </a>
+          <a href="../index.html#contact" class="text-xs font-bold text-gray-500 hover:text-firm-accent uppercase tracking-widest">
+            Contact
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <span class="text-xs font-bold text-firm-accent uppercase tracking-widest">Insights</span>
+        <h1 class="mt-4 text-4xl md:text-5xl font-serif text-firm-black leading-tight">
+          Practical guidance for expats and remote workers in Argentina
+        </h1>
+        <p class="mt-6 text-gray-600 font-light leading-relaxed">
+          Clear, operational articles on relocation logistics, paperwork, and day-to-day life in Buenos Aires and beyond.
+        </p>
+      </div>
+
+      <!-- Featured -->
+      <div class="mt-12 grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <a href="./buenos-aires-handbook.html" class="group lg:col-span-8 block">
+          <div class="w-full h-96 bg-gray-200 overflow-hidden rounded-2xl shadow-soft">
+            <img
+              src="https://images.unsplash.com/photo-1544989164-31dc3c645987?auto=format&fit=crop&q=80&w=2400"
+              alt="Buenos Aires"
+              class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
+            />
+          </div>
+          <div class="mt-6">
+            <div class="flex items-center space-x-3">
+              <span class="text-xs font-bold text-firm-accent uppercase tracking-widest">Buenos Aires</span>
+              <span class="text-xs text-gray-400 uppercase tracking-widest">|</span>
+              <span class="text-xs text-gray-400 uppercase tracking-widest">Updated 2026</span>
+            </div>
+            <h2 class="mt-3 text-2xl md:text-3xl font-serif text-firm-black group-hover:text-firm-accent transition-colors">
+              A Practical Buenos Aires Handbook for Expats and Remote Workers
+            </h2>
+            <p class="mt-3 text-gray-600 font-light leading-relaxed">
+              Neighbourhoods, housing, transport, SIMs, safety habits, coworking, cafés, and a week-one checklist.
+            </p>
+          </div>
+        </a>
+
+        <div class="lg:col-span-4 space-y-6">
+          <a href="./rentista-paperwork-mistake.html" class="group block p-6 rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+            <div class="flex items-center space-x-3">
+              <span class="text-xs font-bold text-firm-accent uppercase tracking-widest">Documents</span>
+              <span class="text-xs text-gray-400 uppercase tracking-widest">|</span>
+              <span class="text-xs text-gray-400 uppercase tracking-widest">Guides</span>
+            </div>
+            <h3 class="mt-3 text-xl font-serif text-firm-black group-hover:text-firm-accent transition-colors">
+              The paperwork mistake that delays most rentista cases
+            </h3>
+            <p class="mt-3 text-sm text-gray-600 font-light leading-relaxed">
+              What people forget to prepare before travelling, and how to organise apostilles, translations, and timing.
+            </p>
+          </a>
+
+          <a href="./documents.html" class="group block p-6 rounded-2xl border border-gray-200 hover:border-gray-300 transition-colors">
+            <div class="flex items-center space-x-3">
+              <span class="text-xs font-bold text-firm-accent uppercase tracking-widest">Relocation</span>
+              <span class="text-xs text-gray-400 uppercase tracking-widest">|</span>
+              <span class="text-xs text-gray-400 uppercase tracking-widest">Planning</span>
+            </div>
+            <h3 class="mt-3 text-xl font-serif text-firm-black group-hover:text-firm-accent transition-colors">
+              Documents you should prepare before you land in Argentina
+            </h3>
+            <p class="mt-3 text-sm text-gray-600 font-light leading-relaxed">
+              A practical checklist of documents, typical sources, and how to avoid last-minute scrambling.
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALL ARTICLES GRID -->
+  <section class="py-16 bg-firm-gray">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex justify-between items-end mb-10 border-b border-gray-300 pb-4">
+        <div>
+          <span class="text-firm-accent font-bold text-xs uppercase tracking-widest mb-2 block">Library</span>
+          <h2 class="text-3xl md:text-4xl font-serif text-firm-black">All articles</h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <article class="group">
+          <a href="./buenos-aires-handbook.html" class="block">
+            <div class="aspect-[16/9] mb-4 overflow-hidden bg-gray-200 rounded-xl shadow-soft">
+              <img
+                src="https://images.unsplash.com/photo-1544989164-31dc3c645987?auto=format&fit=crop&q=80&w=2400"
+                alt="Buenos Aires"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
+              />
+            </div>
+            <span class="text-xs font-bold text-firm-accent uppercase tracking-widest mb-1 block">Buenos Aires</span>
+            <h4 class="text-lg font-serif font-semibold text-firm-black mb-2 group-hover:text-firm-accent transition-colors">
+              A Practical Buenos Aires Handbook for Expats and Remote Workers (Updated 2026)
+            </h4>
+            <p class="text-sm text-gray-600 leading-relaxed line-clamp-2">
+              Neighbourhoods, rents, visas basics, SUBE, SIMs, safety habits, coworking, cafés, and setup.
+            </p>
+          </a>
+        </article>
+
+        <article class="group">
+          <a href="./rentista-paperwork-mistake.html" class="block">
+            <div class="aspect-[16/9] mb-4 overflow-hidden bg-gray-200 rounded-xl shadow-soft">
+              <img
+                src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&q=80&w=2400"
+                alt="Paperwork and document preparation"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
+              />
+            </div>
+            <span class="text-xs font-bold text-firm-accent uppercase tracking-widest mb-1 block">Documents</span>
+            <h4 class="text-lg font-serif font-semibold text-firm-black mb-2 group-hover:text-firm-accent transition-colors">
+              The paperwork mistake that delays most rentista cases
+            </h4>
+            <p class="text-sm text-gray-600 leading-relaxed line-clamp-2">
+              A practical breakdown of what to prepare before travelling, and how to avoid predictable delays.
+            </p>
+          </a>
+        </article>
+
+        <article class="group">
+          <a href="./documents.html" class="block">
+            <div class="aspect-[16/9] mb-4 overflow-hidden bg-gray-200 rounded-xl shadow-soft">
+              <img
+                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&q=80&w=2400"
+                alt="Legal documents"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out"
+              />
+            </div>
+            <span class="text-xs font-bold text-firm-accent uppercase tracking-widest mb-1 block">Relocation</span>
+            <h4 class="text-lg font-serif font-semibold text-firm-black mb-2 group-hover:text-firm-accent transition-colors">
+              Documents you should prepare before you land in Argentina
+            </h4>
+            <p class="text-sm text-gray-600 leading-relaxed line-clamp-2">
+              A clean checklist of the documents most expats need, plus timing and logistics notes.
+            </p>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-firm-black text-white py-12 border-t-4 border-firm-accent">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="font-display text-xl tracking-wide font-bold mb-4">LIFE IN ARGENTINA</p>
+      <p class="text-gray-500 text-sm">&copy; 2026. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
 
