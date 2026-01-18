@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- TITULO DE TU ARTICULO AQUI -->
-    <title>Article Title | Life In Argentina</title>
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>The 183-Day Rule | Life In Argentina</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
     <script>
@@ -16,57 +17,64 @@
                     colors: {
                         'firm-black': '#111111',
                         'firm-gray': '#f4f4f4',
-                        'firm-accent': '#800020',
+                        'firm-accent': '#800020', // Burgundy
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         serif: ['Playfair Display', 'serif'],
                         display: ['Cinzel', 'serif'], 
                     },
+                    typography: (theme) => ({
+                        DEFAULT: {
+                            css: {
+                                color: theme('colors.gray.600'),
+                                h1: { fontFamily: theme('fontFamily.serif') },
+                                h2: { fontFamily: theme('fontFamily.serif') },
+                                h3: { fontFamily: theme('fontFamily.serif') },
+                                strong: { color: theme('colors.firm-black') },
+                            },
+                        },
+                    }),
                 }
             }
         }
     </script>
 </head>
-<body class="bg-white text-firm-black font-sans">
+<body class="bg-white text-firm-black font-sans antialiased">
 
-    <!-- HEADER (Con enlaces que vuelven al inicio usando ../) -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50 transition-all duration-300">
         <div class="max-w-4xl mx-auto px-6">
             <div class="flex justify-between items-center h-24">
                 <div class="flex-shrink-0 flex items-center">
-                    <!-- NOTA EL "../" PARA VOLVER ATRAS -->
-                    <a href="../index.html" class="font-display text-xl tracking-widest font-bold text-firm-black">
+                    <a href="../index.html" class="font-display text-xl tracking-widest font-bold text-firm-black hover:opacity-80 transition-opacity">
                         LIFE <span class="text-firm-accent">IN</span> ARGENTINA
                     </a>
                 </div>
                 <nav class="hidden md:flex space-x-8 items-center">
-                    <a href="../index.html#insights" class="text-xs font-bold text-gray-500 hover:text-firm-accent uppercase tracking-widest">&larr; Back to Insights</a>
+                    <a href="../index.html#insights" class="text-xs font-bold text-gray-500 hover:text-firm-accent uppercase tracking-widest transition-colors">
+                        &larr; Back to Insights
+                    </a>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- ARTICLE CONTENT -->
     <article class="py-20">
         <div class="max-w-3xl mx-auto px-6">
             
-            <!-- Category & Date -->
             <div class="flex items-center space-x-4 mb-6">
                 <span class="text-xs font-bold text-firm-accent uppercase tracking-widest">Tax Law</span>
                 <span class="text-xs text-gray-400 uppercase tracking-widest">|</span>
                 <span class="text-xs text-gray-400 uppercase tracking-widest">October 24, 2024</span>
             </div>
 
-            <!-- Title -->
             <h1 class="text-4xl md:text-5xl font-serif text-firm-black mb-8 leading-tight">
                 The 183-Day Rule: Are you a tax resident in Argentina?
             </h1>
 
-            <!-- Author -->
             <div class="flex items-center mb-12 border-b border-gray-100 pb-8">
-                <div class="w-10 h-10 rounded-full bg-gray-200 mr-4 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+                <div class="w-10 h-10 rounded-full bg-gray-200 mr-4 overflow-hidden ring-2 ring-gray-100">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80" alt="Martin Velasco" class="w-full h-full object-cover">
                 </div>
                 <div>
                     <p class="text-sm font-bold text-firm-black">By Martin Velasco</p>
@@ -74,39 +82,36 @@
                 </div>
             </div>
 
-            <!-- Main Image -->
-            <div class="w-full h-96 bg-gray-200 mb-12 overflow-hidden">
-                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80" class="w-full h-full object-cover">
+            <div class="w-full h-96 bg-gray-200 mb-12 overflow-hidden shadow-sm">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80" alt="Tax Documents" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
             </div>
 
-            <!-- Body Text (Typography Prose) -->
-            <div class="prose prose-lg text-gray-600 font-light leading-relaxed">
+            <div class="prose prose-lg prose-headings:text-firm-black prose-p:text-gray-600 prose-li:text-gray-600 font-light leading-relaxed max-w-none">
                 <p class="mb-6">
                     Many expats assume that if they don't have a DNI, they don't owe taxes. This is a common misconception that can lead to significant penalties. In Argentina, fiscal residency is determined primarily by the "center of vital interests" and the time spent in the country.
                 </p>
                 
-                <h3 class="text-2xl font-serif text-firm-black mt-10 mb-4">How the rule works</h3>
-                <p class="mb-6">
+                <h3>How the rule works</h3>
+                <p>
                     If you spend more than 183 days in a 12-month period within Argentine territory, AFIP (Administración Federal de Ingresos Públicos) may consider you a fiscal resident. This applies regardless of your visa status.
                 </p>
 
-                <ul class="list-disc pl-5 mb-6 space-y-2">
+                <ul>
                     <li><strong>Worldwide Income:</strong> Residents are taxed on global income.</li>
                     <li><strong>Personal Assets Tax:</strong> Applied to assets held worldwide.</li>
                     <li><strong>Double Taxation Treaties:</strong> Check if your country has an agreement with Argentina to avoid paying twice.</li>
                 </ul>
 
-                <h3 class="text-2xl font-serif text-firm-black mt-10 mb-4">Planning ahead</h3>
+                <h3>Planning ahead</h3>
                 <p>
                     Before you hit the 6-month mark, it is crucial to speak with an accountant. Structuring your assets correctly before becoming a resident can save you thousands of dollars in the long run.
                 </p>
             </div>
 
-            <!-- CTA Box -->
-            <div class="mt-16 bg-gray-50 p-8 border-l-4 border-firm-accent">
+            <div class="mt-16 bg-firm-gray p-8 border-l-4 border-firm-accent">
                 <h4 class="font-serif text-xl text-firm-black mb-2">Need tax advice?</h4>
                 <p class="text-sm text-gray-600 mb-4">Our accounting team specializes in expat taxation. Schedule a consultation to review your status.</p>
-                <a href="../index.html" class="inline-block bg-firm-black text-white px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-firm-accent transition-colors">
+                <a href="../index.html" class="inline-block bg-firm-black text-white px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-firm-accent transition-colors duration-300">
                     Contact Us
                 </a>
             </div>
@@ -114,7 +119,6 @@
         </div>
     </article>
 
-    <!-- FOOTER SIMPLE -->
     <footer class="bg-firm-black text-white py-12 border-t-4 border-firm-accent mt-20">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <p class="font-display text-xl tracking-wide font-bold mb-4">LIFE IN ARGENTINA</p>
@@ -123,4 +127,4 @@
     </footer>
 
 </body>
-</html> 
+</html>
