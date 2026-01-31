@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-BR" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life In Argentina | Assessoria Jurídica Estratégica</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'firm-black': '#111111',
+                        'firm-gray': '#f4f4f4',
+                        'firm-stone': '#8c8c8c',
+                        // BRAZIL PALETTE ADAPTED FOR UI
+                        'firm-accent': '#009c3b',      // Flag Green (Primary Actions/Icons)
+                        'firm-accent-hover': '#007a2e', // Darker Green
+                        'firm-blue': '#002776',        // Flag Blue (Text/Headings)
+                        'firm-yellow': '#ffdf00',      // Flag Yellow (Highlights/Underlines)
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        display: ['Cinzel', 'serif'], 
+                    },
+                    spacing: {
+                        '128': '32rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+        }
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 3px; /* Slightly thicker for the yellow */
+            bottom: 0;
+            left: 0;
+            background-color: #ffdf00; /* Yellow Underline */
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,39,118,0.4)); /* Subtle blue tint in overlay */
+        }
+
+        /* Modal Animation */
+        .modal {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+        .modal.open {
+            opacity: 1;
+            visibility: visible;
+        }
+        .modal-content {
+            transform: translateY(20px);
+            transition: all 0.3s ease-in-out;
+        }
+        .modal.open .modal-content {
+            transform: translateY(0);
+        }
+        
+        /* Custom Scrollbar for Modal if content is long */
+        .modal-scroll {
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        /* Helper classes */
+        .aspect-16-9 {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+        }
+        .aspect-16-9 img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-white text-firm-black font-sans">
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-display text-2xl tracking-widest font-bold text-firm-blue">
+                        LIFE <span class="text-firm-accent">IN</span> ARGENTINA
+                    </a>
+                </div>
+
+                <!-- Navegación Principal -->
+                <nav class="hidden md:flex space-x-12 items-center">
+                    <a href="#team" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Nossa Equipe</a>
+                    <a href="#practice-areas" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Serviços</a>
+                    <a href="#insights" class="text-sm font-medium text-gray-800 hover:text-firm-accent transition-colors uppercase tracking-widest hover-underline-animation">Guia Prático</a>
+                </nav>
+
+                <!-- Elemento Destacado (Trigger Modal) -->
+                <div class="hidden lg:flex items-center">
+                    <div onclick="openModal()" class="relative group cursor-pointer">
+                        <div class="flex items-center border border-gray-300 px-4 py-2 bg-gray-50 transition-all duration-300 group-hover:border-firm-accent group-hover:bg-white w-64 justify-between">
+                            <span class="text-sm text-gray-500 font-serif italic group-hover:text-firm-blue">Comece sua jornada</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-firm-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-800 hover:text-firm-accent">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-gray-900 h-[650px] flex items-center justify-center">
+        <!-- Imagen de fondo -->
+        <div class="absolute inset-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1589909202802-8f4aadce1849?auto=format&fit=crop&q=80" alt="Buenos Aires Architecture" class="w-full h-full object-cover object-center opacity-60">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-6 lg:px-8 text-center md:text-left w-full pt-12">
+            <div class="max-w-3xl">
+                <!-- Headline -->
+                <h1 class="text-4xl md:text-6xl font-serif text-white font-medium leading-tight mb-6 flex flex-col md:block items-center">
+                    <span class="inline-flex items-center">
+                        Argentina, simplificada.
+                        <!-- Brazilian Flag Icon -->
+                        <img src="https://flagcdn.com/br.svg" alt="Brasil" class="h-8 md:h-12 w-auto ml-3 shadow-lg rounded border border-white/20 opacity-90">
+                    </span>
+                    <span class="italic text-gray-300 block text-2xl md:text-4xl mt-3 font-light">Assessoria jurídica para brasileiros.</span>
+                </h1>
+                
+                <!-- Subtítulo -->
+                <p class="mt-6 text-lg md:text-xl text-gray-200 font-light max-w-2xl leading-relaxed">
+                    Mudar de país não precisa ser complicado. Do visto Mercosul à abertura da sua empresa, nossa equipe local cuida da burocracia argentina para você focar no que importa.
+                </p>
+
+                <!-- CTA (Trigger Modal) -->
+                <div class="mt-10">
+                    <button onclick="openModal()" class="inline-flex items-center px-8 py-3 bg-white text-firm-blue border border-white text-base font-medium hover:bg-firm-accent hover:text-white hover:border-firm-accent transition-all duration-300 uppercase tracking-widest text-xs">
+                        Fale com um consultor
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE ACCESOS DIRECTOS (THE 3 DOORS) -->
+    <section id="practice-areas" class="bg-white relative -mt-20 z-10 max-w-7xl mx-auto px-6 lg:px-8 pb-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-0 shadow-2xl bg-white">
+            
+            <!-- Door 1: Immigration -->
+            <a href="#" class="group p-10 border-r border-gray-100 hover:bg-gray-50 transition-colors border-t-4 border-firm-accent">
+                <div class="mb-4 text-firm-accent">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                </div>
+                <h3 class="text-xl font-serif font-semibold text-firm-blue mb-3 group-hover:text-firm-accent transition-colors">
+                    Residência Mercosul
+                </h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                    Aproveite os acordos bilaterais. Seja para estudar medicina, trabalhar remotamente ou aposentar-se, garantimos que seu processo de DNI seja rápido e sem erros.
+                </p>
+                <div class="flex items-center text-xs font-bold uppercase tracking-widest text-firm-black group-hover:translate-x-2 transition-transform duration-300">
+                    Serviços Migratórios <span class="ml-2 text-firm-accent">&rarr;</span>
+                </div>
+            </a>
+
+            <!-- Door 2: Corporate -->
+            <a href="#" class="group p-10 border-r border-gray-100 hover:bg-gray-50 transition-colors border-t-4 border-gray-200 hover:border-firm-accent transition-all">
+                <div class="mb-4 text-firm-black group-hover:text-firm-accent transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                </div>
+                <h3 class="text-xl font-serif font-semibold text-firm-blue mb-3 group-hover:text-firm-accent transition-colors">
+                    Empreender na Argentina
+                </h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                    Eliminamos a papelada. Desde a abertura de S.A.S. ou S.R.L. até a obtenção do CUIT e inscrições fiscais, construímos a base legal para seu negócio prosperar.
+                </p>
+                <div class="flex items-center text-xs font-bold uppercase tracking-widest text-firm-black group-hover:translate-x-2 transition-transform duration-300">
+                    Soluções Corporativas <span class="ml-2 text-firm-accent">&rarr;</span>
+                </div>
+            </a>
+
+            <!-- Door 3: IP & General -->
+            <a href="#" class="group p-10 hover:bg-gray-50 transition-colors border-t-4 border-gray-200 hover:border-firm-accent transition-all">
+                <div class="mb-4 text-firm-black group-hover:text-firm-accent transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <h3 class="text-xl font-serif font-semibold text-firm-blue mb-3 group-hover:text-firm-accent transition-colors">
+                    Proteja sua Marca
+                </h3>
+                <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                    Suas ideias são seus ativos. Gerenciamos o registro de marcas e propriedade intelectual no INPI para que você possa expandir com segurança jurídica.
+                </p>
+                <div class="flex items-center text-xs font-bold uppercase tracking-widest text-firm-black group-hover:translate-x-2 transition-transform duration-300">
+                    Propriedade Intelectual <span class="ml-2 text-firm-accent">&rarr;</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN: OUR TEAM -->
+    <section id="team" class="py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-firm-accent font-bold text-xs uppercase tracking-widest mb-3 block">Um Ecossistema Completo</span>
+                <h2 class="text-4xl font-serif text-firm-blue mb-6">Mais que advogados, seus parceiros locais.</h2>
+                <p class="text-gray-500 font-light leading-relaxed">
+                    Reunimos uma rede completa de profissionais para gerenciar cada aspecto da sua mudança. 
+                    Da estratégia legal à tradução juramentada, coordenamos tudo sob o mesmo teto.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Immigration Law -->
+                <div class="bg-gray-50 p-10 border-t-4 border-firm-accent hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-serif font-semibold text-firm-blue mb-4">Especialistas em Imigração</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Nossa equipe principal consiste em advogados dedicados exclusivamente ao direito migratório e cidadania. Estamos sempre atualizados com as mudanças nas regulações da <em>Dirección Nacional de Migraciones</em>.
+                    </p>
+                </div>
+
+                <!-- Card 2: Support Network -->
+                <div class="bg-gray-50 p-10 border-t-4 border-gray-200 hover:border-firm-accent transition-all hover:shadow-lg">
+                     <h3 class="text-xl font-serif font-semibold text-firm-blue mb-4">Rede de Apoio</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        A burocracia exige mais que conselhos jurídicos. Nossa rede inclui <strong>tradutores juramentados</strong> e <strong>escribanos</strong> (notários). Lidamos com as legalizações e apostilas para que você não precise procurar múltiplos fornecedores.
+                    </p>
+                </div>
+
+                <!-- Card 3: In-Person Support -->
+                <div class="bg-gray-50 p-10 border-t-4 border-gray-200 hover:border-firm-accent transition-all hover:shadow-lg">
+                     <h3 class="text-xl font-serif font-semibold text-firm-blue mb-4">Ao seu lado, literalmente</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        Não damos apenas conselhos à distância. Oferecemos <strong>consultas virtuais</strong> de planejamento e <strong>acompanhamos você presencialmente</strong> nas repartições públicas (Migraciones, AFIP, Bancos) para garantir que tudo corra bem.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: INSIGHTS -->
+    <section id="insights" class="py-24 bg-firm-gray">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            
+            <div class="flex justify-between items-end mb-12 border-b border-gray-300 pb-4">
+                <div>
+                    <span class="text-firm-accent font-bold text-xs uppercase tracking-widest mb-2 block">Base de Conhecimento</span>
+                    <h2 class="text-4xl font-serif text-firm-blue">Leitura Essencial</h2>
+                </div>
+                <a href="#" class="hidden md:block text-sm font-semibold text-gray-600 hover:text-firm-black">
+                    Ler todos os artigos &rarr;
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <div class="lg:col-span-7 space-y-8">
+                    <a href="#" class="block group">
+                        <article class="group cursor-pointer">
+                            <div class="aspect-16-9 mb-6 overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1642069525937-ce9e8b24413a?auto=format&fit=crop&q=80&w=2400" alt="Documentos Oficiais" class="grayscale group-hover:grayscale-0 transition-all duration-700 ease-in-out">
+                            </div>
+                            <div class="space-y-3">
+                                <span class="text-xs font-bold text-firm-accent uppercase tracking-widest">Documentação</span>
+                                <h3 class="text-3xl font-serif leading-tight text-firm-black group-hover:text-gray-700 transition-colors">
+                                    Guia de Apostila de Haia e Documentos Brasileiros
+                                </h3>
+                                <p class="text-gray-600 leading-relaxed font-light">
+                                    Pare de adivinhar quais documentos precisam de tradução ou apostila. Aqui está exatamente como preparar seus antecedentes criminais e certidões brasileiras para que seu processo de residência seja aprovado de primeira.
+                                </p>
+                                <span class="text-xs text-gray-400 block mt-2">Por Life in Argentina | 5 Min de Leitura</span>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+
+                <div class="lg:col-span-5 flex flex-col justify-between border-l border-gray-300 pl-0 lg:pl-12 pt-8 lg:pt-0">
+                    
+                    <article class="mb-8 group cursor-pointer">
+                        <a href="#" class="block">
+                            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Vida em Buenos Aires</span>
+                            <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
+                                Guia Prático: Vivendo em Buenos Aires em 2026
+                            </h4>
+                            <p class="text-sm text-gray-500 line-clamp-2">
+                                Melhores bairros, cartão SUBE, chips de celular, segurança e como se adaptar à vida portenha na sua primeira semana.
+                            </p>
+                        </a>
+                    </article>
+
+                    <div class="w-full h-px bg-gray-200 mb-8"></div>
+
+                    <article class="mb-8 group cursor-pointer">
+                         <a href="#" class="block">
+                            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Estudantes</span>
+                            <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
+                                Medicina na Argentina: Matrícula e DNI
+                            </h4>
+                            <p class="text-sm text-gray-500 line-clamp-2">
+                                Vai estudar na UBA ou Barceló? Entenda os prazos para regularizar sua situação migratória antes do início das aulas.
+                            </p>
+                        </a>
+                    </article>
+
+                    <div class="w-full h-px bg-gray-200 mb-8"></div>
+
+                    <article class="mb-8 group cursor-pointer">
+                        <a href="#" class="block">
+                            <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Economia</span>
+                            <h4 class="text-xl font-serif mt-2 mb-2 text-firm-black group-hover:text-firm-accent transition-colors">
+                                Câmbio: Trazendo Reais para a Argentina
+                                <p class="text-sm text-gray-500 line-clamp-2 mt-2">
+                                    Western Union, cripto ou cartões internacionais? Um guia honesto sobre como fazer seu dinheiro render mais no "Dólar Blue" ou "MEP".
+                                </p>
+                            </h4>
+                        </a>
+                    </article>
+                    
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="bg-firm-black text-white pt-20 pb-10 border-t-4 border-firm-accent">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                
+                <!-- Branding Column -->
+                <div class="col-span-1 md:col-span-1">
+                    <a href="#" class="font-display text-xl tracking-wide font-bold text-white mb-6 block">
+                        LIFE <span class="text-firm-accent">IN</span> ARGENTINA
+                    </a>
+                    <p class="text-gray-500 text-sm font-medium">
+                        Buenos Aires &bull; Córdoba
+                    </p>
+                    <p class="text-gray-500 text-xs mt-4 leading-relaxed">
+                        Nós preenchemos a lacuna entre as necessidades internacionais e as soluções locais. Simples, transparente e eficaz.
+                    </p>
+                </div>
+
+                <!-- Utility Links 1 -->
+                <div>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Serviços</h4>
+                    <ul class="space-y-4 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">Residência e Vistos</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Abertura de Empresas</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Registro de Marcas</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contratos de Aluguel</a></li>
+                    </ul>
+                </div>
+
+                <!-- Utility Links 2 -->
+                <div>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Área do Cliente</h4>
+                    <ul class="space-y-4 text-sm text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">Portal do Cliente</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Acompanhar Processo</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Perguntas Frequentes (FAQ)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact / Legal -->
+                <div>
+                    <h4 class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Contato</h4>
+                    <p class="text-sm text-gray-300 mb-4">
+                        +54 11 1234 5678 <br>
+                        ola@lifeinargentina.com
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <!-- Social Placeholders -->
+                        <div class="w-5 h-5 bg-gray-700 hover:bg-white transition-colors cursor-pointer"></div>
+                        <div class="w-5 h-5 bg-gray-700 hover:bg-white transition-colors cursor-pointer"></div>
+                        <div class="w-5 h-5 bg-gray-700 hover:bg-white transition-colors cursor-pointer"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Legal -->
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between text-xs text-gray-500">
+                <p>&copy; 2024 Life In Argentina. Todos os direitos reservados.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-gray-300">Política de Privacidade</a>
+                    <a href="#" class="hover:text-gray-300">Termos de Serviço</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL OVERLAY -->
+    <div id="contactModal" class="modal fixed inset-0 z-[100] flex items-center justify-center">
+        <!-- Backdrop -->
+        <div onclick="closeModal()" class="absolute inset-0 bg-black bg-opacity-80 backdrop-blur-sm cursor-pointer"></div>
+        
+        <!-- Content -->
+        <div class="modal-content relative bg-white w-full max-w-lg mx-4 p-8 shadow-2xl border-t-4 border-firm-accent modal-scroll">
+            <!-- Close Button -->
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-firm-black">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+
+            <!-- Form State -->
+            <div id="modalFormState">
+                <h3 class="font-display text-2xl font-bold text-firm-blue mb-2">Vamos simplificar?</h3>
+                <p class="text-gray-600 text-sm mb-6 leading-relaxed">
+                    Conte um pouco sobre seus planos na Argentina. Entraremos em contato ainda hoje com um caminho claro.
+                </p>
+                
+                <form id="liaContactForm" onsubmit="handleSubmit(event)" class="space-y-4">
+                    <!-- HIDDEN FIELDS FOR EMAILJS -->
+                    <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
+                    <input type="hidden" id="timeField" name="time">
+                    <input type="hidden" id="pageUrlField" name="page_url">
+
+                    <!-- Name Fields -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label for="firstName" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Nome</label>
+                            <input type="text" id="firstName" name="firstName" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors">
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Sobrenome</label>
+                            <input type="text" id="lastName" name="lastName" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors">
+                        </div>
+                    </div>
+
+                    <!-- Nationality -->
+                    <div>
+                        <label for="nationality" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Cidade / Estado (Brasil)</label>
+                        <input type="text" id="nationality" name="nationality" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="ex: São Paulo, SP">
+                    </div>
+
+                    <!-- Email -->
+                    <div>
+                        <label for="email" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Seu E-mail</label>
+                        <input type="email" id="email" name="email" required class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="nome@email.com">
+                    </div>
+
+                    <!-- Area of Interest -->
+                    <div>
+                        <label for="interest" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Como podemos ajudar?</label>
+                        <div class="relative">
+                            <select id="interest" name="interest" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors appearance-none bg-white">
+                                <option value="residency">Residência Mercosul / DNI</option>
+                                <option value="student">Estudante (Medicina/Outros)</option>
+                                <option value="nomad_visa">Visto Nômade Digital</option>
+                                <option value="corporate">Abrir Empresa / Negócios</option>
+                                <option value="trademark">Registro de Marca</option>
+                                <option value="other">Outra dúvida</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div>
+                        <label for="description" class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Mensagem (Opcional)</label>
+                        <textarea id="description" name="description" rows="3" class="w-full border border-gray-300 p-3 text-sm focus:outline-none focus:border-firm-accent transition-colors" placeholder="Descreva brevemente sua situação..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-firm-blue text-white py-3 text-xs font-bold uppercase tracking-widest hover:bg-firm-accent transition-colors">
+                        Enviar Solicitação
+                    </button>
+                    <p class="text-[10px] text-gray-400 text-center mt-2">
+                        Respeitamos sua privacidade. Seus dados estão seguros.
+                    </p>
+                </form>
+            </div>
+
+            <!-- Success State (Hidden by default) -->
+            <div id="modalSuccessState" class="hidden text-center py-8">
+                <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
+                    <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-firm-blue mb-2">Recebemos seu contato!</h3>
+                <p class="text-gray-600 text-sm mb-6">
+                    Obrigado pelo interesse. <br>
+                    Nossa equipe analisará seu perfil e enviará um e-mail para você em breve.
+                </p>
+                <button onclick="closeModal()" class="inline-block border border-gray-300 px-6 py-2 text-xs uppercase tracking-widest hover:bg-gray-50">
+                    Voltar ao site
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR MODAL & EMAILJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // --- CONFIG ---
+        const EMAILJS_SERVICE_ID = "service_huqa16f";
+        const EMAILJS_TEMPLATE_ID = "template_yk44c0i";
+        const EMAILJS_PUBLIC_KEY = "kcX6p2ITpMpxi-ZYc";
+
+        // Init EmailJS
+        (function() {
+            if (window.emailjs) {
+                emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+            }
+        })();
+
+        // --- MODAL LOGIC ---
+        function openModal() {
+            const modal = document.getElementById('contactModal');
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            
+            // Reset state
+            document.getElementById('modalFormState').classList.remove('hidden');
+            document.getElementById('modalSuccessState').classList.add('hidden');
+            
+            // Clear form
+            const form = document.getElementById('liaContactForm');
+            if(form) form.reset();
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('contactModal');
+            modal.classList.remove('open');
+            document.body.style.overflow = ''; // Restore scrolling
+        }
+
+        // --- FORM SUBMIT LOGIC ---
+        async function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById("liaContactForm");
+            if (!form || !window.emailjs) return;
+
+            // Set hidden metadata fields
+            const timeField = document.getElementById("timeField");
+            if (timeField) timeField.value = new Date().toISOString();
+
+            const pageUrlField = document.getElementById("pageUrlField");
+            if (pageUrlField) pageUrlField.value = window.location.href;
+
+            // UI Feedback
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn ? submitBtn.textContent : "Enviar Solicitação";
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Enviando...";
+            }
+
+            try {
+                await window.emailjs.sendForm(
+                    EMAILJS_SERVICE_ID,
+                    EMAILJS_TEMPLATE_ID,
+                    form
+                );
+
+                // Success
+                document.getElementById('modalFormState').classList.add('hidden');
+                document.getElementById('modalSuccessState').classList.remove('hidden');
+                form.reset();
+
+            } catch (err) {
+                console.error("EmailJS Error:", err);
+                alert("Não foi possível enviar sua solicitação. Verifique sua conexão e tente novamente.");
+            } finally {
+                // Restore button state
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = originalText;
+                }
+            }
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
