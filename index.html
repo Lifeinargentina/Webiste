@@ -386,7 +386,7 @@
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             
-            <!-- Form State (NEW SURVEY) -->
+             <!-- Form State -->
             <div id="modalFormState">
                 <h3 class="font-display text-2xl font-bold text-firm-black mb-2">Let's Simplify Argentina</h3>
                 <p class="text-gray-600 text-sm mb-6 leading-relaxed">
@@ -454,9 +454,25 @@
                     </p>
                 </form>
             </div>
+
+            <!-- Success State (Hidden by default) -->
+            <div id="modalSuccessState" class="hidden text-center py-8">
+                <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
+                    <svg class="h-6 w-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-firm-black mb-2">We're on it!</h3>
+                <p class="text-gray-600 text-sm mb-6">
+                    Thanks for reaching out. We've received your details.<br>
+                    Our team will check your eligibility and email you at <strong>contact@lifeinargentina.com</strong> shortly.
+                </p>
+                <button onclick="closeModal()" class="inline-block border border-gray-300 px-6 py-2 text-xs uppercase tracking-widest hover:bg-gray-50">
+                    Back to Site
+                </button>
+            </div>
         </div>
     </div>
-
     <!-- JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
