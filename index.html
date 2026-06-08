@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life in Argentina | Legal & Relocation Support</title>
+  <meta name="description" content="Premium legal and relocation support for foreigners, investors and remote professionals moving to Argentina." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Montagu+Slab:opsz,wght@16..144,400;16..144,500;16..144,600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --deep:#072b22;
+      --deep-2:#0d3a2f;
+      --green:#184f40;
+      --mint:#dcece2;
+      --mint-2:#edf6f0;
+      --cream:#f7f3ea;
+      --paper:#fffdf8;
+      --lav:#dad7e2;
+      --charcoal:#24312d;
+      --muted:#6d766f;
+      --line:rgba(7,43,34,.14);
+      --shadow:0 30px 80px rgba(7,43,34,.22);
+      --serif:"Montagu Slab", Georgia, serif;
+      --sans:"Instrument Sans", Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      color:var(--charcoal);
+      background:var(--cream);
+      -webkit-font-smoothing:antialiased;
+      text-rendering:geometricPrecision;
+    }
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font:inherit}
+
+    .nav{
+      position:fixed;
+      z-index:50;
+      top:18px;
+      left:50%;
+      transform:translateX(-50%);
+      width:min(1180px, calc(100% - 36px));
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+padding:8px 12px 8px 16px;
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:999px;
+      background:rgba(7,43,34,.42);
+      backdrop-filter:blur(22px);
+      box-shadow:0 18px 60px rgba(0,0,0,.22);
+      color:#fffdf6;
+    }
+    .brand{display:flex;align-items:center;gap:12px;letter-spacing:.02em;font-weight:600;white-space:nowrap}
+    .bird{
+      width:28px;height:28px;border-radius:50%;display:grid;place-items:center;
+      background:linear-gradient(135deg, rgba(220,236,226,.95), rgba(255,253,248,.78));
+      color:var(--deep);font-size:17px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)
+    }
+
+    .brand-logo{
+  width:36px;
+  height:36px;
+  max-width:36px;
+  max-height:36px;
+  object-fit:contain;
+  display:block;
+  flex-shrink:0;
+}
+
+    .links{display:flex;align-items:center;gap:28px;font-size:14px;color:rgba(255,253,248,.82)}
+    .links a:hover{color:white}
+.nav-cta{
+  padding:9px 16px;
+  border-radius:999px;
+  background:#fffdf8;
+  color:var(--deep);
+  font-weight:600;
+  box-shadow:0 10px 30px rgba(0,0,0,.16);
+}
+
+.hero{
+  position:relative;
+  min-height:100svh;
+  overflow:hidden;
+  background-color:var(--deep);
+  background-image:url('./img/hans-jurgen-weinhardt-fB8AA0OIEFk-unsplash.jpg');
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  display:flex;
+  align-items:center;
+  isolation:isolate;
+}
+
+    .hero-slides{
+      position:absolute;
+      inset:0;
+      z-index:-3;
+    }
+    .slide{
+      position:absolute;
+      inset:0;
+      background-size:cover;
+      background-position:center center;
+      opacity:0;
+      transform:scale(1.04);
+      animation:fadeSlide 24s infinite;
+    }
+
+
+    .slide:nth-child(1){
+  background-image:url('./img/hans-jurgen-weinhardt-fB8AA0OIEFk-unsplash.jpg');
+  animation-delay:0s;
+}
+
+.slide:nth-child(2){
+  background-image:url('./img/hector-ramon-perez-e7D8evFSyww-unsplash.jpg');
+  animation-delay:6s;
+}
+
+.slide:nth-child(3){
+  background-image:url('./img/ignacio-estevo-xAMfQn0tWoE-unsplash.jpg');
+  animation-delay:12s;
+}
+
+.slide:nth-child(4){
+  background-image:url('./img/matt-broch-zxEZt6xNIe0-unsplash.jpg');
+  animation-delay:18s;
+}
+
+.slide:nth-child(5){
+  background-image:url('./img/nicolas-taylor-ziXS8iTdeXE-unsplash.jpg');
+  animation-delay:24s;
+}
+   @keyframes fadeSlide{
+  0%{opacity:1;transform:scale(1.04)}
+  20%{opacity:1;transform:scale(1.08)}
+  26%{opacity:0}
+  94%{opacity:0;transform:scale(1.1)}
+  100%{opacity:1;transform:scale(1.04)}
+}
+   .hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background:
+    linear-gradient(90deg, rgba(7,43,34,.58) 0%, rgba(7,43,34,.28) 42%, rgba(7,43,34,.08) 100%),
+    linear-gradient(0deg, rgba(7,43,34,.45) 0%, rgba(7,43,34,.04) 55%, rgba(7,43,34,.18) 100%);
+}
+
+
+    .hero:after{
+      content:"";position:absolute;left:0;right:0;bottom:-1px;height:170px;z-index:-1;
+      background:linear-gradient(0deg, var(--cream), transparent);
+    }
+    .hero-inner{
+      width:min(1180px, calc(100% - 40px));
+      margin:0 auto;
+      padding:130px 0 70px;
+      color:#fffdf8;
+    }
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:8px 12px;border:1px solid rgba(255,253,248,.22);border-radius:999px;
+      background:rgba(255,255,255,.08);backdrop-filter:blur(10px);
+      font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,253,248,.86);
+    }
+    .eyebrow:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--mint)}
+    h1,h2,h3{font-family:var(--serif);font-weight:400;margin:0;letter-spacing:-.055em}
+h1{
+  max-width:760px;
+  margin-top:22px;
+  font-size:clamp(44px, 5.8vw, 86px);
+  line-height:1;
+}
+    .hero-sub{max-width:760px;margin:28px 0 0;font-size:clamp(19px,2.1vw,28px);line-height:1.22;color:rgba(255,253,248,.86);font-weight:400;letter-spacing:-.02em}
+    .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      min-height:52px;padding:0 22px;border-radius:999px;border:1px solid transparent;
+      font-weight:650;letter-spacing:.01em;transition:.25s ease;cursor:pointer;
+    }
+    .btn.primary{background:#fffdf8;color:var(--deep);box-shadow:0 18px 50px rgba(0,0,0,.22)}
+    .btn.primary:hover{transform:translateY(-2px);box-shadow:0 24px 70px rgba(0,0,0,.28)}
+    .btn.secondary{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.28);color:white;backdrop-filter:blur(12px)}
+    .btn.secondary:hover{background:rgba(255,255,255,.16)}
+    .hero-meta{margin-top:58px;display:flex;gap:18px;flex-wrap:wrap;color:rgba(255,253,248,.76);font-size:14px}
+    .hero-meta span{padding:9px 12px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.06)}
+    .hero-dots{display:flex;gap:8px;margin-top:28px}
+    .hero-dots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.34);animation:dotPulse 24s infinite}
+    .hero-dots span:nth-child(1){animation-delay:0s}
+    .hero-dots span:nth-child(2){animation-delay:6s}
+    .hero-dots span:nth-child(3){animation-delay:12s}
+    .hero-dots span:nth-child(4){animation-delay:18s}
+    @keyframes dotPulse{
+      0%,100%{background:rgba(255,255,255,.34);transform:scale(1)}
+      8%,25%{background:#fffdf8;transform:scale(1.4)}
+      31%{background:rgba(255,255,255,.34);transform:scale(1)}
+    }
+
+    section{padding:112px 0}
+    .wrap{width:min(1180px, calc(100% - 40px));margin:0 auto}
+    .section-kicker{font-size:13px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:var(--green);margin-bottom:18px}
+    .section-title{font-size:clamp(38px,5.2vw,76px);line-height:1.02;color:var(--deep);max-width:880px}
+    .lead{font-size:clamp(18px,2vw,24px);line-height:1.42;color:#53605a;max-width:760px;letter-spacing:-.02em}
+
+    .about{background:var(--cream)}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:end}
+    .about-card{
+      background:var(--paper);border:1px solid var(--line);border-radius:34px;padding:34px;box-shadow:0 22px 70px rgba(7,43,34,.08);
+    }
+    .about-card p{margin:0;color:#56615b;font-size:18px;line-height:1.55}
+    .diff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:46px}
+    .diff{
+  min-height:260px;
+  background:rgba(255,253,248,.72);
+  border:1px solid var(--line);
+  border-radius:0;
+  padding:34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:.28s ease;
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+}
+.diff:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:var(--green);
+  opacity:0;
+  transition:.28s ease;
+  z-index:0;
+}    
+.diff:hover{
+  transform:none;
+  box-shadow:none;
+  border-color:var(--green);
+}
+
+.diff:hover:before{
+  opacity:1;
+}
+
+.diff:hover small,
+.diff:hover h3,
+.diff:hover p{
+  color:#fffdf8;
+}
+
+.diff small,
+.diff h3,
+.diff p{
+  transition:.28s ease;
+  z-index:1;
+}
+
+
+    .diff small{font-size:12px;color:var(--green);font-weight:700;letter-spacing:.12em;text-transform:uppercase;position:relative}
+    .diff h3{font-family:var(--serif);font-size:24px;line-height:1.1;color:var(--deep);letter-spacing:-.04em;position:relative}
+    .diff p{margin:12px 0 0;color:#66716b;line-height:1.45;position:relative}
+
+    .services{background:var(--deep);color:#fffdf8;position:relative;overflow:hidden}
+    .services:before{content:"";position:absolute;inset:-240px -220px auto auto;width:520px;height:520px;border-radius:50%;background:rgba(220,236,226,.10);filter:blur(2px)}
+    .services .section-kicker{color:var(--mint)}
+    .services .section-title{color:#fffdf8}
+    .services .lead{color:rgba(255,253,248,.70)}
+    .services-head{display:grid;grid-template-columns:1fr .8fr;gap:70px;align-items:end;margin-bottom:46px;position:relative}
+    .service-list{display:grid;border-top:1px solid rgba(255,255,255,.16);position:relative}
+    .service{
+      display:grid;grid-template-columns:.75fr 1fr;gap:40px;padding:32px 0;border-bottom:1px solid rgba(255,255,255,.16);
+      transition:.25s ease;
+    }
+    .service:hover{padding-left:18px;background:linear-gradient(90deg,rgba(255,255,255,.06),transparent)}
+.service h3{
+  font-family:var(--sans);
+  font-weight:700;
+  font-size:clamp(24px,2.6vw,38px);
+  line-height:1.08;
+  letter-spacing:-.035em;
+  color:#fffdf8;
+}
+    .service p{margin:0;color:rgba(255,253,248,.70);font-size:18px;line-height:1.5;max-width:650px}
+
+    .meeting{background:linear-gradient(180deg,var(--cream),#fffdf8)}
+    .meeting-panel{
+      display:grid;grid-template-columns:1fr .86fr;gap:28px;align-items:stretch;
+      background:var(--paper);border:1px solid var(--line);border-radius:42px;overflow:hidden;box-shadow:var(--shadow);
+    }
+    .meeting-copy{padding:54px}
+    .meeting-copy .section-title{font-size:clamp(40px,5vw,72px)}
+    .meeting-copy p{font-size:21px;line-height:1.45;color:#5c6761;max-width:650px}
+    .meeting-note{display:flex;gap:14px;align-items:center;margin-top:32px;color:var(--green);font-weight:650}
+    .meeting-note .seal{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--mint);color:var(--deep)}
+    .form-card{background:var(--deep);padding:34px;color:#fffdf8;display:flex;flex-direction:column;justify-content:center}
+    .form-card h3{font-size:34px;margin-bottom:10px;color:#fffdf8}
+    .form-card p{margin:0 0 22px;color:rgba(255,253,248,.68);line-height:1.45}
+    .form{display:grid;gap:12px}
+    .form input,.form select,.form textarea{
+      width:100%;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.08);color:#fffdf8;border-radius:18px;padding:15px 16px;outline:none;
+    }
+    .form textarea{min-height:112px;resize:vertical}
+    .form input::placeholder,.form textarea::placeholder{color:rgba(255,253,248,.54)}
+    .form select{color:rgba(255,253,248,.88)}
+    .form option{color:var(--charcoal)}
+    .form .btn{width:100%;margin-top:8px;border:0}
+    .email-line{font-size:14px;color:rgba(255,253,248,.66);margin-top:16px}.email-line a{color:#fff;text-decoration:underline;text-underline-offset:4px}
+
+    footer{background:#061f19;color:#fffdf8;padding:46px 0}
+    .footer-inner{width:min(1180px, calc(100% - 40px));margin:0 auto;display:flex;justify-content:space-between;gap:30px;align-items:flex-end}
+    .footer-brand{display:flex;gap:14px;align-items:center;margin-bottom:12px;font-weight:700}
+    .footer p{margin:0;color:rgba(255,253,248,.64)}
+    .footer-links{display:flex;gap:22px;color:rgba(255,253,248,.70);font-size:14px;flex-wrap:wrap;justify-content:flex-end}
+
+    @media (max-width: 900px){
+      .links{display:none}.nav{top:14px;width:calc(100% - 24px)}.nav-cta{padding:10px 14px;font-size:14px}
+      .hero-inner{width:calc(100% - 32px);padding:150px 0 80px}.hero-sub{font-size:20px}.hero-meta{margin-top:34px}
+      section{padding:82px 0}.wrap{width:calc(100% - 32px)}
+      .about-grid,.services-head,.meeting-panel{grid-template-columns:1fr;gap:30px}.diff-grid{grid-template-columns:1fr 1fr}.service{grid-template-columns:1fr;gap:12px;padding:28px 0}.meeting-copy{padding:32px}.footer-inner{display:block}.footer-links{justify-content:flex-start;margin-top:26px}
+    }
+    @media (max-width: 560px){
+      .brand span{display:none}.bird{width:34px;height:34px}h1{font-size:50px}.hero-actions .btn{width:100%}.diff-grid{grid-template-columns:1fr}.diff{min-height:180px}.about-card{padding:24px;border-radius:26px}.form-card{padding:26px}.meeting-panel{border-radius:30px}.slide{background-position:center center}
+      .hero:before{background:linear-gradient(90deg,rgba(7,43,34,.90),rgba(7,43,34,.58)),linear-gradient(0deg,rgba(7,43,34,.94),rgba(7,43,34,.1) 55%,rgba(7,43,34,.42))}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Primary navigation">
+
+
+<a class="brand" href="#top" aria-label="Life in Argentina home">
+  <img class="brand-logo" src="./img/logo-life-in-argentina.png" alt="Life in Argentina logo">
+  <span>Life in Argentina</span>
+</a>
+
+
+<div class="links">
+      <a href="#about">About us</a>
+      <a href="#services">Services</a>
+      <a href="#meeting">Free meeting</a>
+    </div>
+    <a class="nav-cta" href="#meeting">Book a free call</a>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-slides" aria-hidden="true">
+  <div class="slide"></div>
+  <div class="slide"></div>
+  <div class="slide"></div>
+  <div class="slide"></div>
+  <div class="slide"></div>
+</div>
+    <div class="hero-inner">
+      <h1>We help you move to Argentina</h1>
+      <p class="hero-sub">Life in Argentina offers legal and relocation support for people who want to live, work, invest, or start a business in Argentina.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#meeting">Book a free call</a>
+        <a class="btn secondary" href="#services">Explore our services</a>
+      </div>
+      <div class="hero-dots" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+     
+    </div>
+  </header>
+
+  <main>
+    <section class="about" id="about">
+      <div class="wrap">
+        <div class="about-grid">
+          <div>
+            <div class="section-kicker">About us</div>
+            <h2 class="section-title">Legal and relocation help built around your situation, not a fixed package.</h2>
+          </div>
+          <div class="about-card">
+            <p>Life in Argentina was created for people moving to Argentina with different needs, timelines and levels of independence. Some clients need one clear consultation. Others need closer involvement, in-person assistance or help coordinating specific parts of the process.
+
+We start by understanding your situation, then help you choose the kind of support that makes sense for your case.</p>
+          </div>
+        </div>
+        <div class="diff-grid">
+          <article class="diff">
+            <small>01</small>
+            <div>
+              <h3>Lawyers trained at the University of Buenos Aires</h3>
+              <p>Your case is reviewed by lawyers trained at one of Argentina’s most respected public universities.</p>
+            </div>
+          </article>
+
+          <article class="diff">
+            <small>02</small>
+            <div>
+              <h3>Clear English, clear process</h3>
+              <p>We explain Argentine legal and administrative steps in plain English, so you understand what is happening and why it matters.</p>
+            </div>
+          </article>
+
+          <article class="diff">
+            <small>03</small>
+            <div>
+              <h3>One of the most competitive prices in the market</h3>
+              <p>We offer legal and relocation services at a competitive price, without compromising the quality or seriousness your case requires.</p>
+            </div>
+          </article>
+
+          <article class="diff">
+            <small>04</small>
+            <div>
+              <h3>Argentina’s largest vendor network for relocation needs</h3>
+              <p>From housing to local setup, paperwork and everyday services, we connect clients with vetted vendors across Argentina.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="services-head">
+          <div>
+            <div class="section-kicker">Services</div>
+            <h2 class="section-title">Moving to Argentina comes with a lot of questions. We help you answer them.</h2>
+          </div>
+          <p class="lead">Residency, paperwork, taxes, company setup, housing, local contacts — every move is different. We help you understand what applies to your case, what can wait, and what needs to be handled properly from the start.</p>
+        </div>
+
+                <div class="service-list">
+          <article class="service">
+            <h3>Residency and immigration</h3>
+            <p>We help you understand which residency option fits your situation, what documents you need and how to move through the process.</p>
+          </article>
+
+          <article class="service">
+            <h3>Company formation</h3>
+            <p>For founders, investors and professionals who want to open a company in Argentina and understand what the process involves.</p>
+          </article>
+
+          <article class="service">
+            <h3>Brand registration</h3>
+            <p>We help you register and protect your brand if you are bringing a business, project or professional activity into the Argentine market.</p>
+          </article>
+
+          <article class="service">
+            <h3>Tax organization</h3>
+            <p>We help you understand the tax registrations and basic structure you may need, working with specialized accountants when your case requires it.</p>
+          </article>
+
+          <article class="service">
+            <h3>Relocation support</h3>
+            <p>For the everyday parts of the move: housing, local setup, appointments, vendors and the things that are harder to solve from abroad.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="meeting" id="meeting">
+      <div class="wrap">
+        <div class="meeting-panel">
+          <div class="meeting-copy">
+            <div class="section-kicker">Free consultation</div>
+            <h2 class="section-title">Schedule a free 15-minute meeting with us.</h2>
+            <p>If you are thinking about moving to Argentina, opening a company or regularizing your situation, we can help you understand what needs to be done and where to start.</p>
+            <div class="meeting-note"><span class="seal">⌂</span><span>Personal response. Clear next steps. No unnecessary complexity.</span></div>
+          </div>
+          <div class="form-card">
+            <h3>Book a free call</h3>
+            <p>Tell us briefly what you need and we will contact you to coordinate a 15-minute introductory meeting.</p>
+            <form class="form" action="mailto:hello@lifeinargentina.com" method="post" enctype="text/plain">
+              <input type="text" name="name" placeholder="Name" required>
+              <input type="email" name="email" placeholder="Email" required>
+              <input type="text" name="based" placeholder="Where are you currently based?">
+              <select name="need" aria-label="What do you need help with?">
+                <option value="">What do you need help with?</option>
+                <option>Residency / immigration</option>
+                <option>Company formation</option>
+                <option>Brand registration</option>
+                <option>Tax organization</option>
+                <option>Relocation support</option>
+                <option>Not sure yet</option>
+              </select>
+              <textarea name="message" placeholder="Optional message"></textarea>
+              <button class="btn primary" type="submit">Book a free call</button>
+            </form>
+            <div class="email-line">Prefer email? <a href="mailto:contact@lifeinargentina.com">Contact us directly.</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+<div class="footer-brand">
+  <img class="brand-logo" src="./img/logo-life-in-argentina.png" alt="Life in Argentina logo">
+  <span>Life in Argentina</span>
+</div>
+
+<p>Legal and relocation guidance for building your life in Argentina.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About us</a>
+        <a href="#services">Services</a>
+        <a href="#meeting">Book a free call</a>
+        <a href="mailto:hello@lifeinargentina.com">hello@lifeinargentina.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      nav.style.background = window.scrollY > 40 ? 'rgba(7,43,34,.72)' : 'rgba(7,43,34,.42)';
+    });
+  </script>
+</body>
+</html>
