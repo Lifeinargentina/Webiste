@@ -1,0 +1,3634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Life in Argentina | Legal & Relocation Support</title>
+
+  <meta
+    name="description"
+    content="Legal and relocation support for people moving to Argentina."
+  >
+
+  <link rel="canonical" href="https://lifeinargentina.com/">
+
+  <meta http-equiv="content-language" content="en">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Life in Argentina">
+  <meta property="og:title" content="Life in Argentina | Legal & Relocation Support">
+  <meta
+    property="og:description"
+    content="Legal and relocation support for people who want to live, work, invest or start a business in Argentina."
+  >
+  <meta property="og:url" content="https://lifeinargentina.com/">
+  <meta
+    property="og:image"
+    content="https://lifeinargentina.com/img/hero-buenos-aires.jpg"
+  >
+  <meta property="og:locale" content="en_US">
+
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Life in Argentina | Legal and Relocation Support">
+  <meta
+    name="twitter:description"
+    content="Legal and relocation support for people moving to Argentina."
+  >
+  <meta
+    name="twitter:image"
+    content="https://lifeinargentina.com/img/hero-buenos-aires.jpg"
+  >
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="./img/favicon.png">
+  <link rel="apple-touch-icon" href="./img/favicon.png">
+
+  <meta name="theme-color" content="#072b22">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Montagu+Slab:opsz,wght@16..144,400;16..144,500;16..144,600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    "name": "Life in Argentina",
+    "description": "Legal and relocation support for living, working, investing or starting a business in Argentina.",
+    "url": "https://lifeinargentina.com/",
+    "email": "contact@lifeinargentina.com",
+    "image": "https://lifeinargentina.com/img/hero-buenos-aires.jpg",
+    "logo": "https://lifeinargentina.com/img/logo-life-in-argentina.png",
+    "priceRange": "$$",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Argentina"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AR",
+      "addressLocality": "Buenos Aires"
+    },
+    "knowsLanguage": ["en", "es"]
+  }
+  </script>
+
+  <style>
+
+    /* =========================================================
+       VARIABLES
+    ========================================================= */
+
+    :root{
+      --deep:#072b22;
+      --deep-2:#0d3a2f;
+      --green:#184f40;
+
+      --mint:#dcece2;
+      --mint-2:#edf6f0;
+
+      --cream:#f7f3ea;
+      --paper:#fffdf8;
+
+      --lav:#eeebf1;
+      --lav-2:#f4f1f5;
+
+      --charcoal:#24312d;
+      --muted:#67716c;
+
+      --line:rgba(7,43,34,.14);
+      --line-light:rgba(255,255,255,.17);
+
+      --serif:"Montagu Slab", Georgia, serif;
+      --sans:"Instrument Sans", Inter, system-ui, sans-serif;
+    }
+
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+
+      background:var(--cream);
+      color:var(--charcoal);
+
+      font-family:var(--sans);
+
+      -webkit-font-smoothing:antialiased;
+      text-rendering:geometricPrecision;
+    }
+
+    body.modal-open{
+      overflow:hidden;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    button,
+    input,
+    textarea,
+    select{
+      font:inherit;
+    }
+
+    button{
+      cursor:pointer;
+    }
+
+    h1,
+    h2,
+    h3,
+    p{
+      margin-top:0;
+    }
+
+    .wrap{
+      width:min(1220px, calc(100% - 48px));
+      margin:0 auto;
+    }
+
+    .section-label{
+      font-size:12px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.13em;
+    }
+
+    .section-label.green{
+      color:var(--green);
+    }
+
+    .section-label.light{
+      color:var(--mint);
+    }
+
+    .arrow{
+      transition:transform .25s ease;
+    }
+
+
+    /* =========================================================
+       NAVIGATION
+    ========================================================= */
+
+    .nav{
+      position:fixed;
+
+      z-index:100;
+
+      top:18px;
+      left:50%;
+
+      transform:translateX(-50%);
+
+      width:min(1180px, calc(100% - 36px));
+
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      padding:8px 10px 8px 16px;
+
+      color:#fffdf8;
+
+      background:rgba(7,43,34,.42);
+
+      border:1px solid rgba(255,255,255,.20);
+      border-radius:999px;
+
+      backdrop-filter:blur(20px);
+      -webkit-backdrop-filter:blur(20px);
+
+      transition:
+        background .3s ease,
+        box-shadow .3s ease;
+    }
+
+    .nav.scrolled{
+      background:rgba(7,43,34,.90);
+
+      box-shadow:
+        0 12px 35px rgba(0,0,0,.15);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+
+      font-size:15px;
+      font-weight:600;
+    }
+
+    .brand-logo{
+      width:34px;
+      height:34px;
+
+      object-fit:contain;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:28px;
+
+      font-size:14px;
+
+      color:rgba(255,253,248,.77);
+    }
+
+    .nav-links a{
+      transition:color .2s ease;
+    }
+
+    .nav-links a:hover{
+      color:#fff;
+    }
+
+    .nav-cta{
+      display:inline-flex;
+      align-items:center;
+
+      min-height:42px;
+
+      padding:0 18px;
+
+      border:0;
+      border-radius:999px;
+
+      background:#fffdf8;
+      color:var(--deep);
+
+      font-weight:600;
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero{
+      position:relative;
+
+      min-height:100svh;
+
+      display:flex;
+      align-items:flex-end;
+
+      overflow:hidden;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(7,43,34,.90) 0%,
+          rgba(7,43,34,.67) 38%,
+          rgba(7,43,34,.15) 78%
+        ),
+        linear-gradient(
+          0deg,
+          rgba(7,43,34,.74) 0%,
+          rgba(7,43,34,0) 48%
+        ),
+        url('./img/hero-buenos-aires.jpg');
+
+      background-size:cover;
+      background-position:center center;
+      background-repeat:no-repeat;
+    }
+
+    .hero-inner{
+      width:min(1220px, calc(100% - 48px));
+
+      margin:0 auto;
+
+      padding:170px 0 80px;
+
+      color:#fffdf8;
+    }
+
+    .hero-label{
+      margin-bottom:24px;
+
+      font-size:12px;
+      font-weight:700;
+
+      text-transform:uppercase;
+
+      letter-spacing:.14em;
+
+      color:rgba(255,255,255,.74);
+    }
+
+    .hero h1{
+      max-width:880px;
+
+      margin:0;
+
+      font-family:var(--serif);
+      font-weight:400;
+
+      font-size:clamp(54px,7vw,104px);
+
+      line-height:.96;
+
+      letter-spacing:-.06em;
+    }
+
+    .hero-bottom{
+      margin-top:42px;
+
+      display:grid;
+
+      grid-template-columns:
+        minmax(0,670px) auto;
+
+      gap:70px;
+
+      align-items:end;
+    }
+
+    .hero-sub{
+      margin:0;
+
+      max-width:670px;
+
+      font-size:clamp(18px,1.7vw,23px);
+
+      line-height:1.42;
+
+      color:rgba(255,253,248,.82);
+    }
+
+    .hero-actions{
+      display:flex;
+
+      gap:10px;
+
+      flex-wrap:wrap;
+
+      justify-content:flex-end;
+    }
+
+    .button{
+      min-height:50px;
+
+      padding:0 21px;
+
+      display:inline-flex;
+
+      align-items:center;
+      justify-content:center;
+
+      gap:9px;
+
+      border-radius:999px;
+
+      border:1px solid transparent;
+
+      font-weight:600;
+
+      transition:
+        transform .25s ease,
+        background .25s ease;
+    }
+
+    .button:hover{
+      transform:translateY(-2px);
+    }
+
+    .button.light{
+      background:#fffdf8;
+
+      color:var(--deep);
+    }
+
+    .button.ghost{
+      color:#fff;
+
+      border-color:rgba(255,255,255,.30);
+
+      background:rgba(255,255,255,.08);
+
+      backdrop-filter:blur(8px);
+    }
+
+
+    /* =========================================================
+       ABOUT
+    ========================================================= */
+
+    .about{
+      padding:120px 0;
+
+      background:var(--cream);
+    }
+
+    .about-stories{
+      display:flex;
+
+      flex-direction:column;
+
+      gap:28px;
+    }
+
+    .about-story{
+      display:grid;
+
+      grid-template-columns:1fr 1fr;
+
+      gap:62px;
+
+      align-items:center;
+
+      padding:54px;
+
+      background:var(--lav-2);
+    }
+
+    .about-story-copy{
+      max-width:560px;
+    }
+
+    .about-label{
+      margin-bottom:17px;
+
+      font-size:12px;
+
+      font-weight:700;
+
+      text-transform:uppercase;
+
+      letter-spacing:.13em;
+
+      color:#79717d;
+    }
+
+    .about-heading{
+      margin:0 0 15px;
+
+      font-family:var(--sans);
+
+      font-size:clamp(36px,3.8vw,54px);
+
+      line-height:1.02;
+
+      font-weight:400;
+
+      letter-spacing:-.05em;
+
+      color:var(--deep);
+    }
+
+    .about-intro{
+      margin-bottom:28px;
+
+      color:#5e6662;
+
+      font-size:18px;
+
+      line-height:1.5;
+    }
+
+    .about-story-copy p{
+      margin-bottom:18px;
+
+      color:#5e6762;
+
+      font-size:16px;
+
+      line-height:1.65;
+    }
+
+    .about-story-copy p:last-child{
+      margin-bottom:0;
+    }
+
+    .about-story-copy strong{
+      color:var(--deep);
+    }
+
+    .about-story-image{
+      min-height:430px;
+
+      height:100%;
+
+      overflow:hidden;
+    }
+
+    .about-story-image img{
+      width:100%;
+      height:100%;
+
+      min-height:430px;
+
+      object-fit:cover;
+
+      transition:transform .8s ease;
+    }
+
+    .about-story:hover .about-story-image img{
+      transform:scale(1.02);
+    }
+
+
+    /* =========================================================
+       SERVICES
+    ========================================================= */
+
+    .services{
+      padding:140px 0 115px;
+
+      background:var(--deep);
+
+      color:#fffdf8;
+    }
+
+    .services-intro{
+      display:grid;
+
+      grid-template-columns:1.15fr .75fr;
+
+      gap:80px;
+
+      align-items:end;
+
+      margin-bottom:95px;
+    }
+
+    .services-intro h2{
+      max-width:760px;
+
+      margin:18px 0 0;
+
+      font-family:var(--serif);
+
+      font-size:clamp(48px,6vw,82px);
+
+      line-height:.98;
+
+      letter-spacing:-.06em;
+
+      font-weight:400;
+    }
+
+    .services-intro p{
+      margin:0;
+
+      max-width:480px;
+
+      font-size:18px;
+
+      line-height:1.55;
+
+      color:rgba(255,253,248,.67);
+    }
+
+
+    /* =========================================================
+       SERVICE ROWS
+    ========================================================= */
+
+    .service-editorial{
+      display:grid;
+
+      grid-template-columns:1fr 1fr;
+
+      min-height:520px;
+
+      border-top:1px solid var(--line-light);
+    }
+
+    .service-editorial:last-child{
+      border-bottom:1px solid var(--line-light);
+    }
+
+    .service-copy{
+      padding:55px 65px 55px 0;
+
+      display:flex;
+
+      flex-direction:column;
+
+      justify-content:space-between;
+    }
+
+    .service-editorial.reverse .service-copy{
+      order:2;
+
+      padding:
+        55px 0
+        55px 65px;
+    }
+
+    .service-editorial.reverse .service-image{
+      order:1;
+    }
+
+    .service-number{
+      font-size:12px;
+
+      font-weight:700;
+
+      letter-spacing:.15em;
+
+      color:rgba(255,255,255,.47);
+    }
+
+    .service-main{
+      max-width:520px;
+    }
+
+    .service-main h3{
+      margin:0 0 25px;
+
+      font-family:var(--sans);
+
+      font-weight:500;
+
+      font-size:clamp(37px,4.2vw,61px);
+
+      line-height:1;
+
+      letter-spacing:-.055em;
+
+      color:#fffdf8;
+    }
+
+    .service-main p{
+      max-width:480px;
+
+      margin:0 0 28px;
+
+      font-size:17px;
+
+      line-height:1.55;
+
+      color:rgba(255,253,248,.67);
+    }
+
+    .text-link{
+      display:inline-flex;
+
+      align-items:center;
+
+      gap:11px;
+
+      padding-bottom:4px;
+
+      border-bottom:
+        1px solid rgba(255,255,255,.42);
+
+      font-size:14px;
+
+      font-weight:600;
+
+      color:#fffdf8;
+    }
+
+    .text-link:hover .arrow{
+      transform:translateX(4px);
+    }
+
+    .service-image{
+      position:relative;
+
+      min-height:520px;
+
+      overflow:hidden;
+    }
+
+    .service-image img{
+      width:100%;
+      height:100%;
+
+      position:absolute;
+
+      inset:0;
+
+      object-fit:cover;
+
+      transition:
+        transform .8s cubic-bezier(.2,.7,.2,1);
+    }
+
+    .service-editorial:hover .service-image img{
+      transform:scale(1.025);
+    }
+
+
+    /* =========================================================
+       JOURNAL / EXPLORE
+    ========================================================= */
+
+    .journal{
+      padding:135px 0 145px;
+
+      background:var(--paper);
+    }
+
+    .journal-head{
+      display:grid;
+
+      grid-template-columns:1.15fr .65fr;
+
+      gap:80px;
+
+      align-items:end;
+
+      margin-bottom:60px;
+    }
+
+    .journal-head h2{
+      max-width:750px;
+
+      margin:18px 0 0;
+
+      font-family:var(--serif);
+
+      font-size:clamp(48px,5.6vw,78px);
+
+      line-height:1;
+
+      letter-spacing:-.06em;
+
+      font-weight:400;
+
+      color:var(--deep);
+    }
+
+    .journal-head p{
+      margin:0;
+
+      font-size:18px;
+
+      line-height:1.55;
+
+      color:var(--muted);
+    }
+
+    .featured-story{
+      display:grid;
+
+      grid-template-columns:1.25fr .75fr;
+
+      min-height:580px;
+
+      background:var(--lav);
+    }
+
+    .featured-image{
+      min-height:580px;
+
+      overflow:hidden;
+    }
+
+    .featured-image img{
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+
+      transition:transform .8s ease;
+    }
+
+    .featured-story:hover .featured-image img{
+      transform:scale(1.025);
+    }
+
+    .featured-copy{
+      padding:55px;
+
+      display:flex;
+
+      flex-direction:column;
+
+      justify-content:space-between;
+    }
+
+    .story-category{
+      font-size:11px;
+
+      font-weight:700;
+
+      letter-spacing:.14em;
+
+      text-transform:uppercase;
+
+      color:#737078;
+    }
+
+    .featured-copy h3{
+      margin:0 0 20px;
+
+      font-family:var(--sans);
+
+      font-size:clamp(34px,3.5vw,52px);
+
+      font-weight:400;
+
+      line-height:1.04;
+
+      letter-spacing:-.05em;
+
+      color:var(--deep);
+    }
+
+    .featured-copy p{
+      margin:0 0 30px;
+
+      color:#5f6763;
+
+      font-size:16px;
+
+      line-height:1.6;
+    }
+
+    .dark-link{
+      display:inline-flex;
+
+      align-items:center;
+
+      gap:10px;
+
+      padding-bottom:4px;
+
+      border-bottom:
+        1px solid rgba(7,43,34,.35);
+
+      color:var(--deep);
+
+      font-size:14px;
+
+      font-weight:600;
+    }
+
+    .dark-link:hover .arrow{
+      transform:translateX(4px);
+    }
+
+    .story-grid{
+      display:grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap:26px;
+
+      margin-top:26px;
+    }
+
+    .story-card{
+      border-top:1px solid var(--line);
+
+      padding-top:18px;
+    }
+
+    .story-card-image{
+      aspect-ratio:4/3;
+
+      overflow:hidden;
+
+      margin-bottom:25px;
+
+      background:#eee;
+    }
+
+    .story-card-image img{
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+
+      transition:transform .7s ease;
+    }
+
+    .story-card:hover .story-card-image img{
+      transform:scale(1.03);
+    }
+
+    .story-card h3{
+      margin:12px 0 14px;
+
+      font-family:var(--sans);
+
+      font-size:27px;
+
+      line-height:1.1;
+
+      font-weight:500;
+
+      letter-spacing:-.04em;
+
+      color:var(--deep);
+    }
+
+    .story-card p{
+      margin:0 0 19px;
+
+      color:var(--muted);
+
+      font-size:15px;
+
+      line-height:1.55;
+    }
+
+
+    /* =========================================================
+       PROCESS
+    ========================================================= */
+
+    .process{
+      padding:135px 0;
+
+      background:var(--cream);
+    }
+
+    .process-header{
+      max-width:780px;
+
+      margin-bottom:70px;
+    }
+
+    .process-header h2{
+      margin:18px 0 0;
+
+      font-family:var(--serif);
+
+      font-size:clamp(48px,5.7vw,80px);
+
+      font-weight:400;
+
+      letter-spacing:-.06em;
+
+      line-height:1;
+
+      color:var(--deep);
+    }
+
+    .process-grid{
+      display:grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      border-top:1px solid var(--line);
+    }
+
+    .process-step{
+      min-height:340px;
+
+      padding:30px 42px 35px 0;
+
+      display:flex;
+
+      flex-direction:column;
+
+      justify-content:space-between;
+
+      border-right:1px solid var(--line);
+    }
+
+    .process-step + .process-step{
+      padding-left:42px;
+    }
+
+    .process-step:last-child{
+      border-right:0;
+    }
+
+    .step-number{
+      font-size:12px;
+
+      letter-spacing:.15em;
+
+      font-weight:700;
+
+      color:#738078;
+    }
+
+    .process-step h3{
+      margin:0 0 17px;
+
+      font-family:var(--sans);
+
+      font-size:32px;
+
+      font-weight:500;
+
+      letter-spacing:-.04em;
+
+      line-height:1.1;
+
+      color:var(--deep);
+    }
+
+    .process-step p{
+      margin:0;
+
+      max-width:310px;
+
+      font-size:16px;
+
+      line-height:1.55;
+
+      color:var(--muted);
+    }
+
+
+    /* =========================================================
+       WHY LIFE IN ARGENTINA
+    ========================================================= */
+
+    .why{
+      padding:135px 0;
+
+      background:var(--lav-2);
+    }
+
+    .why-layout{
+      display:grid;
+
+      grid-template-columns:.75fr 1.25fr;
+
+      gap:110px;
+    }
+
+    .why-title{
+      position:sticky;
+
+      top:130px;
+
+      align-self:start;
+    }
+
+    .why-title h2{
+      margin:18px 0 0;
+
+      font-family:var(--serif);
+
+      font-size:
+        clamp(46px,5vw,72px);
+
+      line-height:1;
+
+      letter-spacing:-.06em;
+
+      font-weight:400;
+
+      color:var(--deep);
+    }
+
+    .why-list{
+      border-top:1px solid var(--line);
+    }
+
+    .why-item{
+      display:grid;
+
+      grid-template-columns:
+        70px 1fr;
+
+      gap:25px;
+
+      padding:35px 0;
+
+      border-bottom:1px solid var(--line);
+    }
+
+    .why-number{
+      padding-top:5px;
+
+      font-size:12px;
+
+      font-weight:700;
+
+      letter-spacing:.14em;
+
+      color:#7e837f;
+    }
+
+    .why-item h3{
+      margin:0 0 12px;
+
+      font-family:var(--sans);
+
+      font-size:28px;
+
+      line-height:1.1;
+
+      letter-spacing:-.035em;
+
+      font-weight:500;
+
+      color:var(--deep);
+    }
+
+    .why-item p{
+      margin:0;
+
+      max-width:620px;
+
+      color:var(--muted);
+
+      line-height:1.55;
+
+      font-size:16px;
+    }
+
+
+    /* =========================================================
+       CONTACT
+    ========================================================= */
+
+    .contact{
+      padding:150px 0;
+
+      background:var(--deep);
+
+      color:#fffdf8;
+    }
+
+    .contact-inner{
+      display:grid;
+
+      grid-template-columns:
+        1fr auto;
+
+      gap:80px;
+
+      align-items:end;
+    }
+
+    .contact h2{
+      max-width:790px;
+
+      margin:18px 0 30px;
+
+      font-family:var(--serif);
+
+      font-size:
+        clamp(54px,7vw,96px);
+
+      font-weight:400;
+
+      line-height:.95;
+
+      letter-spacing:-.065em;
+    }
+
+    .contact p{
+      margin:0;
+
+      max-width:650px;
+
+      font-size:18px;
+
+      line-height:1.5;
+
+      color:rgba(255,255,255,.66);
+    }
+
+    .contact-actions{
+      min-width:230px;
+
+      display:flex;
+
+      flex-direction:column;
+
+      gap:15px;
+
+      align-items:flex-start;
+    }
+
+    .contact-email{
+      margin-top:5px;
+
+      color:rgba(255,255,255,.70);
+
+      font-size:14px;
+
+      border-bottom:
+        1px solid rgba(255,255,255,.28);
+
+      padding-bottom:4px;
+    }
+
+
+
+    /* =========================================================
+       WORK WITH US
+    ========================================================= */
+
+    .work-with-us{
+      padding:135px 0;
+
+      background:var(--paper);
+    }
+
+    .work-with-us-inner{
+      display:grid;
+
+      grid-template-columns:1fr .85fr;
+
+      gap:90px;
+
+      align-items:end;
+    }
+
+    .work-with-us h2{
+      max-width:760px;
+
+      margin:18px 0 0;
+
+      font-family:var(--serif);
+
+      font-size:clamp(48px,5.7vw,80px);
+
+      font-weight:400;
+
+      letter-spacing:-.06em;
+
+      line-height:1;
+
+      color:var(--deep);
+    }
+
+    .work-with-us-copy{
+      max-width:560px;
+    }
+
+    .work-with-us-copy p{
+      margin:0 0 28px;
+
+      font-size:18px;
+
+      line-height:1.55;
+
+      color:var(--muted);
+    }
+
+    .work-with-us .button{
+      background:var(--deep);
+
+      color:#fffdf8;
+    }
+
+
+    /* =========================================================
+       WHATSAPP
+    ========================================================= */
+
+    .whatsapp-button{
+      position:fixed;
+      right:24px;
+      bottom:24px;
+      z-index:120;
+
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:9px;
+
+      min-height:50px;
+      padding:0 19px;
+
+      border-radius:999px;
+
+      background:#fffdf8;
+      color:var(--deep);
+
+      border:1px solid rgba(7,43,34,.14);
+
+      box-shadow:
+        0 10px 30px rgba(0,0,0,.16);
+
+      font-size:14px;
+      font-weight:600;
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+    }
+
+    .whatsapp-button:hover{
+      transform:translateY(-2px);
+
+      box-shadow:
+        0 14px 34px rgba(0,0,0,.20);
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    .footer{
+      padding:72px 0 35px;
+
+      background:#041b16;
+
+      color:#fffdf8;
+    }
+
+    .footer-grid{
+      display:grid;
+
+      grid-template-columns:
+        1.45fr repeat(3,.7fr);
+
+      gap:70px;
+
+      padding-bottom:70px;
+    }
+
+    .footer-brand{
+      display:flex;
+
+      align-items:center;
+
+      gap:12px;
+
+      margin-bottom:20px;
+
+      font-size:16px;
+
+      font-weight:600;
+    }
+
+    .footer-brand img{
+      width:38px;
+      height:38px;
+
+      object-fit:contain;
+    }
+
+    .footer-about{
+      max-width:340px;
+
+      margin:0;
+
+      color:rgba(255,255,255,.57);
+
+      font-size:15px;
+
+      line-height:1.6;
+    }
+
+    .footer-column-title{
+      margin-bottom:20px;
+
+      color:rgba(255,255,255,.42);
+
+      font-size:11px;
+
+      text-transform:uppercase;
+
+      font-weight:700;
+
+      letter-spacing:.14em;
+    }
+
+    .footer-links{
+      display:flex;
+
+      flex-direction:column;
+
+      gap:12px;
+
+      font-size:14px;
+
+      color:rgba(255,255,255,.72);
+    }
+
+    .footer-links a:hover{
+      color:#fff;
+    }
+
+    .footer-bottom{
+      padding-top:24px;
+
+      border-top:
+        1px solid rgba(255,255,255,.12);
+
+      display:flex;
+
+      justify-content:space-between;
+
+      gap:30px;
+
+      color:rgba(255,255,255,.39);
+
+      font-size:12px;
+    }
+
+
+    /* =========================================================
+       MODAL
+    ========================================================= */
+
+    .modal{
+      position:fixed;
+
+      inset:0;
+
+      z-index:500;
+
+      display:none;
+
+      align-items:center;
+
+      justify-content:center;
+
+      padding:25px;
+
+      background:
+        rgba(2,18,14,.68);
+
+      backdrop-filter:blur(10px);
+    }
+
+    .modal.open{
+      display:flex;
+    }
+
+    .modal-card{
+      position:relative;
+
+      width:min(630px,100%);
+
+      max-height:
+        calc(100vh - 50px);
+
+      overflow:auto;
+
+      padding:48px;
+
+      background:var(--paper);
+
+      color:var(--charcoal);
+    }
+
+    .modal-close{
+      position:absolute;
+
+      top:18px;
+      right:20px;
+
+      width:40px;
+      height:40px;
+
+      display:grid;
+
+      place-items:center;
+
+      border:
+        1px solid var(--line);
+
+      border-radius:50%;
+
+      background:transparent;
+
+      color:var(--deep);
+
+      font-size:22px;
+    }
+
+    .modal-card h2{
+      margin:15px 0 12px;
+
+      font-family:var(--serif);
+
+      font-size:47px;
+
+      line-height:1;
+
+      letter-spacing:-.05em;
+
+      font-weight:400;
+
+      color:var(--deep);
+    }
+
+    .modal-card > p{
+      margin-bottom:30px;
+
+      color:var(--muted);
+
+      line-height:1.55;
+    }
+
+    .form{
+      display:grid;
+
+      gap:13px;
+    }
+
+    .form input,
+    .form select,
+    .form textarea{
+      width:100%;
+
+      padding:15px 16px;
+
+      color:var(--charcoal);
+
+      background:#fff;
+
+      border:
+        1px solid var(--line);
+
+      border-radius:0;
+
+      outline:none;
+    }
+
+    .form input:focus,
+    .form select:focus,
+    .form textarea:focus{
+      border-color:var(--green);
+    }
+
+    .form textarea{
+      min-height:120px;
+
+      resize:vertical;
+    }
+
+    .form-submit{
+      min-height:52px;
+
+      border:0;
+
+      background:var(--deep);
+
+      color:#fffdf8;
+
+      font-weight:600;
+    }
+
+    .form-note{
+      margin:15px 0 0;
+
+      font-size:12px;
+
+      color:#858b87;
+
+      line-height:1.5;
+    }
+
+
+    /* =========================================================
+       REVEAL
+    ========================================================= */
+
+    .reveal{
+      opacity:0;
+
+      transform:translateY(25px);
+
+      transition:
+        opacity .7s ease,
+        transform .7s ease;
+    }
+
+    .reveal.visible{
+      opacity:1;
+
+      transform:translateY(0);
+    }
+
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media (max-width:950px){
+
+      .nav-links{
+        display:none;
+      }
+
+      .hero-bottom{
+        grid-template-columns:1fr;
+
+        gap:28px;
+      }
+
+      .hero-actions{
+        justify-content:flex-start;
+      }
+
+      .about-story{
+        grid-template-columns:1fr;
+
+        gap:35px;
+      }
+
+      .about-story-image,
+      .about-story-image img{
+        min-height:370px;
+      }
+
+      .services-intro,
+      .journal-head{
+        grid-template-columns:1fr;
+
+        gap:30px;
+      }
+
+      .service-editorial{
+        grid-template-columns:1fr;
+      }
+
+      .service-copy,
+      .service-editorial.reverse .service-copy{
+        order:1;
+
+        padding:50px 0;
+
+        min-height:420px;
+      }
+
+      .service-image,
+      .service-editorial.reverse .service-image{
+        order:2;
+
+        min-height:440px;
+      }
+
+      .featured-story{
+        grid-template-columns:1fr;
+      }
+
+      .featured-image{
+        min-height:480px;
+      }
+
+      .story-grid{
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+      .process-grid{
+        grid-template-columns:1fr;
+      }
+
+      .process-step,
+      .process-step + .process-step{
+        min-height:auto;
+
+        padding:35px 0;
+
+        border-right:0;
+
+        border-bottom:
+          1px solid var(--line);
+      }
+
+      .why-layout{
+        grid-template-columns:1fr;
+
+        gap:55px;
+      }
+
+      .why-title{
+        position:static;
+      }
+
+      .contact-inner{
+        grid-template-columns:1fr;
+      }
+
+      .work-with-us-inner{
+        grid-template-columns:1fr;
+
+        gap:35px;
+      }
+
+      .footer-grid{
+        grid-template-columns:
+          1.3fr 1fr 1fr;
+      }
+
+      .footer-grid > div:last-child{
+        grid-column:2;
+      }
+
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width:620px){
+
+      .wrap,
+      .hero-inner{
+        width:
+          calc(100% - 30px);
+      }
+
+      .nav{
+        top:12px;
+
+        width:
+          calc(100% - 20px);
+      }
+
+      .brand span{
+        display:none;
+      }
+
+      .nav-cta{
+        font-size:13px;
+
+        padding:0 14px;
+      }
+
+      .hero{
+        min-height:92svh;
+
+        background:
+          linear-gradient(
+            0deg,
+            rgba(7,43,34,.89),
+            rgba(7,43,34,.28)
+          ),
+          url('./img/hero-buenos-aires.jpg');
+
+        background-size:cover;
+
+        background-position:center;
+      }
+
+      .hero-inner{
+        padding:
+          145px 0 50px;
+      }
+
+      .hero h1{
+        font-size:51px;
+      }
+
+      .hero-sub{
+        font-size:18px;
+      }
+
+      .hero-actions{
+        width:100%;
+      }
+
+      .hero-actions .button{
+        width:100%;
+      }
+
+
+      /* ABOUT */
+
+      .about{
+        padding:80px 0;
+      }
+
+      .about-story{
+        padding:26px;
+      }
+
+      .about-heading{
+        font-size:37px;
+      }
+
+      .about-story-image,
+      .about-story-image img{
+        min-height:260px;
+      }
+
+
+      /* SERVICES */
+
+      .services{
+        padding:90px 0 75px;
+      }
+
+      .services-intro{
+        margin-bottom:55px;
+      }
+
+      .services-intro h2{
+        font-size:49px;
+      }
+
+      .service-copy,
+      .service-editorial.reverse .service-copy{
+        min-height:390px;
+
+        padding:38px 0;
+      }
+
+      .service-main h3{
+        font-size:39px;
+      }
+
+      .service-image,
+      .service-editorial.reverse .service-image{
+        min-height:320px;
+      }
+
+
+      /* JOURNAL */
+
+      .journal{
+        padding:90px 0;
+      }
+
+      .journal-head{
+        margin-bottom:42px;
+      }
+
+      .journal-head h2{
+        font-size:49px;
+      }
+
+      .featured-image{
+        min-height:310px;
+      }
+
+      .featured-copy{
+        padding:30px;
+      }
+
+      .featured-copy h3{
+        font-size:35px;
+      }
+
+      .story-grid{
+        grid-template-columns:1fr;
+
+        gap:45px;
+      }
+
+
+      /* PROCESS */
+
+      .process{
+        padding:90px 0;
+      }
+
+      .process-header{
+        margin-bottom:40px;
+      }
+
+      .process-header h2{
+        font-size:49px;
+      }
+
+
+      /* WHY */
+
+      .why{
+        padding:90px 0;
+      }
+
+      .why-title h2{
+        font-size:49px;
+      }
+
+      .why-item{
+        grid-template-columns:
+          45px 1fr;
+      }
+
+
+      /* CONTACT */
+
+      .contact{
+        padding:95px 0;
+      }
+
+      .contact h2{
+        font-size:55px;
+      }
+
+
+      /* WORK WITH US */
+
+      .work-with-us{
+        padding:90px 0;
+      }
+
+      .work-with-us h2{
+        font-size:49px;
+      }
+
+
+      /* WHATSAPP */
+
+      .whatsapp-button{
+        right:15px;
+        bottom:15px;
+
+        min-height:46px;
+
+        padding:0 16px;
+
+        font-size:13px;
+      }
+
+
+
+      /* FOOTER */
+
+      .footer-grid{
+        grid-template-columns:
+          1fr 1fr;
+
+        gap:45px 30px;
+      }
+
+      .footer-grid > div:first-child{
+        grid-column:
+          1 / -1;
+      }
+
+      .footer-grid > div:last-child{
+        grid-column:auto;
+      }
+
+      .footer-bottom{
+        display:block;
+      }
+
+      .footer-bottom span{
+        display:block;
+
+        margin-top:8px;
+      }
+
+
+      /* MODAL */
+
+      .modal{
+        padding:10px;
+      }
+
+      .modal-card{
+        padding:
+          36px 22px 25px;
+      }
+
+      .modal-card h2{
+        font-size:39px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+
+<body>
+
+
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
+
+  <nav class="nav" id="nav">
+
+    <a class="brand" href="#top">
+
+      <img
+        class="brand-logo"
+        src="./img/logo-life-in-argentina.png"
+        alt="Life in Argentina logo"
+      >
+
+      <span>
+        Life in Argentina
+      </span>
+
+    </a>
+
+
+    <div class="nav-links">
+
+      <a href="#about">
+        About us
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#explore">
+        Explore
+      </a>
+
+      <a href="#process">
+        How it works
+      </a>
+
+      <a href="#careers">
+        Careers
+      </a>
+
+    </div>
+
+
+    <button class="nav-cta open-modal">
+
+      Book a free call
+
+    </button>
+
+  </nav>
+
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <header class="hero" id="top">
+
+    <div class="hero-inner">
+
+      <div class="hero-label">
+        Legal and relocation support - Buenos Aires
+      </div>
+
+      <h1>
+        For people building a life in Argentina.
+      </h1>
+
+
+      <div class="hero-bottom">
+
+        <p class="hero-sub">
+          Legal and relocation support for living, working, investing or starting a business in Argentina.
+        </p>
+
+
+        <div class="hero-actions">
+
+          <button class="button light open-modal">
+
+            Book a free call
+
+            <span>
+              ↗
+            </span>
+
+          </button>
+
+
+          <a
+            class="button ghost"
+            href="#services"
+          >
+
+            Explore our services
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =====================================================
+         ABOUT US
+    ====================================================== -->
+
+    <section class="about" id="about">
+
+      <div class="wrap">
+
+        <div class="about-stories">
+
+
+          <!-- ABOUT 01 -->
+
+          <article class="about-story reveal">
+
+
+            <div class="about-story-copy">
+
+              <div class="about-label">
+                About us
+              </div>
+
+
+              <h2 class="about-heading">
+                This is our city.
+              </h2>
+
+
+              <p class="about-intro">
+
+              
+
+              </p>
+
+
+              <p>
+                We live in Palermo Soho, and we love Buenos Aires in a way
+                that is difficult to explain without getting a little
+                sentimental about it.
+              </p>
+
+
+              <p>
+                This is our city. We know its streets, its cafés, its trees,
+                the old buildings squeezed between new ones, the quiet of a
+                Sunday morning and the complete chaos of a weekday afternoon.
+              </p>
+
+
+              <p>
+                Like everyone who lives here, we have our complaints. Buenos Aires can be complicated, unpredictable and, at times, exhausting. But that is also part of what makes it what it is.
+
+For all its contradictions, we genuinely believe there are few places quite like it. And for the right person, living here can be something very special.
+              </p>
+
+            </div>
+
+
+            <div class="about-story-image">
+
+              <img
+                src="./img/about-palermo.jpg"
+                alt="Palermo Soho in Buenos Aires"
+              >
+
+            </div>
+
+          </article>
+
+
+
+          <!-- ABOUT 02 -->
+
+          <article class="about-story reveal">
+
+
+            <div class="about-story-image">
+
+              <img
+                src="./img/about-buenos-aires.jpg"
+                alt="Everyday life in Buenos Aires"
+              >
+
+            </div>
+
+
+            <div class="about-story-copy">
+
+              <div class="about-label">
+                Why we do this
+              </div>
+
+
+              <h2 class="about-heading">
+                Why Buenos Aires matters to us.
+              </h2>
+
+
+              <p>
+                There is something Borges understood very well about Buenos
+                Aires. He loved it not because it was grand or monumental,
+                but because it was <em>intimate</em>.
+              </p>
+
+
+              <p>
+                A collection of streets, corners and neighborhoods tied to
+                memory, time and a sense of belonging. We feel something
+                very similar.
+              </p>
+
+
+              <p>
+                Buenos Aires is not just where we happen to live or where
+                our office is. It is part of our lives, our memories and who
+                we are.
+              </p>
+
+
+              <p>
+                Life in Argentina grew out of that feeling. We wanted to help
+                people who choose Argentina understand the place we know and
+                love, and make a life here that feels like their own.
+              </p>
+
+
+              <p>
+                Yes, there is paperwork, immigration law and bureaucracy
+                involved. That is our job. But behind all of that is
+                something much more personal:
+                <strong>
+                  we really want people to discover why we chose to make our
+                  lives here too.
+                </strong>
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SERVICES
+    ====================================================== -->
+
+    <section class="services" id="services">
+
+      <div class="wrap">
+
+
+        <div class="services-intro reveal">
+
+
+          <div>
+
+            <div class="section-label light">
+              What we do
+            </div>
+
+            <h2>
+              Legal support for building a life in Argentina.
+            </h2>
+
+          </div>
+
+
+          <p>
+            Moving to another country is rarely a single process. Immigration, taxes, business matters, housing and everyday logistics often overlap.
+
+We help you understand what applies to your situation, what needs to happen next, and where professional support can make the process easier.
+          </p>
+
+        </div>
+
+
+
+        <!-- RESIDENCY -->
+
+        <article class="service-editorial reveal">
+
+
+          <div class="service-copy">
+
+            <div class="service-number">
+              01
+            </div>
+
+
+            <div class="service-main">
+
+              <h3>
+                Residency and citizenship
+              </h3>
+
+
+              <p>
+              From understanding your residency options to preparing the required documents, dealing with Migraciones and guiding the process through to completion.
+              </p>
+
+
+              <a
+                class="text-link"
+                href="#contact"
+              >
+
+                Talk to us 
+
+                <span class="arrow">
+                  →
+                </span>
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="service-image">
+
+            <img
+              src="./img/service-residency.jpg"
+              alt="Residency and citizenship support"
+            >
+
+          </div>
+
+        </article>
+
+
+
+        <!-- BUSINESS -->
+
+        <article class="service-editorial reverse reveal">
+
+
+          <div class="service-copy">
+
+            <div class="service-number">
+              02
+            </div>
+
+
+            <div class="service-main">
+
+              <h3>
+                Companies and business
+              </h3>
+
+
+              <p>
+               For founders, investors and professionals doing business in Argentina. We help with business setup, legal structure and trademark registration.
+              </p>
+
+
+              <a
+                class="text-link"
+                href="#contact"
+              >
+
+                Talk to us about business
+
+                <span class="arrow">
+                  →
+                </span>
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="service-image">
+
+            <img
+              src="./img/service-business.jpg"
+              alt="Companies and business in Argentina"
+            >
+
+          </div>
+
+        </article>
+
+
+
+        <!-- TAX -->
+
+        <article class="service-editorial reveal">
+
+
+          <div class="service-copy">
+
+            <div class="service-number">
+              03
+            </div>
+
+
+            <div class="service-main">
+
+              <h3>
+                Tax organization
+              </h3>
+
+
+              <p>
+                We help you understand the registrations and tax requirements that apply to your situation, and coordinate with specialized accountants when needed.
+              </p>
+
+
+              <a
+                class="text-link"
+                href="#contact"
+              >
+
+                Talk to us about taxes
+
+                <span class="arrow">
+                  →
+                </span>
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="service-image">
+
+            <img
+              src="./img/service-tax.jpg"
+              alt="Taxes in Argentina"
+            >
+
+          </div>
+
+        </article>
+
+
+
+        <!-- RELOCATION -->
+
+        <article class="service-editorial reverse reveal">
+
+
+          <div class="service-copy">
+
+            <div class="service-number">
+              04
+            </div>
+
+
+            <div class="service-main">
+
+              <h3>
+                Relocation support
+              </h3>
+
+
+              <p>
+                Housing, local setup, appointments, trusted vendors and the
+                everyday things that can be surprisingly difficult to
+                arrange before you know how Argentina works.
+              </p>
+
+
+              <a
+                class="text-link"
+                href="#contact"
+              >
+
+                Talk to us about relocating
+
+                <span class="arrow">
+                  →
+                </span>
+
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="service-image">
+
+            <img
+              src="./img/service-relocation.jpg"
+              alt="Relocation support in Buenos Aires"
+            >
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LIFE IN ARGENTINA / JOURNAL
+    ====================================================== -->
+
+    <section class="journal" id="explore">
+
+      <div class="wrap">
+
+
+        <div class="journal-head reveal">
+
+
+          <div>
+
+            <div class="section-label green">
+              Life in Argentina
+            </div>
+
+            <h2>
+              Understand the place before you arrive.
+            </h2>
+
+          </div>
+
+
+          <p>
+            Moving to Argentina comes with a long list of questions, and not all of them are legal.
+
+Here, we cover the things that matter once you start planning the move: residency, paperwork, housing, taxes, work, business and everyday life in Argentina.
+          </p>
+
+        </div>
+
+
+
+        <!-- FEATURED ARTICLE -->
+
+        <article class="featured-story reveal">
+
+
+          <div class="featured-image">
+
+            <img
+              src="./img/article-residency.jpg"
+              alt="Residency in Argentina"
+            >
+
+          </div>
+
+
+          <div class="featured-copy">
+
+            <div class="story-category">
+              Immigration
+            </div>
+
+
+            <div>
+
+              <h3>
+                How residency in Argentina actually works.
+              </h3>
+
+
+              <p>
+                An introduction to the main residency routes, the documents
+                involved and what the process generally looks like after
+                arriving in Argentina.
+              </p>
+
+
+              <a
+                class="dark-link"
+                href="#"
+              >
+
+                Read the guide
+
+                <span class="arrow">
+                  →
+                </span>
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- SMALL ARTICLES -->
+
+        <div class="story-grid">
+
+
+          <!-- HOUSING -->
+
+          <article class="story-card reveal">
+
+            <div class="story-card-image">
+
+              <img
+                src="./img/article-housing.jpg"
+                alt="Housing and neighborhoods in Buenos Aires"
+              >
+
+            </div>
+
+
+            <div class="story-category">
+              Living
+            </div>
+
+
+            <h3>
+              Finding a home in Buenos Aires.
+            </h3>
+
+
+            <p>
+              What newcomers should know about neighborhoods, temporary
+              rentals and the local housing market.
+            </p>
+
+
+            <a
+              class="dark-link"
+              href="#"
+            >
+
+              Read
+
+              <span class="arrow">
+                →
+              </span>
+
+            </a>
+
+          </article>
+
+
+
+          <!-- BUSINESS -->
+
+          <article class="story-card reveal">
+
+            <div class="story-card-image">
+
+              <img
+                src="./img/article-business.jpg"
+                alt="Starting a company in Argentina"
+              >
+
+            </div>
+
+
+            <div class="story-category">
+              Business
+            </div>
+
+
+            <h3>
+              Starting a company in Argentina.
+            </h3>
+
+
+            <p>
+            A practical guide for founders and investors looking to start a business in Argentina.
+            </p>
+
+
+            <a
+              class="dark-link"
+              href="#"
+            >
+
+              Read
+
+              <span class="arrow">
+                →
+              </span>
+
+            </a>
+
+          </article>
+
+
+
+          <!-- ARGENTINA -->
+
+          <article class="story-card reveal">
+
+            <div class="story-card-image">
+
+              <img
+                src="./img/article-argentina.jpg"
+                alt="Life in Argentina"
+              >
+
+            </div>
+
+
+            <div class="story-category">
+              Argentina
+            </div>
+
+
+            <h3>
+              What changes when Argentina becomes your home?
+            </h3>
+
+
+            <p>
+              What to think about when a temporary stay turns into something more permanent.
+            </p>
+
+
+            <a
+              class="dark-link"
+              href="#"
+            >
+
+              Read
+
+              <span class="arrow">
+                →
+              </span>
+
+            </a>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         HOW IT WORKS
+    ====================================================== -->
+
+    <section class="process" id="process">
+
+      <div class="wrap">
+
+
+        <div class="process-header reveal">
+
+          <div class="section-label green">
+            How it works
+          </div>
+
+          <h2>
+          No two cases are exactly alike.
+          </h2>
+
+        </div>
+
+
+
+        <div class="process-grid">
+
+
+          <article class="process-step reveal">
+
+            <div class="step-number">
+              01
+            </div>
+
+
+            <div>
+
+              <h3>
+                Tell us what you're planning.
+              </h3>
+
+              <p>
+                We start with a short conversation about where you are,
+                what you want to do in Argentina and what has already been
+                arranged.
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="process-step reveal">
+
+            <div class="step-number">
+              02
+            </div>
+
+
+            <div>
+
+              <h3>
+                Understand your options.
+              </h3>
+
+              <p>
+                We identify which legal, immigration or relocation steps
+                actually matter for your situation and explain them clearly.
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="process-step reveal">
+
+            <div class="step-number">
+              03
+            </div>
+
+
+            <div>
+
+              <h3>
+                Decide how much help you need.
+              </h3>
+
+              <p>
+                Some people need one consultation. Others want us involved
+                throughout the entire process. The support adapts to the case.
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WHY LIFE IN ARGENTINA
+    ====================================================== -->
+
+    <section class="why">
+
+      <div class="wrap">
+
+        <div class="why-layout">
+
+
+          <div class="why-title reveal">
+
+            <div class="section-label green">
+              Why Life in Argentina
+            </div>
+
+
+            <h2>
+              Local knowledge. Professional support.
+            </h2>
+
+          </div>
+
+
+
+          <div class="why-list">
+
+
+            <article class="why-item reveal">
+
+              <div class="why-number">
+                01
+              </div>
+
+
+              <div>
+
+                <h3>
+                  Lawyers trained at the University of Buenos Aires.
+                </h3>
+
+                <p>
+                  Legal and immigration matters are handled with the
+                  seriousness they require, rather than treated as simply
+                  another part of a relocation checklist.
+                </p>
+
+              </div>
+
+            </article>
+
+
+
+            <article class="why-item reveal">
+
+              <div class="why-number">
+                02
+              </div>
+
+
+              <div>
+
+                <h3>
+                  Clear communication in English.
+                </h3>
+
+                <p>
+                  Argentine procedures can be difficult enough without
+                  translating legal and administrative language yourself.
+                  We explain what is happening and why it matters.
+                </p>
+
+              </div>
+
+            </article>
+
+
+
+            <article class="why-item reveal">
+
+              <div class="why-number">
+                03
+              </div>
+
+
+              <div>
+
+                <h3>
+                  We actually live here.
+                </h3>
+
+                <p>
+                  Our advice comes from professional experience, but also
+                  from knowing Buenos Aires, its institutions and the
+                  practical realities of everyday life.
+                </p>
+
+              </div>
+
+            </article>
+
+
+
+            <article class="why-item reveal">
+
+              <div class="why-number">
+                04
+              </div>
+
+
+              <div>
+
+                <h3>
+                  A local network when you need one.
+                </h3>
+
+                <p>
+                  When a case requires other professionals or practical
+                  relocation support, we can help coordinate trusted local
+                  vendors and specialists.
+                </p>
+
+              </div>
+
+            </article>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="contact" id="contact">
+
+      <div class="wrap">
+
+        <div class="contact-inner reveal">
+
+
+          <div>
+
+            <div class="section-label light">
+              Start here
+            </div>
+
+
+            <h2>
+              Thinking about Argentina?
+            </h2>
+
+
+            <p>
+              Tell us what you're planning. Whether you're considering
+              residency, opening a company or simply trying to understand
+              your options, we can start with a short conversation.
+            </p>
+
+          </div>
+
+
+
+          <div class="contact-actions">
+
+
+            <button class="button light open-modal">
+
+              Book a free call
+
+              <span>
+                ↗
+              </span>
+
+            </button>
+
+
+            <a
+              class="contact-email"
+              href="mailto:contact@lifeinargentina.com"
+            >
+              contact@lifeinargentina.com
+            </a>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WORK WITH US
+    ====================================================== -->
+
+    <section class="work-with-us" id="careers" id="work-with-us">
+
+      <div class="wrap">
+
+        <div class="work-with-us-inner reveal">
+
+
+          <div>
+
+            <div class="section-label green">
+              Work with us
+            </div>
+
+            <h2>
+              Love Buenos Aires as much as we do?
+            </h2>
+
+          </div>
+
+
+          <div class="work-with-us-copy">
+
+            <p>
+              We are always interested in meeting lawyers who speak English,
+              Chinese, Russian, German or Portuguese and who love this city
+              as much as we do.
+            </p>
+
+
+            <a
+              class="button"
+              href="mailto:contact@lifeinargentina.com?subject=CV%20-%20Work%20with%20us"
+            >
+
+              Send us your CV
+
+              <span>
+                ↗
+              </span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
+
+  <footer class="footer">
+
+    <div class="wrap">
+
+
+      <div class="footer-grid">
+
+
+        <div>
+
+
+          <div class="footer-brand">
+
+            <img
+              src="./img/logo-life-in-argentina.png"
+              alt="Life in Argentina logo"
+            >
+
+            <span>
+              Life in Argentina
+            </span>
+
+          </div>
+
+
+          <p class="footer-about">
+            Legal and relocation support for people building a life,
+            business or future in Argentina.
+          </p>
+
+
+        </div>
+
+
+
+        <div>
+
+          <div class="footer-column-title">
+            Services
+          </div>
+
+          <div class="footer-links">
+
+            <a href="#services">
+              Residency
+            </a>
+
+            <a href="#services">
+              Companies
+            </a>
+
+            <a href="#services">
+              Tax organization
+            </a>
+
+            <a href="#services">
+              Relocation
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <div>
+
+          <div class="footer-column-title">
+            Explore
+          </div>
+
+          <div class="footer-links">
+
+            <a href="#about">
+              About us
+            </a>
+
+            <a href="#explore">
+              Life in Argentina
+            </a>
+
+            <a href="#process">
+              How it works
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <div>
+
+          <div class="footer-column-title">
+            Contact
+          </div>
+
+          <div class="footer-links">
+
+            <button
+              class="open-modal"
+              style="
+                background:none;
+                border:0;
+                padding:0;
+                text-align:left;
+                color:inherit;
+              "
+            >
+              Book a free call
+            </button>
+
+
+            <a href="https://www.instagram.com/lifeinargentinaservices/" target="_blank" rel="noopener noreferrer">
+              @lifeinargentinaservices
+            </a>
+
+
+            <a href="mailto:contact@lifeinargentina.com">
+              contact@lifeinargentina.com
+            </a>
+
+
+            <a href="tel:+5491125683629">
+              +54 9 11 2568-3629
+            </a>
+
+
+            <a href="#">
+              LinkedIn
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 Life in Argentina
+        </div>
+
+        <span>
+          Buenos Aires · Argentina
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+
+  <a
+    class="whatsapp-button"
+    href="https://wa.me/5491125683629"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact Life in Argentina on WhatsApp"
+  >
+    WhatsApp
+    <span>↗</span>
+  </a>
+
+
+
+  <!-- =======================================================
+       CONTACT MODAL
+  ======================================================== -->
+
+  <div
+    class="modal"
+    id="contactModal"
+  >
+
+
+    <div class="modal-card">
+
+
+      <button
+        class="modal-close"
+        id="closeModal"
+        aria-label="Close contact form"
+      >
+        ×
+      </button>
+
+
+      <div class="section-label green">
+        Free consultation
+      </div>
+
+
+      <h2>
+        Tell us what you're planning.
+      </h2>
+
+
+      <p>
+        Send us a few details and we'll contact you to coordinate a
+        15-minute introductory meeting.
+      </p>
+
+
+
+      <form
+        class="form"
+        action="mailto:contact@lifeinargentina.com"
+        method="post"
+        enctype="text/plain"
+      >
+
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          required
+        >
+
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+        >
+
+
+        <input
+          type="text"
+          name="based"
+          placeholder="Where are you currently based?"
+        >
+
+
+        <select
+          name="need"
+          aria-label="What do you need help with?"
+        >
+
+          <option value="">
+            What do you need help with?
+          </option>
+
+          <option>
+            Residency / immigration
+          </option>
+
+          <option>
+            Company formation
+          </option>
+
+          <option>
+            Trademark registration
+          </option>
+
+          <option>
+            Tax organization
+          </option>
+
+          <option>
+            Relocation support
+          </option>
+
+          <option>
+            Not sure yet
+          </option>
+
+        </select>
+
+
+        <textarea
+          name="message"
+          placeholder="Tell us briefly about your situation"
+        ></textarea>
+
+
+        <button
+          class="form-submit"
+          type="submit"
+        >
+          Request a free call
+        </button>
+
+
+      </form>
+
+
+      <p class="form-note">
+        Prefer email? You can also contact us directly at
+        contact@lifeinargentina.com.
+      </p>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+
+    /* NAVIGATION */
+
+    const nav =
+      document.getElementById('nav');
+
+
+    window.addEventListener(
+      'scroll',
+      () => {
+
+        if(window.scrollY > 40){
+
+          nav.classList.add('scrolled');
+
+        } else {
+
+          nav.classList.remove('scrolled');
+
+        }
+
+      }
+    );
+
+
+
+    /* CONTACT MODAL */
+
+    const modal =
+      document.getElementById('contactModal');
+
+
+    const openButtons =
+      document.querySelectorAll('.open-modal');
+
+
+    const closeButton =
+      document.getElementById('closeModal');
+
+
+
+    function openModal(){
+
+      modal.classList.add('open');
+
+      document.body.classList.add('modal-open');
+
+    }
+
+
+
+    function closeModal(){
+
+      modal.classList.remove('open');
+
+      document.body.classList.remove('modal-open');
+
+    }
+
+
+
+    openButtons.forEach(
+      button => {
+
+        button.addEventListener(
+          'click',
+          openModal
+        );
+
+      }
+    );
+
+
+
+    closeButton.addEventListener(
+      'click',
+      closeModal
+    );
+
+
+
+    modal.addEventListener(
+      'click',
+      event => {
+
+        if(event.target === modal){
+
+          closeModal();
+
+        }
+
+      }
+    );
+
+
+
+    document.addEventListener(
+      'keydown',
+      event => {
+
+        if(event.key === 'Escape'){
+
+          closeModal();
+
+        }
+
+      }
+    );
+
+
+
+    /* REVEAL ON SCROLL */
+
+    const observer =
+      new IntersectionObserver(
+
+        entries => {
+
+          entries.forEach(
+            entry => {
+
+              if(entry.isIntersecting){
+
+                entry.target.classList.add('visible');
+
+                observer.unobserve(entry.target);
+
+              }
+
+            }
+          );
+
+        },
+
+        {
+          threshold:.12
+        }
+
+      );
+
+
+
+    document
+      .querySelectorAll('.reveal')
+      .forEach(
+        element => {
+
+          observer.observe(element);
+
+        }
+      );
+
+
+  </script>
+
+
+</body>
+
+</html>
