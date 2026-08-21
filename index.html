@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -2010,9 +2013,6 @@
       }
 
     }
-.journal{
-  display:none;
-}
   </style>
 </head>
 
@@ -2549,15 +2549,15 @@ We help you understand what applies to your situation, what needs to happen next
 
     <!-- =====================================================
          LIFE IN ARGENTINA / JOURNAL
+         Automatically populated from _posts
     ====================================================== -->
 
+    {% if site.posts.size > 0 %}
     <section class="journal" id="explore">
 
       <div class="wrap">
 
-
         <div class="journal-head reveal">
-
 
           <div>
 
@@ -2571,64 +2571,47 @@ We help you understand what applies to your situation, what needs to happen next
 
           </div>
 
-
           <p>
             Moving to Argentina comes with a long list of questions, and not all of them are legal.
 
-Here, we cover the things that matter once you start planning the move: residency, paperwork, housing, taxes, work, business and everyday life in Argentina.
+            Here, we cover the things that matter once you start planning the move: residency, paperwork, housing, taxes, work, business and everyday life in Argentina.
           </p>
 
         </div>
 
+        {% assign featured = site.posts.first %}
 
-
-        <!-- FEATURED ARTICLE -->
-
+        <!-- FEATURED ARTICLE: newest published post -->
         <article class="featured-story reveal">
 
-
-          <div class="featured-image">
-
+          <a class="featured-image" href="{{ featured.url | relative_url }}" aria-label="Read {{ featured.title }}">
             <img
-              src="./img/article-residency.jpg"
-              alt="Residency in Argentina"
+              src="{{ featured.image | default: '/img/hero-buenos-aires.jpg' | relative_url }}"
+              alt="{{ featured.image_alt | default: featured.title }}"
             >
-
-          </div>
-
+          </a>
 
           <div class="featured-copy">
 
             <div class="story-category">
-              Immigration
+              {{ featured.category | default: 'Life in Argentina' }}
             </div>
-
 
             <div>
 
               <h3>
-                How residency in Argentina actually works.
+                <a href="{{ featured.url | relative_url }}">
+                  {{ featured.title }}
+                </a>
               </h3>
 
-
               <p>
-                An introduction to the main residency routes, the documents
-                involved and what the process generally looks like after
-                arriving in Argentina.
+                {{ featured.description | default: featured.excerpt | strip_html | truncate: 190 }}
               </p>
 
-
-              <a
-                class="dark-link"
-                href="#"
-              >
-
+              <a class="dark-link" href="{{ featured.url | relative_url }}">
                 Read the guide
-
-                <span class="arrow">
-                  →
-                </span>
-
+                <span class="arrow">→</span>
               </a>
 
             </div>
@@ -2637,157 +2620,56 @@ Here, we cover the things that matter once you start planning the move: residenc
 
         </article>
 
-
-
-        <!-- SMALL ARTICLES -->
-
+        {% if site.posts.size > 1 %}
+        <!-- NEXT THREE ARTICLES -->
         <div class="story-grid">
 
-
-          <!-- HOUSING -->
-
+          {% for post in site.posts offset:1 limit:3 %}
           <article class="story-card reveal">
 
-            <div class="story-card-image">
-
+            <a class="story-card-image" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
               <img
-                src="./img/article-housing.jpg"
-                alt="Housing and neighborhoods in Buenos Aires"
+                src="{{ post.image | default: '/img/hero-buenos-aires.jpg' | relative_url }}"
+                alt="{{ post.image_alt | default: post.title }}"
               >
-
-            </div>
-
+            </a>
 
             <div class="story-category">
-              Living
+              {{ post.category | default: 'Life in Argentina' }}
             </div>
 
-
             <h3>
-              Finding a home in Buenos Aires.
+              <a href="{{ post.url | relative_url }}">
+                {{ post.title }}
+              </a>
             </h3>
 
-
             <p>
-              What newcomers should know about neighborhoods, temporary
-              rentals and the local housing market.
+              {{ post.description | default: post.excerpt | strip_html | truncate: 145 }}
             </p>
 
-
-            <a
-              class="dark-link"
-              href="#"
-            >
-
+            <a class="dark-link" href="{{ post.url | relative_url }}">
               Read
-
-              <span class="arrow">
-                →
-              </span>
-
+              <span class="arrow">→</span>
             </a>
 
           </article>
+          {% endfor %}
 
+        </div>
+        {% endif %}
 
-
-          <!-- BUSINESS -->
-
-          <article class="story-card reveal">
-
-            <div class="story-card-image">
-
-              <img
-                src="./img/article-business.jpg"
-                alt="Starting a company in Argentina"
-              >
-
-            </div>
-
-
-            <div class="story-category">
-              Business
-            </div>
-
-
-            <h3>
-              Starting a company in Argentina.
-            </h3>
-
-
-            <p>
-            A practical guide for founders and investors looking to start a business in Argentina.
-            </p>
-
-
-            <a
-              class="dark-link"
-              href="#"
-            >
-
-              Read
-
-              <span class="arrow">
-                →
-              </span>
-
-            </a>
-
-          </article>
-
-
-
-          <!-- ARGENTINA -->
-
-          <article class="story-card reveal">
-
-            <div class="story-card-image">
-
-              <img
-                src="./img/article-argentina.jpg"
-                alt="Life in Argentina"
-              >
-
-            </div>
-
-
-            <div class="story-category">
-              Argentina
-            </div>
-
-
-            <h3>
-              What changes when Argentina becomes your home?
-            </h3>
-
-
-            <p>
-              What to think about when a temporary stay turns into something more permanent.
-            </p>
-
-
-            <a
-              class="dark-link"
-              href="#"
-            >
-
-              Read
-
-              <span class="arrow">
-                →
-              </span>
-
-            </a>
-
-          </article>
-
-
+        <div style="margin-top:42px;">
+          <a class="dark-link" href="{{ '/blog/' | relative_url }}">
+            View all articles
+            <span class="arrow">→</span>
+          </a>
         </div>
 
       </div>
 
     </section>
-
+    {% endif %}
 
 
     <!-- =====================================================
