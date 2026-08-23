@@ -910,9 +910,39 @@ layout: null
     }
 
     .story-card{
+      min-width:0;
+
       border-top:1px solid var(--line);
 
       padding-top:18px;
+    }
+
+    .featured-copy{
+      gap:34px;
+      min-width:0;
+    }
+
+    .featured-copy > div{
+      min-width:0;
+    }
+
+    .featured-copy h3,
+    .story-card h3{
+      overflow-wrap:break-word;
+      word-break:normal;
+    }
+
+    .journal-all{
+      position:relative;
+      z-index:1;
+
+      display:flex;
+      justify-content:flex-end;
+
+      clear:both;
+
+      margin-top:48px;
+      padding-top:10px;
     }
 
     .story-card-image{
@@ -2579,9 +2609,13 @@ We help you understand what applies to your situation, what needs to happen next
 
         </div>
 
-        {% assign featured = site.posts.first %}
+        {% assign featured_posts = site.posts | where: "featured", true %}
+        {% assign featured = featured_posts.first %}
+        {% unless featured %}
+          {% assign featured = site.posts.first %}
+        {% endunless %}
 
-        <!-- FEATURED ARTICLE: newest published post -->
+        <!-- FEATURED ARTICLE: pinned with featured: true -->
         <article class="featured-story reveal">
 
           <a class="featured-image" href="{{ featured.url | relative_url }}" aria-label="Read {{ featured.title }}">
@@ -2621,45 +2655,49 @@ We help you understand what applies to your situation, what needs to happen next
         </article>
 
         {% if site.posts.size > 1 %}
-        <!-- NEXT THREE ARTICLES -->
+        <!-- NEXT THREE ARTICLES, EXCLUDING THE PINNED ARTICLE -->
         <div class="story-grid">
 
-          {% for post in site.posts offset:1 limit:3 %}
-          <article class="story-card reveal">
+          {% assign shown_posts = 0 %}
+          {% for post in site.posts %}
+            {% if post.url != featured.url and shown_posts < 3 %}
+            <article class="story-card reveal">
 
-            <a class="story-card-image" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
-              <img
-                src="{{ post.image | default: '/img/hero-buenos-aires.jpg' | relative_url }}"
-                alt="{{ post.image_alt | default: post.title }}"
-              >
-            </a>
-
-            <div class="story-category">
-              {{ post.category | default: 'Life in Argentina' }}
-            </div>
-
-            <h3>
-              <a href="{{ post.url | relative_url }}">
-                {{ post.title }}
+              <a class="story-card-image" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
+                <img
+                  src="{{ post.image | default: '/img/hero-buenos-aires.jpg' | relative_url }}"
+                  alt="{{ post.image_alt | default: post.title }}"
+                >
               </a>
-            </h3>
 
-            <p>
-              {{ post.description | default: post.excerpt | strip_html | truncate: 145 }}
-            </p>
+              <div class="story-category">
+                {{ post.category | default: 'Life in Argentina' }}
+              </div>
 
-            <a class="dark-link" href="{{ post.url | relative_url }}">
-              Read
-              <span class="arrow">→</span>
-            </a>
+              <h3>
+                <a href="{{ post.url | relative_url }}">
+                  {{ post.title }}
+                </a>
+              </h3>
 
-          </article>
+              <p>
+                {{ post.description | default: post.excerpt | strip_html | truncate: 145 }}
+              </p>
+
+              <a class="dark-link" href="{{ post.url | relative_url }}">
+                Read
+                <span class="arrow">→</span>
+              </a>
+
+            </article>
+            {% assign shown_posts = shown_posts | plus: 1 %}
+            {% endif %}
           {% endfor %}
 
         </div>
         {% endif %}
 
-        <div style="margin-top:42px;">
+        <div class="journal-all">
           <a class="dark-link" href="{{ '/blog/' | relative_url }}">
             View all articles
             <span class="arrow">→</span>
