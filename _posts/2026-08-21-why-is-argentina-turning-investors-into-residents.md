@@ -4,6 +4,7 @@ title: "Why is Argentina turning investors into residents?"
 description: "A practical briefing on immigration, tax residency, investment structuring and relocation considerations for foreign investors moving to Argentina."
 date: 2026-08-21
 category: Immigration
+featured: true
 image: /img/blog/argentina-investors-residency.jpg
 image_alt: "Buenos Aires, Argentina"
 ---
