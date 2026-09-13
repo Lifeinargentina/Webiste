@@ -3,6 +3,8 @@ layout: post
 title: "I’m already in Argentina as a tourist. Can I switch to residency without leaving?"
 date: 2026-09-13
 description: "Can you apply for Argentina residency while already in the country as a tourist? Learn when a change of immigration category is allowed and when you may need to leave Argentina."
+image: "/img/blog/tourist-to-residency.jpg"
+image_alt: "Aerial view of Buenos Aires for an article about changing from tourist status to residency in Argentina"
 ---
 
 # I’m already in Argentina as a tourist. Can I switch to residency without leaving?
