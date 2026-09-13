@@ -3,6 +3,8 @@ layout: post
 title: "Argentina residency options: Which one is right for you?"
 date: 2026-09-13
 description: "Compare Argentina's temporary, permanent and transitory residency options, including MERCOSUR, rentista, pensionado, family, work, study, investor and digital nomad routes."
+image: "/img/blog/argentina-residency-options.jpg"
+image_alt: "Argentina residency options including temporary, permanent and transitory residence"
 ---
 
 # Argentina residency options: Which one is right for you?
