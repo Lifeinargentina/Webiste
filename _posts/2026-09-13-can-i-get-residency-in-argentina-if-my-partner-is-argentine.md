@@ -3,6 +3,8 @@ layout: post
 title: "Can I get residency in Argentina if my partner is Argentine?"
 date: 2026-09-13
 description: "Can you get residency in Argentina through an Argentine partner? Learn when marriage or a registered unión convivencial can qualify you for family reunification residency."
+image: "/img/blog/partner-residency-argentina.jpg"
+image_alt: "Couple in Buenos Aires for an article about Argentine residency through an Argentine partner"
 ---
 
 # Can I get residency in Argentina if my partner is Argentine?
