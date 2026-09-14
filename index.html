@@ -1949,7 +1949,7 @@ layout: null
       .hero{
         background:
           linear-gradient(rgba(0,59,45,.55),rgba(0,59,45,.72)),
-          url('./img/hero-buenos-aires.jpg') center/cover no-repeat;
+          url('{{ "/img/lia-hero-buenos-aires-poster.jpg" | relative_url }}') center/cover no-repeat;
       }
 
     }
@@ -2014,10 +2014,10 @@ layout: null
       loop
       playsinline
       preload="metadata"
-      poster="./img/hero-buenos-aires.jpg"
+      poster="{{ '/img/lia-hero-buenos-aires-poster.jpg' | relative_url }}"
       aria-hidden="true"
     >
-      <source src="./video/lia-hero-buenos-aires.mp4" type="video/mp4">
+      <source src="{{ '/video/lia-hero-buenos-aires-web.mp4' | relative_url }}" type="video/mp4">
     </video>
 
     <div class="hero-scrim" aria-hidden="true"></div>
