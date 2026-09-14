@@ -406,25 +406,52 @@ layout: null
       overflow:hidden;
 
       background:
+        var(--deep)
+        url('./img/hero-buenos-aires.jpg')
+        center center / cover no-repeat;
+    }
+
+    .hero-video{
+      position:absolute;
+      inset:0;
+
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+      object-position:center center;
+
+      z-index:0;
+    }
+
+    .hero-overlay{
+      position:absolute;
+      inset:0;
+
+      z-index:1;
+
+      pointer-events:none;
+
+      background:
         linear-gradient(
           90deg,
-          rgba(7,43,34,.90) 0%,
-          rgba(7,43,34,.67) 38%,
-          rgba(7,43,34,.15) 78%
+          rgba(7,43,34,.86) 0%,
+          rgba(7,43,34,.60) 40%,
+          rgba(7,43,34,.18) 78%,
+          rgba(7,43,34,.08) 100%
         ),
         linear-gradient(
           0deg,
-          rgba(7,43,34,.74) 0%,
-          rgba(7,43,34,0) 48%
-        ),
-        url('./img/hero-buenos-aires.jpg');
-
-      background-size:cover;
-      background-position:center center;
-      background-repeat:no-repeat;
+          rgba(7,43,34,.72) 0%,
+          rgba(7,43,34,.12) 55%,
+          rgba(7,43,34,.18) 100%
+        );
     }
 
     .hero-inner{
+      position:relative;
+      z-index:2;
+
       width:min(1220px, calc(100% - 48px));
 
       margin:0 auto;
@@ -1943,18 +1970,20 @@ layout: null
 
       .hero{
         min-height:92svh;
+      }
 
+      .hero-video{
+        object-position:center center;
+      }
+
+      .hero-overlay{
         background:
           linear-gradient(
             0deg,
-            rgba(7,43,34,.89),
-            rgba(7,43,34,.28)
-          ),
-          url('./img/hero-buenos-aires.jpg');
-
-        background-size:cover;
-
-        background-position:center;
+            rgba(7,43,34,.90) 0%,
+            rgba(7,43,34,.48) 52%,
+            rgba(7,43,34,.24) 100%
+          );
       }
 
       .hero-inner{
@@ -2182,6 +2211,14 @@ layout: null
       }
 
     }
+
+
+    @media (prefers-reduced-motion: reduce){
+      .hero-video{
+        display:none;
+      }
+    }
+
   </style>
 </head>
 
@@ -2251,6 +2288,24 @@ layout: null
   ======================================================== -->
 
   <header class="hero" id="top">
+
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="./img/hero-buenos-aires.jpg"
+      aria-hidden="true"
+    >
+      <source
+        src="./video/lia-hero-buenos-aires.mp4"
+        type="video/mp4"
+      >
+    </video>
+
+    <div class="hero-overlay" aria-hidden="true"></div>
 
     <div class="hero-inner">
 
