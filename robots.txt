@@ -1,0 +1,9 @@
+# Explicitly allow OpenAI search discovery
+User-agent: OAI-SearchBot
+Allow: /
+
+# All other crawlers follow the same open-access rule
+User-agent: *
+Allow: /
+
+Sitemap: https://lifeinargentina.com/sitemap.xml
