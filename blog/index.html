@@ -7,67 +7,668 @@ title: Articles
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Articles | Life in Argentina</title>
-  <meta name="description" content="Practical guides on residency, legal matters, business, taxes, housing and everyday life in Argentina.">
+
+  <meta
+    name="description"
+    content="Practical guides on residency, citizenship, legal matters, business, taxes, housing and everyday life in Argentina."
+  >
+
   <link rel="canonical" href="{{ '/blog/' | absolute_url }}">
   <link rel="icon" type="image/png" href="{{ '/img/favicon.png' | relative_url }}">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Montagu+Slab:opsz,wght@16..144,400;16..144,500;16..144,600&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Montagu+Slab:opsz,wght@16..144,400;16..144,500;16..144,600&display=swap"
+    rel="stylesheet"
+  >
+
   <style>
-    :root{--deep:#072b22;--green:#184f40;--cream:#f7f3ea;--paper:#fffdf8;--lav:#eeebf1;--charcoal:#24312d;--muted:#67716c;--line:rgba(7,43,34,.14);--serif:"Montagu Slab",Georgia,serif;--sans:"Instrument Sans",Inter,system-ui,sans-serif}
-    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--charcoal);font-family:var(--sans)}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}.wrap{width:min(1180px,calc(100% - 48px));margin:0 auto}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px max(24px,calc((100vw - 1180px)/2));background:var(--deep);color:#fffdf8}.brand{display:flex;align-items:center;gap:11px;font-weight:600}.brand img{width:34px;height:34px;object-fit:contain}.nav-links{display:flex;gap:28px;font-size:14px;color:rgba(255,255,255,.76)}
-    .hero{padding:100px 0 70px;background:var(--cream)}.label{font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--green)}h1{max-width:900px;margin:18px 0 0;font-family:var(--serif);font-size:clamp(55px,7vw,92px);font-weight:400;line-height:.97;letter-spacing:-.06em;color:var(--deep)}.intro{max-width:690px;margin:28px 0 0;font-size:19px;line-height:1.55;color:var(--muted)}
-    .posts{padding:80px 0 120px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:42px 26px}.card{border-top:1px solid var(--line);padding-top:18px}.image{aspect-ratio:4/3;overflow:hidden;margin-bottom:24px;background:var(--lav)}.image img{width:100%;height:100%;object-fit:cover}.category{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#737078}.card h2{margin:12px 0 14px;font-size:28px;line-height:1.08;font-weight:500;letter-spacing:-.04em;color:var(--deep)}.card p{margin:0 0 18px;font-size:15px;line-height:1.55;color:var(--muted)}.read{display:inline-flex;padding-bottom:4px;border-bottom:1px solid rgba(7,43,34,.35);font-size:14px;font-weight:600;color:var(--deep)}
-    .featured{display:grid;grid-template-columns:1.15fr .85fr;margin-bottom:64px;background:var(--lav)}.featured-image{min-height:500px;overflow:hidden}.featured-image img{width:100%;height:100%;object-fit:cover}.featured-copy{min-width:0;padding:48px;display:flex;flex-direction:column;justify-content:center}.featured-copy h2{margin:14px 0 18px;font-size:clamp(34px,4vw,52px);line-height:1.05;font-weight:500;letter-spacing:-.045em;color:var(--deep);overflow-wrap:break-word}.featured-copy p{margin:0 0 24px;font-size:16px;line-height:1.6;color:var(--muted)}
-    .empty{padding:25px 0;color:var(--muted)}.footer{padding:42px 0;background:#041b16;color:rgba(255,255,255,.55);font-size:13px}
-    @media(max-width:850px){.featured{grid-template-columns:1fr}.featured-image{min-height:420px}.grid{grid-template-columns:1fr 1fr}.nav-links{display:none}}@media(max-width:620px){.wrap{width:calc(100% - 30px)}.grid{grid-template-columns:1fr}.hero{padding:70px 0 50px}.brand span{display:none}}
+    :root{
+      --deep:#072b22;
+      --green:#184f40;
+      --cream:#f7f3ea;
+      --paper:#fffdf8;
+      --lav:#eeebf1;
+      --charcoal:#24312d;
+      --muted:#67716c;
+      --line:rgba(7,43,34,.14);
+      --serif:"Montagu Slab",Georgia,serif;
+      --sans:"Instrument Sans",Inter,system-ui,sans-serif;
+    }
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--charcoal);
+      font-family:var(--sans);
+      -webkit-font-smoothing:antialiased;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .wrap{
+      width:min(1180px,calc(100% - 48px));
+      margin:0 auto;
+    }
+
+
+    /* NAVIGATION */
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+
+      padding:
+        18px max(24px,calc((100vw - 1180px)/2));
+
+      background:var(--deep);
+      color:#fffdf8;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:11px;
+
+      font-weight:600;
+    }
+
+    .brand img{
+      width:34px;
+      height:34px;
+      object-fit:contain;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:28px;
+
+      font-size:14px;
+      color:rgba(255,255,255,.76);
+    }
+
+    .nav-links a{
+      transition:color .2s ease;
+    }
+
+    .nav-links a:hover{
+      color:#fff;
+    }
+
+
+    /* HERO */
+
+    .hero{
+      padding:100px 0 72px;
+      background:var(--cream);
+    }
+
+    .label{
+      font-size:12px;
+      font-weight:700;
+
+      letter-spacing:.13em;
+      text-transform:uppercase;
+
+      color:var(--green);
+    }
+
+    h1{
+      max-width:900px;
+
+      margin:18px 0 0;
+
+      font-family:var(--serif);
+      font-size:clamp(55px,7vw,92px);
+      font-weight:400;
+      line-height:.97;
+      letter-spacing:-.06em;
+
+      color:var(--deep);
+    }
+
+    .intro{
+      max-width:690px;
+
+      margin:28px 0 0;
+
+      font-size:19px;
+      line-height:1.55;
+
+      color:var(--muted);
+    }
+
+
+    /* POSTS */
+
+    .posts{
+      padding:80px 0 120px;
+    }
+
+
+    /* FEATURED ARTICLE */
+
+    .featured{
+      display:grid;
+      grid-template-columns:minmax(0,1.18fr) minmax(330px,.82fr);
+
+      align-items:stretch;
+
+      margin-bottom:76px;
+
+      background:var(--lav);
+
+      overflow:hidden;
+    }
+
+    .featured-image{
+      display:block;
+
+      min-width:0;
+      min-height:520px;
+
+      overflow:hidden;
+
+      background:#e7e4e9;
+    }
+
+    .featured-image img{
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+
+      transition:transform .7s ease;
+    }
+
+    .featured:hover .featured-image img{
+      transform:scale(1.02);
+    }
+
+    .featured-copy{
+      min-width:0;
+
+      padding:52px;
+
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:flex-start;
+    }
+
+    .category{
+      margin-bottom:12px;
+
+      font-size:11px;
+      font-weight:700;
+
+      letter-spacing:.14em;
+      text-transform:uppercase;
+
+      color:#737078;
+    }
+
+    .featured-copy h2{
+      width:100%;
+
+      margin:0 0 18px;
+
+      font-size:clamp(34px,4vw,52px);
+      line-height:1.05;
+      font-weight:500;
+      letter-spacing:-.045em;
+
+      color:var(--deep);
+
+      overflow-wrap:break-word;
+      word-break:normal;
+    }
+
+    .featured-copy p{
+      margin:0 0 28px;
+
+      font-size:16px;
+      line-height:1.6;
+
+      color:var(--muted);
+    }
+
+
+    /* ARTICLE GRID */
+
+    .grid{
+      display:grid;
+
+      grid-template-columns:
+        repeat(3,minmax(0,1fr));
+
+      gap:56px 28px;
+
+      align-items:stretch;
+    }
+
+    .card{
+      min-width:0;
+      height:100%;
+
+      display:flex;
+      flex-direction:column;
+
+      padding-top:18px;
+
+      border-top:1px solid var(--line);
+    }
+
+    .image{
+      display:block;
+
+      width:100%;
+      aspect-ratio:4/3;
+
+      margin-bottom:24px;
+
+      overflow:hidden;
+
+      background:var(--lav);
+    }
+
+    .image img{
+      width:100%;
+      height:100%;
+
+      object-fit:cover;
+
+      transition:transform .65s ease;
+    }
+
+    .card:hover .image img{
+      transform:scale(1.025);
+    }
+
+    .card h2{
+      margin:0 0 14px;
+
+      font-size:27px;
+      line-height:1.1;
+      font-weight:500;
+      letter-spacing:-.04em;
+
+      color:var(--deep);
+
+      overflow-wrap:break-word;
+      word-break:normal;
+    }
+
+    .card p{
+      margin:0 0 24px;
+
+      font-size:15px;
+      line-height:1.55;
+
+      color:var(--muted);
+    }
+
+    .read{
+      display:inline-flex;
+      align-items:center;
+
+      width:max-content;
+
+      padding-bottom:4px;
+
+      border-bottom:
+        1px solid rgba(7,43,34,.35);
+
+      font-size:14px;
+      font-weight:600;
+      line-height:1.2;
+
+      color:var(--deep);
+
+      transition:
+        transform .2s ease,
+        border-color .2s ease;
+    }
+
+    .read:hover{
+      transform:translateX(2px);
+      border-color:var(--deep);
+    }
+
+    .card .read{
+      margin-top:auto;
+      align-self:flex-start;
+    }
+
+    .empty{
+      padding:25px 0;
+      color:var(--muted);
+    }
+
+
+    /* FOOTER */
+
+    .footer{
+      padding:42px 0;
+
+      background:#041b16;
+
+      color:rgba(255,255,255,.55);
+
+      font-size:13px;
+    }
+
+
+    /* TABLET */
+
+    @media(max-width:900px){
+
+      .featured{
+        grid-template-columns:1fr;
+      }
+
+      .featured-image{
+        min-height:0;
+        aspect-ratio:16/10;
+      }
+
+      .featured-copy{
+        padding:42px;
+      }
+
+      .grid{
+        grid-template-columns:
+          repeat(2,minmax(0,1fr));
+
+        gap:52px 26px;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+    }
+
+
+    /* MOBILE */
+
+    @media(max-width:620px){
+
+      .wrap{
+        width:calc(100% - 30px);
+      }
+
+      .hero{
+        padding:70px 0 50px;
+      }
+
+      h1{
+        font-size:50px;
+      }
+
+      .brand span{
+        display:none;
+      }
+
+      .posts{
+        padding:60px 0 85px;
+      }
+
+      .featured{
+        margin-bottom:58px;
+      }
+
+      .featured-image{
+        aspect-ratio:4/3;
+      }
+
+      .featured-copy{
+        padding:30px 26px 32px;
+      }
+
+      .featured-copy h2{
+        font-size:34px;
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+
+        gap:46px;
+      }
+
+      .card h2{
+        font-size:26px;
+      }
+
+    }
+
   </style>
 </head>
+
 <body>
+
   <nav class="nav">
-    <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/img/logo-life-in-argentina.png' | relative_url }}" alt="Life in Argentina logo"><span>Life in Argentina</span></a>
-    <div class="nav-links"><a href="{{ '/#about' | relative_url }}">About us</a><a href="{{ '/#services' | relative_url }}">Services</a><a href="{{ '/#explore' | relative_url }}">Explore</a><a href="{{ '/#careers' | relative_url }}">Careers</a></div>
-  </nav>
-  <header class="hero"><div class="wrap"><div class="label">Life in Argentina</div><h1>Guides for living and building a life in Argentina.</h1><p class="intro">Residency, paperwork, housing, taxes, work, business and everyday life in Argentina.</p></div></header>
-  <main class="posts"><div class="wrap">
-    {% if site.posts.size > 0 %}
-    {% assign featured_posts = site.posts | where: "featured", true %}
-    {% assign featured = featured_posts.first %}
-    {% unless featured %}
-      {% assign featured = site.posts.first %}
-    {% endunless %}
 
-    <article class="featured">
-      <a class="featured-image" href="{{ featured.url | relative_url }}">
-        <img src="{{ featured.image | default: '/img/hero-buenos-aires.jpg' | relative_url }}" alt="{{ featured.image_alt | default: featured.title }}">
+    <a
+      class="brand"
+      href="{{ '/' | relative_url }}"
+    >
+
+      <img
+        src="{{ '/img/logo-life-in-argentina.png' | relative_url }}"
+        alt="Life in Argentina logo"
+      >
+
+      <span>
+        Life in Argentina
+      </span>
+
+    </a>
+
+
+    <div class="nav-links">
+
+      <a href="{{ '/#about' | relative_url }}">
+        About us
       </a>
-      <div class="featured-copy">
-        <div class="category">{{ featured.category | default: 'Life in Argentina' }}</div>
-        <h2><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h2>
-        <p>{{ featured.description | default: featured.excerpt | strip_html | truncate: 190 }}</p>
-        <a class="read" href="{{ featured.url | relative_url }}">Read the guide →</a>
-      </div>
-    </article>
 
-    <div class="grid">
-      {% for post in site.posts %}
-      {% if post.url != featured.url %}
-      <article class="card">
-        <a class="image" href="{{ post.url | relative_url }}"><img src="{{ post.image | default: '/img/hero-buenos-aires.jpg' | relative_url }}" alt="{{ post.image_alt | default: post.title }}"></a>
-        <div class="category">{{ post.category | default: 'Life in Argentina' }}</div>
-        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-        <p>{{ post.description | default: post.excerpt | strip_html | truncate: 145 }}</p>
-        <a class="read" href="{{ post.url | relative_url }}">Read →</a>
-      </article>
-      {% endif %}
-      {% endfor %}
+      <a href="{{ '/#services' | relative_url }}">
+        Services
+      </a>
+
+      <a href="{{ '/#explore' | relative_url }}">
+        Explore
+      </a>
+
+      <a href="{{ '/#careers' | relative_url }}">
+        Careers
+      </a>
+
     </div>
-    {% else %}
-      <p class="empty">Articles coming soon.</p>
-    {% endif %}
-  </div></main>
-  <footer class="footer"><div class="wrap">© 2026 Life in Argentina · Buenos Aires, Argentina</div></footer>
+
+  </nav>
+
+
+  <header class="hero">
+
+    <div class="wrap">
+
+      <div class="label">
+        Life in Argentina
+      </div>
+
+      <h1>
+        Guides for living and building a life in Argentina.
+      </h1>
+
+      <p class="intro">
+        Residency, paperwork, housing, taxes, work, business and everyday life in Argentina.
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <main class="posts">
+
+    <div class="wrap">
+
+      {% if site.posts.size > 0 %}
+
+        {% assign featured_posts = site.posts | where: "featured", true %}
+        {% assign featured = featured_posts.first %}
+
+        {% unless featured %}
+          {% assign featured = site.posts.first %}
+        {% endunless %}
+
+
+        <!-- FEATURED ARTICLE -->
+
+        <article class="featured">
+
+          <a
+            class="featured-image"
+            href="{{ featured.url | relative_url }}"
+            aria-label="Read {{ featured.title }}"
+          >
+
+            <img
+              src="{{ featured.image | default: '/img/hero-buenos-aires.jpg' | relative_url }}"
+              alt="{{ featured.image_alt | default: featured.title }}"
+            >
+
+          </a>
+
+
+          <div class="featured-copy">
+
+            <div class="category">
+              {{ featured.category | default: 'Life in Argentina' }}
+            </div>
+
+            <h2>
+              <a href="{{ featured.url | relative_url }}">
+                {{ featured.title }}
+              </a>
+            </h2>
+
+            <p>
+              {{ featured.description | default: featured.excerpt | strip_html | truncate: 190 }}
+            </p>
+
+            <a
+              class="read"
+              href="{{ featured.url | relative_url }}"
+            >
+              Read the guide →
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <!-- ARTICLE GRID -->
+
+        <div class="grid">
+
+          {% for post in site.posts %}
+
+            {% if post.url != featured.url %}
+
+              <article class="card">
+
+                <a
+                  class="image"
+                  href="{{ post.url | relative_url }}"
+                  aria-label="Read {{ post.title }}"
+                >
+
+                  <img
+                    src="{{ post.image | default: '/img/hero-buenos-aires.jpg' | relative_url }}"
+                    alt="{{ post.image_alt | default: post.title }}"
+                    loading="lazy"
+                  >
+
+                </a>
+
+
+                <div class="category">
+                  {{ post.category | default: 'Life in Argentina' }}
+                </div>
+
+
+                <h2>
+                  <a href="{{ post.url | relative_url }}">
+                    {{ post.title }}
+                  </a>
+                </h2>
+
+
+                <p>
+                  {{ post.description | default: post.excerpt | strip_html | truncate: 145 }}
+                </p>
+
+
+                <a
+                  class="read"
+                  href="{{ post.url | relative_url }}"
+                >
+                  Read →
+                </a>
+
+              </article>
+
+            {% endif %}
+
+          {% endfor %}
+
+        </div>
+
+
+      {% else %}
+
+        <p class="empty">
+          Articles coming soon.
+        </p>
+
+      {% endif %}
+
+    </div>
+
+  </main>
+
+
+  <footer class="footer">
+
+    <div class="wrap">
+      © 2026 Life in Argentina · Buenos Aires, Argentina
+    </div>
+
+  </footer>
+
 </body>
 </html>
