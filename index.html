@@ -384,8 +384,13 @@ layout: null
       width:100%;
       height:100%;
 
+      display:block;
       object-fit:cover;
       object-position:center;
+
+      opacity:1;
+      visibility:visible;
+      pointer-events:none;
 
       transform:scale(1.012);
     }
@@ -1943,13 +1948,7 @@ layout: null
       }
 
       .hero-video{
-        display:none;
-      }
-
-      .hero{
-        background:
-          linear-gradient(rgba(0,59,45,.55),rgba(0,59,45,.72)),
-          url('{{ "/img/lia-hero-buenos-aires-poster.jpg" | relative_url }}') center/cover no-repeat;
+        animation:none;
       }
 
     }
@@ -3129,21 +3128,41 @@ layout: null
     }
 
 
-    /* VIDEO: avoid unnecessary playback when tab is hidden */
+    /* HERO VIDEO */
 
-    const heroVideo = document.querySelector('.hero-video');
+    const heroVideo = document.getElementById('heroVideo');
 
-    document.addEventListener('visibilitychange', () => {
+    if(heroVideo){
 
-      if(!heroVideo) return;
+      heroVideo.muted = true;
+      heroVideo.defaultMuted = true;
 
-      if(document.hidden){
-        heroVideo.pause();
+      const startHeroVideo = () => {
+        heroVideo.load();
+        const playPromise = heroVideo.play();
+
+        if(playPromise !== undefined){
+          playPromise.catch(() => {
+            /* Poster remains visible if autoplay is blocked. */
+          });
+        }
+      };
+
+      if(document.readyState === 'complete'){
+        startHeroVideo();
       } else {
-        heroVideo.play().catch(() => {});
+        window.addEventListener('load', startHeroVideo, { once:true });
       }
 
-    });
+      document.addEventListener('visibilitychange', () => {
+        if(document.hidden){
+          heroVideo.pause();
+        } else {
+          heroVideo.play().catch(() => {});
+        }
+      });
+
+    }
 
   </script>
 
