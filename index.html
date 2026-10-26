@@ -2252,7 +2252,41 @@ section{scroll-margin-top:100px}
 @media(max-width:420px){.hero h1{font-size:39px}.hero-art{height:330px}.why-list{grid-template-columns:1fr}.brand{font-size:16px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 
-  </style>
+  
+/* Smartphone layout: preserve content and metadata across all screen sizes. */
+.menu-toggle{display:none}
+:focus-visible{outline:3px solid #a16f32;outline-offset:4px}
+@media(max-width:760px){
+ html{scroll-padding-top:88px}body{overflow-wrap:break-word}
+ .nav{min-height:72px;padding:12px 20px;gap:10px;flex-wrap:wrap}
+ .nav.nav-hidden{transform:translateX(-50%)}
+ .brand{font-size:18px;margin-right:auto}.nav-cta{min-height:44px;font-size:12px;padding:0 12px;order:2}
+ .menu-toggle{display:flex;order:3;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:11px;border:1px solid var(--line);border-radius:5px;background:transparent;color:var(--deep);cursor:pointer}
+ .menu-toggle span{display:block;width:20px;height:2px;background:currentColor;transition:transform .2s,opacity .2s}
+ .menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(7px) rotate(45deg)}
+ .menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+ .menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-7px) rotate(-45deg)}
+ .nav-links{order:4;width:100%;display:none;flex-direction:column;gap:0;align-items:stretch;padding:8px 0;border-top:1px solid var(--line);max-height:calc(100dvh - 90px);overflow-y:auto}
+ .nav.menu-open .nav-links{display:flex}.nav-links a{display:flex;align-items:center;min-height:48px;padding:10px 2px;font-size:16px}
+ .hero-inner{padding-top:100px;gap:8px}.hero h1{font-size:clamp(36px,9.5vw,52px);line-height:1.12;letter-spacing:-1.3px}
+ .hero-sub{font-size:16px;line-height:1.65}.hero-bottom{margin-top:22px}.hero-actions{display:grid;grid-template-columns:1fr;gap:10px;width:100%}
+ .hero-actions .button{width:100%;min-height:48px;justify-content:center;text-align:center;font-size:14px}
+ .hero-art{height:300px;max-width:100%;margin:0 auto}.hero-content{min-width:0}
+ .about,.services,.process,.why,.contact,.work-with-us,.lia-journal{padding:28px 0}
+ .about-story-copy{order:0}.about-story-image{order:1}.about-story-image,.about-story-image img{height:250px}
+ .about-story-copy p{font-size:16px;line-height:1.75}.about-heading,.lia-journal-heading h2{font-size:32px;line-height:1.18}
+ .service-editorial{gap:16px;padding:24px 0}.service-copy{gap:12px;grid-template-columns:24px minmax(0,1fr)}
+ .service-main{min-width:0}.service-image,.service-editorial.reverse .service-image{margin-left:36px;height:180px}
+ .why-list{grid-template-columns:1fr}.process-grid{gap:28px}.contact-actions .button{min-height:48px;width:100%;justify-content:center}
+ .footer-grid{grid-template-columns:1fr 1fr;gap:28px 20px}.footer-grid>:first-child{grid-column:1/-1}.footer-links a{display:inline-block;padding:8px 0}
+ .footer{padding-bottom:100px}.whatsapp-button{right:16px;bottom:calc(16px + env(safe-area-inset-bottom));min-height:44px;padding:12px 16px}
+ .modal{padding:16px}.modal-card{max-height:calc(100dvh - 32px);padding:54px 24px 28px;overscroll-behavior:contain;border-radius:10px}
+ .modal input,.modal select,.modal textarea{font-size:16px;min-height:48px}.modal-close{width:44px;height:44px;top:8px;right:8px}
+}
+@media(max-width:360px){.nav{padding-left:14px;padding-right:14px;gap:7px}.brand{font-size:15px}.nav-cta{font-size:11px;padding:0 9px}.wrap,.hero-inner{width:calc(100% - 32px)}.hero-art{height:260px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+
+</style>
 </head>
 
 
@@ -2281,7 +2315,8 @@ section{scroll-margin-top:100px}
     </a>
 
 
-    <div class="nav-links">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open navigation"><span></span><span></span><span></span></button>
+    <div class="nav-links" id="mobile-navigation">
 
       <a href="#about">
         About us
@@ -3525,6 +3560,23 @@ We help you understand what applies to your situation, what needs to happen next
 
     const nav =
       document.getElementById('nav');
+
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    function closeNavigation(){
+      nav.classList.remove('menu-open');
+      menuToggle.setAttribute('aria-expanded','false');
+      menuToggle.setAttribute('aria-label','Open navigation');
+    }
+    menuToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('menu-open');
+      menuToggle.setAttribute('aria-expanded',String(isOpen));
+      menuToggle.setAttribute('aria-label',isOpen ? 'Close navigation' : 'Open navigation');
+    });
+    nav.querySelectorAll('a, .open-modal').forEach(link => link.addEventListener('click',closeNavigation));
+    document.addEventListener('click',event => {if(!nav.contains(event.target)) closeNavigation();});
+    document.addEventListener('keydown',event => {if(event.key === 'Escape' && nav.classList.contains('menu-open')){closeNavigation();menuToggle.focus();}});
+    window.matchMedia('(min-width:761px)').addEventListener('change',event => {if(event.matches) closeNavigation();});
 
     let lastScrollY = window.scrollY;
 
