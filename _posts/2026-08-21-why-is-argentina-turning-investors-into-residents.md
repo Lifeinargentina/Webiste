@@ -1,130 +1,190 @@
 ---
-layout: post
-title: "Why is Argentina turning investors into residents?"
-description: "A practical briefing on immigration, tax residency, investment structuring and relocation considerations for foreign investors moving to Argentina."
-date: 2026-08-21
-category: Immigration
-featured: true
-image: /img/blog/argentina-investors-residency.jpg
-image_alt: "Buenos Aires, Argentina"
+title: "Can I get residency in Argentina by investing?"
+description: "Explore Argentina’s investor residency route, property purchases, foreign income, tax residency and the practical steps to relocate with your family."
+lang: en
+last_modified_at: 2026-10-29
 ---
 
-For a growing number of foreign investors, Argentina is a place to live and work. The reasons vary, a spouse from Buenos Aires, a taste for wine country in Mendoza, the pull of Patagonian landscapes, a desire to spend part of the year in the same time zone as U.S. capital markets while enjoying a materially lower cost of living, or the simple recognition that the deepest investment insights emerge from ground-level presence. Yet the practical realities of moving to Argentina, particularly for someone who intends to remain economically active, are more consequential than casual visitors often realize. This report explains the immigration options available to foreign residents; the tax implications of becoming an Argentine tax resident (which are potentially significant, given the country’s worldwide-income and wealth-tax rules); the interaction between residency status and investment structuring; and the practical adjustments an investor should anticipate. It is not a lifestyle article. It is a briefing for the reader considering, or already committed to, spending meaningful time in Argentina while continuing to manage international capital.
+# Can I get residency in Argentina by investing?
 
-#### Immigration Architecture: Three Categories, Different Purposes
+*A practical guide to investor residency, taxes, business ownership and building a life in Argentina.*
 
-Argentine law recognizes three main residence categories: transitory, temporary and permanent. A person applying for residence may also receive a provisional permit, known as a residencia precaria, while the application is being reviewed. This permit is generally valid for up to 90 days and may be renewed. It allows the holder to remain in Argentina, travel, work and study, although time spent under a precaria does not count towards permanent residence or citizenship.
+**By Life in Argentina · Updated October 29, 2026**
 
-Transitory residence covers short stays for a specific purpose. Investors and business visitors can usually obtain permission to remain for up to two months, with an extension available in some cases. Separate permits exist for technical and professional activities. Transitory residents do not receive an Argentine DNI and may only work when their particular immigration status allows it. This category is useful for investors visiting Argentina to attend meetings, review projects or explore opportunities without moving to the country.
+**Yes. Argentina has a temporary residence category for qualifying investors. But investing money does not automatically give you residency, and owning a business or buying a home is not the same as having permission to live in the country.** The right route depends on your investment, nationality, income and personal circumstances.
 
-Temporary residence is intended for longer stays and may be granted for up to three years, depending on the category. Available routes include employment, investment, income from foreign assets, retirement income, study, family reunification and Mercosur nationality. Temporary residents can obtain an Argentine DNI and may work according to the terms of their residence.
+Perhaps you came to Buenos Aires for a few weeks and started looking at apartments. Perhaps you have a business idea, a partner here, or a portfolio that allows you to choose where you live. Somewhere between the first visit and the decision to stay, the questions change. Can I live here legally? What happens to my investments abroad? Can my family come with me?
 
-Applications may be started in Argentina or from abroad. The documents and procedures depend on the category. An Argentine sponsor registered with RENURE is normally required when the application is based on employment or an activity hosted by a local organization. It is not a general requirement for every temporary residence application. Investors, rentistas and Mercosur nationals apply under different criteria.
+These questions belong in the same conversation. A residence application may be one part of the move, but the timing of your arrival, the way you hold your assets and the documents your family needs can be just as important.
 
-For investors planning to spend a significant part of the year in Argentina, temporary residence is usually the practical starting point. It provides a formal immigration status, access to a temporary DNI and a basis for remaining in the country beyond the limits of a short-term visit.
+> **Questions we answer in this article**
+>
+> - Can I get residency by investing?
+> - How much do I need to invest?
+> - Does buying property give me residency?
+> - Can I get residency by opening a company?
+> - Can I qualify with income from abroad?
+> - Is investor residency the same as citizenship by investment?
+> - Can I apply from outside Argentina?
+> - Will I get a DNI?
+> - When do I become a tax resident?
+> - Will Argentina tax my foreign income and assets?
+> - Should I change my investment structure before moving?
+> - Can my family move with me?
+> - How do I prepare for banking and everyday life?
 
-Permanent residence has no expiry date and allows the holder to live and work in Argentina indefinitely. It may be available through qualifying family relationships or after a period of temporary residence. The usual requirement is two years of temporary residence for Mercosur nationals and three years for other nationalities. Applicants must also show sufficient means of support and meet the applicable criminal-record requirements.
+## Can I get residency by investing?
 
-Brazilian nationals benefit from a separate bilateral agreement. Subject to the required documentation, they may request permanent residence without completing the usual two-year period that applies to other Mercosur nationals.
+**Yes, if you qualify under Argentina’s investor residence category and your application is approved.** The Migration Law includes investors among the categories eligible for temporary residence. This is permission to reside in Argentina, rather than an automatic award of permanent residence or citizenship.
 
-Investment is a category of temporary residence. An investor who contributes personal assets to an activity considered beneficial to Argentina may receive temporary residence for up to three years, with the possibility of renewal. The investment category does not by itself provide a direct route to permanent residence. An investor seeking permanent status must qualify under the rules that apply at the time of the application.
+The distinction matters when you compare options. Someone planning to run a local business has different needs from someone who wants to live in Buenos Aires while managing investments overseas. Your occupation may be “investor,” but that does not necessarily make investor residence the most suitable immigration category.
 
-A separate citizenship-by-investment route was introduced in 2025. It allows a foreign national to apply for Argentine citizenship without completing a minimum residence period if the applicant has made an investment considered relevant by the government. The Ministry of Economy determines which investments qualify, while the Citizenship by Investment Programs Agency evaluates the application before a decision is made by the National Directorate of Migration. The qualifying investment and procedure should be reviewed carefully before relying on this route.
+Start with what you intend to do here: make occasional business visits, relocate for a year, operate a business, or establish a long-term home. Then identify the residence route that supports that plan.
 
-Foreign residents may otherwise apply for Argentine citizenship after two years of continuous and legal residence. Permanent residence is not required, so time held under a valid temporary residence may qualify. Under the current law, the applicant must remain in Argentina throughout the entire two-year period without travelling abroad. Applications are handled by the National Directorate of Migration rather than filed before a civil court.
+Source: [Argentina’s Migration Law, Article 23](https://www.argentina.gob.ar/normativa/nacional/ley-25871-92016/actualizacion).
 
-Argentina does not generally require a person to renounce another nationality when becoming Argentine. Whether the applicant can retain the original nationality will also depend on the law of that country.
+## How much do I need to invest?
 
-Nationals of eligible Mercosur member and associated countries may obtain a two-year temporary residence based on nationality, without relying on employment or a local sponsor. The current list includes Uruguay, Brazil, Paraguay, Bolivia, Chile, Peru, Ecuador, Colombia, Venezuela, Guyana and Suriname. Some naturalized citizens of these countries may also qualify, subject to additional conditions.
+**The investor provisions in Decree 616/2010 state a minimum of ARS 1,500,000. That figure alone is not a reliable budget for obtaining residence.** The framework also requires a productive, commercial or service investment project, evidence of lawful funds and their entry through authorized financial institutions, and an assessment of the project.
 
-Rules for short business visits depend on the traveller’s nationality and the activity planned in Argentina. Some visitors may enter without obtaining a visa in advance, while others must apply through an Argentine consulate and may need an invitation from an organization registered with RENURE. These short-stay permissions do not create residence rights and should not be treated as a substitute for temporary residence.
+A nominal amount in an older regulation can look surprisingly small when converted into dollars. It should not be read as a promise that depositing that sum will secure residency. Before committing funds, confirm the current filing requirements and how your proposed project would be assessed.
 
-### Tax residency: the key threshold
+Source: [Decree 616/2010, Article 23(d)](https://www.argentina.gob.ar/normativa/nacional/decreto-616-2010-167004/texto).
 
-For investors planning to spend significant time in Argentina, tax residency should be considered before the move. Argentine tax residents are generally taxed on income earned in Argentina and abroad. Non-residents are taxed only on Argentine-source income. A similar distinction applies to the personal assets tax: residents are generally assessed on taxable assets held worldwide, while non-residents are assessed only on assets located in Argentina.
+## Does buying property in Argentina give me residency?
 
-Tax residency is governed by specific rules. A foreign national generally becomes an Argentine tax resident after obtaining permanent immigration residence or after remaining in the country for 12 months under temporary residence permits. Short trips abroad do not necessarily interrupt that period. Residency takes effect on the first day of the month following the grant of permanent residence or the completion of the 12-month period. Special rules may apply to foreign employees on temporary assignments and to students.
+**Buying a home does not automatically give you Argentine residency.** The investor framework concerns a qualifying investment project, rather than a residence entitlement attached to any property purchase.
 
-Once tax residency begins, worldwide income falls within the Argentine income-tax system. Ordinary net income is subject to progressive rates ranging from 5 to 35 per cent, with the income brackets adjusted every six months. Some dividends, investment returns and capital gains are subject to separate rules, rates or exemptions. Foreign income taxes may generally be credited against the Argentine tax attributable to the same foreign income, although the credit cannot exceed that Argentine liability.
+An apartment to live in and a commercial project involving real estate are different proposals. Do not assume that either the purchase price or the fact that money has entered Argentina settles the immigration question.
 
-The personal assets tax is calculated on assets held on December 31 each year. Under the rules currently in force, residents are taxed on taxable assets in Argentina and abroad once the applicable exemption is exceeded. The rates scheduled for the 2026 tax year range from 0.5 to 0.75 per cent. From the 2027 tax year, the law provides for a single rate of 0.25 per cent on taxable assets above the exemption threshold. A limited credit may be available for comparable wealth taxes paid abroad.
+If you are considering a property, review the purchase and your residence options together before signing. You may have another basis for residence that does not depend on the property at all.
 
-The effect can be substantial for someone with a large international portfolio. An investor who remains a non-resident may have limited exposure to Argentine assets and income. Once that person becomes resident, foreign securities, bank accounts, company interests and other investments may enter the Argentine tax calculation.
+Source: [Decree 616/2010, investor residence requirements](https://www.argentina.gob.ar/normativa/nacional/decreto-616-2010-167004/texto).
 
-Argentina currently has double-taxation treaties in force with 24 countries, including Germany, Spain, the United Kingdom, Italy, Switzerland, China and several others. These treaties may contain rules for resolving dual residence and allocating taxing rights, although the result depends on the terms of the treaty and the type of income or asset involved. The United States is not included in Argentina’s current treaty network. US citizens living in Argentina generally remain subject to US tax on worldwide income and must coordinate the domestic foreign-tax-credit rules of both countries.
+## Can I get residency by opening a company?
 
-Relocation should therefore be planned before tax residency begins. Existing trusts, holding companies, insurance arrangements and family investment vehicles should be reviewed individually. Their treatment depends on factors such as ownership, control, the rights retained by the investor, the type of income involved and the country in which the entity is established. Argentine law can attribute the income of some foreign entities, funds and trust-like arrangements directly to an Argentine resident, even when the income has not been distributed. Setting up a structure before moving does not, by itself, place it outside the Argentine tax system.
+**Company formation alone does not grant residence.** Incorporating a business, owning its shares and obtaining permission to live and work in Argentina are separate steps.
 
-For investors with significant international assets, the timing of the move and the review of existing holdings are central parts of the relocation process. Advice should be obtained in both Argentina and the investor’s current country of residence before any change is made.
+A company may form part of an investment proposal. But the immigration analysis still needs to establish which category applies and what evidence supports it. Before incorporating, clarify what the business will do, who will manage it, how it will be financed and what your own role will be.
 
-### Structuring investments around tax residency
+The structure should serve the business as well as your relocation plans. It also creates accounting, registration and ongoing compliance questions that deserve their own budget.
 
-An investment structure should be reviewed when the owner’s tax residency changes. Immigration residence and tax residence are related, but they are not the same. A foreign national generally becomes an Argentine tax resident after obtaining permanent residence or spending 12 months in the country under temporary residence permits, subject to limited exceptions. From that point, Argentina generally taxes income from Argentina and abroad. The personal assets tax may also extend to assets held outside the country.
+## Can I qualify with income from abroad?
 
-A non-resident is generally taxed only on Argentine-source income. Payments to foreign beneficiaries are often subject to final withholding in Argentina. The effective rate depends on the type of income, the parties involved, any available exemption and the terms of an applicable tax treaty. Argentine law commonly calculates the withholding by applying a 35 per cent rate to a presumed net profit, which varies by category. For this reason, there is no general 4.9 per cent rate that can be used for interest income.
+**Possibly. The rentista category may suit someone who receives qualifying income from assets outside Argentina.** Migraciones identifies sources such as financial investments, property and company holdings, while expressly excluding remuneration from personal work from this category.
 
-Non-residents may also face personal assets tax on property and investments located in Argentina. Depending on the asset, the tax may be paid through an Argentine representative, company or other local party acting as a substitute taxpayer. No Argentine tax generally applies to income or assets located abroad while the investor remains a non-resident.
+For example, a person receiving documented rental income from an overseas property presents a different case from a consultant earning fees from foreign clients. Both receive money from abroad, but the nature of the income matters.
 
-The position changes once the investor becomes an Argentine tax resident. Foreign rental income, dividends, interest and investment gains may then have to be reported in Argentina. Holding these assets through a foreign company, trust or similar arrangement does not necessarily reduce the tax. Argentine rules can attribute the income of certain controlled trusts and foreign entities directly to the resident owner, including in some cases before the income has been distributed.
+A large savings balance should not be treated as a substitute for checking the income requirements. Review the source, amount, regularity and supporting documentation before choosing this route.
 
-The period before tax residency begins is therefore an important time for reviewing the portfolio. There is no general rule that exempts assets because they were acquired before the owner became resident, nor is there an automatic revaluation of those assets when residency begins. The tax cost is determined under the rules that apply to each type of asset. Selling and repurchasing an investment may alter its cost basis, but it may also trigger tax in another country and should not be undertaken without a full calculation.
+Nationality or family ties may also provide another basis for residence. Investing locally is not a requirement for every foreigner who wants to move here.
 
-The ownership of Argentine investments also requires careful analysis. Holding real estate personally may expose the investor to income tax, personal assets tax and local property charges. Using an Argentine company changes the way the income and the asset are taxed, but it does not remove the tax burden. Argentine companies pay corporate income tax under progressive rates of 25, 30 and 35 per cent, with the brackets adjusted annually. Dividends are generally subject to a further 7 per cent tax. Shares in an Argentine company may also remain within the personal assets tax system, with the company responsible for paying the tax on behalf of its shareholders.
+Source: [Migraciones: temporary residence as a rentista](https://www.argentina.gob.ar/servicio/obtener-una-residencia-temporaria-como-rentista).
 
-The appropriate vehicle depends on the assets involved, expected income, length of ownership, financing arrangements and the investor’s tax position in other countries. The comparison may include personal ownership, an Argentine company, a foreign company or an existing trust, but none should be assumed to be more efficient without reviewing the full facts.
+## Is investor residency the same as citizenship by investment?
 
-Investors planning to become Argentine tax residents should review their holdings before residency begins. Argentine advice should be coordinated with advice in the investor’s current country of residence, particularly where a restructuring, sale or transfer of assets is being considered.
+**No. Investor residency and citizenship by investment are separate legal routes with different outcomes.** One concerns permission to reside; the other concerns Argentine nationality.
 
-#### The family dimension
+A separate citizenship-by-investment framework was introduced in 2025. On October 2, 2026, the Ministry of Economy announced proposed routes involving a USD 350,000 non-refundable contribution or a USD 800,000 subscription to a specific public bond, with applications anticipated during the fourth quarter of 2026.
 
-Investors relocating to Argentina frequently do so with family members whose situations require separate attention. Spouses and dependent children generally qualify for derivative residency permits on the basis of the primary applicant’s status. The mechanics involve the same document requirements birth and marriage certificates, criminal-record certificates for family members over the age of sixteen but the sponsoring vehicle and the underlying application category can accommodate the family unit.
+That announcement should not be treated as proof that a particular application can already be filed. Before transferring money or engaging an intermediary, confirm the implementing rules, official application channel, qualifying investment and applicable due-diligence requirements. This article does not confirm that applications are currently open.
 
-For children, education is a significant consideration. Argentina has a substantial system of both public and private schools, and the major cities offer a range of international schools that follow curricula from the United States, France, Germany, Italy, Britain, and other countries. Selection of an appropriate school is often the first major post-relocation decision families make, and it may effectively determine the neighborhood in which the family settles.
+Source: [Ministry of Economy announcement, October 2, 2026](https://www.argentina.gob.ar/noticias/luis-caputo-anuncio-la-puesta-en-marcha-del-programa-de-ciudadania-por-inversion-de).
 
-For spouses who are also economically active, Argentine work authorization is available to residents at both the temporary and permanent levels. The interaction between the spouse’s professional activity and the family’s overall tax profile should be analyzed alongside the primary investor’s activity.
+## Can I apply from outside Argentina?
 
-For extended family parents or adult children the derivative-residency rules are more limited. Argentine law does not automatically extend residency rights to non-dependent adult relatives. Where family reunification is a consideration, separate applications on independent grounds are typically required.
+**Some residence procedures can be pursued from abroad, while an in-country residence application follows a different process.** Migraciones distinguishes between an application made within Argentina, called a *radicación*, and entry-permit or consular procedures pursued from overseas.
 
-For inheritance planning, the fact that residence in Argentina brings the resident’s worldwide estate within the analytical scope of Argentine tax authorities requires attention. Argentina has no general inheritance tax at the federal level, though the province of Buenos Aires historically has imposed one, and other provinces have periodically considered similar levies. The interaction between Argentine succession law, which applies its own principles to property located in Argentina and to residents’ estates generally, and the succession laws of the investor’s home country requires expert coordination particularly for investors with complex international holdings or beneficiaries in multiple jurisdictions.
+The appropriate process depends on your nationality, residence category and circumstances. Do not assume that starting an online form from another country is equivalent to lodging a valid in-country application.
 
-#### Banking, currency, and everyday finance
+Much of the preparation can happen before you travel. Establish which identity, criminal-record, family and financial documents you need, where they must be issued, and whether apostilles, legalization or certified Spanish translations are required. Check document validity before ordering everything too early.
 
-The practical logistics of managing finances as a resident are meaningfully different from those of a visiting investor. Foreign residents can open Argentine bank accounts once they hold a resident identification number (DNI), which is generally issued upon approval of the temporary or permanent residency application. These accounts can be denominated in Argentine pesos or, subject to prevailing regulations, in dollars.
+Source: [Migraciones: residence procedures](https://www.argentina.gob.ar/migraciones/residencias).
 
-The Argentine banking system is functional and technologically modern in many respects, but it operates under the constant pressure of foreign-exchange regulations that constrain the movement of currency across borders. For a resident who receives income in dollars from foreign sources and wishes to spend in pesos in Argentina, the mechanisms available for conversion are well-understood but subject to change. Blue-chip swap transactions through the securities market have been one common route; direct conversion at the official rate is another, though the two rates can differ materially. Investors with significant recurring dollar income should plan their conversion strategy in advance and adjust as regulations evolve.
+## Will I get a DNI?
 
-Payment infrastructure has developed substantially. Digital wallets and interoperable payment platforms, subject to the regulatory framework governing Payment Service Providers (PSPs), have made electronic payments efficient and widespread. Credit cards issued by Argentine banks operate similarly to those in other jurisdictions, though with cash-advance and international-transaction rules that reflect the underlying foreign-exchange framework.
+**Temporary and permanent residence can provide access to an Argentine DNI. Transitory residence does not.** A DNI is your local identity document; it is not citizenship and does not replace your passport.
 
-Currency choice for everyday transactions varies by category. Rental payments, tuition fees, medical services, and many high-value goods are frequently priced or paid in dollars. Groceries, transportation, and most consumer services are priced in pesos and paid electronically or in cash. Adjusting to the everyday multi-currency reality of Argentine life is one of the routine adaptations that new residents make.
+While an application is being processed, a *residencia precaria* may document your provisional immigration status. Read its validity and conditions carefully, and keep any required renewals up to date.
 
-#### Quality of life considerations
+In practical terms, obtaining a DNI makes many administrative tasks easier. But you should still check each bank, service provider or institution’s own onboarding requirements rather than assume that the document is the only thing they will request.
 
-An honest assessment of relocation must address the daily texture of life. The document from which this analysis draws does not treat these questions directly, but any investor considering a move should factor them in.
+Source: [Migraciones: residence categories](https://www.argentina.gob.ar/migraciones/residencias).
 
-Buenos Aires is one of the great cities of the Americas, with a European architectural character, a deep cultural life, and a significant international expatriate community. It is comparable in cost of living to major U.S. or European cities for premium services but materially cheaper for most everyday goods. Its neighborhoods vary substantially in character, from the professional and diplomatic zones of Palermo and Recoleta to the historical center around San Telmo and the modern developments of Puerto Madero.
+## When do I become a tax resident in Argentina?
 
-Beyond Buenos Aires, Argentina offers a range of settings. Mendoza, at the foot of the Andes, is the wine country; Bariloche and other Patagonian locations offer mountain and lake scenery of exceptional beauty. Córdoba is the country’s second-largest metropolitan area, with a distinct cultural identity and a growing technology sector. Rosario, on the Paraná River, is an important commercial and industrial center. For investors whose economic activity does not require presence in Buenos Aires, these secondary cities can offer meaningful advantages in cost of living, quality of life, and access to specific sectoral activities.
+**For foreign nationals, the general triggers include obtaining permanent immigration residence or remaining in Argentina under temporary residence authorizations for 12 months.** Exceptions and rules on temporary absences can affect the result.
 
-Healthcare in Argentina is delivered through a mix of public, social-security, and private systems. Private health insurance, purchased individually or through employer arrangements, provides access to a network of well-regarded hospitals and clinics. The quality of care in the major private institutions is high, and many physicians have received training in the United States or Europe. Costs are substantially lower than in the United States and comparable to those in Western Europe.
+Immigration residence and tax residence are related, but they answer different questions. Your immigration permission determines the basis on which you can stay. Your tax status determines how Argentina treats your income and assets.
 
-Security conditions vary by location and neighborhood, and investors should conduct honest inquiry about the specific area they are considering. Buenos Aires as a whole is not among the more dangerous large cities in Latin America, but urban crime exists and property crime is a concern that residents adapt to.
+Do not build your plan around a generic “183-day rule.” Have an adviser map your likely tax-residency date against your immigration status and travel history, including when the change takes effect.
 
-Language is a practical consideration. Spanish is the operating language of business, government, and daily life. Argentine Spanish has its own characteristics the *voseo* second-person form, distinct pronunciation, and Italian-influenced idioms that even fluent Latin-American Spanish speakers may take time to fully adapt to. English is widely spoken in business, professional-services, and hospitality environments, but for a resident who intends to engage with Argentine society beyond expatriate circles, Spanish fluency is essential.
+Source: [ARCA: tax residence](https://afip.gob.ar/gananciasYBienes/ganancias/conceptos-basicos/residencia.asp).
 
-#### The role of local professionals
+## Will Argentina tax my foreign income?
 
-An observation that applies with unusual force to Argentine relocation and investment: the quality of one’s local professional advisers is often the single most important determinant of whether the experience is successful or frustrating. Argentina has a well-developed legal, accounting, tax-advisory, and notarial infrastructure. The top firms in each of these categories are internationally competitive, and the professionals within them are typically fluent in English and experienced with cross-border matters.
+**Argentine tax residents are generally subject to tax on worldwide income. Non-residents are generally taxed on Argentine-source income.** Foreign dividends, interest, rent and investment gains may therefore become relevant after a move.
 
-But Argentine practice is also marked by significant informational asymmetries. Regulations change frequently, particularly in foreign-exchange, tax, and administrative-law areas. Rules that appear straightforward on paper are often applied differently in practice by different authorities. Documentation requirements vary between jurisdictions. What is possible in one province may not be possible in another, and what is possible today may not be possible tomorrow.
+The rate and treatment depend on the income. Credits for foreign income tax may be available, subject to limits and any applicable treaty. Paying tax in another country does not automatically eliminate an Argentine filing or payment obligation.
 
-For the relocating investor, engaging serious professional advisers early is not a matter of caution but of basic economic rationality. The cost of good advice is negligible compared to the cost of a poorly structured residency, a mismanaged tax transition, or an improperly documented investment. The Argentine market has produced firms and individuals capable of providing that advice at international quality standards; the investor’s task is to identify them and to build a working relationship that can extend across the years of eventual residence.
+Also distinguish where money is paid from where income is legally sourced. Receiving payment in an overseas account does not, by itself, make the income foreign-source or exempt.
 
-#### Conclusion
+Source: [Income Tax Law](https://biblioteca.afip.gob.ar/dcp/LEY_C_020628_2019_12_05).
 
-Relocating to Argentina requires investors to consider both their personal plans and their financial position. The amount of time they expect to spend in the country may affect their immigration status, tax residency and investment holdings. Family needs, housing, healthcare and day-to-day costs should be considered at the same stage.
+## Will Argentina tax my assets abroad?
 
-Good planning begins with a clear idea of what the investor intends to do in Argentina. Someone making occasional visits will face different questions from someone planning to live in the country, manage a local business or remain for several years. Immigration, tax and investment advice should reflect those plans.
+**Tax residency may also bring foreign assets within Argentina’s personal assets tax, known as Bienes Personales.** This is separate from income tax and generally considers taxable assets held on December 31, subject to exemptions, valuation rules and the taxpayer’s circumstances.
 
-Argentina can offer investors a high quality of life, access to experienced professionals and opportunities across several sectors. It can also involve complex rules, economic volatility and administrative delays. Understanding these conditions before moving can prevent unnecessary costs and make the transition easier.
+An asset does not have to produce cash income to matter for this calculation. Foreign securities, bank accounts, real estate and company interests should be included in the review.
 
-This report provides a general overview rather than advice for a particular case. Before relocating, investors should speak with qualified immigration, tax and financial advisers in Argentina and in any other country where they hold assets or remain subject to tax. The earlier those conversations take place, the easier it is to make informed decisions about residency, investment structures and the move itself.
+Rates, thresholds and any special regime must be checked for the relevant tax year. A useful relocation budget includes an estimate of both annual income tax and potential personal assets tax, rather than looking at living costs alone.
+
+Source: [Personal Assets Tax Law](https://biblioteca.arca.gob.ar/dcp/TOR_C_023966_1997_03_26).
+
+## Should I change my investment structure before moving?
+
+**Review it before moving, but do not assume that restructuring will improve the outcome.** A foreign company or trust does not automatically keep assets or income outside the Argentine tax system. Attribution rules can apply to certain foreign arrangements, including undistributed income.
+
+Ask your advisers to compare your existing structure with realistic alternatives. Include ownership, control, distributions, reporting costs and the consequences in your current country of residence. A sale, transfer or reorganization that appears helpful in Argentina may create a tax cost elsewhere.
+
+Keep acquisition records and evidence of historical costs. The useful question is what the move changes for your actual portfolio, rather than which structure sounds most efficient in isolation.
+
+Source: [Income Tax Law, foreign-source income provisions](https://biblioteca.afip.gob.ar/dcp/LEY_C_020628_2019_12_05).
+
+## Can my family move with me?
+
+**Qualifying family members may apply through family reunification, but each person’s eligibility and documentation must be checked.** The current temporary-residence framework includes spouses and parents of temporary or permanent residents, as well as unmarried, unemancipated children under 18 and qualifying adult children with disabilities.
+
+Do not assume that every adult child or extended relative is covered. Equally, do not rule out a parent without reviewing the applicable category. The permitted duration can be linked to the sponsoring family member’s residence.
+
+Alongside the applications, plan the practical move. School calendars, healthcare arrangements and a spouse’s work plans can determine where you live and when it makes sense to arrive. Bring those questions into the discussion before booking the family’s flights.
+
+Source: [Migraciones: temporary residence through family reunification](https://www.argentina.gob.ar/node/152641).
+
+## How do I prepare for banking and everyday life?
+
+**Plan how you will document, receive and use your money before making a substantial transfer.** Ask the receiving bank about identification, tax registration, source-of-funds evidence, account eligibility and the proposed transaction. Requirements and foreign-exchange rules should be checked at the time.
+
+Keep the financial story easy to follow: where the money came from, who owns it and why it is being transferred. The documents needed for a bank review may overlap with those used in an investment application, but the two reviews serve different purposes.
+
+For everyday life, build a budget using actual quotes. Housing, school fees, health coverage and transport will vary with your family’s needs and location. Confirm the currency, adjustment terms and payment method for major contracts. A few weeks spent testing a neighborhood can tell you more than a broad claim that Argentina is inexpensive.
+
+## What should I do before moving?
+
+Start with a coordinated plan:
+
+1. **Choose a residence route.** Match it to your nationality, family ties, income and intended activity.
+2. **Set a realistic timeline.** Include document preparation, travel, applications and family logistics.
+3. **Review your tax position.** Identify the likely residency date and coordinate advice across countries.
+4. **Assess the investment separately.** Examine its commercial merits, ownership structure and funding requirements.
+5. **Prepare the practical move.** Confirm housing, healthcare, schooling and banking arrangements.
+
+Argentina may become the place where you build a business, join your partner or simply decide to stay. The aim is to make those plans work together, so that the residence route supports the life you actually want to build.
+
+### Thinking about investing or moving to Argentina?
+
+Tell us where you are from, what you are planning and when you would like to move. At Life in Argentina, we help you understand your residence options and coordinate the legal and relocation steps, working with tax and accounting professionals where needed.
+
+[Email contact@lifeinargentina.com](mailto:contact@lifeinargentina.com)
+
+*This article provides general information. Immigration and tax outcomes depend on individual circumstances and the rules applicable when you apply or move.*
