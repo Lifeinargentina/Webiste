@@ -5,8 +5,6 @@ description: "Learn who can get an Argentine DNI, why a precaria is not enough, 
 date: 2026-09-08
 category: Immigration
 featured: false
-image: /img/blog/how-to-get-a-dni-in-argentina-as-a-foreigner.jpg
-image_alt: "Argentine DNI card and immigration documents on a desk"
 ---
 
 If you are a foreigner, you can generally get an Argentine DNI once the Dirección Nacional de Migraciones has granted you **temporary or permanent residence**.
