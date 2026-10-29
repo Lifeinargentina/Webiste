@@ -5,7 +5,6 @@ description: "Learn who qualifies for temporary residency in Argentina, which do
 date: 2026-10-05
 category: Immigration
 featured: false
-image: /img/blog/temporary-residency-in-argentina.jpg
 image_alt: ""
 ---
 
