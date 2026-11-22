@@ -231,6 +231,52 @@ layout: null
       .hero-video { display: none; }
     }
   </style>
+
+  <!-- LIA: navegación superpuesta al hero, sin franja blanca -->
+  <style>
+    /* La navegación flota sobre el video/imagen en la portada. */
+    .nav {
+      top: 0;
+      z-index: 100;
+      color: #fffdf8;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+    }
+    .nav .brand,
+    .nav .nav-links { color: #fffdf8; }
+    .nav .nav-links a:hover { color: #d5e9de; }
+    .nav .nav-cta {
+      background: #fffdf8;
+      color: #003b2d;
+    }
+    /* Después de hacer scroll, el menú tiene fondo verde para ser legible. */
+    .nav.scrolled,
+    .nav.menu-open {
+      background: rgba(0, 59, 45, .96);
+      color: #fffdf8;
+      -webkit-backdrop-filter: blur(14px);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 6px 20px rgba(0, 22, 16, .16);
+    }
+    .nav.scrolled .brand,
+    .nav.scrolled .nav-links,
+    .nav.menu-open .brand,
+    .nav.menu-open .nav-links { color: #fffdf8; }
+    /* Menú hamburguesa visible también sobre el fondo en móvil. */
+    @media (max-width: 760px) {
+      .nav .menu-toggle {
+        color: #fffdf8;
+        border-color: rgba(255, 255, 255, .55);
+        background: rgba(0, 40, 30, .20);
+      }
+      .nav .nav-links {
+        border-top-color: rgba(255, 255, 255, .22);
+      }
+    }
+  </style>
 </head>
 <body>
   <nav class="nav" id="nav" aria-label="Primary navigation">
